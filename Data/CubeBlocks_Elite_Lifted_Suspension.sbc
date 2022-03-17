@@ -1,0 +1,980 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<!-- ==============================================================
+
+                      Large Grid Suspension
+
+=============================================================== -->
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LG_5x5_Lifted_Suspension_Left</SubtypeId>
+			</Id>
+			<DisplayName>5x5 Lifted Wheel Suspension Left</DisplayName>
+			<Icon>Textures\Icons\5x5_Lifted_Suspension_Left.dds</Icon>
+			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
+			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="3" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\LG_5x5_Lifted_Suspension_ZANTULO.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200"/>
+				<Component Subtype="Construction" Count="200"/>
+				<Component Subtype="LargeTube" Count="100"/>
+				<Component Subtype="Motor" Count="100"/>
+				<Component Subtype="SmallTube" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.0" EndY="2.0" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\LG_5x5_Lifted_Suspension_ZANTULO_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\LG_5x5_Lifted_Suspension_ZANTULO_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\LG_5x5_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>5x5_Lifted_Suspension_Left</BlockPairName>
+			<MirroringY>ZThenOffsetX</MirroringY>
+			<MirroringZ>YThenOffsetX</MirroringZ>
+			<MirroringBlock>LG_5x5_Lifted_Suspension_Right</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>40</BuildTimeSeconds>
+			<PrimarySound>BlockWheel5x5</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>15</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<PropulsionForce>1000000</PropulsionForce>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<RotorPart>EliteRealWheel5x5mirrored</RotorPart>
+			<MinHeight>-2.0</MinHeight>
+			<MaxHeight>2.0</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large3X</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LG_5x5_Lifted_Suspension_Right</SubtypeId>
+			</Id>
+			<DisplayName>5x5 Lifted Wheel Suspension Right</DisplayName>
+			<Icon>Textures\Icons\5x5_Lifted_Suspension_Right.dds</Icon>
+			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
+			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="3" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\LG_5x5_Lifted_Suspension_ZANTULO.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200"/>
+				<Component Subtype="Construction" Count="200"/>
+				<Component Subtype="LargeTube" Count="100"/>
+				<Component Subtype="Motor" Count="100"/>
+				<Component Subtype="SmallTube" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.0" EndY="2.0" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\LG_5x5_Lifted_Suspension_ZANTULO_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\LG_5x5_Lifted_Suspension_ZANTULO_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\LG_5x5_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+			</BuildProgressModels>
+			<Center x="0" y="0" z="0"/>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>5x5_Lifted_Suspension_Right</BlockPairName>
+			<MirroringY>ZThenOffsetX</MirroringY>
+			<MirroringZ>YThenOffsetX</MirroringZ>
+			<MirroringBlock>LG_5x5_Lifted_Suspension_Left</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>40</BuildTimeSeconds>
+			<PrimarySound>BlockWheel5x5</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>15</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<PropulsionForce>1000000</PropulsionForce>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<RotorPart>EliteRealWheel5x5</RotorPart>
+			<MinHeight>-2.0</MinHeight>
+			<MaxHeight>2.0</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large3X</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LG_3x3_Lifted_Suspension_Left</SubtypeId>
+			</Id>
+			<DisplayName>3x3 Lifted Wheel Suspension Left</DisplayName>
+			<Icon>Textures\Icons\3x3_Lifted_Suspension_Left.dds</Icon>
+			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
+			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\LG_3x3_Lifted_Suspension_ZANTULO.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>3x3_Lifted_Suspension_Left</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>LG_3x3_Lifted_Suspension_Right</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<PrimarySound>BlockWheel3x3</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>10</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>600000</PropulsionForce>
+			<RotorPart>EliteRealWheelmirrored</RotorPart>
+			<MaxSteer>0.8</MaxSteer>
+			<MinHeight>-1.5</MinHeight>
+			<MaxHeight>1.3</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LG_3x3_Lifted_Suspension_Right</SubtypeId>
+			</Id>
+			<DisplayName>3x3 Lifted Wheel Suspension Right</DisplayName>
+			<Icon>Textures\Icons\3x3_Lifted_Suspension_Right.dds</Icon>
+			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
+			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\LG_3x3_Lifted_Suspension_ZANTULO.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>3x3_Lifted_Suspension_Right</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>LG_3x3_Lifted_Suspension_Left</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<PrimarySound>BlockWheel3x3</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>10</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>600000</PropulsionForce>
+			<RotorPart>EliteRealWheel</RotorPart>
+			<MaxSteer>0.8</MaxSteer>
+			<MinHeight>-1.5</MinHeight>
+			<MaxHeight>1.3</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LG_1x1_Lifted_Suspension_Left</SubtypeId>
+			</Id>
+			<DisplayName>1x1 Lifted Wheel Suspension Left</DisplayName>
+			<Icon>Textures\Icons\1x1_Lifted_Suspension_Left.dds</Icon>
+			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
+			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\LG_1x1_Lifted_Suspension_ZANTULO.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>1x1_Lifted_Suspension_Left</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>LG_1x1_Lifted_Suspension_Right</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<PrimarySound>BlockWheel1x1</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>5</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>200000</PropulsionForce>
+			<RotorPart>EliteRealWheel1x1mirrored</RotorPart>
+			<MinHeight>-1.6</MinHeight>
+			<MaxHeight>-0.8</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LG_1x1_Lifted_Suspension_Right</SubtypeId>
+			</Id>
+			<DisplayName>1x1 Lifted Wheel Suspension Right</DisplayName>
+			<Icon>Textures\Icons\1x1_Lifted_Suspension_Right.dds</Icon>
+			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
+			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\LG_1x1_Lifted_Suspension_ZANTULO.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>1x1_Lifted_Suspension_Right</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>LG_1x1_Lifted_Suspension_Left</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<PrimarySound>BlockWheel1x1</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>5</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>200000</PropulsionForce>
+			<RotorPart>EliteRealWheel1x1</RotorPart>
+			<MinHeight>-1.6</MinHeight>
+			<MaxHeight>-0.8</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+		</Definition>
+		<!-- ==============================================================
+
+                      Small Grid Suspension
+
+=============================================================== -->
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SG_5x5_Lifted_Suspension_Left</SubtypeId>
+			</Id>
+			<DisplayName>5x5 Lifted Wheel Suspension Left</DisplayName>
+			<Icon>Textures\Icons\5x5_Lifted_Suspension_Left.dds</Icon>
+			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
+			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<CubeSize>Small</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="3" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\SG_5x5_Lifted_Suspension_ZANTULO.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="50"/>
+				<Component Subtype="Construction" Count="60"/>
+				<Component Subtype="Motor" Count="10"/>
+				<Component Subtype="SmallTube" Count="20"/>
+				<Component Subtype="SteelPlate" Count="30"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.0" EndY="2.0" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\SG_5x5_Lifted_Suspension_ZANTULO_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\SG_5x5_Lifted_Suspension_ZANTULO_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\SG_5x5_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>5x5_Lifted_Suspension_Left</BlockPairName>
+			<MirroringY>ZThenOffsetX</MirroringY>
+			<MirroringZ>YThenOffsetX</MirroringZ>
+			<MirroringBlock>SG_5x5_Lifted_Suspension_Right</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<PrimarySound>BlockWheel5x5</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>3</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<RotorPart>EliteRealWheel5x5mirrored</RotorPart>
+			<PropulsionForce>48000</PropulsionForce>
+			<MinHeight>-0.45</MinHeight>
+			<MaxHeight>0.45</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SG_5x5_Lifted_Suspension_Right</SubtypeId>
+			</Id>
+			<DisplayName>5x5 Lifted Wheel Suspension Right</DisplayName>
+			<Icon>Textures\Icons\5x5_Lifted_Suspension_Right.dds</Icon>
+			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
+			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<CubeSize>Small</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="3" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\SG_5x5_Lifted_Suspension_ZANTULO.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="50"/>
+				<Component Subtype="Construction" Count="60"/>
+				<Component Subtype="Motor" Count="10"/>
+				<Component Subtype="SmallTube" Count="20"/>
+				<Component Subtype="SteelPlate" Count="30"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.0" EndY="2.0" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\SG_5x5_Lifted_Suspension_ZANTULO_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\SG_5x5_Lifted_Suspension_ZANTULO_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\SG_5x5_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>5x5_Lifted_Suspension_Right</BlockPairName>
+			<MirroringY>ZThenOffsetX</MirroringY>
+			<MirroringZ>YThenOffsetX</MirroringZ>
+			<MirroringBlock>SG_5x5_Lifted_Suspension_Left</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<PrimarySound>BlockWheel5x5</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>3</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<RotorPart>EliteRealWheel5x5</RotorPart>
+			<PropulsionForce>48000</PropulsionForce>
+			<MinHeight>-0.45</MinHeight>
+			<MaxHeight>0.45</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SG_3x3_Lifted_Suspension_Left</SubtypeId>
+			</Id>
+			<DisplayName>3x3 Lifted Wheel Suspension Left</DisplayName>
+			<Icon>Textures\Icons\3x3_Lifted_Suspension_Left.dds</Icon>
+			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
+			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\SG_3x3_Lifted_Suspension_ZANTULO.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\SG_3x3_Lifted_Suspension_ZANTULO_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\SG_3x3_Lifted_Suspension_ZANTULO_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\SG_3x3_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>3x3_Lifted_Suspension_Left</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>SG_3x3_Lifted_Suspension_Right</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>10</BuildTimeSeconds>
+			<PrimarySound>BlockWheel3x3</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<RotorPart>EliteRealWheelmirrored</RotorPart>
+			<PropulsionForce>19200</PropulsionForce>
+			<MinHeight>-0.35</MinHeight>
+			<MaxHeight>0.15</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SG_3x3_Lifted_Suspension_Right</SubtypeId>
+			</Id>
+			<DisplayName>3x3 Lifted Wheel Suspension Right</DisplayName>
+			<Icon>Textures\Icons\3x3_Lifted_Suspension_Right.dds</Icon>
+			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
+			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\SG_3x3_Lifted_Suspension_ZANTULO.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\SG_3x3_Lifted_Suspension_ZANTULO_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\SG_3x3_Lifted_Suspension_ZANTULO_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\SG_3x3_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>3x3_Lifted_Suspension_Right</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>SG_3x3_Lifted_Suspension_Left</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>10</BuildTimeSeconds>
+			<PrimarySound>BlockWheel3x3</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<RotorPart>EliteRealWheel</RotorPart>
+			<PropulsionForce>19200</PropulsionForce>
+			<MinHeight>-0.35</MinHeight>
+			<MaxHeight>0.15</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SG_1x1_Lifted_Suspension_Left</SubtypeId>
+			</Id>
+			<DisplayName>1x1 Lifted Wheel Suspension Left</DisplayName>
+			<Icon>Textures\Icons\1x1_Lifted_Suspension_Left.dds</Icon>
+			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
+			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<CubeSize>Small</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\SG_1x1_Lifted_Suspension_ZANTULO.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\SG_1x1_Lifted_Suspension_ZANTULO_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\SG_1x1_Lifted_Suspension_ZANTULO_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\SG_1x1_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>1x1_Lifted_Suspension_Left</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>SG_1x1_Lifted_Suspension_Right</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>10</BuildTimeSeconds>
+			<PrimarySound>BlockWheel1x1</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>1</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<RotorPart>EliteRealWheel1x1mirrored</RotorPart>
+			<PropulsionForce>1200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>-0.15</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SG_1x1_Lifted_Suspension_Right</SubtypeId>
+			</Id>
+			<DisplayName>1x1 Lifted Wheel Suspension Right</DisplayName>
+			<Icon>Textures\Icons\1x1_Lifted_Suspension_Right.dds</Icon>
+			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
+			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<CubeSize>Small</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\SG_1x1_Lifted_Suspension_ZANTULO.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\SG_1x1_Lifted_Suspension_ZANTULO_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\SG_1x1_Lifted_Suspension_ZANTULO_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\SG_1x1_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>1x1_Lifted_Suspension_Right</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>SG_1x1_Lifted_Suspension_Left</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>10</BuildTimeSeconds>
+			<PrimarySound>BlockWheel1x1</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>1</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<RotorPart>EliteRealWheel1x1</RotorPart>
+			<PropulsionForce>1200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>-0.15</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+		</Definition>
+	</CubeBlocks>
+</Definitions>
