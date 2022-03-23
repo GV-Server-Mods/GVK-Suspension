@@ -13,7 +13,6 @@
 			</Id>
 			<DisplayName>5x5 Offroad Lifted Wheel Suspension Left</DisplayName>
 			<Icon>Textures\Icons\5x5_Lifted_Offroad_Suspension_Left.dds</Icon>
-			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -71,7 +70,7 @@
 			<PropulsionForce>1000000</PropulsionForce>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<RotorPart>OffroadEliteRealWheel5x5mirrored</RotorPart>
+			<RotorPart>OffroadRealWheel5x5mirrored</RotorPart>
 			<MinHeight>-2.0</MinHeight>
 			<MaxHeight>2.0</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
@@ -95,7 +94,6 @@
 			</Id>
 			<DisplayName>5x5 Offroad Lifted Wheel Suspension Right</DisplayName>
 			<Icon>Textures\Icons\5x5_Lifted_Offroad_Suspension_Right.dds</Icon>
-			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -154,7 +152,7 @@
 			<PropulsionForce>1000000</PropulsionForce>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<RotorPart>OffroadEliteRealWheel5x5</RotorPart>
+			<RotorPart>OffroadRealWheel5x5</RotorPart>
 			<MinHeight>-2.0</MinHeight>
 			<MaxHeight>2.0</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
@@ -178,7 +176,6 @@
 			</Id>
 			<DisplayName>3x3 Offroad Lifted Wheel Suspension Left</DisplayName>
 			<Icon>Textures\Icons\3x3_Lifted_Offroad_Suspension_Left.dds</Icon>
-			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -235,7 +232,7 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<PropulsionForce>600000</PropulsionForce>
-			<RotorPart>OffroadEliteRealWheelmirrored</RotorPart>
+			<RotorPart>OffroadRealWheelmirrored</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
 			<MinHeight>-1.5</MinHeight>
 			<MaxHeight>1.3</MaxHeight>
@@ -260,7 +257,6 @@
 			</Id>
 			<DisplayName>3x3 Offroad Lifted Wheel Suspension Right</DisplayName>
 			<Icon>Textures\Icons\3x3_Lifted_Offroad_Suspension_Right.dds</Icon>
-			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -317,7 +313,7 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<PropulsionForce>600000</PropulsionForce>
-			<RotorPart>OffroadEliteRealWheel</RotorPart>
+			<RotorPart>OffroadRealWheel</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
 			<MinHeight>-1.5</MinHeight>
 			<MaxHeight>1.3</MaxHeight>
@@ -342,7 +338,6 @@
 			</Id>
 			<DisplayName>1x1 Offroad Lifted Wheel Suspension Left</DisplayName>
 			<Icon>Textures\Icons\1x1_Lifted_Offroad_Suspension_Left.dds</Icon>
-			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -400,7 +395,7 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<PropulsionForce>200000</PropulsionForce>
-			<RotorPart>OffroadEliteRealWheel1x1mirrored</RotorPart>
+			<RotorPart>OffroadRealWheel1x1mirrored</RotorPart>
 			<MinHeight>-1.6</MinHeight>
 			<MaxHeight>-0.8</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
@@ -424,7 +419,6 @@
 			</Id>
 			<DisplayName>1x1 Offroad Lifted Wheel Suspension Right</DisplayName>
 			<Icon>Textures\Icons\1x1_Lifted_Offroad_Suspension_Right.dds</Icon>
-			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -482,7 +476,7 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<PropulsionForce>200000</PropulsionForce>
-			<RotorPart>OffroadEliteRealWheel1x1</RotorPart>
+			<RotorPart>OffroadRealWheel1x1</RotorPart>
 			<MinHeight>-1.6</MinHeight>
 			<MaxHeight>-0.8</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
@@ -511,7 +505,6 @@
 			</Id>
 			<DisplayName>5x5 Offroad Lifted Wheel Suspension Left</DisplayName>
 			<Icon>Textures\Icons\5x5_Lifted_Offroad_Suspension_Left.dds</Icon>
-			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -567,7 +560,7 @@
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<RotorPart>OffroadEliteRealWheel5x5mirrored</RotorPart>
+			<RotorPart>OffroadRealWheel5x5mirrored</RotorPart>
 			<PropulsionForce>48000</PropulsionForce>
 			<MinHeight>-0.45</MinHeight>
 			<MaxHeight>0.45</MaxHeight>
@@ -592,7 +585,6 @@
 			</Id>
 			<DisplayName>5x5 Offroad Lifted Wheel Suspension Right</DisplayName>
 			<Icon>Textures\Icons\5x5_Lifted_Offroad_Suspension_Right.dds</Icon>
-			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -648,7 +640,7 @@
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<RotorPart>OffroadEliteRealWheel5x5</RotorPart>
+			<RotorPart>OffroadRealWheel5x5</RotorPart>
 			<PropulsionForce>48000</PropulsionForce>
 			<MinHeight>-0.45</MinHeight>
 			<MaxHeight>0.45</MaxHeight>
@@ -673,7 +665,6 @@
 			</Id>
 			<DisplayName>3x3 Offroad Lifted Wheel Suspension Left</DisplayName>
 			<Icon>Textures\Icons\3x3_Lifted_Offroad_Suspension_Left.dds</Icon>
-			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -728,7 +719,7 @@
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<RotorPart>OffroadEliteRealWheelmirrored</RotorPart>
+			<RotorPart>OffroadRealWheelmirrored</RotorPart>
 			<PropulsionForce>19200</PropulsionForce>
 			<MinHeight>-0.35</MinHeight>
 			<MaxHeight>0.15</MaxHeight>
@@ -753,7 +744,6 @@
 			</Id>
 			<DisplayName>3x3 Offroad Lifted Wheel Suspension Right</DisplayName>
 			<Icon>Textures\Icons\3x3_Lifted_Offroad_Suspension_Right.dds</Icon>
-			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -808,7 +798,7 @@
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<RotorPart>OffroadEliteRealWheel</RotorPart>
+			<RotorPart>OffroadRealWheel</RotorPart>
 			<PropulsionForce>19200</PropulsionForce>
 			<MinHeight>-0.35</MinHeight>
 			<MaxHeight>0.15</MaxHeight>
@@ -833,7 +823,6 @@
 			</Id>
 			<DisplayName>1x1 Offroad Lifted Wheel Suspension Left</DisplayName>
 			<Icon>Textures\Icons\1x1_Lifted_Offroad_Suspension_Left.dds</Icon>
-			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -889,7 +878,7 @@
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<RotorPart>OffroadEliteRealWheel1x1mirrored</RotorPart>
+			<RotorPart>OffroadRealWheel1x1mirrored</RotorPart>
 			<PropulsionForce>1200</PropulsionForce>
 			<MinHeight>-0.32</MinHeight>
 			<MaxHeight>-0.15</MaxHeight>
@@ -914,7 +903,6 @@
 			</Id>
 			<DisplayName>1x1 Offroad Lifted Wheel Suspension Right</DisplayName>
 			<Icon>Textures\Icons\1x1_Lifted_Offroad_Suspension_Right.dds</Icon>
-			<Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -970,7 +958,7 @@
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<RotorPart>OffroadEliteRealWheel1x1</RotorPart>
+			<RotorPart>OffroadRealWheel1x1</RotorPart>
 			<PropulsionForce>1200</PropulsionForce>
 			<MinHeight>-0.32</MinHeight>
 			<MaxHeight>-0.15</MaxHeight>

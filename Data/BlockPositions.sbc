@@ -3,86 +3,30 @@
 	<BlockPositions>
 		<!-- Region Row 6-->
 		<BlockPosition>
-			<Name>3x3RightEliteSuspension</Name>
+			<Name>LG_3x3_Lifted_Suspension_Left</Name>
 			<Position>
 				<X>6</X>
 				<Y>6</Y>
 			</Position>
 		</BlockPosition>
 		<BlockPosition>
-			<Name>3x3LeftEliteSuspension</Name>
+			<Name>LG_3x3_Lifted_Suspension_Right</Name>
 			<Position>
 				<X>7</X>
 				<Y>6</Y>
 			</Position>
 		</BlockPosition>
 		<BlockPosition>
-			<Name>Offroad3x3RightEliteSuspension</Name>
+			<Name>LG_3x3_Offroad_Lifted_Suspension_Left</Name>
 			<Position>
 				<X>8</X>
 				<Y>6</Y>
 			</Position>
 		</BlockPosition>
 		<BlockPosition>
-			<Name>Offroad3x3LeftEliteSuspension</Name>
+			<Name>LG_3x3_Offroad_Lifted_Suspension_Right</Name>
 			<Position>
 				<X>9</X>
-				<Y>6</Y>
-			</Position>
-		</BlockPosition>
-		<BlockPosition>
-			<Name>LG_5x5_Lifted_Suspension_Left</Name>
-			<Position>
-				<X>10</X>
-				<Y>6</Y>
-			</Position>
-		</BlockPosition>
-		<BlockPosition>
-			<Name>LG_5x5_Lifted_Suspension_Right</Name>
-			<Position>
-				<X>11</X>
-				<Y>6</Y>
-			</Position>
-		</BlockPosition>
-		<BlockPosition>
-			<Name>LG_5x5_Offroad_Lifted_Suspension_Left</Name>
-			<Position>
-				<X>12</X>
-				<Y>6</Y>
-			</Position>
-		</BlockPosition>
-		<BlockPosition>
-			<Name>LG_5x5_Offroad_Lifted_Suspension_Right</Name>
-			<Position>
-				<X>13</X>
-				<Y>6</Y>
-			</Position>
-		</BlockPosition>
-		<BlockPosition>
-			<Name>LG_5x5_Lifted_Suspension_Left</Name>
-			<Position>
-				<X>14</X>
-				<Y>6</Y>
-			</Position>
-		</BlockPosition>
-		<BlockPosition>
-			<Name>LG_5x5_Lifted_Suspension_Right</Name>
-			<Position>
-				<X>15</X>
-				<Y>6</Y>
-			</Position>
-		</BlockPosition>
-		<BlockPosition>
-			<Name>LG_5x5_Offroad_Lifted_Suspension_Left</Name>
-			<Position>
-				<X>16</X>
-				<Y>6</Y>
-			</Position>
-		</BlockPosition>
-		<BlockPosition>
-			<Name>LG_5x5_Offroad_Lifted_Suspension_Right</Name>
-			<Position>
-				<X>17</X>
 				<Y>6</Y>
 			</Position>
 		</BlockPosition>
