@@ -1032,12 +1032,12 @@
 			<Model>Models\Cubes\Small\WheelSuspension1x1.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-			<Components>
-				<Component Subtype="SteelPlate" Count="25"/>
-				<Component Subtype="LargeTube" Count="25"/>
-				<Component Subtype="Construction" Count="50"/>
-				<Component Subtype="SteelPlate" Count="25"/>
-			</Components>
+            <Components>
+                <Component Subtype="SteelPlate" Count="5" />
+                <Component Subtype="LargeTube" Count="5" />
+                <Component Subtype="Construction" Count="25" />
+                <Component Subtype="SteelPlate" Count="5" />
+            </Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Small\WheelSuspension1x1Construction_1.mwm"/>
@@ -1096,12 +1096,12 @@
 			<Model>Models\Cubes\Small\WheelSuspension3x3.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-			<Components>
-				<Component Subtype="SteelPlate" Count="15"/>
-				<Component Subtype="LargeTube" Count="5"/>
-				<Component Subtype="Construction" Count="50"/>
-				<Component Subtype="SteelPlate" Count="10"/>
-			</Components>
+            <Components>
+                <Component Subtype="SteelPlate" Count="15" />
+                <Component Subtype="LargeTube" Count="15" />
+                <Component Subtype="Construction" Count="75" />
+                <Component Subtype="SteelPlate" Count="25" />
+            </Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Small\WheelSuspension3x3Construction_1.mwm"/>
@@ -1161,12 +1161,12 @@
 			<Model>Models\Cubes\Small\WheelSuspension5x5.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-			<Components>
-				<Component Subtype="SteelPlate" Count="30"/>
-				<Component Subtype="LargeTube" Count="20"/>
-				<Component Subtype="Construction" Count="150"/>
-				<Component Subtype="SteelPlate" Count="30"/>
-			</Components>
+            <Components>
+                <Component Subtype="SteelPlate" Count="25" />
+                <Component Subtype="LargeTube" Count="25" />
+                <Component Subtype="Construction" Count="125" />
+                <Component Subtype="SteelPlate" Count="50" />
+            </Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Small\WheelSuspension5x5Construction_1.mwm"/>
@@ -1225,12 +1225,12 @@
 			<Model>Models\Cubes\large\WheelSuspension1x1.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-			<Components>
-				<Component Subtype="SteelPlate" Count="20"/>
-				<Component Subtype="LargeTube" Count="20"/>
-				<Component Subtype="Construction" Count="100"/>
-				<Component Subtype="SteelPlate" Count="20"/>
-			</Components>
+            <Components>
+                <Component Subtype="SteelPlate" Count="30" />
+                <Component Subtype="LargeTube" Count="30" />
+                <Component Subtype="Construction" Count="90" />
+                <Component Subtype="SteelPlate" Count="60" />
+            </Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\WheelSuspension1x1Construction_1.mwm"/>
@@ -1289,12 +1289,12 @@
 			<Model>Models\Cubes\Large\WheelSuspension3x3.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-			<Components>
-				<Component Subtype="SteelPlate" Count="30"/>
-				<Component Subtype="LargeTube" Count="30"/>
-				<Component Subtype="Construction" Count="125"/>
-				<Component Subtype="SteelPlate" Count="30"/>
-			</Components>
+            <Components>
+                <Component Subtype="SteelPlate" Count="60" />
+                <Component Subtype="SteelPlate" Count="150" />
+                <Component Subtype="Construction" Count="150" />
+                <Component Subtype="LargeTube" Count="60" />
+            </Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\WheelSuspension3x3Construction_1.mwm"/>
@@ -1354,12 +1354,12 @@
 			<Model>Models\Cubes\Large\WheelSuspension5x5.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-			<Components>
-				<Component Subtype="SteelPlate" Count="80"/>
-				<Component Subtype="LargeTube" Count="80"/>
-				<Component Subtype="Construction" Count="300"/>
-				<Component Subtype="SteelPlate" Count="80"/>
-			</Components>
+            <Components>
+                <Component Subtype="SteelPlate" Count="90" />
+                <Component Subtype="LargeTube" Count="90" />
+                <Component Subtype="Construction" Count="210" />
+                <Component Subtype="SteelPlate" Count="300" />
+            </Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\WheelSuspension5x5Construction_1.mwm"/>
@@ -1481,12 +1481,12 @@
 			<Model>Models\Cubes\Small\WheelSuspension3x3mirrored.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-			<Components>
-				<Component Subtype="SteelPlate" Count="15"/>
-				<Component Subtype="LargeTube" Count="5"/>
-				<Component Subtype="Construction" Count="50"/>
-				<Component Subtype="SteelPlate" Count="10"/>
-			</Components>
+            <Components>
+                <Component Subtype="SteelPlate" Count="15" />
+                <Component Subtype="LargeTube" Count="15" />
+                <Component Subtype="Construction" Count="75" />
+                <Component Subtype="SteelPlate" Count="25" />
+            </Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Small\WheelSuspension3x3Construction_1.mwm"/>
@@ -1545,12 +1545,12 @@
 			<Model>Models\Cubes\Small\WheelSuspension5x5mirrored.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-			<Components>
-				<Component Subtype="SteelPlate" Count="30"/>
-				<Component Subtype="LargeTube" Count="20"/>
-				<Component Subtype="Construction" Count="150"/>
-				<Component Subtype="SteelPlate" Count="30"/>
-			</Components>
+            <Components>
+                <Component Subtype="SteelPlate" Count="25" />
+                <Component Subtype="LargeTube" Count="25" />
+                <Component Subtype="Construction" Count="125" />
+                <Component Subtype="SteelPlate" Count="50" />
+            </Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Small\WheelSuspension5x5Construction_1.mwm"/>
@@ -1608,12 +1608,12 @@
 			<Model>Models\Cubes\large\WheelSuspension1x1mirrored.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-			<Components>
-				<Component Subtype="SteelPlate" Count="20"/>
-				<Component Subtype="LargeTube" Count="20"/>
-				<Component Subtype="Construction" Count="100"/>
-				<Component Subtype="SteelPlate" Count="20"/>
-			</Components>
+            <Components>
+                <Component Subtype="SteelPlate" Count="30" />
+                <Component Subtype="LargeTube" Count="30" />
+                <Component Subtype="Construction" Count="90" />
+                <Component Subtype="SteelPlate" Count="60" />
+            </Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\WheelSuspension1x1Construction_1.mwm"/>
@@ -1671,12 +1671,12 @@
 			<Model>Models\Cubes\Large\WheelSuspension3x3mirrored.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-			<Components>
-				<Component Subtype="SteelPlate" Count="30"/>
-				<Component Subtype="LargeTube" Count="30"/>
-				<Component Subtype="Construction" Count="125"/>
-				<Component Subtype="SteelPlate" Count="30"/>
-			</Components>
+            <Components>
+                <Component Subtype="SteelPlate" Count="60" />
+                <Component Subtype="SteelPlate" Count="150" />
+                <Component Subtype="Construction" Count="150" />
+                <Component Subtype="LargeTube" Count="60" />
+            </Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\WheelSuspension3x3Construction_1.mwm"/>
@@ -1736,12 +1736,12 @@
 			<Model>Models\Cubes\Large\WheelSuspension5x5mirrored.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-			<Components>
-				<Component Subtype="SteelPlate" Count="80"/>
-				<Component Subtype="LargeTube" Count="80"/>
-				<Component Subtype="Construction" Count="300"/>
-				<Component Subtype="SteelPlate" Count="80"/>
-			</Components>
+            <Components>
+                <Component Subtype="SteelPlate" Count="90" />
+                <Component Subtype="LargeTube" Count="90" />
+                <Component Subtype="Construction" Count="210" />
+                <Component Subtype="SteelPlate" Count="300" />
+            </Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\WheelSuspension5x5Construction_1.mwm"/>
