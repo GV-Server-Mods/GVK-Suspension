@@ -1345,9 +1345,9 @@
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
             <Components>
                 <Component Subtype="SteelPlate" Count="60" />
+                <Component Subtype="LargeTube" Count="60" />
                 <Component Subtype="SteelPlate" Count="150" />
                 <Component Subtype="Construction" Count="150" />
-                <Component Subtype="LargeTube" Count="60" />
             </Components>
 			<CriticalComponent Index="0" Subtype="LargeTube"/>
 			<BuildProgressModels>
@@ -1756,9 +1756,9 @@
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
             <Components>
                 <Component Subtype="SteelPlate" Count="60" />
+                <Component Subtype="LargeTube" Count="60" />
                 <Component Subtype="SteelPlate" Count="150" />
                 <Component Subtype="Construction" Count="150" />
-                <Component Subtype="LargeTube" Count="60" />
             </Components>
 			<CriticalComponent Index="0" Subtype="LargeTube"/>
 			<BuildProgressModels>
