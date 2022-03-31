@@ -1346,8 +1346,8 @@
             <Components>
                 <Component Subtype="SteelPlate" Count="60" />
                 <Component Subtype="LargeTube" Count="60" />
-                <Component Subtype="SteelPlate" Count="150" />
                 <Component Subtype="Construction" Count="150" />
+                <Component Subtype="SteelPlate" Count="150" />
             </Components>
 			<CriticalComponent Index="0" Subtype="LargeTube"/>
 			<BuildProgressModels>
@@ -1757,8 +1757,8 @@
             <Components>
                 <Component Subtype="SteelPlate" Count="60" />
                 <Component Subtype="LargeTube" Count="60" />
-                <Component Subtype="SteelPlate" Count="150" />
                 <Component Subtype="Construction" Count="150" />
+                <Component Subtype="SteelPlate" Count="150" />
             </Components>
 			<CriticalComponent Index="0" Subtype="LargeTube"/>
 			<BuildProgressModels>
