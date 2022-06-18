@@ -10,6 +10,8 @@
 			<Name>LargeBlocks</Name>
 			<StrictSearch>true</StrictSearch>
 			<ItemIds>
+				<string>MotorSuspension/Suspension7x7</string>
+				<string>MotorSuspension/Suspension7x7mirrored</string>
 				<string>MotorSuspension/LG_5x5_Lifted_Suspension_Left</string>
 				<string>MotorSuspension/LG_5x5_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/LG_5x5_Offroad_Lifted_Suspension_Left</string>
@@ -39,8 +41,8 @@
 			<Name>SmallBlocks</Name>
 			<StrictSearch>true</StrictSearch>
 			<ItemIds>
-				<string>MotorSuspension/SG_5x5_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/SG_5x5_Lifted_Suspension_Right</string>
+				<string>MotorSuspension/SmallSuspension7x7</string>
+				<string>MotorSuspension/SmallSuspension7x7mirrored</string>
 				<string>MotorSuspension/SG_5x5_Offroad_Lifted_Suspension_Left</string>
 				<string>MotorSuspension/SG_5x5_Offroad_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/SG_1x1_Lifted_Suspension_Left</string>
@@ -94,30 +96,6 @@
 				<string>MotorSuspension/SG_3x3_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/SG_3x3_Offroad_Lifted_Suspension_Left</string>
 				<string>MotorSuspension/SG_3x3_Offroad_Lifted_Suspension_Right</string>
-			</ItemIds>
-		</Category>
-		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
-			<Id>
-				<TypeId>GuiBlockCategoryDefinition</TypeId>
-				<SubtypeId/>
-			</Id>
-			<DisplayName>+ theimmersion</DisplayName>
-			<Name>ztheimmersion</Name>
-			<ItemIds>
-				<string>MotorSuspension/LargeBlockATWheelSuspension</string>
-				<string>MotorSuspension/LargeBlockATWheelSuspensionMirrored</string>
-				<string>Wheel/LargeBlockATSuspensionWheel</string>
-				<string>Wheel/LargeBlockATSuspensionWheelMirrored</string>
-				<string>Wheel/LargeBlockATWheel</string>
-				<string>Wheel/LargeBlockATWheelMirrored</string>
-				<string>MotorSuspension/SmallBlockATWheelSuspension</string>
-				<string>MotorSuspension/SmallBlockATWheelSuspensionMirrored</string>
-				<string>Wheel/SmallBlockATSuspensionWheel</string>
-				<string>Wheel/SmallBlockATSuspensionWheelMirrored</string>
-				<string>Wheel/SmallBlockATWheel</string>
-				<string>Wheel/SmallBlockATWheelMirrored</string>
-				<string>MotorSuspension/SmallBlockBigATWheelSuspension</string>
-				<string>MotorSuspension/SmallBlockBigATWheelSuspensionMirrored</string>
 			</ItemIds>
 		</Category>
 	</CategoryClasses>

@@ -8,7 +8,7 @@
 				<SubtypeId>Suspension7x7</SubtypeId>
 			</Id>
 			<DisplayName>7x7 Suspension Right</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension7x7Right.dds</Icon>
+			<Icon>Textures\Icons\WheelSuspension7x7Right.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -93,7 +93,7 @@
 				<SubtypeId>SmallSuspension7x7</SubtypeId>
 			</Id>
 			<DisplayName>7x7 Suspension Right</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension7x7Right.dds</Icon>
+			<Icon>Textures\Icons\WheelSuspension7x7Right.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -176,7 +176,7 @@
 				<SubtypeId>Suspension7x7mirrored</SubtypeId>
 			</Id>
 			<DisplayName>7x7 Suspension Left</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension7x7Left.dds</Icon>
+			<Icon>Textures\Icons\WheelSuspension7x7Left.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -261,7 +261,7 @@
 				<SubtypeId>SmallSuspension7x7mirrored</SubtypeId>
 			</Id>
 			<DisplayName>7x7 Suspension Left</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension7x7Left.dds</Icon>
+			<Icon>Textures\Icons\WheelSuspension7x7Left.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -346,7 +346,7 @@
 			</Id>
 			<Public>false</Public>
 			<DisplayName>7x7 Real Wheel Right</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension7x7Right.dds</Icon>
+			<Icon>Textures\Icons\WheelSuspension7x7Right.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -410,7 +410,7 @@
 			</Id>
 			<Public>false</Public>
 			<DisplayName>7x7 Real Wheel Right</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension7x7Right.dds</Icon>
+			<Icon>Textures\Icons\WheelSuspension7x7Right.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -474,7 +474,7 @@
 			</Id>
 			<Public>false</Public>
 			<DisplayName>7x7 Real Wheel Left</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension7x7Left.dds</Icon>
+			<Icon>Textures\Icons\WheelSuspension7x7Left.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -537,7 +537,7 @@
 			</Id>
 			<Public>false</Public>
 			<DisplayName>7x7 Real Wheel Left</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension7x7Left.dds</Icon>
+			<Icon>Textures\Icons\WheelSuspension7x7Left.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
