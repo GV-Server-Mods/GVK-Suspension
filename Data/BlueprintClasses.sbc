@@ -1,47 +1,41 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <BlueprintClasses>
-    <Class>
-      <Id>                   
-        <TypeId>BlueprintClassDefinition</TypeId>
-        <SubtypeId>LargeBlocks</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_BlueprintClass_LargeBlocks</DisplayName>
-      <Icon>Textures\GUI\Icons\buttons\large_block.dds</Icon>
-      <HighlightIcon>Textures\GUI\Icons\buttons\large_block_highlight.dds</HighlightIcon>
-      <InputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</InputConstraintIcon>
-    </Class>
-    <Class>
-      <Id>                   
-        <TypeId>BlueprintClassDefinition</TypeId>
-        <SubtypeId>SmallBlocks</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_BlueprintClass_SmallBlocks</DisplayName>
-      <Icon>Textures\GUI\Icons\buttons\small_block.dds</Icon>
-      <HighlightIcon>Textures\GUI\Icons\buttons\small_block_highlight.dds</HighlightIcon>
-      <InputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</InputConstraintIcon>
-    </Class>
-  </BlueprintClasses>
-  <BlueprintClassEntries>
-    <Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/LargeBlockATWheelSuspension" />
-    <Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/LargeBlockATWheelSuspensionMirrored" />
-	
-    <Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/LargeBlockATSuspensionWheel" />
-    <Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/LargeBlockATSuspensionWheelMirrored" />
-	
-    <Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/LargeBlockATWheel" />
-    <Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/LargeBlockATWheelMirrored" />
-
-    <Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/SmallBlockATWheelSuspension" />
-    <Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/SmallBlockATWheelSuspensionMirrored" />
-    
-    <Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/SmallBlockATSuspensionWheel" />
-    <Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/SmallBlockATSuspensionWheelMirrored" />
-	
-    <Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/SmallBlockATWheel" />
-    <Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/SmallBlockATWheelMirrored" />
-	
-    <Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/SmallBlockBigATWheelSuspension" />
-    <Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/SmallBlockBigATWheelSuspensionMirrored" />
-  </BlueprintClassEntries>
+	<BlueprintClasses>
+		<Class>
+			<Id>
+				<TypeId>BlueprintClassDefinition</TypeId>
+				<SubtypeId>LargeBlocks</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_BlueprintClass_LargeBlocks</DisplayName>
+			<Icon>Textures\GUI\Icons\buttons\large_block.dds</Icon>
+			<HighlightIcon>Textures\GUI\Icons\buttons\large_block.dds</HighlightIcon>
+			<InputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</InputConstraintIcon>
+		</Class>
+		<Class>
+			<Id>
+				<TypeId>BlueprintClassDefinition</TypeId>
+				<SubtypeId>SmallBlocks</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_BlueprintClass_SmallBlocks</DisplayName>
+			<Icon>Textures\GUI\Icons\buttons\small_block.dds</Icon>
+			<HighlightIcon>Textures\GUI\Icons\buttons\small_block.dds</HighlightIcon>
+			<InputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</InputConstraintIcon>
+		</Class>
+	</BlueprintClasses>
+	<BlueprintClassEntries>
+		<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/LargeBlockATWheelSuspension"/>
+		<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/LargeBlockATWheelSuspensionMirrored"/>
+		<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/LargeBlockATSuspensionWheel"/>
+		<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/LargeBlockATSuspensionWheelMirrored"/>
+		<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/LargeBlockATWheel"/>
+		<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/LargeBlockATWheelMirrored"/>
+		<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/SmallBlockATWheelSuspension"/>
+		<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/SmallBlockATWheelSuspensionMirrored"/>
+		<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/SmallBlockATSuspensionWheel"/>
+		<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/SmallBlockATSuspensionWheelMirrored"/>
+		<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/SmallBlockATWheel"/>
+		<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/SmallBlockATWheelMirrored"/>
+		<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/SmallBlockBigATWheelSuspension"/>
+		<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/SmallBlockBigATWheelSuspensionMirrored"/>
+	</BlueprintClassEntries>
 </Definitions>
