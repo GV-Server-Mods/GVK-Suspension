@@ -68,7 +68,7 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel7x7</RotorPart>
-			<MinHeight>-2</MinHeight>
+			<MinHeight>-3</MinHeight>
 			<MaxHeight>2</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
@@ -236,7 +236,7 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel7x7mirrored</RotorPart>
-			<MinHeight>-2</MinHeight>
+			<MinHeight>-3</MinHeight>
 			<MaxHeight>2</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
