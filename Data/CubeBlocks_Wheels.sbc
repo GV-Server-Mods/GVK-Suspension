@@ -1032,19 +1032,19 @@
 			<Model>Models\Cubes\Small\WheelSuspension1x1.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-            <Components>
-                <Component Subtype="SteelPlate" Count="5" />
-                <Component Subtype="LargeTube" Count="5" />
-                <Component Subtype="Construction" Count="25" />
-                <Component Subtype="SteelPlate" Count="5" />
-            </Components>
+			<Components>
+				<Component Subtype="SteelPlate" Count="5"/>
+				<Component Subtype="LargeTube" Count="5"/>
+				<Component Subtype="Construction" Count="25"/>
+				<Component Subtype="SteelPlate" Count="5"/>
+			</Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Small\WheelSuspension1x1Construction_1.mwm"/>
 				<Model BuildPercentUpperBound="1" File="Models\Cubes\Small\WheelSuspension1x1Construction_2.mwm"/>
 			</BuildProgressModels>
 			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0"/>
+				<MountPoint Side="Back" StartX="1" StartY="1" EndX="1" EndY="1" Enabled="false"/>
 			</MountPoints>
 			<VoxelPlacement>
 				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
@@ -1096,12 +1096,12 @@
 			<Model>Models\Cubes\Small\WheelSuspension3x3.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-            <Components>
-                <Component Subtype="SteelPlate" Count="15" />
-                <Component Subtype="LargeTube" Count="15" />
-                <Component Subtype="Construction" Count="75" />
-                <Component Subtype="SteelPlate" Count="25" />
-            </Components>
+			<Components>
+				<Component Subtype="SteelPlate" Count="15"/>
+				<Component Subtype="LargeTube" Count="15"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="SteelPlate" Count="25"/>
+			</Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Small\WheelSuspension3x3Construction_1.mwm"/>
@@ -1121,7 +1121,7 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
 			</MountPoints>
 			<BlockPairName>RealWheel</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
@@ -1161,12 +1161,12 @@
 			<Model>Models\Cubes\Small\WheelSuspension5x5.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-            <Components>
-                <Component Subtype="SteelPlate" Count="25" />
-                <Component Subtype="LargeTube" Count="25" />
-                <Component Subtype="Construction" Count="125" />
-                <Component Subtype="SteelPlate" Count="50" />
-            </Components>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="LargeTube" Count="25"/>
+				<Component Subtype="Construction" Count="125"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Small\WheelSuspension5x5Construction_1.mwm"/>
@@ -1186,7 +1186,7 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
 			</MountPoints>
 			<BlockPairName>RealWheel5x5</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
@@ -1225,12 +1225,12 @@
 			<Model>Models\Cubes\large\WheelSuspension1x1.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-            <Components>
-                <Component Subtype="SteelPlate" Count="30" />
-                <Component Subtype="LargeTube" Count="30" />
-                <Component Subtype="Construction" Count="90" />
-                <Component Subtype="SteelPlate" Count="60" />
-            </Components>
+			<Components>
+				<Component Subtype="SteelPlate" Count="30"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Construction" Count="90"/>
+				<Component Subtype="SteelPlate" Count="60"/>
+			</Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\WheelSuspension1x1Construction_1.mwm"/>
@@ -1251,8 +1251,9 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0"/>
-			</MountPoints><BlockPairName>RealWheel1x1</BlockPairName>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
+			</MountPoints>
+			<BlockPairName>RealWheel1x1</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
 			<MirroringY>Z</MirroringY>
@@ -1289,12 +1290,12 @@
 			<Model>Models\Cubes\Large\WheelSuspension3x3.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-            <Components>
-                <Component Subtype="SteelPlate" Count="60" />
-                <Component Subtype="LargeTube" Count="60" />
-                <Component Subtype="Construction" Count="150" />
-                <Component Subtype="SteelPlate" Count="150" />
-            </Components>
+			<Components>
+				<Component Subtype="SteelPlate" Count="60"/>
+				<Component Subtype="LargeTube" Count="60"/>
+				<Component Subtype="Construction" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\WheelSuspension3x3Construction_1.mwm"/>
@@ -1315,8 +1316,9 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0"/>
-			</MountPoints><BlockPairName>RealWheel</BlockPairName>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
+			</MountPoints>
+			<BlockPairName>RealWheel</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
 			<MirroringY>Z</MirroringY>
@@ -1354,12 +1356,12 @@
 			<Model>Models\Cubes\Large\WheelSuspension5x5.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-            <Components>
-                <Component Subtype="SteelPlate" Count="90" />
-                <Component Subtype="LargeTube" Count="90" />
-                <Component Subtype="Construction" Count="210" />
-                <Component Subtype="SteelPlate" Count="300" />
-            </Components>
+			<Components>
+				<Component Subtype="SteelPlate" Count="90"/>
+				<Component Subtype="LargeTube" Count="90"/>
+				<Component Subtype="Construction" Count="210"/>
+				<Component Subtype="SteelPlate" Count="300"/>
+			</Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\WheelSuspension5x5Construction_1.mwm"/>
@@ -1380,8 +1382,9 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0"/>
-			</MountPoints><BlockPairName>RealWheel5x5</BlockPairName>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
+			</MountPoints>
+			<BlockPairName>RealWheel5x5</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
 			<MirroringY>Z</MirroringY>
@@ -1430,8 +1433,9 @@
 				<Model BuildPercentUpperBound="1" File="Models\Cubes\Small\WheelSuspension1x1Construction_2.mwm"/>
 			</BuildProgressModels>
 			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0"/>
-			</MountPoints><VoxelPlacement>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
+			</MountPoints>
+			<VoxelPlacement>
 				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
 				<StaticMode>
 					<PlacementMode>OutsideVoxel</PlacementMode>
@@ -1481,12 +1485,12 @@
 			<Model>Models\Cubes\Small\WheelSuspension3x3mirrored.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-            <Components>
-                <Component Subtype="SteelPlate" Count="15" />
-                <Component Subtype="LargeTube" Count="15" />
-                <Component Subtype="Construction" Count="75" />
-                <Component Subtype="SteelPlate" Count="25" />
-            </Components>
+			<Components>
+				<Component Subtype="SteelPlate" Count="15"/>
+				<Component Subtype="LargeTube" Count="15"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="SteelPlate" Count="25"/>
+			</Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Small\WheelSuspension3x3Construction_1.mwm"/>
@@ -1506,8 +1510,9 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0"/>
-			</MountPoints><BlockPairName>RealWheelmirrored</BlockPairName>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
+			</MountPoints>
+			<BlockPairName>RealWheelmirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
 			<MirroringY>Z</MirroringY>
@@ -1545,12 +1550,12 @@
 			<Model>Models\Cubes\Small\WheelSuspension5x5mirrored.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-            <Components>
-                <Component Subtype="SteelPlate" Count="25" />
-                <Component Subtype="LargeTube" Count="25" />
-                <Component Subtype="Construction" Count="125" />
-                <Component Subtype="SteelPlate" Count="50" />
-            </Components>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="LargeTube" Count="25"/>
+				<Component Subtype="Construction" Count="125"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Small\WheelSuspension5x5Construction_1.mwm"/>
@@ -1570,8 +1575,9 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0"/>
-			</MountPoints><BlockPairName>RealWheel5x5mirrored</BlockPairName>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
+			</MountPoints>
+			<BlockPairName>RealWheel5x5mirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
 			<MirroringY>Z</MirroringY>
@@ -1608,12 +1614,12 @@
 			<Model>Models\Cubes\large\WheelSuspension1x1mirrored.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-            <Components>
-                <Component Subtype="SteelPlate" Count="30" />
-                <Component Subtype="LargeTube" Count="30" />
-                <Component Subtype="Construction" Count="90" />
-                <Component Subtype="SteelPlate" Count="60" />
-            </Components>
+			<Components>
+				<Component Subtype="SteelPlate" Count="30"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Construction" Count="90"/>
+				<Component Subtype="SteelPlate" Count="60"/>
+			</Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\WheelSuspension1x1Construction_1.mwm"/>
@@ -1634,8 +1640,9 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0"/>
-			</MountPoints><BlockPairName>RealWheel1x1mirrored</BlockPairName>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
+			</MountPoints>
+			<BlockPairName>RealWheel1x1mirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
 			<MirroringY>Z</MirroringY>
@@ -1671,12 +1678,12 @@
 			<Model>Models\Cubes\Large\WheelSuspension3x3mirrored.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-            <Components>
-                <Component Subtype="SteelPlate" Count="60" />
-                <Component Subtype="LargeTube" Count="60" />
-                <Component Subtype="Construction" Count="150" />
-                <Component Subtype="SteelPlate" Count="150" />
-            </Components>
+			<Components>
+				<Component Subtype="SteelPlate" Count="60"/>
+				<Component Subtype="LargeTube" Count="60"/>
+				<Component Subtype="Construction" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\WheelSuspension3x3Construction_1.mwm"/>
@@ -1697,8 +1704,9 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0"/>
-			</MountPoints><BlockPairName>RealWheelmirrored</BlockPairName>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
+			</MountPoints>
+			<BlockPairName>RealWheelmirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
 			<MirroringY>Z</MirroringY>
@@ -1736,12 +1744,12 @@
 			<Model>Models\Cubes\Large\WheelSuspension5x5mirrored.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<PhysicalMaterial>Wheel</PhysicalMaterial>
-            <Components>
-                <Component Subtype="SteelPlate" Count="90" />
-                <Component Subtype="LargeTube" Count="90" />
-                <Component Subtype="Construction" Count="210" />
-                <Component Subtype="SteelPlate" Count="300" />
-            </Components>
+			<Components>
+				<Component Subtype="SteelPlate" Count="90"/>
+				<Component Subtype="LargeTube" Count="90"/>
+				<Component Subtype="Construction" Count="210"/>
+				<Component Subtype="SteelPlate" Count="300"/>
+			</Components>
 			<CriticalComponent Subtype="LargeTube" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\WheelSuspension5x5Construction_1.mwm"/>
@@ -1762,8 +1770,9 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0"/>
-			</MountPoints><BlockPairName>RealWheel5x5mirrored</BlockPairName>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
+			</MountPoints>
+			<BlockPairName>RealWheel5x5mirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
 			<MirroringY>Z</MirroringY>
