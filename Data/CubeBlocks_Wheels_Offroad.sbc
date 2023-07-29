@@ -1638,6 +1638,8 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
+			<MountPoints>
+            </MountPoints>
 			<BlockPairName>OffroadRealWheel2x2</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -1912,6 +1914,8 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
+			<MountPoints>
+            </MountPoints>
 			<BlockPairName>OffroadRealWheel2x2</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -2182,6 +2186,8 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
+			<MountPoints>
+            </MountPoints>
 			<BlockPairName>OffroadRealWheel2x2Mirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -2456,6 +2462,8 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
+			<MountPoints>
+            </MountPoints>
 			<BlockPairName>OffroadRealWheel2x2Mirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
