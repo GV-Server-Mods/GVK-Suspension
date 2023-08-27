@@ -232,8 +232,8 @@
 			<PropulsionForce>600000</PropulsionForce>
 			<RotorPart>RealWheelmirrored</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
-			<MinHeight>-1.5</MinHeight>
-			<MaxHeight>1.3</MaxHeight>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -312,8 +312,8 @@
 			<PropulsionForce>600000</PropulsionForce>
 			<RotorPart>RealWheel</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
-			<MinHeight>-1.5</MinHeight>
-			<MaxHeight>1.3</MaxHeight>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>

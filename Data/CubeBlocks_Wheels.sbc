@@ -70,8 +70,8 @@
 			<!-- The max angle (radians) that steer angle slider can go to. -->
 			<MaxSteer>0.8</MaxSteer>
 			<!-- Min/Max height sets the physical boundaries of the suspension as well as the height slider limits. -->
-			<MinHeight>-1.5</MinHeight>
-			<MaxHeight>1.3</MaxHeight>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -155,8 +155,8 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel5x5</RotorPart>
-			<MinHeight>-1.5</MinHeight>
-			<MaxHeight>1.3</MaxHeight>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -240,8 +240,8 @@
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<PropulsionForce>200000</PropulsionForce>
 			<RotorPart>RealWheel1x1</RotorPart>
-			<MinHeight>-1.5</MinHeight>
-			<MaxHeight>1.3</MaxHeight>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -576,8 +576,8 @@
 			<!-- The max angle (radians) that steer angle slider can go to. -->
 			<MaxSteer>0.8</MaxSteer>
 			<!-- Min/Max height sets the physical boundaries of the suspension as well as the height slider limits. -->
-			<MinHeight>-1.5</MinHeight>
-			<MaxHeight>1.3</MaxHeight>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -661,8 +661,8 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel5x5mirrored</RotorPart>
-			<MinHeight>-1.5</MinHeight>
-			<MaxHeight>1.3</MaxHeight>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -746,8 +746,8 @@
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<PropulsionForce>200000</PropulsionForce>
 			<RotorPart>RealWheel1x1mirrored</RotorPart>
-			<MinHeight>-1.5</MinHeight>
-			<MaxHeight>1.3</MaxHeight>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
