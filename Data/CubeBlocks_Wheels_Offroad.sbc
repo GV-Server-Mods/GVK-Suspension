@@ -1501,6 +1501,9 @@
 				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Small\WheelSuspension2x2_Racing_Construction1.mwm"/>
 				<Model BuildPercentUpperBound="1" File="Models\Cubes\Small\WheelSuspension2x2_Racing_Construction2.mwm"/>
 			</BuildProgressModels>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
+			</MountPoints>
 			<VoxelPlacement>
 				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
 				<StaticMode>
@@ -1519,8 +1522,6 @@
 				<ColliderHeight>0.85</ColliderHeight>
 				<ColliderOffset>0.27</ColliderOffset>
 			</WheelPlacementCollider>
-			<MountPoints>
-            </MountPoints>
 			<BlockPairName>OffroadRealWheel2x2</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -1781,6 +1782,9 @@
 				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\WheelSuspension2x2_Racing_Construction2.mwm"/>
 				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\WheelSuspension2x2_Racing_Construction3.mwm"/>
 			</BuildProgressModels>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
+			</MountPoints>
 			<VoxelPlacement>
 				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
 				<StaticMode>
@@ -1799,8 +1803,6 @@
 				<ColliderHeight>0.88</ColliderHeight>
 				<ColliderOffset>0.28</ColliderOffset>
 			</WheelPlacementCollider>
-			<MountPoints>
-            </MountPoints>
 			<BlockPairName>OffroadRealWheel2x2</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -2061,6 +2063,9 @@
 				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Small\WheelSuspension2x2_Racing_Construction1.mwm"/>
 				<Model BuildPercentUpperBound="1" File="Models\Cubes\Small\WheelSuspension2x2_Racing_Construction2.mwm"/>
 			</BuildProgressModels>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="1" StartY="1" EndX="1" EndY="1" Enabled="false"/>
+			</MountPoints>
 			<VoxelPlacement>
 				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
 				<StaticMode>
@@ -2079,8 +2084,6 @@
 				<ColliderHeight>0.85</ColliderHeight>
 				<ColliderOffset>0.387</ColliderOffset>
 			</WheelPlacementCollider>
-			<MountPoints>
-            </MountPoints>
 			<BlockPairName>OffroadRealWheel2x2Mirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -2341,6 +2344,9 @@
 				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\WheelSuspension2x2_Racing_Construction2.mwm"/>
 				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\WheelSuspension2x2_Racing_Construction3.mwm"/>
 			</BuildProgressModels>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
+			</MountPoints>
 			<VoxelPlacement>
 				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
 				<StaticMode>
@@ -2359,8 +2365,6 @@
 				<ColliderHeight>0.88</ColliderHeight>
 				<ColliderOffset>0.28</ColliderOffset>
 			</WheelPlacementCollider>
-			<MountPoints>
-            </MountPoints>
 			<BlockPairName>OffroadRealWheel2x2Mirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
