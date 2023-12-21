@@ -15,7 +15,6 @@
 			<Icon>Textures\Icons\5x5_Lifted_Suspension_Left.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
-			<GuiVisible>false</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="2" y="3" z="2"/>
 			<ModelOffset x="0" y="0" z="0"/>
@@ -78,13 +77,14 @@
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
 			<AxleFriction>200000</AxleFriction>
-			<SteeringSpeed>0.010</SteeringSpeed>
+			<SteeringSpeed>0.005</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
 			<AirShockActivationDelay>60</AirShockActivationDelay>
 			<DestroyEffect>BlockDestroyedExplosion_Large3X</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>50</PCU>
+			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -95,7 +95,6 @@
 			<Icon>Textures\Icons\5x5_Lifted_Suspension_Right.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
-			<GuiVisible>false</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="2" y="3" z="2"/>
 			<ModelOffset x="0" y="0" z="0"/>
@@ -159,13 +158,14 @@
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
 			<AxleFriction>200000</AxleFriction>
-			<SteeringSpeed>0.010</SteeringSpeed>
+			<SteeringSpeed>0.005</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
 			<AirShockActivationDelay>60</AirShockActivationDelay>
 			<DestroyEffect>BlockDestroyedExplosion_Large3X</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>50</PCU>
+			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -233,19 +233,20 @@
 			<RotorPart>RealWheelmirrored</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
 			<MinHeight>-2.00</MinHeight>
-			<MaxHeight>1.5</MaxHeight>
+			<MaxHeight>2</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
 			<AxleFriction>200000</AxleFriction>
-			<SteeringSpeed>0.005</SteeringSpeed>
+			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
 			<AirShockActivationDelay>60</AirShockActivationDelay>
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>50</PCU>
+			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -313,19 +314,20 @@
 			<RotorPart>RealWheel</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
 			<MinHeight>-2.00</MinHeight>
-			<MaxHeight>1.5</MaxHeight>
+			<MaxHeight>2</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
 			<AxleFriction>200000</AxleFriction>
-			<SteeringSpeed>0.005</SteeringSpeed>
+			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
 			<AirShockActivationDelay>60</AirShockActivationDelay>
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>50</PCU>
+			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -393,7 +395,7 @@
 			<RotorPart>RealWheel2x2Mirrored</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
 			<MinHeight>-2.00</MinHeight>
-			<MaxHeight>1.5</MaxHeight>
+			<MaxHeight>2</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -406,6 +408,7 @@
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>50</PCU>
+			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -473,7 +476,7 @@
 			<RotorPart>RealWheel2x2</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
 			<MinHeight>-2.00</MinHeight>
-			<MaxHeight>1.5</MaxHeight>
+			<MaxHeight>2</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -486,6 +489,7 @@
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>50</PCU>
+			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -496,7 +500,6 @@
 			<Icon>Textures\Icons\1x1_Lifted_Suspension_Left.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
-			<GuiVisible>false</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="2" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
@@ -552,8 +555,8 @@
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<PropulsionForce>200000</PropulsionForce>
 			<RotorPart>RealWheel1x1mirrored</RotorPart>
-			<MinHeight>-1.6</MinHeight>
-			<MaxHeight>-0.8</MaxHeight>
+			<MinHeight>-2</MinHeight>
+			<MaxHeight>2</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -566,6 +569,7 @@
 			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>50</PCU>
+			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -576,7 +580,6 @@
 			<Icon>Textures\Icons\1x1_Lifted_Suspension_Right.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
-			<GuiVisible>false</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="2" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
@@ -632,8 +635,8 @@
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<PropulsionForce>200000</PropulsionForce>
 			<RotorPart>RealWheel1x1</RotorPart>
-			<MinHeight>-1.6</MinHeight>
-			<MaxHeight>-0.8</MaxHeight>
+			<MinHeight>-2</MinHeight>
+			<MaxHeight>2</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -646,6 +649,7 @@
 			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>50</PCU>
+			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<!-- ==============================================================
 
@@ -661,7 +665,6 @@
 			<Icon>Textures\Icons\5x5_Lifted_Suspension_Left.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
-			<GuiVisible>false</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="2" y="3" z="2"/>
 			<ModelOffset x="0" y="0" z="0"/>
@@ -730,6 +733,7 @@
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>50</PCU>
+			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -740,7 +744,6 @@
 			<Icon>Textures\Icons\5x5_Lifted_Suspension_Right.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
-			<GuiVisible>false</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="2" y="3" z="2"/>
 			<ModelOffset x="0" y="0" z="0"/>
@@ -809,6 +812,7 @@
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>50</PCU>
+			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -880,13 +884,14 @@
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
 			<AxleFriction>200000</AxleFriction>
-			<SteeringSpeed>0.010</SteeringSpeed>
+			<SteeringSpeed>0.015</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
 			<AirShockActivationDelay>60</AirShockActivationDelay>
 			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>50</PCU>
+			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -958,13 +963,14 @@
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
 			<AxleFriction>200000</AxleFriction>
-			<SteeringSpeed>0.010</SteeringSpeed>
+			<SteeringSpeed>0.015</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
 			<AirShockActivationDelay>60</AirShockActivationDelay>
 			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>50</PCU>
+			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -975,7 +981,6 @@
 			<Icon>Textures\Icons\1x1_Lifted_Suspension_Left.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
-			<GuiVisible>false</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="2" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
@@ -1037,13 +1042,14 @@
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
 			<AxleFriction>200000</AxleFriction>
-			<SteeringSpeed>0.010</SteeringSpeed>
+			<SteeringSpeed>0.015</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
 			<AirShockActivationDelay>60</AirShockActivationDelay>
 			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>50</PCU>
+			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -1054,7 +1060,6 @@
 			<Icon>Textures\Icons\1x1_Lifted_Suspension_Right.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
-			<GuiVisible>false</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="2" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
@@ -1116,13 +1121,14 @@
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
 			<AxleFriction>200000</AxleFriction>
-			<SteeringSpeed>0.010</SteeringSpeed>
+			<SteeringSpeed>0.015</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
 			<AirShockActivationDelay>60</AirShockActivationDelay>
 			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>50</PCU>
+			<GuiVisible>false</GuiVisible>
 		</Definition>
 	</CubeBlocks>
 </Definitions>

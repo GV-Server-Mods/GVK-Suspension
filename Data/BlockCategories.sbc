@@ -20,16 +20,14 @@
 				<string>MotorSuspension/LG_3x3_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/LG_3x3_Offroad_Lifted_Suspension_Left</string>
 				<string>MotorSuspension/LG_3x3_Offroad_Lifted_Suspension_Right</string>
+				<string>MotorSuspension/LG_2x2_Lifted_Suspension_Left</string>
+				<string>MotorSuspension/LG_2x2_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/LG_1x1_Lifted_Suspension_Left</string>
 				<string>MotorSuspension/LG_1x1_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/LG_1x1_Offroad_Lifted_Suspension_Left</string>
 				<string>MotorSuspension/LG_1x1_Offroad_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/LargeBlockATWheelSuspension</string>
 				<string>MotorSuspension/LargeBlockATWheelSuspensionMirrored</string>
-				<string>Wheel/LargeBlockATSuspensionWheel</string>
-				<string>Wheel/LargeBlockATSuspensionWheelMirrored</string>
-				<string>Wheel/LargeBlockATWheel</string>
-				<string>Wheel/LargeBlockATWheelMirrored</string>
 			</ItemIds>
 		</Category>
 		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
@@ -55,12 +53,6 @@
 				<string>MotorSuspension/SG_3x3_Offroad_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/SmallBlockATWheelSuspension</string>
 				<string>MotorSuspension/SmallBlockATWheelSuspensionMirrored</string>
-				<string>Wheel/SmallBlockATSuspensionWheel</string>
-				<string>Wheel/SmallBlockATSuspensionWheelMirrored</string>
-				<string>Wheel/SmallBlockATWheel</string>
-				<string>Wheel/SmallBlockATWheelMirrored</string>
-				<string>MotorSuspension/SmallBlockBigATWheelSuspension</string>
-				<string>MotorSuspension/SmallBlockBigATWheelSuspensionMirrored</string>
 			</ItemIds>
 		</Category>
 		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
@@ -68,7 +60,7 @@
 				<TypeId>GuiBlockCategoryDefinition</TypeId>
 				<SubtypeId/>
 			</Id>
-			<DisplayName>Lifted Suspension</DisplayName>
+			<DisplayName>GVK Lifted Suspension</DisplayName>
 			<Name>LiftedSuspension</Name>
 			<StrictSearch>true</StrictSearch>
 			<ItemIds>
@@ -80,6 +72,8 @@
 				<string>MotorSuspension/LG_3x3_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/LG_3x3_Offroad_Lifted_Suspension_Left</string>
 				<string>MotorSuspension/LG_3x3_Offroad_Lifted_Suspension_Right</string>
+				<string>MotorSuspension/LG_2x2_Lifted_Suspension_Left</string>
+				<string>MotorSuspension/LG_2x2_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/LG_1x1_Lifted_Suspension_Left</string>
 				<string>MotorSuspension/LG_1x1_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/LG_1x1_Offroad_Lifted_Suspension_Left</string>

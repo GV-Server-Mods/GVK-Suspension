@@ -10,6 +10,7 @@
 			<Blocks>
 				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="LG_3x3_Lifted_Suspension_Right"/>
 				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="LG_5x5_Lifted_Suspension_Right"/>
+				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="LG_2x2_Lifted_Suspension_Right"/>
 				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="LG_1x1_Lifted_Suspension_Right"/>
 				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="SG_3x3_Lifted_Suspension_Right"/>
 				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="SG_5x5_Lifted_Suspension_Right"/>
@@ -24,6 +25,7 @@
 			<Blocks>
 				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="LG_3x3_Lifted_Suspension_Left"/>
 				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="LG_5x5_Lifted_Suspension_Left"/>
+				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="LG_2x2_Lifted_Suspension_Left"/>
 				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="LG_1x1_Lifted_Suspension_Left"/>
 				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="SG_3x3_Lifted_Suspension_Left"/>
 				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="SG_5x5_Lifted_Suspension_Left"/>
