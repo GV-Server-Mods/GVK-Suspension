@@ -65,7 +65,7 @@
 			<BuildTimeSeconds>30</BuildTimeSeconds>
 			<PrimarySound>BlockWheel5x5</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>15</RequiredPowerInput>
+			<RequiredPowerInput>3</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<PropulsionForce>1000000</PropulsionForce>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
@@ -149,7 +149,7 @@
 			<BuildTimeSeconds>30</BuildTimeSeconds>
 			<PrimarySound>BlockWheel5x5</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>15</RequiredPowerInput>
+			<RequiredPowerInput>3</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<PropulsionForce>1000000</PropulsionForce>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
@@ -233,7 +233,7 @@
 			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>10</RequiredPowerInput>
+			<RequiredPowerInput>2</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -320,7 +320,7 @@
 			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>10</RequiredPowerInput>
+			<RequiredPowerInput>2</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -407,7 +407,7 @@
 			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>10</RequiredPowerInput>
+			<RequiredPowerInput>2</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -494,7 +494,7 @@
 			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>10</RequiredPowerInput>
+			<RequiredPowerInput>2</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -579,7 +579,7 @@
 			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel1x1</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>5</RequiredPowerInput>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -663,7 +663,7 @@
 			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel1x1</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>5</RequiredPowerInput>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -752,7 +752,7 @@
 			<BuildTimeSeconds>15</BuildTimeSeconds>
 			<PrimarySound>BlockWheel5x5</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>3</RequiredPowerInput>
+			<RequiredPowerInput>0.6</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -834,7 +834,7 @@
 			<BuildTimeSeconds>15</BuildTimeSeconds>
 			<PrimarySound>BlockWheel5x5</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>3</RequiredPowerInput>
+			<RequiredPowerInput>0.6</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -916,7 +916,7 @@
 			<BuildTimeSeconds>10</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>2</RequiredPowerInput>
+			<RequiredPowerInput>0.4</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -998,7 +998,7 @@
 			<BuildTimeSeconds>10</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>2</RequiredPowerInput>
+			<RequiredPowerInput>0.4</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -1080,7 +1080,7 @@
 			<BuildTimeSeconds>10</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>1.5</RequiredPowerInput>
+			<RequiredPowerInput>.3</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -1162,7 +1162,7 @@
 			<BuildTimeSeconds>10</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>1.5</RequiredPowerInput>
+			<RequiredPowerInput>.3</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -1244,7 +1244,7 @@
 			<BuildTimeSeconds>10</BuildTimeSeconds>
 			<PrimarySound>BlockWheel1x1</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>1</RequiredPowerInput>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -1326,7 +1326,7 @@
 			<BuildTimeSeconds>10</BuildTimeSeconds>
 			<PrimarySound>BlockWheel1x1</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>1</RequiredPowerInput>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -2482,7 +2482,7 @@
 			<BuildTimeSeconds>30</BuildTimeSeconds>
 			<PrimarySound>BlockWheel5x5</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>15</RequiredPowerInput>
+			<RequiredPowerInput>3</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<PropulsionForce>1000000</PropulsionForce>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
@@ -2566,7 +2566,7 @@
 			<BuildTimeSeconds>30</BuildTimeSeconds>
 			<PrimarySound>BlockWheel5x5</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>15</RequiredPowerInput>
+			<RequiredPowerInput>3</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<PropulsionForce>1000000</PropulsionForce>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
@@ -2650,7 +2650,7 @@
 			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>10</RequiredPowerInput>
+			<RequiredPowerInput>2</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -2735,7 +2735,7 @@
 			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>10</RequiredPowerInput>
+			<RequiredPowerInput>2</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -2822,7 +2822,7 @@
 			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>10</RequiredPowerInput>
+			<RequiredPowerInput>2</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -2907,7 +2907,7 @@
 			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>10</RequiredPowerInput>
+			<RequiredPowerInput>2</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -2992,7 +2992,7 @@
 			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel1x1</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>5</RequiredPowerInput>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -3076,7 +3076,7 @@
 			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel1x1</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>5</RequiredPowerInput>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -3164,7 +3164,7 @@
 			<BuildTimeSeconds>15</BuildTimeSeconds>
 			<PrimarySound>BlockWheel5x5</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>3</RequiredPowerInput>
+			<RequiredPowerInput>0.6</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -3247,7 +3247,7 @@
 			<BuildTimeSeconds>15</BuildTimeSeconds>
 			<PrimarySound>BlockWheel5x5</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>3</RequiredPowerInput>
+			<RequiredPowerInput>0.6</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -3329,7 +3329,7 @@
 			<BuildTimeSeconds>10</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>2</RequiredPowerInput>
+			<RequiredPowerInput>0.4</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -3411,7 +3411,7 @@
 			<BuildTimeSeconds>15</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>2</RequiredPowerInput>
+			<RequiredPowerInput>0.4</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -3493,7 +3493,7 @@
 			<BuildTimeSeconds>10</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>1.5</RequiredPowerInput>
+			<RequiredPowerInput>.3</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -3575,7 +3575,7 @@
 			<BuildTimeSeconds>10</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>1.5</RequiredPowerInput>
+			<RequiredPowerInput>.3</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -3657,7 +3657,7 @@
 			<BuildTimeSeconds>10</BuildTimeSeconds>
 			<PrimarySound>BlockWheel1x1</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>1</RequiredPowerInput>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
@@ -3739,7 +3739,7 @@
 			<BuildTimeSeconds>10</BuildTimeSeconds>
 			<PrimarySound>BlockWheel1x1</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
-			<RequiredPowerInput>1</RequiredPowerInput>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
