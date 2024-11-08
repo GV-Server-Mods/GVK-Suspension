@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<Model Name="Segment">
+	<Parameter Name="RescaleFactor">1.0</Parameter>
+	<Parameter Name="Centered">false</Parameter>
+	<Parameter Name="RescaleToLengthInMeters">false</Parameter>
+	<Material Name="Decals">
+		<Parameter Name="Technique">DECAL_CUTOUT</Parameter>
+		<Parameter Name="ColorMetalTexture">Textures\Models\Cubes\Decals_Atlas_A_01_cm.dds</Parameter>
+		<Parameter Name="NormalGlossTexture">Textures\Models\Cubes\Decals_Atlas_A_01_ng.dds</Parameter>
+		<Parameter Name="AddMapsTexture">Textures\Models\Cubes\Decals_Atlas_A_02_add.dds</Parameter>
+		<Parameter Name="AlphamaskTexture">Textures\Models\Cubes\Decals_Atlas_A_01_alphamask.dds</Parameter>
+	</Material>
+	<MaterialRef Name="Chrome"/>
+	<MaterialRef Name="PaintedMetal_Colorable"/>
+	<MaterialRef Name="PaintedMetal_VeryDark"/>
+	<MaterialRef Name="PaintedMetalScratched_Colorable"/>
+	<MaterialRef Name="PaintedMetalScratched_VeryDark"/>
+	<MaterialRef Name="RubberDry"/>
+	<MaterialRef Name="RubberWheels"/>
+	<MaterialRef Name="RubberWheelsScratched"/>
+	<LOD Distance="15">
+		<Model>Models\Segment_LOD1</Model>
+	</LOD>
+	<LOD Distance="30">
+		<Model>Models\Segment_LOD2</Model>
+	</LOD>
+	<LOD Distance="60">
+		<Model>Models\Segment_LOD3</Model>
+	</LOD>
+</Model>
