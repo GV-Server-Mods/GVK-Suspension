@@ -1,0 +1,1649 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CubeBlocks>
+		<!-- ==============================================================
+
+                      Large Grid Suspension (Short Tracks)
+
+=============================================================== -->
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>ShortTrackSuspension5x5mirrored</SubtypeId>
+			</Id>
+			<DisplayName>5x5 Short Track Suspension Left</DisplayName>
+			<Icon>Textures\Icons\5x5_Lifted_Short_Track_Suspension_Left.dds</Icon>
+			<Description>Description_Suspension</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="2" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Large\MotorSuspensionCompactLarge.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200"/>
+				<Component Subtype="Construction" Count="200"/>
+				<Component Subtype="LargeTube" Count="100"/>
+				<Component Subtype="Motor" Count="100"/>
+				<Component Subtype="SmallTube" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0.1" EndX="2" EndY="1.9" Default="true"/>
+				<MountPoint Side="Front" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>ShortTrackSuspension5x5mirrored</BlockPairName>
+			<MirroringY>ZThenOffsetX</MirroringY>
+			<MirroringZ>YThenOffsetX</MirroringZ>
+			<MirroringBlock>ShortTrackSuspension5x5</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<PrimarySound>BlockWheel5x5</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>3</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<PropulsionForce>1000000</PropulsionForce>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<RotorPart>RealTrackWheel5x5</RotorPart>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.005</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large3X</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
+			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>ShortTrackSuspension5x5</SubtypeId>
+			</Id>
+			<DisplayName>5x5 Short Track Suspension Right</DisplayName>
+			<Icon>Textures\Icons\5x5_Lifted_Short_Track_Suspension_Right.dds</Icon>
+			<Description>Description_Suspension</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="2" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Large\MotorSuspensionCompactLarge.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200"/>
+				<Component Subtype="Construction" Count="200"/>
+				<Component Subtype="LargeTube" Count="100"/>
+				<Component Subtype="Motor" Count="100"/>
+				<Component Subtype="SmallTube" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0.1" EndX="2" EndY="1.9" Default="true"/>
+				<MountPoint Side="Front" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>ShortTrackSuspension5x5</BlockPairName>
+			<MirroringY>ZThenOffsetX</MirroringY>
+			<MirroringZ>YThenOffsetX</MirroringZ>
+			<MirroringBlock>ShortTrackSuspension5x5mirrored</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<PrimarySound>BlockWheel5x5</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>3</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<PropulsionForce>1000000</PropulsionForce>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<RotorPart>RealTrackWheel5x5</RotorPart>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.005</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large3X</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
+			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>ShortTrackSuspension3x3mirrored</SubtypeId>
+			</Id>
+			<DisplayName>3x3 Short Track Suspension Left</DisplayName>
+			<Icon>Textures\Icons\3x3_Lifted_Short_Track_Suspension_Left.dds</Icon>
+			<Description>Description_Suspension</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Large\MotorSuspensionCompact.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>ShortTrackSuspension3x3mirrored</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>ShortTrackSuspension3x3</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<PrimarySound>BlockWheel3x3</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>600000</PropulsionForce>
+			<RotorPart>RealTrackWheel</RotorPart>
+			<MaxSteer>0.8</MaxSteer>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
+			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>ShortTrackSuspension3x3</SubtypeId>
+			</Id>
+			<DisplayName>3x3 Short Track Suspension Right</DisplayName>
+			<Icon>Textures\Icons\3x3_Lifted_Short_Track_Suspension_Right.dds</Icon>
+			<Description>Description_Suspension</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Large\MotorSuspensionCompact.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>ShortTrackSuspension3x3</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>ShortTrackSuspension3x3mirrored</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<PrimarySound>BlockWheel3x3</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>600000</PropulsionForce>
+			<RotorPart>RealTrackWheel</RotorPart>
+			<!-- The max angle (radians) that steer angle slider can go to. -->
+			<MaxSteer>0.8</MaxSteer>
+			<!-- Min/Max height sets the physical boundaries of the suspension as well as the height slider limits. -->
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
+			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>ShortTrackSuspension2x2mirrored</SubtypeId>
+			</Id>
+			<DisplayName>2x2 Short Track Suspension Left</DisplayName>
+			<Icon>Textures\Icons\2x2_Lifted_Short_Track_Suspension_Left.dds</Icon>
+			<Description>Description_Suspension</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Large\MotorSuspensionCompact.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>ShortTrackSuspension2x2mirrored</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>ShortTrackSuspension2x2</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<PrimarySound>BlockWheel3x3</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>400000</PropulsionForce>
+			<RotorPart>RealTrackWheel2x2</RotorPart>
+			<MaxSteer>0.8</MaxSteer>
+			<MinHeight>-2</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
+			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>ShortTrackSuspension2x2</SubtypeId>
+			</Id>
+			<DisplayName>2x2 Short Track Suspension Right</DisplayName>
+			<Icon>Textures\Icons\2x2_Lifted_Short_Track_Suspension_Right.dds</Icon>
+			<Description>Description_Suspension</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Large\MotorSuspensionCompact.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>ShortTrackSuspension2x2</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>ShortTrackSuspension2x2mirrored</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<PrimarySound>BlockWheel3x3</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>400000</PropulsionForce>
+			<RotorPart>RealTrackWheel2x2</RotorPart>
+			<MaxSteer>0.8</MaxSteer>
+			<MinHeight>-2</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
+			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>ShortTrackSuspension1x1mirrored</SubtypeId>
+			</Id>
+			<DisplayName>1x1 Short Track Suspension Left</DisplayName>
+			<Icon>Textures\Icons\1x1_Lifted_Short_Track_Suspension_Left.dds</Icon>
+			<Description>Description_Suspension</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Large\MotorSuspensionCompact.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>ShortTrackSuspension1x1mirrored</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>ShortTrackSuspension1x1</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<PrimarySound>BlockWheel1x1</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>200000</PropulsionForce>
+			<RotorPart>RealTrackWheel1x1</RotorPart>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
+			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>ShortTrackSuspension1x1</SubtypeId>
+			</Id>
+			<DisplayName>1x1 Short Track Suspension Right</DisplayName>
+			<Icon>Textures\Icons\1x1_Lifted_Short_Track_Suspension_Right.dds</Icon>
+			<Description>Description_Suspension</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Large\MotorSuspensionCompact.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>ShortTrackSuspension1x1</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>ShortTrackSuspension1x1mirrored</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<PrimarySound>BlockWheel1x1</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>200000</PropulsionForce>
+			<RotorPart>RealTrackWheel1x1</RotorPart>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+			<IsAirTight>false</IsAirTight>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<!-- ==============================================================
+
+                      Large Grid Suspension (Lifted Short Tracks)
+
+=============================================================== -->
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LiftedShortTrackSuspension5x5mirrored</SubtypeId>
+			</Id>
+			<DisplayName>5x5 Lifted Short Track Suspension Left</DisplayName>
+			<Icon>Textures\Icons\5x5_Lifted_Short_Track_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
+			<Description>Description_Suspension</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="2" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Large\MotorSuspensionCompactLarge.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200"/>
+				<Component Subtype="Construction" Count="200"/>
+				<Component Subtype="LargeTube" Count="100"/>
+				<Component Subtype="Motor" Count="100"/>
+				<Component Subtype="SmallTube" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0.1" EndX="2" EndY="1.9" Default="true"/>
+				<MountPoint Side="Front" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>LiftedShortTrackSuspension5x5mirrored</BlockPairName>
+			<MirroringY>ZThenOffsetX</MirroringY>
+			<MirroringZ>YThenOffsetX</MirroringZ>
+			<MirroringBlock>LiftedShortTrackSuspension5x5</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<PrimarySound>BlockWheel5x5</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>3</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<PropulsionForce>1000000</PropulsionForce>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<RotorPart>RealTrackWheel5x5</RotorPart>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.005</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large3X</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
+			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LiftedShortTrackSuspension5x5</SubtypeId>
+			</Id>
+			<DisplayName>5x5 Lifted Short Track Suspension Right</DisplayName>
+			<Icon>Textures\Icons\5x5_Lifted_Short_Track_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
+			<Description>Description_Suspension</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="2" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Large\MotorSuspensionCompactLarge.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200"/>
+				<Component Subtype="Construction" Count="200"/>
+				<Component Subtype="LargeTube" Count="100"/>
+				<Component Subtype="Motor" Count="100"/>
+				<Component Subtype="SmallTube" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0.1" EndX="2" EndY="1.9" Default="true"/>
+				<MountPoint Side="Front" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>LiftedShortTrackSuspension5x5</BlockPairName>
+			<MirroringY>ZThenOffsetX</MirroringY>
+			<MirroringZ>YThenOffsetX</MirroringZ>
+			<MirroringBlock>LiftedShortTrackSuspension5x5mirrored</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<PrimarySound>BlockWheel5x5</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>3</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<PropulsionForce>1000000</PropulsionForce>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<RotorPart>RealTrackWheel5x5</RotorPart>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.005</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large3X</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
+			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LiftedShortTrackSuspension3x3mirrored</SubtypeId>
+			</Id>
+			<DisplayName>3x3 Lifted Short Track Suspension Left</DisplayName>
+			<Icon>Textures\Icons\3x3_Lifted_Short_Track_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
+			<Description>Description_Suspension</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\LiftedMotorSuspensionCompact.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\LiftedMotorSuspensionCompact_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>LiftedShortTrackSuspension3x3mirrored</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>LiftedShortTrackSuspension3x3</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<PrimarySound>BlockWheel3x3</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>600000</PropulsionForce>
+			<RotorPart>RealTrackWheel</RotorPart>
+			<MaxSteer>0.8</MaxSteer>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
+			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LiftedShortTrackSuspension3x3</SubtypeId>
+			</Id>
+			<DisplayName>3x3 Lifted Short Track Suspension Right</DisplayName>
+			<Icon>Textures\Icons\3x3_Lifted_Short_Track_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
+			<Description>Description_Suspension</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\LiftedMotorSuspensionCompact.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\LiftedMotorSuspensionCompact_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>LiftedShortTrackSuspension3x3</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>LiftedShortTrackSuspension3x3mirrored</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<PrimarySound>BlockWheel3x3</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>600000</PropulsionForce>
+			<RotorPart>RealTrackWheel</RotorPart>
+			<!-- The max angle (radians) that steer angle slider can go to. -->
+			<MaxSteer>0.8</MaxSteer>
+			<!-- Min/Max height sets the physical boundaries of the suspension as well as the height slider limits. -->
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
+			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LiftedShortTrackSuspension2x2mirrored</SubtypeId>
+			</Id>
+			<DisplayName>2x2 Lifted Short Track Suspension Left</DisplayName>
+			<Icon>Textures\Icons\2x2_Lifted_Short_Track_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
+			<Description>Description_Suspension</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\LiftedMotorSuspensionCompact.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\LiftedMotorSuspensionCompact_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>LiftedShortTrackSuspension2x2mirrored</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>LiftedShortTrackSuspension2x2</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<PrimarySound>BlockWheel3x3</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>400000</PropulsionForce>
+			<RotorPart>RealTrackWheel2x2</RotorPart>
+			<MaxSteer>0.8</MaxSteer>
+			<MinHeight>-2</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
+			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LiftedShortTrackSuspension2x2</SubtypeId>
+			</Id>
+			<DisplayName>2x2 Lifted Short Track Suspension Right</DisplayName>
+			<Icon>Textures\Icons\2x2_Lifted_Short_Track_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
+			<Description>Description_Suspension</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\LiftedMotorSuspensionCompact.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\LiftedMotorSuspensionCompact_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>LiftedShortTrackSuspension2x2</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>LiftedShortTrackSuspension2x2mirrored</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<PrimarySound>BlockWheel3x3</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>400000</PropulsionForce>
+			<RotorPart>RealTrackWheel2x2</RotorPart>
+			<MaxSteer>0.8</MaxSteer>
+			<MinHeight>-2</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
+			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LiftedShortTrackSuspension1x1mirrored</SubtypeId>
+			</Id>
+			<DisplayName>1x1 Lifted Short Track Suspension Left</DisplayName>
+			<Icon>Textures\Icons\1x1_Lifted_Short_Track_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
+			<Description>Description_Suspension</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\LiftedMotorSuspensionCompact.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\LiftedMotorSuspensionCompact_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>LiftedShortTrackSuspension1x1mirrored</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>LiftedShortTrackSuspension1x1</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<PrimarySound>BlockWheel1x1</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>200000</PropulsionForce>
+			<RotorPart>RealTrackWheel1x1</RotorPart>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
+			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LiftedShortTrackSuspension1x1</SubtypeId>
+			</Id>
+			<DisplayName>1x1 Lifted Short Track Suspension Right</DisplayName>
+			<Icon>Textures\Icons\1x1_Lifted_Short_Track_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
+			<Description>Description_Suspension</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\LiftedMotorSuspensionCompact.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\LiftedMotorSuspensionCompact_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>LiftedShortTrackSuspension1x1</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>LiftedShortTrackSuspension1x1mirrored</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<PrimarySound>BlockWheel1x1</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>200000</PropulsionForce>
+			<RotorPart>RealTrackWheel1x1</RotorPart>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+			<IsAirTight>false</IsAirTight>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<!-- Real Wheels -->
+		<!-- Large 1x1 -->
+		<Definition>
+			<Id>
+				<TypeId>Wheel</TypeId>
+				<SubtypeId>RealTrackWheel1x1</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_Wheel1x1</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension1x1Right.dds</Icon>
+			<Description>Description_Wheel</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\TankWheel1x1.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<PhysicalMaterial>Wheel</PhysicalMaterial>
+			<Components>
+				<Component Subtype="SteelPlate" Count="30"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Construction" Count="90"/>
+				<Component Subtype="SteelPlate" Count="60"/>
+			</Components>
+			<CriticalComponent Subtype="LargeTube" Index="0"/>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\TankWheel1x1_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\TankWheel1x1_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\TankWheel1x1_BS3.mwm.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
+			</MountPoints>
+			<BlockPairName>RealTrackWheel1x1</BlockPairName>
+			<UsesDeformation>false</UsesDeformation>
+			<DeformationRatio>0.3</DeformationRatio>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>RealTrackWheel1x1</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<InventorySize>
+				<X>2.5</X>
+				<Y>2.5</Y>
+				<Z>2.5</Z>
+			</InventorySize>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>BlockDestroyed_Medium</DestroyEffect>
+			<DestroySound>PoofExplosionCat2</DestroySound>
+			<PCU>25</PCU>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
+		</Definition>
+		<!-- Large 2x2 -->
+		<Definition>
+			<Id>
+				<TypeId>Wheel</TypeId>
+				<SubtypeId>RealTrackWheel2x2</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_Wheel2x2</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension2x2Right.dds</Icon>
+			<Description>Description_Wheel</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="1" z="2"/>
+			<MechanicalTopInitialPlacementOffset x="-1.25" y="0" z="-1.25"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\TankWheel2x2.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<PhysicalMaterial>Wheel</PhysicalMaterial>
+			<Components>
+				<Component Subtype="SteelPlate" Count="45"/>
+				<Component Subtype="LargeTube" Count="45"/>
+				<Component Subtype="Construction" Count="90"/>
+				<Component Subtype="SteelPlate" Count="90"/>
+			</Components>
+			<CriticalComponent Subtype="LargeTube" Index="0"/>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\TankWheel2x2_BS1"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\TankWheel2x2_BS2"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\TankWheel2x2_BS3.mwm"/>
+			</BuildProgressModels>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="1" StartY="1" EndX="1" EndY="1" Enabled="false"/>
+			</MountPoints>
+			<VoxelPlacement>
+				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<WheelPlacementCollider>
+				<ColliderDiameter>1</ColliderDiameter>
+				<ColliderHeight>0.88</ColliderHeight>
+				<ColliderOffset>0.28</ColliderOffset>
+			</WheelPlacementCollider>
+			<BlockPairName>RealTrackWheel2x2</BlockPairName>
+			<UsesDeformation>false</UsesDeformation>
+			<DeformationRatio>0.3</DeformationRatio>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>RealTrackWheel2x2</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<InventorySize>
+				<X>2.5</X>
+				<Y>2.5</Y>
+				<Z>2.5</Z>
+			</InventorySize>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+			<DestroySound>PoofExplosionCat3</DestroySound>
+			<PCU>25</PCU>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
+		</Definition>
+		<!-- Large 3x3 -->
+		<Definition>
+			<Id>
+				<TypeId>Wheel</TypeId>
+				<SubtypeId>RealTrackWheel</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_Wheel3x3</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension3x3Right.dds</Icon>
+			<Description>Description_Wheel</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="2" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\TankWheel3x3.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<PhysicalMaterial>Wheel</PhysicalMaterial>
+			<Components>
+				<Component Subtype="SteelPlate" Count="60"/>
+				<Component Subtype="LargeTube" Count="60"/>
+				<Component Subtype="Construction" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
+			<CriticalComponent Subtype="LargeTube" Index="0"/>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\TankWheel3x3_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\TankWheel3x3_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\TankWheel3x3_BS3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
+			</MountPoints>
+			<BlockPairName>RealTrackWheel</BlockPairName>
+			<UsesDeformation>false</UsesDeformation>
+			<DeformationRatio>0.3</DeformationRatio>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>RealTrackWheel</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<InventorySize>
+				<X>2.5</X>
+				<Y>2.5</Y>
+				<Z>2.5</Z>
+			</InventorySize>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+			<DestroySound>PoofExplosionCat3</DestroySound>
+			<PCU>25</PCU>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
+		</Definition>
+		<!-- Large 5x5 -->
+		<Definition>
+			<Id>
+				<TypeId>Wheel</TypeId>
+				<SubtypeId>RealTrackWheel5x5</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_Wheel5x5</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension5x5Right.dds</Icon>
+			<Description>Description_Wheel</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="5" y="3" z="5"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\TankWheel5x5.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<PhysicalMaterial>Wheel</PhysicalMaterial>
+			<Components>
+				<Component Subtype="SteelPlate" Count="90"/>
+				<Component Subtype="LargeTube" Count="90"/>
+				<Component Subtype="Construction" Count="210"/>
+				<Component Subtype="SteelPlate" Count="300"/>
+			</Components>
+			<CriticalComponent Subtype="LargeTube" Index="0"/>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\TankWheel5x5_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\TankWheel5x5_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\TankWheel5x5_BS3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
+			</MountPoints>
+			<BlockPairName>RealTrackWheel5x5</BlockPairName>
+			<UsesDeformation>false</UsesDeformation>
+			<DeformationRatio>0.3</DeformationRatio>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<InventorySize>
+				<X>2.5</X>
+				<Y>2.5</Y>
+				<Z>2.5</Z>
+			</InventorySize>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+			<DestroySound>PoofExplosionCat3</DestroySound>
+			<PCU>25</PCU>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

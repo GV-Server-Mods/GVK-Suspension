@@ -13,6 +13,7 @@
 			</Id>
 			<DisplayName>5x5 Lifted Wheel Suspension Left</DisplayName>
 			<Icon>Textures\Icons\5x5_Lifted_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -93,6 +94,7 @@
 			</Id>
 			<DisplayName>5x5 Lifted Wheel Suspension Right</DisplayName>
 			<Icon>Textures\Icons\5x5_Lifted_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -174,6 +176,7 @@
 			</Id>
 			<DisplayName>3x3 Lifted Wheel Suspension Left</DisplayName>
 			<Icon>Textures\Icons\3x3_Lifted_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -255,6 +258,7 @@
 			</Id>
 			<DisplayName>3x3 Lifted Wheel Suspension Right</DisplayName>
 			<Icon>Textures\Icons\3x3_Lifted_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -336,6 +340,7 @@
 			</Id>
 			<DisplayName>2x2 Lifted Wheel Suspension Left</DisplayName>
 			<Icon>Textures\Icons\3x3_Lifted_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -417,6 +422,7 @@
 			</Id>
 			<DisplayName>2x2 Lifted Wheel Suspension Right</DisplayName>
 			<Icon>Textures\Icons\3x3_Lifted_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -498,6 +504,7 @@
 			</Id>
 			<DisplayName>1x1 Lifted Wheel Suspension Left</DisplayName>
 			<Icon>Textures\Icons\1x1_Lifted_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -578,6 +585,7 @@
 			</Id>
 			<DisplayName>1x1 Lifted Wheel Suspension Right</DisplayName>
 			<Icon>Textures\Icons\1x1_Lifted_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -663,6 +671,7 @@
 			</Id>
 			<DisplayName>5x5 Lifted Wheel Suspension Left</DisplayName>
 			<Icon>Textures\Icons\5x5_Lifted_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -742,6 +751,7 @@
 			</Id>
 			<DisplayName>5x5 Lifted Wheel Suspension Right</DisplayName>
 			<Icon>Textures\Icons\5x5_Lifted_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -821,6 +831,7 @@
 			</Id>
 			<DisplayName>3x3 Lifted Wheel Suspension Left</DisplayName>
 			<Icon>Textures\Icons\3x3_Lifted_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -900,6 +911,7 @@
 			</Id>
 			<DisplayName>3x3 Lifted Wheel Suspension Right</DisplayName>
 			<Icon>Textures\Icons\3x3_Lifted_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -979,6 +991,7 @@
 			</Id>
 			<DisplayName>1x1 Lifted Wheel Suspension Left</DisplayName>
 			<Icon>Textures\Icons\1x1_Lifted_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -1058,6 +1071,7 @@
 			</Id>
 			<DisplayName>1x1 Lifted Wheel Suspension Right</DisplayName>
 			<Icon>Textures\Icons\1x1_Lifted_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

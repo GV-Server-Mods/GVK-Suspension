@@ -12,7 +12,7 @@
 				<SubtypeId>LG_5x5_Offroad_Lifted_Suspension_Left</SubtypeId>
 			</Id>
 			<DisplayName>5x5 Offroad Lifted Wheel Suspension Left</DisplayName>
-			<Icon>Textures\Icons\5x5_Lifted_Offroad_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\5x5_Lifted_Offroad_Suspension_Left.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -93,7 +93,7 @@
 				<SubtypeId>LG_5x5_Offroad_Lifted_Suspension_Right</SubtypeId>
 			</Id>
 			<DisplayName>5x5 Offroad Lifted Wheel Suspension Right</DisplayName>
-			<Icon>Textures\Icons\5x5_Lifted_Offroad_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\5x5_Lifted_Offroad_Suspension_Right.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -175,7 +175,7 @@
 				<SubtypeId>LG_3x3_Offroad_Lifted_Suspension_Left</SubtypeId>
 			</Id>
 			<DisplayName>3x3 Offroad Lifted Wheel Suspension Left</DisplayName>
-			<Icon>Textures\Icons\3x3_Lifted_Offroad_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\3x3_Lifted_Offroad_Suspension_Left.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -257,7 +257,7 @@
 				<SubtypeId>LG_3x3_Offroad_Lifted_Suspension_Right</SubtypeId>
 			</Id>
 			<DisplayName>3x3 Offroad Lifted Wheel Suspension Right</DisplayName>
-			<Icon>Textures\Icons\3x3_Lifted_Offroad_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\3x3_Lifted_Offroad_Suspension_Right.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -336,10 +336,174 @@
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
 				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LG_2x2_Offroad_Lifted_Suspension_Left</SubtypeId>
+			</Id>
+			<DisplayName>2x2 Offroad Lifted Wheel Suspension Left</DisplayName>
+			<Icon>Textures\Icons\3x3_Lifted_Offroad_Suspension_Left.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
+			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\LG_3x3_Lifted_Suspension_ZANTULO.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>2x2_Offroad_Lifted_Suspension_Left</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>LG_2x2_Offroad_Lifted_Suspension_Right</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<PrimarySound>BlockWheel3x3</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>400000</PropulsionForce>
+			<RotorPart>OffroadRealWheel2x2Mirrored</RotorPart>
+			<MaxSteer>0.8</MaxSteer>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>2</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LG_2x2_Offroad_Lifted_Suspension_Right</SubtypeId>
+			</Id>
+			<DisplayName>2x2 Offroad Lifted Wheel Suspension Right</DisplayName>
+			<Icon>Textures\Icons\3x3_Lifted_Offroad_Suspension_Right.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
+			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\LG_3x3_Lifted_Suspension_ZANTULO.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>2x2_Offroad_Lifted_Suspension_Right</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringBlock>LG_2x2_Offroad_Lifted_Suspension_Left</MirroringBlock>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<PrimarySound>BlockWheel3x3</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.02</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>400000</PropulsionForce>
+			<RotorPart>OffroadRealWheel2x2</RotorPart>
+			<MaxSteer>0.8</MaxSteer>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>2</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
 				<SubtypeId>LG_1x1_Offroad_Lifted_Suspension_Left</SubtypeId>
 			</Id>
 			<DisplayName>1x1 Offroad Lifted Wheel Suspension Left</DisplayName>
-			<Icon>Textures\Icons\1x1_Lifted_Offroad_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\1x1_Lifted_Offroad_Suspension_Left.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -420,7 +584,7 @@
 				<SubtypeId>LG_1x1_Offroad_Lifted_Suspension_Right</SubtypeId>
 			</Id>
 			<DisplayName>1x1 Offroad Lifted Wheel Suspension Right</DisplayName>
-			<Icon>Textures\Icons\1x1_Lifted_Offroad_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\1x1_Lifted_Offroad_Suspension_Right.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -506,7 +670,7 @@
 				<SubtypeId>SG_5x5_Offroad_Lifted_Suspension_Left</SubtypeId>
 			</Id>
 			<DisplayName>5x5 Offroad Lifted Wheel Suspension Left</DisplayName>
-			<Icon>Textures\Icons\5x5_Lifted_Offroad_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\5x5_Lifted_Offroad_Suspension_Left.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -586,7 +750,7 @@
 				<SubtypeId>SG_5x5_Offroad_Lifted_Suspension_Right</SubtypeId>
 			</Id>
 			<DisplayName>5x5 Offroad Lifted Wheel Suspension Right</DisplayName>
-			<Icon>Textures\Icons\5x5_Lifted_Offroad_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\5x5_Lifted_Offroad_Suspension_Right.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -666,7 +830,7 @@
 				<SubtypeId>SG_3x3_Offroad_Lifted_Suspension_Left</SubtypeId>
 			</Id>
 			<DisplayName>3x3 Offroad Lifted Wheel Suspension Left</DisplayName>
-			<Icon>Textures\Icons\3x3_Lifted_Offroad_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\3x3_Lifted_Offroad_Suspension_Left.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -746,7 +910,7 @@
 				<SubtypeId>SG_3x3_Offroad_Lifted_Suspension_Right</SubtypeId>
 			</Id>
 			<DisplayName>3x3 Offroad Lifted Wheel Suspension Right</DisplayName>
-			<Icon>Textures\Icons\3x3_Lifted_Offroad_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\3x3_Lifted_Offroad_Suspension_Right.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -826,7 +990,7 @@
 				<SubtypeId>SG_1x1_Offroad_Lifted_Suspension_Left</SubtypeId>
 			</Id>
 			<DisplayName>1x1 Offroad Lifted Wheel Suspension Left</DisplayName>
-			<Icon>Textures\Icons\1x1_Lifted_Offroad_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\1x1_Lifted_Offroad_Suspension_Left.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -906,7 +1070,7 @@
 				<SubtypeId>SG_1x1_Offroad_Lifted_Suspension_Right</SubtypeId>
 			</Id>
 			<DisplayName>1x1 Offroad Lifted Wheel Suspension Right</DisplayName>
-			<Icon>Textures\Icons\1x1_Lifted_Offroad_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\1x1_Lifted_Offroad_Suspension_Right.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
