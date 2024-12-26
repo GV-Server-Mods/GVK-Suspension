@@ -1,0 +1,2033 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<!-- ==============================================================
+
+                      Large Grid Suspension
+
+=============================================================== -->
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>Suspension5x5mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200"/>
+				<Component Subtype="Construction" Count="200"/>
+				<Component Subtype="LargeTube" Count="100"/>
+				<Component Subtype="Motor" Count="100"/>
+				<Component Subtype="SmallTube" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.0" EndY="2.0" Default="true"/>
+			</MountPoints>
+			<RequiredPowerInput>3</RequiredPowerInput>
+			<PropulsionForce>1000000</PropulsionForce>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.005</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>Suspension5x5</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200"/>
+				<Component Subtype="Construction" Count="200"/>
+				<Component Subtype="LargeTube" Count="100"/>
+				<Component Subtype="Motor" Count="100"/>
+				<Component Subtype="SmallTube" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.0" EndY="2.0" Default="true"/>
+			</MountPoints>
+			<RequiredPowerInput>3</RequiredPowerInput>
+			<PropulsionForce>1000000</PropulsionForce>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.005</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>Suspension3x3mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+			</MountPoints>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>600000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>Suspension3x3</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+			</MountPoints>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>600000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>Suspension2x2Mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+			</MountPoints>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>400000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>Suspension2x2</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+			</MountPoints>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>400000</PropulsionForce>
+			<MinHeight>-2</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>Suspension1x1mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+			</MountPoints>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>200000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>Suspension1x1</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+			</MountPoints>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>200000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<!-- ==============================================================
+
+                      Small Grid Suspension
+
+=============================================================== -->
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SmallSuspension5x5mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="50"/>
+				<Component Subtype="Construction" Count="60"/>
+				<Component Subtype="Motor" Count="10"/>
+				<Component Subtype="SmallTube" Count="20"/>
+				<Component Subtype="SteelPlate" Count="30"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.0" EndY="2.0" Default="true"/>
+			</MountPoints>
+			<RequiredPowerInput>0.6</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>48000</PropulsionForce>
+			<MinHeight>-0.50</MinHeight>
+			<MaxHeight>0.35</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SmallSuspension5x5</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="50"/>
+				<Component Subtype="Construction" Count="60"/>
+				<Component Subtype="Motor" Count="10"/>
+				<Component Subtype="SmallTube" Count="20"/>
+				<Component Subtype="SteelPlate" Count="30"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.0" EndY="2.0" Default="true"/>
+			</MountPoints>
+			<RequiredPowerInput>0.6</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>48000</PropulsionForce>
+			<MinHeight>-0.50</MinHeight>
+			<MaxHeight>0.35</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SmallSuspension3x3mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+			</MountPoints>
+			<RequiredPowerInput>0.4</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>19200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SmallSuspension3x3</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+			</MountPoints>
+			<RequiredPowerInput>0.4</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>19200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SmallSuspension2x2Mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+			</MountPoints>
+			<RequiredPowerInput>.3</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>10000</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SmallSuspension2x2</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+			</MountPoints>
+			<RequiredPowerInput>.3</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>10000</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SmallSuspension1x1mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+			</MountPoints>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>1200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SmallSuspension1x1</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+			</MountPoints>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>1200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<!-- ==============================================================
+
+                      Large Grid Suspension
+
+=============================================================== -->
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSuspension5x5mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200"/>
+				<Component Subtype="Construction" Count="200"/>
+				<Component Subtype="LargeTube" Count="100"/>
+				<Component Subtype="Motor" Count="100"/>
+				<Component Subtype="SmallTube" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="Motor"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.0" EndY="2.0" Default="true"/>
+			</MountPoints>
+			<RequiredPowerInput>3</RequiredPowerInput>
+			<PropulsionForce>1000000</PropulsionForce>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.005</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSuspension5x5</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200"/>
+				<Component Subtype="Construction" Count="200"/>
+				<Component Subtype="LargeTube" Count="100"/>
+				<Component Subtype="Motor" Count="100"/>
+				<Component Subtype="SmallTube" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="Motor"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.0" EndY="2.0" Default="true"/>
+			</MountPoints>
+			<RequiredPowerInput>3</RequiredPowerInput>
+			<PropulsionForce>1000000</PropulsionForce>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.005</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSuspension3x3mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="Motor"/>
+			<MountPoints>
+				<MountPoint Default="true" EndX="1.0" EndY="1.0" Side="Bottom" StartX="0.0" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.8" Side="Left" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.8" Side="Front" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.8" Side="Right" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.8" Side="Back" StartX="0.25" StartY="0.0"/>
+			</MountPoints>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>600000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSuspension3x3</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="Motor"/>
+			<MountPoints>
+				<MountPoint Default="true" EndX="1.0" EndY="1.0" Side="Bottom" StartX="0.0" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.8" Side="Left" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.8" Side="Front" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.8" Side="Right" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.8" Side="Back" StartX="0.25" StartY="0.0"/>
+			</MountPoints>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>600000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSuspension2x2Mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+			</MountPoints>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>400000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSuspension2x2</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.80"/>
+			</MountPoints>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>400000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSuspension1x1mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="Motor"/>
+			<MountPoints>
+				<MountPoint Default="true" EndX="1.0" EndY="1.0" Side="Bottom" StartX="0.0" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.8" Side="Left" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.8" Side="Right" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.8" Side="Front" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.8" Side="Back" StartX="0.25" StartY="0.0"/>
+			</MountPoints>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>200000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSuspension1x1</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="Motor"/>
+			<MountPoints>
+				<MountPoint Default="true" EndX="1.0" EndY="1.0" Side="Bottom" StartX="0.0" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.8" Side="Left" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.8" Side="Right" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.8" Side="Front" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.8" Side="Back" StartX="0.25" StartY="0.0"/>
+			</MountPoints>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>200000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<!-- ==============================================================
+
+                      Small Grid Suspension
+
+=============================================================== -->
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSmallSuspension5x5mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="50"/>
+				<Component Subtype="Construction" Count="60"/>
+				<Component Subtype="Motor" Count="10"/>
+				<Component Subtype="SmallTube" Count="20"/>
+				<Component Subtype="SteelPlate" Count="30"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="Motor"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.0" EndY="2.0" Default="true"/>
+			</MountPoints>
+			<RequiredPowerInput>0.6</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>48000</PropulsionForce>
+			<MinHeight>-0.5</MinHeight>
+			<MaxHeight>0.35</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSmallSuspension5x5</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="50"/>
+				<Component Subtype="Construction" Count="60"/>
+				<Component Subtype="Motor" Count="10"/>
+				<Component Subtype="SmallTube" Count="20"/>
+				<Component Subtype="SteelPlate" Count="30"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="Motor"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.0" EndY="2.0" Default="true"/>
+			</MountPoints>
+			<RequiredPowerInput>0.6</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>48000</PropulsionForce>
+			<MinHeight>-0.50</MinHeight>
+			<MaxHeight>0.35</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSmallSuspension3x3mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="Motor"/>
+			<MountPoints>
+				<MountPoint Default="true" EndX="1.0" EndY="1.0" Side="Bottom" StartX="0.0" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.83" Side="Left" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.83" Side="Right" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.83" Side="Front" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.83" Side="Back" StartX="0.25" StartY="0.0"/>
+			</MountPoints>
+			<RequiredPowerInput>0.4</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>19200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSmallSuspension3x3</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="Motor"/>
+			<MountPoints>
+				<MountPoint Default="true" EndX="1.0" EndY="1.0" Side="Bottom" StartX="0.0" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.83" Side="Left" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.83" Side="Right" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.83" Side="Front" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.83" Side="Back" StartX="0.25" StartY="0.0"/>
+			</MountPoints>
+			<RequiredPowerInput>0.4</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>19200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSmallSuspension2x2Mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+			</MountPoints>
+			<RequiredPowerInput>.3</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>10000</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSmallSuspension2x2</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.83"/>
+			</MountPoints>
+			<RequiredPowerInput>.3</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>10000</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSmallSuspension1x1mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="Motor"/>
+			<MountPoints>
+				<MountPoint Default="true" EndX="1.0" EndY="1.0" Side="Bottom" StartX="0.0" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.83" Side="Left" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.83" Side="Right" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.83" Side="Front" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.83" Side="Back" StartX="0.25" StartY="0.0"/>
+			</MountPoints>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>1200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSmallSuspension1x1</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="Motor"/>
+			<MountPoints>
+				<MountPoint Default="true" EndX="1.0" EndY="1.0" Side="Bottom" StartX="0.0" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.83" Side="Left" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.83" Side="Right" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.83" Side="Front" StartX="0.25" StartY="0.0"/>
+				<MountPoint EndX="0.75" EndY="0.83" Side="Back" StartX="0.25" StartY="0.0"/>
+			</MountPoints>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>1200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<!-- ==============================================================
+
+                      Large Grid Suspension (Short) Icons are backwards
+
+=============================================================== -->
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>ShortSuspension5x5mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200"/>
+				<Component Subtype="Construction" Count="200"/>
+				<Component Subtype="LargeTube" Count="100"/>
+				<Component Subtype="Motor" Count="100"/>
+				<Component Subtype="SmallTube" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0.1" EndX="2" EndY="1.9" Default="true"/>
+				<MountPoint Side="Front" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+			</MountPoints>
+			<RequiredPowerInput>3</RequiredPowerInput>
+			<PropulsionForce>1000000</PropulsionForce>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.005</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>ShortSuspension5x5</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200"/>
+				<Component Subtype="Construction" Count="200"/>
+				<Component Subtype="LargeTube" Count="100"/>
+				<Component Subtype="Motor" Count="100"/>
+				<Component Subtype="SmallTube" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0.1" EndX="2" EndY="1.9" Default="true"/>
+				<MountPoint Side="Front" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+			</MountPoints>
+			<RequiredPowerInput>3</RequiredPowerInput>
+			<PropulsionForce>1000000</PropulsionForce>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.005</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>ShortSuspension3x3mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>600000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>ShortSuspension3x3</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>600000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>ShortSuspension2x2Mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>400000</PropulsionForce>
+			<MinHeight>-2</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>ShortSuspension2x2</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>400000</PropulsionForce>
+			<MinHeight>-2</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>ShortSuspension1x1mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>200000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>ShortSuspension1x1</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>200000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<!-- ==============================================================
+
+                      Small Grid Suspension (Short)
+
+=============================================================== -->
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SmallShortSuspension5x5mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="50"/>
+				<Component Subtype="Construction" Count="60"/>
+				<Component Subtype="Motor" Count="10"/>
+				<Component Subtype="SmallTube" Count="20"/>
+				<Component Subtype="SteelPlate" Count="30"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.1" StartY="0.1" EndX="1.9" EndY="1.9" Default="true"/>
+				<MountPoint Side="Left" StartX="0.2" StartY="0" EndX="1.8" EndY="0.3"/>
+				<MountPoint Side="Front" StartX="0.2" StartY="0" EndX="1.8" EndY="0.5"/>
+				<MountPoint Side="Right" StartX="0.2" StartY="0" EndX="1.8" EndY="0.3"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0.5" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="1.5" StartY="0" EndX="2" EndY="0.2"/>
+			</MountPoints>
+			<RequiredPowerInput>0.6</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>48000</PropulsionForce>
+			<MinHeight>-0.50</MinHeight>
+			<MaxHeight>0.35</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SmallShortSuspension5x5</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="50"/>
+				<Component Subtype="Construction" Count="60"/>
+				<Component Subtype="Motor" Count="10"/>
+				<Component Subtype="SmallTube" Count="20"/>
+				<Component Subtype="SteelPlate" Count="30"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.1" StartY="0.1" EndX="1.9" EndY="1.9" Default="true"/>
+				<MountPoint Side="Left" StartX="0.2" StartY="0" EndX="1.8" EndY="0.3"/>
+				<MountPoint Side="Front" StartX="0.2" StartY="0" EndX="1.8" EndY="0.5"/>
+				<MountPoint Side="Right" StartX="0.2" StartY="0" EndX="1.8" EndY="0.3"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0.5" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="1.5" StartY="0" EndX="2" EndY="0.2"/>
+			</MountPoints>
+			<RequiredPowerInput>0.6</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>48000</PropulsionForce>
+			<MinHeight>-0.50</MinHeight>
+			<MaxHeight>0.35</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SmallShortSuspension3x3mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+			</MountPoints>
+			<RequiredPowerInput>0.4</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>19200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SmallShortSuspension3x3</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+			</MountPoints>
+			<RequiredPowerInput>0.4</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>19200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SmallShortSuspension2x2Mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+			</MountPoints>
+			<RequiredPowerInput>.3</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>10000</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SmallShortSuspension2x2</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+			</MountPoints>
+			<RequiredPowerInput>.3</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>10000</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SmallShortSuspension1x1mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+			</MountPoints>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>1200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>SmallShortSuspension1x1</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+			</MountPoints>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>1200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<!-- ==============================================================
+
+                      Large Grid Suspension (Short)
+
+=============================================================== -->
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadShortSuspension5x5mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200"/>
+				<Component Subtype="Construction" Count="200"/>
+				<Component Subtype="LargeTube" Count="100"/>
+				<Component Subtype="Motor" Count="100"/>
+				<Component Subtype="SmallTube" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0.1" EndX="2" EndY="1.9" Default="true"/>
+				<MountPoint Side="Front" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+			</MountPoints>
+			<RequiredPowerInput>3</RequiredPowerInput>
+			<PropulsionForce>1000000</PropulsionForce>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.005</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadShortSuspension5x5</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200"/>
+				<Component Subtype="Construction" Count="200"/>
+				<Component Subtype="LargeTube" Count="100"/>
+				<Component Subtype="Motor" Count="100"/>
+				<Component Subtype="SmallTube" Count="150"/>
+				<Component Subtype="SteelPlate" Count="150"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0.1" EndX="2" EndY="1.9" Default="true"/>
+				<MountPoint Side="Front" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+			</MountPoints>
+			<RequiredPowerInput>3</RequiredPowerInput>
+			<PropulsionForce>1000000</PropulsionForce>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.005</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadShortSuspension3x3mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>600000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadShortSuspension3x3</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>600000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadShortSuspension2x2Mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>400000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadShortSuspension2x2</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<RequiredPowerInput>2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>400000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadShortSuspension1x1mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>200000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadShortSuspension1x1</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="75"/>
+				<Component Subtype="LargeTube" Count="30"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+			</MountPoints>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>200000</PropulsionForce>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<!-- ==============================================================
+
+                      Small Grid Suspension (Short)
+
+=============================================================== -->
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSmallShortSuspension5x5mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="50"/>
+				<Component Subtype="Construction" Count="60"/>
+				<Component Subtype="Motor" Count="10"/>
+				<Component Subtype="SmallTube" Count="20"/>
+				<Component Subtype="SteelPlate" Count="30"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.1" StartY="0.1" EndX="1.9" EndY="1.9" Default="true"/>
+				<MountPoint Side="Left" StartX="0.2" StartY="0" EndX="1.8" EndY="0.3"/>
+				<MountPoint Side="Front" StartX="0.2" StartY="0" EndX="1.8" EndY="0.5"/>
+				<MountPoint Side="Right" StartX="0.2" StartY="0" EndX="1.8" EndY="0.3"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0.5" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="1.5" StartY="0" EndX="2" EndY="0.2"/>
+			</MountPoints>
+			<RequiredPowerInput>0.6</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>48000</PropulsionForce>
+			<MinHeight>-0.50</MinHeight>
+			<MaxHeight>0.35</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSmallShortSuspension5x5</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="50"/>
+				<Component Subtype="Construction" Count="60"/>
+				<Component Subtype="Motor" Count="10"/>
+				<Component Subtype="SmallTube" Count="20"/>
+				<Component Subtype="SteelPlate" Count="30"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.1" StartY="0.1" EndX="1.9" EndY="1.9" Default="true"/>
+				<MountPoint Side="Left" StartX="0.2" StartY="0" EndX="1.8" EndY="0.3"/>
+				<MountPoint Side="Front" StartX="0.2" StartY="0" EndX="1.8" EndY="0.5"/>
+				<MountPoint Side="Right" StartX="0.2" StartY="0" EndX="1.8" EndY="0.3"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0.5" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="1.5" StartY="0" EndX="2" EndY="0.2"/>
+			</MountPoints>
+			<RequiredPowerInput>0.6</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>48000</PropulsionForce>
+			<MinHeight>-0.50</MinHeight>
+			<MaxHeight>0.35</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.010</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSmallShortSuspension3x3mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+			</MountPoints>
+			<RequiredPowerInput>0.4</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>19200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSmallShortSuspension3x3</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+			</MountPoints>
+			<RequiredPowerInput>0.4</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>19200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSmallShortSuspension2x2Mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+			</MountPoints>
+			<RequiredPowerInput>.3</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>10000</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSmallShortSuspension2x2</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+			</MountPoints>
+			<RequiredPowerInput>.3</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>10000</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSmallShortSuspension1x1mirrored</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+			</MountPoints>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>1200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>OffroadSmallShortSuspension1x1</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="Motor" Count="5"/>
+				<Component Subtype="SmallTube" Count="10"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.5"/>
+			</MountPoints>
+			<RequiredPowerInput>0.2</RequiredPowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<PropulsionForce>1200</PropulsionForce>
+			<MinHeight>-0.32</MinHeight>
+			<MaxHeight>0.26</MaxHeight>
+			<AxleFriction>200000</AxleFriction>
+			<SteeringSpeed>0.015</SteeringSpeed>
+			<IsAirTight>false</IsAirTight>
+			<DLC>ScrapRace</DLC>
+			<GuiVisible>false</GuiVisible>
+		</Definition>
+	</CubeBlocks>
+</Definitions>
