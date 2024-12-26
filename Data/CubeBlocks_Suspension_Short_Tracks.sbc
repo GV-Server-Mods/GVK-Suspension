@@ -1,24 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<CubeBlocks>
 		<!-- ==============================================================
 
-                      Large Grid Suspension
+                      Large Grid Suspension (Short Tracks)
 
 =============================================================== -->
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
 				<TypeId>MotorSuspension</TypeId>
-				<SubtypeId>LG_5x5_Track_Lifted_Suspension_Left</SubtypeId>
+				<SubtypeId>ShortTrackSuspension5x5mirrored</SubtypeId>
 			</Id>
-			<DisplayName>5x5 Track Lifted Wheel Suspension Left</DisplayName>
-			<Icon>Textures\Icons\5x5_Track_Lifted_Suspension_Left.dds</Icon>
-			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<DisplayName>5x5 Short Track Suspension Left</DisplayName>
+			<Icon>Textures\Icons\5x5_Lifted_Short_Track_Suspension_Left.dds</Icon>
+			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="2" y="3" z="2"/>
+			<Size x="2" y="2" z="2"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\LG_5x5_Lifted_Suspension_ZANTULO.mwm</Model>
+			<Model>Models\Cubes\Large\MotorSuspensionCompactLarge.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
 			<DeformationRatio>0.1</DeformationRatio>
@@ -33,16 +33,16 @@
 			</Components>
 			<CriticalComponent Subtype="Motor" Index="0"/>
 			<MountPoints>
-				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
-				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
-				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
-				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
-				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.0" EndY="2.0" Default="true"/>
+				<MountPoint Side="Bottom" StartX="0" StartY="0.1" EndX="2" EndY="1.9" Default="true"/>
+				<MountPoint Side="Front" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\LG_5x5_Lifted_Suspension_ZANTULO_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\LG_5x5_Lifted_Suspension_ZANTULO_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\LG_5x5_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_3.mwm"/>
 			</BuildProgressModels>
 			<VoxelPlacement>
 				<StaticMode>
@@ -56,12 +56,12 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<BlockPairName>5x5_Track_Lifted_Suspension_Left</BlockPairName>
+			<BlockPairName>ShortTrackSuspension5x5mirrored</BlockPairName>
 			<MirroringY>ZThenOffsetX</MirroringY>
 			<MirroringZ>YThenOffsetX</MirroringZ>
-			<MirroringBlock>LG_5x5_Track_Lifted_Suspension_Right</MirroringBlock>
+			<MirroringBlock>ShortTrackSuspension5x5</MirroringBlock>
 			<EdgeType>Light</EdgeType>
-			<BuildTimeSeconds>40</BuildTimeSeconds>
+			<BuildTimeSeconds>30</BuildTimeSeconds>
 			<PrimarySound>BlockWheel5x5</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
 			<RequiredPowerInput>3</RequiredPowerInput>
@@ -70,8 +70,8 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealTrackWheel5x5</RotorPart>
-			<MinHeight>-2.0</MinHeight>
-			<MaxHeight>2.0</MaxHeight>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -83,22 +83,26 @@
 			<AirShockActivationDelay>60</AirShockActivationDelay>
 			<DestroyEffect>BlockDestroyedExplosion_Large3X</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
 			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
 				<TypeId>MotorSuspension</TypeId>
-				<SubtypeId>LG_5x5_Track_Lifted_Suspension_Right</SubtypeId>
+				<SubtypeId>ShortTrackSuspension5x5</SubtypeId>
 			</Id>
-			<DisplayName>5x5 Track Lifted Wheel Suspension Right</DisplayName>
-			<Icon>Textures\Icons\5x5_Track_Lifted_Suspension_Right.dds</Icon>
-			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<DisplayName>5x5 Short Track Suspension Right</DisplayName>
+			<Icon>Textures\Icons\5x5_Lifted_Short_Track_Suspension_Right.dds</Icon>
+			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="2" y="3" z="2"/>
+			<Size x="2" y="2" z="2"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\LG_5x5_Lifted_Suspension_ZANTULO.mwm</Model>
+			<Model>Models\Cubes\Large\MotorSuspensionCompactLarge.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
 			<DeformationRatio>0.1</DeformationRatio>
@@ -113,18 +117,17 @@
 			</Components>
 			<CriticalComponent Subtype="Motor" Index="0"/>
 			<MountPoints>
-				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
-				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
-				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
-				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.0" EndY="1.0"/>
-				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.0" EndY="2.0" Default="true"/>
+				<MountPoint Side="Bottom" StartX="0" StartY="0.1" EndX="2" EndY="1.9" Default="true"/>
+				<MountPoint Side="Front" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="2" EndY="0.5"/>
+				<MountPoint Side="Back" StartX="0" StartY="0.1" EndX="2" EndY="1"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\LG_5x5_Lifted_Suspension_ZANTULO_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\LG_5x5_Lifted_Suspension_ZANTULO_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\LG_5x5_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactLargeConstruction_3.mwm"/>
 			</BuildProgressModels>
-			<Center x="0" y="0" z="0"/>
 			<VoxelPlacement>
 				<StaticMode>
 					<PlacementMode>OutsideVoxel</PlacementMode>
@@ -137,12 +140,12 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<BlockPairName>5x5_Track_Lifted_Suspension_Right</BlockPairName>
+			<BlockPairName>ShortTrackSuspension5x5</BlockPairName>
 			<MirroringY>ZThenOffsetX</MirroringY>
 			<MirroringZ>YThenOffsetX</MirroringZ>
-			<MirroringBlock>LG_5x5_Track_Lifted_Suspension_Left</MirroringBlock>
+			<MirroringBlock>ShortTrackSuspension5x5mirrored</MirroringBlock>
 			<EdgeType>Light</EdgeType>
-			<BuildTimeSeconds>40</BuildTimeSeconds>
+			<BuildTimeSeconds>30</BuildTimeSeconds>
 			<PrimarySound>BlockWheel5x5</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
 			<RequiredPowerInput>3</RequiredPowerInput>
@@ -151,8 +154,8 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealTrackWheel5x5</RotorPart>
-			<MinHeight>-2.0</MinHeight>
-			<MaxHeight>2.0</MaxHeight>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -164,22 +167,26 @@
 			<AirShockActivationDelay>60</AirShockActivationDelay>
 			<DestroyEffect>BlockDestroyedExplosion_Large3X</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
 			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
 				<TypeId>MotorSuspension</TypeId>
-				<SubtypeId>LG_3x3_Track_Lifted_Suspension_Left</SubtypeId>
+				<SubtypeId>ShortTrackSuspension3x3mirrored</SubtypeId>
 			</Id>
-			<DisplayName>3x3 Track Lifted Wheel Suspension Left</DisplayName>
-			<Icon>Textures\Icons\3x3_Track_Lifted_Suspension_Left.dds</Icon>
-			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<DisplayName>3x3 Short Track Suspension Left</DisplayName>
+			<Icon>Textures\Icons\3x3_Lifted_Short_Track_Suspension_Left.dds</Icon>
+			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="1" y="2" z="1"/>
+			<Size x="1" y="1" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\LG_3x3_Lifted_Suspension_ZANTULO.mwm</Model>
+			<Model>Models\Cubes\Large\MotorSuspensionCompact.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
 			<DeformationRatio>0.1</DeformationRatio>
@@ -194,16 +201,16 @@
 			</Components>
 			<CriticalComponent Subtype="Motor" Index="0"/>
 			<MountPoints>
-				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
 			</BuildProgressModels>
 			<VoxelPlacement>
 				<StaticMode>
@@ -217,12 +224,12 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<BlockPairName>3x3_Track_Lifted_Suspension_Left</BlockPairName>
+			<BlockPairName>ShortTrackSuspension3x3mirrored</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-			<MirroringBlock>LG_3x3_Track_Lifted_Suspension_Right</MirroringBlock>
+			<MirroringBlock>ShortTrackSuspension3x3</MirroringBlock>
 			<EdgeType>Light</EdgeType>
-			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
 			<RequiredPowerInput>2</RequiredPowerInput>
@@ -233,7 +240,7 @@
 			<RotorPart>RealTrackWheel</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
 			<MinHeight>-2.00</MinHeight>
-			<MaxHeight>2</MaxHeight>
+			<MaxHeight>1.5</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -245,22 +252,26 @@
 			<AirShockActivationDelay>60</AirShockActivationDelay>
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
 			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
 				<TypeId>MotorSuspension</TypeId>
-				<SubtypeId>LG_3x3_Track_Lifted_Suspension_Right</SubtypeId>
+				<SubtypeId>ShortTrackSuspension3x3</SubtypeId>
 			</Id>
-			<DisplayName>3x3 Track Lifted Wheel Suspension Right</DisplayName>
-			<Icon>Textures\Icons\3x3_Track_Lifted_Suspension_Right.dds</Icon>
-			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<DisplayName>3x3 Short Track Suspension Right</DisplayName>
+			<Icon>Textures\Icons\3x3_Lifted_Short_Track_Suspension_Right.dds</Icon>
+			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="1" y="2" z="1"/>
+			<Size x="1" y="1" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\LG_3x3_Lifted_Suspension_ZANTULO.mwm</Model>
+			<Model>Models\Cubes\Large\MotorSuspensionCompact.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
 			<DeformationRatio>0.1</DeformationRatio>
@@ -275,16 +286,16 @@
 			</Components>
 			<CriticalComponent Subtype="Motor" Index="0"/>
 			<MountPoints>
-				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
 			</BuildProgressModels>
 			<VoxelPlacement>
 				<StaticMode>
@@ -298,12 +309,12 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<BlockPairName>3x3_Track_Lifted_Suspension_Right</BlockPairName>
+			<BlockPairName>ShortTrackSuspension3x3</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-			<MirroringBlock>LG_3x3_Track_Lifted_Suspension_Left</MirroringBlock>
+			<MirroringBlock>ShortTrackSuspension3x3mirrored</MirroringBlock>
 			<EdgeType>Light</EdgeType>
-			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
 			<RequiredPowerInput>2</RequiredPowerInput>
@@ -312,9 +323,11 @@
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<PropulsionForce>600000</PropulsionForce>
 			<RotorPart>RealTrackWheel</RotorPart>
+			<!-- The max angle (radians) that steer angle slider can go to. -->
 			<MaxSteer>0.8</MaxSteer>
+			<!-- Min/Max height sets the physical boundaries of the suspension as well as the height slider limits. -->
 			<MinHeight>-2.00</MinHeight>
-			<MaxHeight>2</MaxHeight>
+			<MaxHeight>1.5</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -326,22 +339,26 @@
 			<AirShockActivationDelay>60</AirShockActivationDelay>
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
 			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
 				<TypeId>MotorSuspension</TypeId>
-				<SubtypeId>LG_2x2_Track_Lifted_Suspension_Left</SubtypeId>
+				<SubtypeId>ShortTrackSuspension2x2mirrored</SubtypeId>
 			</Id>
-			<DisplayName>2x2 Track Lifted Wheel Suspension Left</DisplayName>
-			<Icon>Textures\Icons\2x2_Track_Lifted_Suspension_Left.dds</Icon>
-			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<DisplayName>2x2 Short Track Suspension Left</DisplayName>
+			<Icon>Textures\Icons\2x2_Lifted_Short_Track_Suspension_Left.dds</Icon>
+			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="1" y="2" z="1"/>
+			<Size x="1" y="1" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\LG_3x3_Lifted_Suspension_ZANTULO.mwm</Model>
+			<Model>Models\Cubes\Large\MotorSuspensionCompact.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
 			<DeformationRatio>0.1</DeformationRatio>
@@ -356,16 +373,16 @@
 			</Components>
 			<CriticalComponent Subtype="Motor" Index="0"/>
 			<MountPoints>
-				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
 			</BuildProgressModels>
 			<VoxelPlacement>
 				<StaticMode>
@@ -379,12 +396,12 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<BlockPairName>2x2_Track_Lifted_Suspension_Left</BlockPairName>
+			<BlockPairName>ShortTrackSuspension2x2mirrored</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-			<MirroringBlock>LG_2x2_Track_Lifted_Suspension_Right</MirroringBlock>
+			<MirroringBlock>ShortTrackSuspension2x2</MirroringBlock>
 			<EdgeType>Light</EdgeType>
-			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
 			<RequiredPowerInput>2</RequiredPowerInput>
@@ -394,8 +411,8 @@
 			<PropulsionForce>400000</PropulsionForce>
 			<RotorPart>RealTrackWheel2x2</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
-			<MinHeight>-2.00</MinHeight>
-			<MaxHeight>2</MaxHeight>
+			<MinHeight>-2</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -407,22 +424,26 @@
 			<AirShockActivationDelay>60</AirShockActivationDelay>
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
 			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
 				<TypeId>MotorSuspension</TypeId>
-				<SubtypeId>LG_2x2_Track_Lifted_Suspension_Right</SubtypeId>
+				<SubtypeId>ShortTrackSuspension2x2</SubtypeId>
 			</Id>
-			<DisplayName>2x2 Track Lifted Wheel Suspension Right</DisplayName>
-			<Icon>Textures\Icons\2x2_Track_Lifted_Suspension_Right.dds</Icon>
-			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<DisplayName>2x2 Short Track Suspension Right</DisplayName>
+			<Icon>Textures\Icons\2x2_Lifted_Short_Track_Suspension_Right.dds</Icon>
+			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="1" y="2" z="1"/>
+			<Size x="1" y="1" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\LG_3x3_Lifted_Suspension_ZANTULO.mwm</Model>
+			<Model>Models\Cubes\Large\MotorSuspensionCompact.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
 			<DeformationRatio>0.1</DeformationRatio>
@@ -437,16 +458,16 @@
 			</Components>
 			<CriticalComponent Subtype="Motor" Index="0"/>
 			<MountPoints>
-				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
 			</BuildProgressModels>
 			<VoxelPlacement>
 				<StaticMode>
@@ -460,12 +481,12 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<BlockPairName>2x2_Track_Lifted_Suspension_Right</BlockPairName>
+			<BlockPairName>ShortTrackSuspension2x2</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-			<MirroringBlock>LG_2x2_Track_Lifted_Suspension_Left</MirroringBlock>
+			<MirroringBlock>ShortTrackSuspension2x2mirrored</MirroringBlock>
 			<EdgeType>Light</EdgeType>
-			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
 			<RequiredPowerInput>2</RequiredPowerInput>
@@ -475,8 +496,8 @@
 			<PropulsionForce>400000</PropulsionForce>
 			<RotorPart>RealTrackWheel2x2</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
-			<MinHeight>-2.00</MinHeight>
-			<MaxHeight>2</MaxHeight>
+			<MinHeight>-2</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -488,22 +509,26 @@
 			<AirShockActivationDelay>60</AirShockActivationDelay>
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
 			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
 				<TypeId>MotorSuspension</TypeId>
-				<SubtypeId>LG_1x1_Track_Lifted_Suspension_Left</SubtypeId>
+				<SubtypeId>ShortTrackSuspension1x1mirrored</SubtypeId>
 			</Id>
-			<DisplayName>1x1 Track Lifted Wheel Suspension Left</DisplayName>
-			<Icon>Textures\Icons\1x1_Track_Lifted_Suspension_Left.dds</Icon>
-			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<DisplayName>1x1 Short Track Suspension Left</DisplayName>
+			<Icon>Textures\Icons\1x1_Lifted_Short_Track_Suspension_Left.dds</Icon>
+			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="1" y="2" z="1"/>
+			<Size x="1" y="1" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\LG_1x1_Lifted_Suspension_ZANTULO.mwm</Model>
+			<Model>Models\Cubes\Large\MotorSuspensionCompact.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
 			<DeformationRatio>0.1</DeformationRatio>
@@ -518,16 +543,16 @@
 			</Components>
 			<CriticalComponent Subtype="Motor" Index="0"/>
 			<MountPoints>
-				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
 			</BuildProgressModels>
 			<VoxelPlacement>
 				<StaticMode>
@@ -541,10 +566,10 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<BlockPairName>1x1_Track_Lifted_Suspension_Left</BlockPairName>
+			<BlockPairName>ShortTrackSuspension1x1mirrored</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-			<MirroringBlock>LG_1x1_Track_Lifted_Suspension_Right</MirroringBlock>
+			<MirroringBlock>ShortTrackSuspension1x1</MirroringBlock>
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel1x1</PrimarySound>
@@ -555,8 +580,8 @@
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<PropulsionForce>200000</PropulsionForce>
 			<RotorPart>RealTrackWheel1x1</RotorPart>
-			<MinHeight>-2</MinHeight>
-			<MaxHeight>2</MaxHeight>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -568,22 +593,26 @@
 			<AirShockActivationDelay>60</AirShockActivationDelay>
 			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>false</IsAirTight>
 			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
 				<TypeId>MotorSuspension</TypeId>
-				<SubtypeId>LG_1x1_Track_Lifted_Suspension_Right</SubtypeId>
+				<SubtypeId>ShortTrackSuspension1x1</SubtypeId>
 			</Id>
-			<DisplayName>1x1 Track Lifted Wheel Suspension Right</DisplayName>
-			<Icon>Textures\Icons\1x1_Track_Lifted_Suspension_Right.dds</Icon>
-			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
+			<DisplayName>1x1 Short Track Suspension Right</DisplayName>
+			<Icon>Textures\Icons\1x1_Lifted_Short_Track_Suspension_Right.dds</Icon>
+			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="1" y="2" z="1"/>
+			<Size x="1" y="1" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\LG_1x1_Lifted_Suspension_ZANTULO.mwm</Model>
+			<Model>Models\Cubes\Large\MotorSuspensionCompact.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
 			<DeformationRatio>0.1</DeformationRatio>
@@ -598,16 +627,16 @@
 			</Components>
 			<CriticalComponent Subtype="Motor" Index="0"/>
 			<MountPoints>
-				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.2"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MotorSuspensionCompactConstruction_3.mwm"/>
 			</BuildProgressModels>
 			<VoxelPlacement>
 				<StaticMode>
@@ -621,10 +650,10 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<BlockPairName>1x1_Track_Lifted_Suspension_Right</BlockPairName>
+			<BlockPairName>ShortTrackSuspension1x1</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-			<MirroringBlock>LG_1x1_Track_Lifted_Suspension_Left</MirroringBlock>
+			<MirroringBlock>ShortTrackSuspension1x1mirrored</MirroringBlock>
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel1x1</PrimarySound>
@@ -635,8 +664,8 @@
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<PropulsionForce>200000</PropulsionForce>
 			<RotorPart>RealTrackWheel1x1</RotorPart>
-			<MinHeight>-2</MinHeight>
-			<MaxHeight>2</MaxHeight>
+			<MinHeight>-2.00</MinHeight>
+			<MaxHeight>1.5</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
@@ -646,9 +675,13 @@
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
 			<AirShockActivationDelay>60</AirShockActivationDelay>
-			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>50</PCU>
+			<IsAirTight>false</IsAirTight>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
 		</Definition>
 	</CubeBlocks>
