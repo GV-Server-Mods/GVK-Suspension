@@ -282,7 +282,7 @@
 			<RequiredPowerInput>0.6</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>48000</PropulsionForce>
-			<MinHeight>-0.50</MinHeight>
+			<MinHeight>-0.65</MinHeight>
 			<MaxHeight>0.35</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
@@ -312,7 +312,7 @@
 			<RequiredPowerInput>0.6</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>48000</PropulsionForce>
-			<MinHeight>-0.50</MinHeight>
+			<MinHeight>-0.65</MinHeight>
 			<MaxHeight>0.35</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
@@ -342,8 +342,8 @@
 			<RequiredPowerInput>0.4</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>19200</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -372,8 +372,8 @@
 			<RequiredPowerInput>0.4</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>19200</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -402,8 +402,8 @@
 			<RequiredPowerInput>.3</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>10000</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -432,8 +432,8 @@
 			<RequiredPowerInput>.3</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>10000</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -462,8 +462,8 @@
 			<RequiredPowerInput>0.2</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>1200</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -492,8 +492,8 @@
 			<RequiredPowerInput>0.2</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>1200</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -788,7 +788,7 @@
 			<RequiredPowerInput>0.6</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>48000</PropulsionForce>
-			<MinHeight>-0.5</MinHeight>
+			<MinHeight>-0.65</MinHeight>
 			<MaxHeight>0.35</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
@@ -819,7 +819,7 @@
 			<RequiredPowerInput>0.6</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>48000</PropulsionForce>
-			<MinHeight>-0.50</MinHeight>
+			<MinHeight>-0.65</MinHeight>
 			<MaxHeight>0.35</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
@@ -850,8 +850,8 @@
 			<RequiredPowerInput>0.4</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>19200</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -881,8 +881,8 @@
 			<RequiredPowerInput>0.4</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>19200</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -912,8 +912,8 @@
 			<RequiredPowerInput>.3</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>10000</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -943,8 +943,8 @@
 			<RequiredPowerInput>.3</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>10000</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -974,8 +974,8 @@
 			<RequiredPowerInput>0.2</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>1200</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -1005,8 +1005,8 @@
 			<RequiredPowerInput>0.2</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>1200</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -1295,7 +1295,7 @@
 			<RequiredPowerInput>0.6</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>48000</PropulsionForce>
-			<MinHeight>-0.50</MinHeight>
+			<MinHeight>-0.65</MinHeight>
 			<MaxHeight>0.35</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
@@ -1326,7 +1326,7 @@
 			<RequiredPowerInput>0.6</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>48000</PropulsionForce>
-			<MinHeight>-0.50</MinHeight>
+			<MinHeight>-0.65</MinHeight>
 			<MaxHeight>0.35</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
@@ -1356,8 +1356,8 @@
 			<RequiredPowerInput>0.4</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>19200</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -1386,8 +1386,8 @@
 			<RequiredPowerInput>0.4</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>19200</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -1416,8 +1416,8 @@
 			<RequiredPowerInput>.3</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>10000</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -1446,8 +1446,8 @@
 			<RequiredPowerInput>.3</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>10000</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -1476,8 +1476,8 @@
 			<RequiredPowerInput>0.2</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>1200</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -1506,8 +1506,8 @@
 			<RequiredPowerInput>0.2</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>1200</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -1803,7 +1803,7 @@
 			<RequiredPowerInput>0.6</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>48000</PropulsionForce>
-			<MinHeight>-0.50</MinHeight>
+			<MinHeight>-0.65</MinHeight>
 			<MaxHeight>0.35</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
@@ -1835,7 +1835,7 @@
 			<RequiredPowerInput>0.6</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>48000</PropulsionForce>
-			<MinHeight>-0.50</MinHeight>
+			<MinHeight>-0.65</MinHeight>
 			<MaxHeight>0.35</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
@@ -1866,8 +1866,8 @@
 			<RequiredPowerInput>0.4</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>19200</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -1897,8 +1897,8 @@
 			<RequiredPowerInput>0.4</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>19200</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -1928,8 +1928,8 @@
 			<RequiredPowerInput>.3</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>10000</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -1959,8 +1959,8 @@
 			<RequiredPowerInput>.3</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>10000</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -1990,8 +1990,8 @@
 			<RequiredPowerInput>0.2</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>1200</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
@@ -2021,8 +2021,8 @@
 			<RequiredPowerInput>0.2</RequiredPowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<PropulsionForce>1200</PropulsionForce>
-			<MinHeight>-0.32</MinHeight>
-			<MaxHeight>0.26</MaxHeight>
+			<MinHeight>-0.40</MinHeight>
+			<MaxHeight>0.30</MaxHeight>
 			<AxleFriction>200000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<IsAirTight>false</IsAirTight>
