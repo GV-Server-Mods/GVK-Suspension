@@ -66,7 +66,7 @@
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
 			<RequiredPowerInput>3</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
-			<PropulsionForce>1000000</PropulsionForce>
+			<PropulsionForce>1500000</PropulsionForce>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealTrackWheel5x5</RotorPart>
@@ -150,7 +150,7 @@
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
 			<RequiredPowerInput>3</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
-			<PropulsionForce>1000000</PropulsionForce>
+			<PropulsionForce>1500000</PropulsionForce>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealTrackWheel5x5</RotorPart>
@@ -236,7 +236,7 @@
 			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<PropulsionForce>600000</PropulsionForce>
+			<PropulsionForce>900000</PropulsionForce>
 			<RotorPart>RealTrackWheel</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
 			<MinHeight>-2.00</MinHeight>
@@ -321,7 +321,7 @@
 			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<PropulsionForce>600000</PropulsionForce>
+			<PropulsionForce>900000</PropulsionForce>
 			<RotorPart>RealTrackWheel</RotorPart>
 			<!-- The max angle (radians) that steer angle slider can go to. -->
 			<MaxSteer>0.8</MaxSteer>
@@ -408,7 +408,7 @@
 			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<PropulsionForce>400000</PropulsionForce>
+			<PropulsionForce>600000</PropulsionForce>
 			<RotorPart>RealTrackWheel2x2</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
 			<MinHeight>-2</MinHeight>
@@ -493,7 +493,7 @@
 			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<PropulsionForce>400000</PropulsionForce>
+			<PropulsionForce>600000</PropulsionForce>
 			<RotorPart>RealTrackWheel2x2</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
 			<MinHeight>-2</MinHeight>
@@ -578,7 +578,7 @@
 			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<PropulsionForce>200000</PropulsionForce>
+			<PropulsionForce>300000</PropulsionForce>
 			<RotorPart>RealTrackWheel1x1</RotorPart>
 			<MinHeight>-2.00</MinHeight>
 			<MaxHeight>1.5</MaxHeight>
@@ -662,7 +662,7 @@
 			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<PropulsionForce>200000</PropulsionForce>
+			<PropulsionForce>300000</PropulsionForce>
 			<RotorPart>RealTrackWheel1x1</RotorPart>
 			<MinHeight>-2.00</MinHeight>
 			<MaxHeight>1.5</MaxHeight>

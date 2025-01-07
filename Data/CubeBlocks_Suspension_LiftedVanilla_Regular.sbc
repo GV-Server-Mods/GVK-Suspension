@@ -67,7 +67,7 @@
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
 			<RequiredPowerInput>3</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
-			<PropulsionForce>1000000</PropulsionForce>
+			<PropulsionForce>1500000</PropulsionForce>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel5x5mirrored</RotorPart>
@@ -149,7 +149,7 @@
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
 			<RequiredPowerInput>3</RequiredPowerInput>
 			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
-			<PropulsionForce>1000000</PropulsionForce>
+			<PropulsionForce>1500000</PropulsionForce>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel5x5</RotorPart>
@@ -232,7 +232,7 @@
 			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<PropulsionForce>600000</PropulsionForce>
+			<PropulsionForce>900000</PropulsionForce>
 			<RotorPart>RealWheelmirrored</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
 			<MinHeight>-2.00</MinHeight>
@@ -314,7 +314,7 @@
 			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<PropulsionForce>600000</PropulsionForce>
+			<PropulsionForce>900000</PropulsionForce>
 			<RotorPart>RealWheel</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
 			<MinHeight>-2.00</MinHeight>
@@ -396,7 +396,7 @@
 			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<PropulsionForce>400000</PropulsionForce>
+			<PropulsionForce>600000</PropulsionForce>
 			<RotorPart>RealWheel2x2Mirrored</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
 			<MinHeight>-2.00</MinHeight>
@@ -478,7 +478,7 @@
 			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<PropulsionForce>400000</PropulsionForce>
+			<PropulsionForce>600000</PropulsionForce>
 			<RotorPart>RealWheel2x2</RotorPart>
 			<MaxSteer>0.8</MaxSteer>
 			<MinHeight>-2.00</MinHeight>
@@ -560,7 +560,7 @@
 			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<PropulsionForce>200000</PropulsionForce>
+			<PropulsionForce>300000</PropulsionForce>
 			<RotorPart>RealWheel1x1mirrored</RotorPart>
 			<MinHeight>-2</MinHeight>
 			<MaxHeight>2</MaxHeight>
@@ -641,7 +641,7 @@
 			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
-			<PropulsionForce>200000</PropulsionForce>
+			<PropulsionForce>300000</PropulsionForce>
 			<RotorPart>RealWheel1x1</RotorPart>
 			<MinHeight>-2</MinHeight>
 			<MaxHeight>2</MaxHeight>
@@ -727,7 +727,7 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel5x5mirrored</RotorPart>
-			<PropulsionForce>48000</PropulsionForce>
+			<PropulsionForce>100000</PropulsionForce>
 			<MinHeight>-0.45</MinHeight>
 			<MaxHeight>0.45</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
@@ -807,7 +807,7 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel5x5</RotorPart>
-			<PropulsionForce>48000</PropulsionForce>
+			<PropulsionForce>100000</PropulsionForce>
 			<MinHeight>-0.45</MinHeight>
 			<MaxHeight>0.45</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
@@ -887,7 +887,7 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheelmirrored</RotorPart>
-			<PropulsionForce>19200</PropulsionForce>
+			<PropulsionForce>60000</PropulsionForce>
 			<MinHeight>-0.35</MinHeight>
 			<MaxHeight>0.15</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
@@ -967,7 +967,7 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel</RotorPart>
-			<PropulsionForce>19200</PropulsionForce>
+			<PropulsionForce>60000</PropulsionForce>
 			<MinHeight>-0.35</MinHeight>
 			<MaxHeight>0.15</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
@@ -1047,7 +1047,7 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel1x1mirrored</RotorPart>
-			<PropulsionForce>1200</PropulsionForce>
+			<PropulsionForce>10000</PropulsionForce>
 			<MinHeight>-0.32</MinHeight>
 			<MaxHeight>-0.15</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
@@ -1127,7 +1127,7 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel1x1</RotorPart>
-			<PropulsionForce>1200</PropulsionForce>
+			<PropulsionForce>10000</PropulsionForce>
 			<MinHeight>-0.32</MinHeight>
 			<MaxHeight>-0.15</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
