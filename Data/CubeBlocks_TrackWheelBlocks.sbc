@@ -135,5 +135,139 @@
             <PCU>25</PCU>
             <IsAirTight>false</IsAirTight>
         </Definition>
+        <Definition>
+            <Id>
+                <TypeId>Wheel</TypeId>
+                <SubtypeId>ShortTankWheelBlock3x3</SubtypeId>
+            </Id>
+            <DisplayName>Short Track Wheel 3x3</DisplayName>
+            <Icon>Textures\Icons\TankTrackWheelBlock3x3.dds</Icon>
+            <Description>Description_Wheel</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="2" z="3"/>
+            <ModelOffset x="0" y="0" z="0" />
+			<Model>Models\ShortTankWheelBlock3x3.mwm</Model>
+            <UseModelIntersection>true</UseModelIntersection>
+            <Components>
+                <Component Subtype="SteelPlate" Count="20" />
+                <Component Subtype="Construction" Count="50" />
+                <Component Subtype="LargeTube" Count="20" />
+                <Component Subtype="SteelPlate" Count="50" />
+            </Components>
+            <CriticalComponent Subtype="LargeTube" Index="0" />
+            <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\ShortTankWheelBlock3x3_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\ShortTankWheelBlock3x3_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\ShortTankWheelBlock3x3_BS3.mwm"/>
+            </BuildProgressModels>
+            <VoxelPlacement>
+                <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+                <StaticMode>
+                    <PlacementMode>OutsideVoxel</PlacementMode>
+                    <MaxAllowed>0.2</MaxAllowed>
+                    <MinAllowed>0</MinAllowed>
+                </StaticMode>
+                <DynamicMode>
+                    <PlacementMode>OutsideVoxel</PlacementMode>
+                    <MaxAllowed>0.2</MaxAllowed>
+                    <MinAllowed>0.01</MinAllowed>
+                </DynamicMode>
+            </VoxelPlacement>
+            <MountPoints>
+				<MountPoint Side="Bottom" StartX="1" StartY="1" EndX="2" EndY="2"/>
+            </MountPoints>
+            <WheelPlacementCollider>
+                <ColliderDiameter>0.5</ColliderDiameter>
+                <ColliderHeight>0.5</ColliderHeight>
+                <ColliderOffset>0</ColliderOffset>
+            </WheelPlacementCollider>
+            <BlockPairName>ShortTankWheelBlock3x3</BlockPairName>
+            <UsesDeformation>false</UsesDeformation>
+            <DeformationRatio>0.3</DeformationRatio>
+            <MirroringY>Z</MirroringY>
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <Public>true</Public>
+            <BuildTimeSeconds>20</BuildTimeSeconds>
+            <InventorySize>
+                <X>2.5</X>
+                <Y>2.5</Y>
+                <Z>2.5</Z>
+            </InventorySize>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+            <DestroySound>PoofExplosionCat3</DestroySound>
+            <PCU>25</PCU>
+        </Definition>
+        <Definition>
+            <Id>
+                <TypeId>Wheel</TypeId>
+                <SubtypeId>ShortTankWheelBlock1x1</SubtypeId>
+            </Id>
+            <DisplayName>Short Track Wheel 1x1</DisplayName>
+            <Icon>Textures\Icons\TankTrackWheelBlock1x1.dds</Icon>
+            <Description>Description_Wheel</Description>
+            <CubeSize>Large</CubeSize>
+            <GuiVisible>false</GuiVisible>
+            <BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+            <ModelOffset x="0" y="0" z="0" />
+			<Model>Models\ShortTankWheelBlock1x1.mwm</Model>
+            <UseModelIntersection>true</UseModelIntersection>
+            <Components>
+                <Component Subtype="SteelPlate" Count="10" />
+                <Component Subtype="Construction" Count="30" />
+                <Component Subtype="LargeTube" Count="10" />
+                <Component Subtype="SteelPlate" Count="20" />
+            </Components>
+            <CriticalComponent Subtype="LargeTube" Index="0" />
+            <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\ShortTankWheelBlock1x1_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\ShortTankWheelBlock1x1_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\ShortTankWheelBlock1x1_BS3.mwm"/>
+            </BuildProgressModels>
+            <MountPoints>
+                <MountPoint Side="Bottom" StartX="0.25" StartY="0.25" EndX="0.75" EndY="0.75" />
+            </MountPoints>
+            <VoxelPlacement>
+                <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+                <StaticMode>
+                    <PlacementMode>OutsideVoxel</PlacementMode>
+                    <MaxAllowed>0.2</MaxAllowed>
+                    <MinAllowed>0</MinAllowed>
+                </StaticMode>
+                <DynamicMode>
+                    <PlacementMode>OutsideVoxel</PlacementMode>
+                    <MaxAllowed>0.2</MaxAllowed>
+                    <MinAllowed>0.01</MinAllowed>
+                </DynamicMode>
+            </VoxelPlacement>
+            <WheelPlacementCollider>
+                <ColliderDiameter>0.5</ColliderDiameter>
+                <ColliderHeight>0.5</ColliderHeight>
+                <ColliderOffset>0</ColliderOffset>
+            </WheelPlacementCollider>
+            <BlockPairName>ShortTankWheelBlock1x1</BlockPairName>
+            <UsesDeformation>false</UsesDeformation>
+            <DeformationRatio>0.3</DeformationRatio>
+            <MirroringY>Z</MirroringY>
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>10</BuildTimeSeconds>
+            <Public>true</Public>
+            <InventorySize>
+                <X>2.5</X>
+                <Y>2.5</Y>
+                <Z>2.5</Z>
+            </InventorySize>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyed_Medium</DestroyEffect>
+            <DestroySound>PoofExplosionCat2</DestroySound>
+            <PCU>25</PCU>
+            <IsAirTight>false</IsAirTight>
+        </Definition>
 	</CubeBlocks>
 </Definitions>
