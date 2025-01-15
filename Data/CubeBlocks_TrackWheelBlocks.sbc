@@ -72,7 +72,7 @@
                 <TypeId>Wheel</TypeId>
                 <SubtypeId>TankWheelBlock1x1</SubtypeId>
             </Id>
-            <DisplayName>Track Wheel 3x3</DisplayName>
+            <DisplayName>Track Wheel 1x1</DisplayName>
             <Icon>Textures\Icons\TankTrackWheelBlock1x1.dds</Icon>
             <Description>Description_Wheel</Description>
             <CubeSize>Large</CubeSize>
