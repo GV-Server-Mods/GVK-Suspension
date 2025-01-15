@@ -77,7 +77,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.005</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -162,7 +162,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.005</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -250,7 +250,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -338,7 +338,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -426,7 +426,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -512,7 +512,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -597,7 +597,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -683,7 +683,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -764,14 +764,14 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel5x5mirrored</RotorPart>
-			<PropulsionForce>100000</PropulsionForce>
+			<PropulsionForce>8000</PropulsionForce>
 			<MinHeight>-0.65</MinHeight>
 			<MaxHeight>0.35</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>30000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -847,14 +847,14 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel5x5</RotorPart>
-			<PropulsionForce>100000</PropulsionForce>
+			<PropulsionForce>8000</PropulsionForce>
 			<MinHeight>-0.65</MinHeight>
 			<MaxHeight>0.35</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>30000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -930,14 +930,14 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheelmirrored</RotorPart>
-			<PropulsionForce>60000</PropulsionForce>
+			<PropulsionForce>3000</PropulsionForce>
 			<MinHeight>-0.40</MinHeight>
 			<MaxHeight>0.30</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>30000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -1013,14 +1013,14 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel</RotorPart>
-			<PropulsionForce>60000</PropulsionForce>
+			<PropulsionForce>3000</PropulsionForce>
 			<MinHeight>-0.40</MinHeight>
 			<MaxHeight>0.30</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>30000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -1096,14 +1096,14 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel2x2Mirrored</RotorPart>
-			<PropulsionForce>40000</PropulsionForce>
+			<PropulsionForce>1500</PropulsionForce>
 			<MinHeight>-0.40</MinHeight>
 			<MaxHeight>0.30</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>30000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -1179,14 +1179,14 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel2x2</RotorPart>
-			<PropulsionForce>40000</PropulsionForce>
+			<PropulsionForce>1500</PropulsionForce>
 			<MinHeight>-0.40</MinHeight>
 			<MaxHeight>0.30</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>30000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -1262,14 +1262,14 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel1x1mirrored</RotorPart>
-			<PropulsionForce>10000</PropulsionForce>
+			<PropulsionForce>200</PropulsionForce>
 			<MinHeight>-0.40</MinHeight>
 			<MaxHeight>0.30</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>30000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -1345,14 +1345,14 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel1x1</RotorPart>
-			<PropulsionForce>10000</PropulsionForce>
+			<PropulsionForce>200</PropulsionForce>
 			<MinHeight>-0.40</MinHeight>
 			<MaxHeight>0.30</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>30000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -2509,7 +2509,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.005</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -2593,7 +2593,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.005</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -2678,7 +2678,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -2765,7 +2765,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -2850,7 +2850,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -2935,7 +2935,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -3019,7 +3019,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -3103,7 +3103,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -3184,14 +3184,14 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel5x5mirrored</RotorPart>
-			<PropulsionForce>100000</PropulsionForce>
+			<PropulsionForce>8000</PropulsionForce>
 			<MinHeight>-0.65</MinHeight>
 			<MaxHeight>0.35</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>30000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -3267,14 +3267,14 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel5x5</RotorPart>
-			<PropulsionForce>100000</PropulsionForce>
+			<PropulsionForce>8000</PropulsionForce>
 			<MinHeight>-0.65</MinHeight>
 			<MaxHeight>0.35</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>30000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -3349,14 +3349,14 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheelmirrored</RotorPart>
-			<PropulsionForce>60000</PropulsionForce>
+			<PropulsionForce>3000</PropulsionForce>
 			<MinHeight>-0.40</MinHeight>
 			<MaxHeight>0.30</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>30000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -3431,14 +3431,14 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel</RotorPart>
-			<PropulsionForce>60000</PropulsionForce>
+			<PropulsionForce>3000</PropulsionForce>
 			<MinHeight>-0.40</MinHeight>
 			<MaxHeight>0.30</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>30000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -3513,14 +3513,14 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel2x2Mirrored</RotorPart>
-			<PropulsionForce>40000</PropulsionForce>
+			<PropulsionForce>1500</PropulsionForce>
 			<MinHeight>-0.40</MinHeight>
 			<MaxHeight>0.30</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>30000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -3595,14 +3595,14 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel2x2</RotorPart>
-			<PropulsionForce>40000</PropulsionForce>
+			<PropulsionForce>1500</PropulsionForce>
 			<MinHeight>-0.40</MinHeight>
 			<MaxHeight>0.30</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>30000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -3677,14 +3677,14 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel1x1mirrored</RotorPart>
-			<PropulsionForce>10000</PropulsionForce>
+			<PropulsionForce>200</PropulsionForce>
 			<MinHeight>-0.40</MinHeight>
 			<MaxHeight>0.30</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>30000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -3759,14 +3759,14 @@
 			<MaxForceMagnitude>1E9</MaxForceMagnitude>
 			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
 			<RotorPart>RealWheel1x1</RotorPart>
-			<PropulsionForce>10000</PropulsionForce>
+			<PropulsionForce>200</PropulsionForce>
 			<MinHeight>-0.40</MinHeight>
 			<MaxHeight>0.30</MaxHeight>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>30000</AxleFriction>
 			<SteeringSpeed>0.015</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>

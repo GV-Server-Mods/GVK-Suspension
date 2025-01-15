@@ -77,7 +77,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.005</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -162,7 +162,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.005</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -248,7 +248,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -336,7 +336,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -422,7 +422,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -508,7 +508,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -593,7 +593,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
@@ -678,7 +678,7 @@
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<SafetyDetach>5</SafetyDetach>
 			<SafetyDetachMax>5</SafetyDetachMax>
-			<AxleFriction>200000</AxleFriction>
+			<AxleFriction>50000</AxleFriction>
 			<SteeringSpeed>0.010</SteeringSpeed>
 			<AirShockMinSpeed>10</AirShockMinSpeed>
 			<AirShockMaxSpeed>25</AirShockMaxSpeed>
