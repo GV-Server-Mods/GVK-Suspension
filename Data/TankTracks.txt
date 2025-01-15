@@ -1,36 +1,42 @@
 ; For guide on how to configure these see the framework's workshop page: https://steamcommunity.com/sharedfiles/filedetails/?id=3208995513
 
 
+; The small vs large differentiation is to not allow connecting between grid sizes. One can instead make a single design for both sizes to allow that.
+
+; I'm designating a single track per block for tweaking, but it's not required.
+; You can have a single track definition applied to many blocks if you wish.
+
+
 [Design:TigerOne_Large_Track]
 DisplayName = Tiger1-Track-Wheel
-Icon = TigerOne_Icon_Track
+Icon = VanillaOTT_Icon
 
 [Design:T14_Large_Track]
 DisplayName = T14-Track-Wheel
-Icon = T14_Icon_Track
+Icon = VanillaOTT_Icon
 
 [Design:T55MORUE_Large_Track]
 DisplayName = T55Morue-Track-Wheel
-Icon = T55_Icon_Track
+Icon = VanillaOTT_Icon
 
 [Design:Abrams_Large_Track]
 DisplayName = Abrams-Track-Wheel
-Icon = Abrams_Icon_Track
+Icon = VanillaOTT_Icon
 
 [Design:Leopard2_Large_Track]
 DisplayName = Leopard2-Track-Wheel
-Icon = Leopard2_Icon_Track
+Icon = VanillaOTT_Icon
 
 [Design:T80_Large_Track]
 DisplayName = T80-Track-Wheel
-Icon = T80_Icon_Track
+Icon = VanillaOTT_Icon
 
 [Design:CV90mk4_Large_Track]
 DisplayName = CV90mk4-Track-Wheel
-Icon = CV90mk4_Icon_Track
+Icon = VanillaOTT_Icon
 
 
-; Lifted Small
+;Normal Wheels
 [Track:LiftedOTT_Small_1x1]
 Inherit 			= VanillaOTT_Small_1x1
 SegmentScale 		= 0.58, 0.58, 0.58
@@ -57,7 +63,7 @@ SegmentScale 	= 1.5, 1.5, 1.5
 SegmentOffset 	= 0.15, -0.1, 0
 
 
-; Lifted Large
+
 [Track:LiftedOTT_Large_1x1]
 Inherit 		= VanillaOTT_Large_1x1
 SegmentScale 	= 2.3, 2, 2
@@ -83,7 +89,8 @@ Inherit 		= VanillaOTT_Large_3x3
 SegmentScale 	= 7.5, 7.5, 7.5
 SegmentOffset 	= 0.75, -0.6, 0
 
-; Lifted Offroad Small
+;Offroad Wheels... Man, he did not make this easy on me.
+
 [Track:LiftedOTT_Small_1x1_Offroad]
 Inherit 		= VanillaOTT_Small_1x1
 SegmentScale 	= 0.5, 0.5, 0.5
@@ -110,7 +117,7 @@ SegmentScale 	= 1.5, 1.5, 1.5
 SegmentOffset 	= 0.15, -0.1, 0
 
 
-; Lifted Offroad Large
+
 [Track:LiftedOTT_Large_1x1_Offroad]
 Inherit 		= VanillaOTT_Large_1x1
 SegmentScale 	= 2.45, 2, 2
@@ -137,7 +144,7 @@ SegmentScale 	= 7.5, 7.5, 7.5
 SegmentOffset 	= 0.84, -0.6, 0
 
 
-;Tinsoldier wheel replacement
+;Tinsoldier Tracks
 ;1x1
 [Track:TigerOne_Large_1x1_Track]
 Design			= TigerOne_Large_Track
@@ -145,7 +152,6 @@ Inherit 		= TigerOne_Large_1x1
 SegmentScale 	= 4, 2, 2
 SegmentOffset 	= .085, .02, 0
 ReplaceWheelModel = Models\TankWheel1x1.mwm
-ReplaceWheelModelConstruction = Models\TankWheel1x1_BS1.mwm
 
 [Track:T14_Large_1x1_Track]
 Design			= T14_Large_Track
@@ -153,7 +159,6 @@ Inherit 		= T14_Large_1x1
 SegmentScale 	= 5, 2, 2
 SegmentOffset 	= .085, 0, 0
 ReplaceWheelModel = Models\TankWheel1x1.mwm
-ReplaceWheelModelConstruction = Models\TankWheel1x1_BS1.mwm
 
 [Track:T55MORUE_Large_1x1_Track]
 Design			= T55MORUE_Large_Track
@@ -161,7 +166,6 @@ Inherit 		= T55MORUE_Large_1x1
 SegmentScale 	= 4, 2, 2
 SegmentOffset 	= .085, 0, 0
 ReplaceWheelModel = Models\TankWheel1x1.mwm
-ReplaceWheelModelConstruction = Models\TankWheel1x1_BS1.mwm
 
 [Track:Abrams_Large_1x1_Track]
 Design			= Abrams_Large_Track
@@ -169,7 +173,6 @@ Inherit 		= Abrams_Large_1x1
 SegmentScale 	= 4.5, 2.5, 2.5
 SegmentOffset 	= .085, 0, 0
 ReplaceWheelModel = Models\TankWheel1x1.mwm
-ReplaceWheelModelConstruction = Models\TankWheel1x1_BS1.mwm
 
 [Track:Leopard2_Large_1x1_Track]
 Design			= Leopard2_Large_Track
@@ -177,7 +180,6 @@ Inherit 		= Leopard2_Large_1x1
 SegmentScale 	= 4, 2.5, 2.5
 SegmentOffset 	= .085, 0.02, 0
 ReplaceWheelModel = Models\TankWheel1x1.mwm
-ReplaceWheelModelConstruction = Models\TankWheel1x1_BS1.mwm
 
 [Track:T80_Large_1x1_Track]
 Design			= T80_Large_Track
@@ -185,7 +187,6 @@ Inherit 		= T80_Large_1x1
 SegmentScale 	= 4.2, 2, 2
 SegmentOffset 	= .085, 0, 0
 ReplaceWheelModel = Models\TankWheel1x1.mwm
-ReplaceWheelModelConstruction = Models\TankWheel1x1_BS1.mwm
 
 [Track:CV90mk4_Large_1x1_Track]
 Design			= CV90mk4_Large_Track
@@ -193,7 +194,6 @@ Inherit 		= CV90mk4_Large_1x1
 SegmentScale 	= 6, 2.5, 2.5
 SegmentOffset 	= .085, 0, 0
 ReplaceWheelModel = Models\TankWheel1x1.mwm
-ReplaceWheelModelConstruction = Models\TankWheel1x1_BS1.mwm
 
 ;2x2
 [Track:TigerOne_Large_2x2_Track]
@@ -202,7 +202,6 @@ Inherit 		= TigerOne_Large_2x2
 SegmentScale 	= 4.5, 3, 3
 SegmentOffset 	= .68, 0, 0 
 ReplaceWheelModel = Models\TankWheel2x2.mwm
-ReplaceWheelModelConstruction = Models\TankWheel2x2_BS1.mwm
 
 [Track:T14_Large_2x2_Track]
 Design			= T14_Large_Track
@@ -210,7 +209,6 @@ Inherit 		= T14_Large_2x2
 SegmentScale 	= 5.5, 3, 3
 SegmentOffset 	= .68, 0, 0
 ReplaceWheelModel = Models\TankWheel2x2.mwm
-ReplaceWheelModelConstruction = Models\TankWheel2x2_BS1.mwm
 
 [Track:T55MORUE_Large_2x2_Track]
 Design			= T55MORUE_Large_Track
@@ -218,7 +216,6 @@ Inherit 		= T55MORUE_Large_2x2
 SegmentScale 	= 4.5, 3, 3
 SegmentOffset 	= .68, 0, 0 
 ReplaceWheelModel = Models\TankWheel2x2.mwm
-ReplaceWheelModelConstruction = Models\TankWheel2x2_BS1.mwm
 
 [Track:Abrams_Large_2x2_Track]
 Design			= Abrams_Large_Track
@@ -226,7 +223,6 @@ Inherit 		= Abrams_Large_2x2
 SegmentScale 	= 4.5, 3.25, 3.25
 SegmentOffset 	= .68, 0, 0 
 ReplaceWheelModel = Models\TankWheel2x2.mwm
-ReplaceWheelModelConstruction = Models\TankWheel2x2_BS1.mwm
 
 [Track:Leopard2_Large_2x2_Track]
 Design			= Leopard2_Large_Track
@@ -234,7 +230,6 @@ Inherit 		= Leopard2_Large_2x2
 SegmentScale 	= 4.5, 3.5, 3.5
 SegmentOffset 	= .68, 0, 0 
 ReplaceWheelModel = Models\TankWheel2x2.mwm
-ReplaceWheelModelConstruction = Models\TankWheel2x2_BS1.mwm
 
 [Track:T80_Large_2x2_Track]
 Design			= T80_Large_Track
@@ -242,7 +237,6 @@ Inherit 		= T80_Large_2x2
 SegmentScale 	= 4.5, 3, 3
 SegmentOffset 	= .68, 0, 0 
 ReplaceWheelModel = Models\TankWheel2x2.mwm
-ReplaceWheelModelConstruction = Models\TankWheel2x2_BS1.mwm
 
 [Track:CV90mk4_Large_2x2_Track]
 Design			= CV90mk4_Large_Track
@@ -250,7 +244,6 @@ Inherit 		= CV90mk4_Large_2x2
 SegmentScale 	= 6.5, 4, 4
 SegmentOffset 	= .68, 0, 0 
 ReplaceWheelModel = Models\TankWheel2x2.mwm
-ReplaceWheelModelConstruction = Models\TankWheel2x2_BS1.mwm
 
 ;3x3
 [Track:TigerOne_Large_3x3_Track]
@@ -259,7 +252,6 @@ Inherit 		= TigerOne_Large_3x3
 SegmentScale 	= 6, 4, 4
 SegmentOffset 	= .75, 0.05, 0 
 ReplaceWheelModel = Models\TankWheel3x3.mwm
-ReplaceWheelModelConstruction = Models\TankWheel3x3_BS1.mwm
 
 [Track:T14_Large_3x3_Track]
 Design			= T14_Large_Track
@@ -267,7 +259,6 @@ Inherit 		= T14_Large_3x3
 SegmentScale 	= 6.7, 5, 5
 SegmentOffset 	= .75, 0.05, 0
 ReplaceWheelModel = Models\TankWheel3x3.mwm
-ReplaceWheelModelConstruction = Models\TankWheel3x3_BS1.mwm
 
 [Track:T55MORUE_Large_3x3_Track]
 Design			= T55MORUE_Large_Track
@@ -275,7 +266,6 @@ Inherit 		= T55MORUE_Large_3x3
 SegmentScale 	= 6, 5, 5
 SegmentOffset 	= .75, 0.05, 0
 ReplaceWheelModel = Models\TankWheel3x3.mwm
-ReplaceWheelModelConstruction = Models\TankWheel3x3_BS1.mwm
 
 [Track:Abrams_Large_3x3_Track]
 Design			= Abrams_Large_Track
@@ -283,7 +273,6 @@ Inherit 		= Abrams_Large_3x3
 SegmentScale 	= 6, 4, 4
 SegmentOffset 	= .75, 0.05, 0 
 ReplaceWheelModel = Models\TankWheel3x3.mwm
-ReplaceWheelModelConstruction = Models\TankWheel3x3_BS1.mwm
 
 [Track:Leopard2_Large_3x3_Track]
 Design			= Leopard2_Large_Track
@@ -291,7 +280,6 @@ Inherit 		= Leopard2_Large_3x3
 SegmentScale 	= 5.5, 4, 4
 SegmentOffset 	= .75, 0.05, 0
 ReplaceWheelModel = Models\TankWheel3x3.mwm
-ReplaceWheelModelConstruction = Models\TankWheel3x3_BS1.mwm
 
 [Track:T80_Large_3x3_Track]
 Design			= T80_Large_Track
@@ -299,7 +287,6 @@ Inherit 		= T80_Large_3x3
 SegmentScale 	= 6, 4, 4
 SegmentOffset 	= .75, 0.05, 0
 ReplaceWheelModel = Models\TankWheel3x3.mwm
-ReplaceWheelModelConstruction = Models\TankWheel3x3_BS1.mwm
 
 [Track:CV90mk4_Large_3x3_Track]
 Design			= CV90mk4_Large_Track
@@ -307,7 +294,6 @@ Inherit 		= CV90mk4_Large_3x3
 SegmentScale 	= 8, 5, 5
 SegmentOffset 	= .75, 0.05, 0
 ReplaceWheelModel = Models\TankWheel3x3.mwm
-ReplaceWheelModelConstruction = Models\TankWheel3x3_BS1.mwm
 
 ;5x5
 [Track:TigerOne_Large_5x5_Track]
@@ -316,7 +302,6 @@ Inherit 		= TigerOne_Large_5x5
 SegmentScale 	= 12, 8, 8
 SegmentOffset 	= .79, 0.05, 0 
 ReplaceWheelModel = Models\TankWheel5x5.mwm
-ReplaceWheelModelConstruction = Models\TankWheel5x5_BS1.mwm
 
 [Track:T14_Large_5x5_Track]
 Design			= T14_Large_Track
@@ -324,7 +309,6 @@ Inherit 		= T14_Large_5x5
 SegmentScale 	= 14.5, 8, 8
 SegmentOffset 	= .79, 0.05, 0 
 ReplaceWheelModel = Models\TankWheel5x5.mwm
-ReplaceWheelModelConstruction = Models\TankWheel5x5_BS1.mwm
 
 [Track:T55MORUE_Large_5x5_Track]
 Design			= T55MORUE_Large_Track
@@ -332,7 +316,6 @@ Inherit 		= T55MORUE_Large_5x5
 SegmentScale 	= 12, 8, 8
 SegmentOffset 	= .79, 0.05, 0 
 ReplaceWheelModel = Models\TankWheel5x5.mwm
-ReplaceWheelModelConstruction = Models\TankWheel5x5_BS1.mwm
 
 [Track:Abrams_Large_5x5_Track]
 Design			= Abrams_Large_Track
@@ -340,7 +323,6 @@ Inherit 		= Abrams_Large_5x5
 SegmentScale 	= 13.5, 8, 8
 SegmentOffset 	= .79, 0.05, 0 
 ReplaceWheelModel = Models\TankWheel5x5.mwm
-ReplaceWheelModelConstruction = Models\TankWheel5x5_BS1.mwm
 
 [Track:Leopard2_Large_5x5_Track]
 Design			= Leopard2_Large_Track
@@ -348,7 +330,6 @@ Inherit 		= Leopard2_Large_5x5
 SegmentScale 	= 12, 8, 8
 SegmentOffset 	= .79, 0.05, 0 
 ReplaceWheelModel = Models\TankWheel5x5.mwm
-ReplaceWheelModelConstruction = Models\TankWheel5x5_BS1.mwm
 
 [Track:T80_Large_5x5_Track]
 Design			= T80_Large_Track
@@ -356,7 +337,6 @@ Inherit 		= T80_Large_5x5
 SegmentScale 	= 12, 8, 8
 SegmentOffset 	= .79, 0.05, 0 
 ReplaceWheelModel = Models\TankWheel5x5.mwm
-ReplaceWheelModelConstruction = Models\TankWheel5x5_BS1.mwm
 
 [Track:CV90mk4_Large_5x5_Track]
 Design			= CV90mk4_Large_Track
@@ -364,67 +344,16 @@ Inherit 		= CV90mk4_Large_5x5
 SegmentScale 	= 16.5, 8, 8
 SegmentOffset 	= .79, 0.05, 0 
 ReplaceWheelModel = Models\TankWheel5x5.mwm
-ReplaceWheelModelConstruction = Models\TankWheel5x5_BS1.mwm
 
 
 [Blocks]
-; No wheel replacers for vanilla/dlc small grid yet, models not completed
 
-; large grid vanilla wheel replacement
-MotorSuspension/Suspension1x1         = TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
-MotorSuspension/Suspension1x1mirrored = TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
-MotorSuspension/Suspension2x2         = TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
-MotorSuspension/Suspension2x2Mirrored = TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
-MotorSuspension/Suspension3x3         = TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
-MotorSuspension/Suspension3x3mirrored = TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
-MotorSuspension/Suspension5x5         = TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
-MotorSuspension/Suspension5x5mirrored = TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
-
-MotorSuspension/ShortSuspension1x1         = TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
-MotorSuspension/ShortSuspension1x1mirrored = TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
-MotorSuspension/ShortSuspension2x2         = TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
-MotorSuspension/ShortSuspension2x2Mirrored = TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
-MotorSuspension/ShortSuspension3x3         = TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
-MotorSuspension/ShortSuspension3x3mirrored = TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
-MotorSuspension/ShortSuspension5x5         = TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
-MotorSuspension/ShortSuspension5x5mirrored = TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
-
-Wheel/Wheel1x1 = TigerOne_Large_1x1_Static_Track, T14_Large_1x1_Static_Track, T55MORUE_Large_1x1_Static_Track, Abrams_Large_1x1_Static_Track, Leopard2_Large_1x1_Static_Track, T80_Large_1x1_Static_Track, CV90mk4_Large_1x1_Static_Track
-Wheel/Wheel2x2 = TigerOne_Large_2x2_Static_Track, T14_Large_2x2_Static_Track, T55MORUE_Large_2x2_Static_Track, Abrams_Large_2x2_Static_Track, Leopard2_Large_2x2_Static_Track, T80_Large_2x2_Static_Track, CV90mk4_Large_2x2_Static_Track
-Wheel/Wheel3x3 = TigerOne_Large_3x3_Static_Track, T14_Large_3x3_Static_Track, T55MORUE_Large_3x3_Static_Track, Abrams_Large_3x3_Static_Track, Leopard2_Large_3x3_Static_Track, T80_Large_3x3_Static_Track, CV90mk4_Large_3x3_Static_Track
-Wheel/Wheel5x5 = TigerOne_Large_5x5_Static_Track, T14_Large_5x5_Static_Track, T55MORUE_Large_5x5_Static_Track, Abrams_Large_5x5_Static_Track, Leopard2_Large_5x5_Static_Track, T80_Large_5x5_Static_Track, CV90mk4_Large_5x5_Static_Track
-
-; Large Grid DLC Wheel replacement
-MotorSuspension/OffroadSuspension1x1         = TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
-MotorSuspension/OffroadSuspension1x1mirrored = TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
-MotorSuspension/OffroadSuspension2x2         = TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
-MotorSuspension/OffroadSuspension2x2Mirrored = TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
-MotorSuspension/OffroadSuspension3x3         = TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
-MotorSuspension/OffroadSuspension3x3mirrored = TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
-MotorSuspension/OffroadSuspension5x5         = TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
-MotorSuspension/OffroadSuspension5x5mirrored = TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
-
-MotorSuspension/OffroadShortSuspension1x1         = TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Small_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
-MotorSuspension/OffroadShortSuspension1x1mirrored = TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Small_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
-MotorSuspension/OffroadShortSuspension2x2         = TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
-MotorSuspension/OffroadShortSuspension2x2Mirrored = TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
-MotorSuspension/OffroadShortSuspension3x3         = TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
-MotorSuspension/OffroadShortSuspension3x3mirrored = TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
-MotorSuspension/OffroadShortSuspension5x5         = TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
-MotorSuspension/OffroadShortSuspension5x5mirrored = TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
-
-Wheel/OffroadWheel1x1 = TigerOne_Large_1x1_Static_Track, T14_Large_1x1_Static_Track, T55MORUE_Large_1x1_Static_Track, Abrams_Large_1x1_Static_Track, Leopard2_Large_1x1_Static_Track, T80_Large_1x1_Static_Track, CV90mk4_Large_1x1_Static_Track
-Wheel/OffroadWheel2x2 = TigerOne_Large_2x2_Static_Track, T14_Large_2x2_Static_Track, T55MORUE_Large_2x2_Static_Track, Abrams_Large_2x2_Static_Track, Leopard2_Large_2x2_Static_Track, T80_Large_2x2_Static_Track, CV90mk4_Large_2x2_Static_Track
-Wheel/OffroadWheel3x3 = TigerOne_Large_3x3_Static_Track, T14_Large_3x3_Static_Track, T55MORUE_Large_3x3_Static_Track, Abrams_Large_3x3_Static_Track, Leopard2_Large_3x3_Static_Track, T80_Large_3x3_Static_Track, CV90mk4_Large_3x3_Static_Track
-Wheel/OffroadWheel5x5 = TigerOne_Large_5x5_Static_Track, T14_Large_5x5_Static_Track, T55MORUE_Large_5x5_Static_Track, Abrams_Large_5x5_Static_Track, Leopard2_Large_5x5_Static_Track, T80_Large_5x5_Static_Track, CV90mk4_Large_5x5_Static_Track
-
-; Lifted Suspension, needed OTT and Morue added, no wheel replacement
 ; small grid
 ; Vanilla
 MotorSuspension/SG_1x1_Lifted_Suspension_Left	= LiftedOTT_Small_1x1, TigerOne_Small_1x1, T14_Small_1x1, T55MORUE_Small_1x1, Abrams_Small_1x1, Leopard2_Small_1x1, Leclerc_Small_1x1, T80_Small_1x1, Sherman_Small_1x1, PlusT55MORUE_Small_1x1, PlusAbrams_Small_1x1, PlusLeopard2_Small_1x1, PlusT80_Small_1x1, CV90mk4_Small_1x1, PlusCV90mk4_Small_1x1
 MotorSuspension/SG_1x1_Lifted_Suspension_Right	= LiftedOTT_Small_1x1, TigerOne_Small_1x1, T14_Small_1x1, T55MORUE_Small_1x1, Abrams_Small_1x1, Leopard2_Small_1x1, Leclerc_Small_1x1, T80_Small_1x1, Sherman_Small_1x1, PlusT55MORUE_Small_1x1, PlusAbrams_Small_1x1, PlusLeopard2_Small_1x1, PlusT80_Small_1x1, CV90mk4_Small_1x1, PlusCV90mk4_Small_1x1
-MotorSuspension/SG_2x2_Lifted_Suspension_Left	= LiftedOTT_Small_2x2, TigerOne_Small_2x2, T14_Small_2x2, T55MORUE_Small_2x2, Abrams_Small_2x2, Leopard2_Small_2x2, Leclerc_Small_2x2, T80_Small_2x2, Sherman_Small_2x2, PlusT55MORUE_Small_2x2, PlusAbrams_Small_2x2, PlusLeopard2_Small_2x2, PlusT80_Small_2x2, CV90mk4_Small_2x2, PlusCV90mk4_Small_2x2
-MotorSuspension/SG_2x2_Lifted_Suspension_Right	= LiftedOTT_Small_2x2, TigerOne_Small_2x2, T14_Small_2x2, T55MORUE_Small_2x2, Abrams_Small_2x2, Leopard2_Small_2x2, Leclerc_Small_2x2, T80_Small_2x2, Sherman_Small_2x2, PlusT55MORUE_Small_2x2, PlusAbrams_Small_2x2, PlusLeopard2_Small_2x2, PlusT80_Small_2x2, CV90mk4_Small_2x2, PlusCV90mk4_Small_2x2
+;MotorSuspension/SG_2x2_Lifted_Suspension_Left	= LiftedOTT_Small_2x2
+;MotorSuspension/SG_2x2_Lifted_Suspension_Right	= LiftedOTT_Small_2x2
 MotorSuspension/SG_3x3_Lifted_Suspension_Left	= LiftedOTT_Small_3x3, TigerOne_Small_3x3, T14_Small_3x3, T55MORUE_Small_3x3, Abrams_Small_3x3, Leopard2_Small_3x3, Leclerc_Small_3x3, T80_Small_3x3, Sherman_Small_3x3, PlusT55MORUE_Small_3x3, PlusAbrams_Small_3x3, PlusLeopard2_Small_3x3, PlusT80_Small_3x3, CV90mk4_Small_3x3, PlusCV90mk4_Small_3x3
 MotorSuspension/SG_3x3_Lifted_Suspension_Right	= LiftedOTT_Small_3x3, TigerOne_Small_3x3, T14_Small_3x3, T55MORUE_Small_3x3, Abrams_Small_3x3, Leopard2_Small_3x3, Leclerc_Small_3x3, T80_Small_3x3, Sherman_Small_3x3, PlusT55MORUE_Small_3x3, PlusAbrams_Small_3x3, PlusLeopard2_Small_3x3, PlusT80_Small_3x3, CV90mk4_Small_3x3, PlusCV90mk4_Small_3x3
 MotorSuspension/SG_5x5_Lifted_Suspension_Left	= LiftedOTT_Small_5x5, TigerOne_Small_5x5, T14_Small_5x5, T55MORUE_Small_5x5, Abrams_Small_5x5, Leopard2_Small_5x5, Leclerc_Small_5x5, T80_Small_5x5, Sherman_Small_5x5, PlusT55MORUE_Small_5x5, PlusAbrams_Small_5x5, PlusLeopard2_Small_5x5, PlusT80_Small_5x5, CV90mk4_Small_5x5, PlusCV90mk4_Small_5x5
@@ -434,14 +363,13 @@ MotorSuspension/SG_5x5_Lifted_Suspension_Right	= LiftedOTT_Small_5x5, TigerOne_S
 ; Offroad
 MotorSuspension/SG_1x1_Offroad_Lifted_Suspension_Left	= LiftedOTT_Small_1x1_Offroad, TigerOne_Small_1x1, T14_Small_1x1, T55MORUE_Small_1x1, Abrams_Small_1x1, Leopard2_Small_1x1, Leclerc_Small_1x1, T80_Small_1x1, Sherman_Small_1x1, PlusT55MORUE_Small_1x1, PlusAbrams_Small_1x1, PlusLeopard2_Small_1x1, PlusT80_Small_1x1, CV90mk4_Small_1x1, PlusCV90mk4_Small_1x1
 MotorSuspension/SG_1x1_Offroad_Lifted_Suspension_Right	= LiftedOTT_Small_1x1_Offroad, TigerOne_Small_1x1, T14_Small_1x1, T55MORUE_Small_1x1, Abrams_Small_1x1, Leopard2_Small_1x1, Leclerc_Small_1x1, T80_Small_1x1, Sherman_Small_1x1, PlusT55MORUE_Small_1x1, PlusAbrams_Small_1x1, PlusLeopard2_Small_1x1, PlusT80_Small_1x1, CV90mk4_Small_1x1, PlusCV90mk4_Small_1x1
-MotorSuspension/SG_2x2_Offroad_Lifted_Suspension_Left	= LiftedOTT_Small_2x2_Offroad, TigerOne_Small_2x2, T14_Small_2x2, T55MORUE_Small_2x2, Abrams_Small_2x2, Leopard2_Small_2x2, Leclerc_Small_2x2, T80_Small_2x2, Sherman_Small_2x2, PlusT55MORUE_Small_2x2, PlusAbrams_Small_2x2, PlusLeopard2_Small_2x2, PlusT80_Small_2x2, CV90mk4_Small_2x2, PlusCV90mk4_Small_2x2
-MotorSuspension/SG_2x2_Offroad_Lifted_Suspension_Right	= LiftedOTT_Small_2x2_Offroad, TigerOne_Small_2x2, T14_Small_2x2, T55MORUE_Small_2x2, Abrams_Small_2x2, Leopard2_Small_2x2, Leclerc_Small_2x2, T80_Small_2x2, Sherman_Small_2x2, PlusT55MORUE_Small_2x2, PlusAbrams_Small_2x2, PlusLeopard2_Small_2x2, PlusT80_Small_2x2, CV90mk4_Small_2x2, PlusCV90mk4_Small_2x2
+;MotorSuspension/SG_2x2_Offroad_Lifted_Suspension_Left	= LiftedOTT_Small_2x2_Offroad
+;MotorSuspension/SG_2x2_Offroad_Lifted_Suspension_Right	= LiftedOTT_Small_2x2_Offroad
 MotorSuspension/SG_3x3_Offroad_Lifted_Suspension_Left	= LiftedOTT_Small_3x3_Offroad, TigerOne_Small_3x3, T14_Small_3x3, T55MORUE_Small_3x3, Abrams_Small_3x3, Leopard2_Small_3x3, Leclerc_Small_3x3, T80_Small_3x3, Sherman_Small_3x3, PlusT55MORUE_Small_3x3, PlusAbrams_Small_3x3, PlusLeopard2_Small_3x3, PlusT80_Small_3x3, CV90mk4_Small_3x3, PlusCV90mk4_Small_3x3
 MotorSuspension/SG_3x3_Offroad_Lifted_Suspension_Right	= LiftedOTT_Small_3x3_Offroad, TigerOne_Small_3x3, T14_Small_3x3, T55MORUE_Small_3x3, Abrams_Small_3x3, Leopard2_Small_3x3, Leclerc_Small_3x3, T80_Small_3x3, Sherman_Small_3x3, PlusT55MORUE_Small_3x3, PlusAbrams_Small_3x3, PlusLeopard2_Small_3x3, PlusT80_Small_3x3, CV90mk4_Small_3x3, PlusCV90mk4_Small_3x3
 MotorSuspension/SG_5x5_Offroad_Lifted_Suspension_Left	= LiftedOTT_Small_5x5_Offroad, TigerOne_Small_5x5, T14_Small_5x5, T55MORUE_Small_5x5, Abrams_Small_5x5, Leopard2_Small_5x5, Leclerc_Small_5x5, T80_Small_5x5, Sherman_Small_5x5, PlusT55MORUE_Small_5x5, PlusAbrams_Small_5x5, PlusLeopard2_Small_5x5, PlusT80_Small_5x5, CV90mk4_Small_5x5, PlusCV90mk4_Small_5x5
 MotorSuspension/SG_5x5_Offroad_Lifted_Suspension_Right	= LiftedOTT_Small_5x5_Offroad, TigerOne_Small_5x5, T14_Small_5x5, T55MORUE_Small_5x5, Abrams_Small_5x5, Leopard2_Small_5x5, Leclerc_Small_5x5, T80_Small_5x5, Sherman_Small_5x5, PlusT55MORUE_Small_5x5, PlusAbrams_Small_5x5, PlusLeopard2_Small_5x5, PlusT80_Small_5x5, CV90mk4_Small_5x5, PlusCV90mk4_Small_5x5
 
-; Lifted Suspension, needed OTT, Morue, and wheel replacement added
 ; large grid
 ; Vanilla
 MotorSuspension/LG_1x1_Lifted_Suspension_Left	= LiftedOTT_Large_1x1, TigerOne_Large_1x1, T14_Large_1x1, T55MORUE_Large_1x1, Abrams_Large_1x1, Leopard2_Large_1x1, T80_Large_1x1, CV90mk4_Large_1x1, TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
@@ -459,25 +387,55 @@ MotorSuspension/LG_1x1_Offroad_Lifted_Suspension_Left	= LiftedOTT_Large_1x1_Offr
 MotorSuspension/LG_1x1_Offroad_Lifted_Suspension_Right	= LiftedOTT_Large_1x1_Offroad, TigerOne_Large_1x1, T14_Large_1x1, T55MORUE_Large_1x1, Abrams_Large_1x1, Leopard2_Large_1x1, T80_Large_1x1, CV90mk4_Large_1x1, TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
 MotorSuspension/LG_2x2_Offroad_Lifted_Suspension_Left	= LiftedOTT_Large_2x2_Offroad, TigerOne_Large_2x2, T14_Large_2x2, T55MORUE_Large_2x2, Abrams_Large_2x2, Leopard2_Large_2x2, T80_Large_2x2, CV90mk4_Large_2x2, TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
 MotorSuspension/LG_2x2_Offroad_Lifted_Suspension_Right	= LiftedOTT_Large_2x2_Offroad, TigerOne_Large_2x2, T14_Large_2x2, T55MORUE_Large_2x2, Abrams_Large_2x2, Leopard2_Large_2x2, T80_Large_2x2, CV90mk4_Large_2x2, TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
-MotorSuspension/LG_3x3_Offroad_Lifted_Suspension_Left	= LiftedOTT_Large_3x3_Offroad, TigerOne_Large_3x3, T14_Large_3x3, T55MORUE_Large_3x3, Abrams_Large_3x3, Leopard2_Large_3x3, T80_Large_3x3, CV90mk4_Large_3x3, TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
-MotorSuspension/LG_3x3_Offroad_Lifted_Suspension_Right	= LiftedOTT_Large_3x3_Offroad, TigerOne_Large_3x3, T14_Large_3x3, T55MORUE_Large_3x3, Abrams_Large_3x3, Leopard2_Large_3x3, T80_Large_3x3, CV90mk4_Large_3x3, TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
+MotorSuspension/LG_3x3_Offroad_Lifted_Suspension_Left	= LiftedOTT_Large_3x3_Offroad, TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
+MotorSuspension/LG_3x3_Offroad_Lifted_Suspension_Right	= LiftedOTT_Large_3x3_Offroad, TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
 MotorSuspension/LG_5x5_Offroad_Lifted_Suspension_Left	= LiftedOTT_Large_5x5_Offroad, TigerOne_Large_5x5, T14_Large_5x5, T55MORUE_Large_5x5, Abrams_Large_5x5, Leopard2_Large_5x5, T80_Large_5x5, CV90mk4_Large_5x5, TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
 MotorSuspension/LG_5x5_Offroad_Lifted_Suspension_Right	= LiftedOTT_Large_5x5_Offroad, TigerOne_Large_5x5, T14_Large_5x5, T55MORUE_Large_5x5, Abrams_Large_5x5, Leopard2_Large_5x5, T80_Large_5x5, CV90mk4_Large_5x5, TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
 
-; Lifted Short, needed OTT, Morue, and wheel replacement added
+
 ; large grid
-; Vanilla
-MotorSuspension/LiftedShortSuspension1x1mirrored	= LiftedOTT_Large_1x1, TigerOne_Large_1x1, T14_Large_1x1, T55MORUE_Large_1x1, Abrams_Large_1x1, Leopard2_Large_1x1, T80_Large_1x1, CV90mk4_Large_1x1, TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
-MotorSuspension/LiftedShortSuspension1x1			= LiftedOTT_Large_1x1, TigerOne_Large_1x1, T14_Large_1x1, T55MORUE_Large_1x1, Abrams_Large_1x1, Leopard2_Large_1x1, T80_Large_1x1, CV90mk4_Large_1x1, TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
-MotorSuspension/LiftedShortSuspension2x2Mirrored	= LiftedOTT_Large_2x2, TigerOne_Large_2x2, T14_Large_2x2, T55MORUE_Large_2x2, Abrams_Large_2x2, Leopard2_Large_2x2, T80_Large_2x2, CV90mk4_Large_2x2, TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
-MotorSuspension/LiftedShortSuspension2x2			= LiftedOTT_Large_2x2, TigerOne_Large_2x2, T14_Large_2x2, T55MORUE_Large_2x2, Abrams_Large_2x2, Leopard2_Large_2x2, T80_Large_2x2, CV90mk4_Large_2x2, TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
-MotorSuspension/LiftedShortSuspension3x3mirrored	= LiftedOTT_Large_3x3, TigerOne_Large_3x3, T14_Large_3x3, T55MORUE_Large_3x3, Abrams_Large_3x3, Leopard2_Large_3x3, T80_Large_3x3, CV90mk4_Large_3x3, TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
-MotorSuspension/LiftedShortSuspension3x3			= LiftedOTT_Large_3x3, TigerOne_Large_3x3, T14_Large_3x3, T55MORUE_Large_3x3, Abrams_Large_3x3, Leopard2_Large_3x3, T80_Large_3x3, CV90mk4_Large_3x3, TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
-MotorSuspension/LiftedShortSuspension5x5mirrored	= LiftedOTT_Large_5x5, TigerOne_Large_5x5, T14_Large_5x5, T55MORUE_Large_5x5, Abrams_Large_5x5, Leopard2_Large_5x5, T80_Large_5x5, CV90mk4_Large_5x5, TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
-MotorSuspension/LiftedShortSuspension5x5			= LiftedOTT_Large_5x5, TigerOne_Large_5x5, T14_Large_5x5, T55MORUE_Large_5x5, Abrams_Large_5x5, Leopard2_Large_5x5, T80_Large_5x5, CV90mk4_Large_5x5, TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
+; Tinsoldier Tracks
+;MotorSuspension/LG_1x1_Track_Lifted_Suspension_Left		= LiftedOTT_Large_1x1_Offroad, TigerOne_Large_1x1, T14_Large_1x1, T55MORUE_Large_1x1, Abrams_Large_1x1, Leopard2_Large_1x1, T80_Large_1x1, CV90mk4_Large_1x1
+;MotorSuspension/LG_1x1_Track_Lifted_Suspension_Right	= LiftedOTT_Large_1x1_Offroad, TigerOne_Large_1x1, T14_Large_1x1, T55MORUE_Large_1x1, Abrams_Large_1x1, Leopard2_Large_1x1, T80_Large_1x1, CV90mk4_Large_1x1
+;MotorSuspension/LG_2x2_Track_Lifted_Suspension_Left		= LiftedOTT_Large_2x2_Offroad, TigerOne_Large_2x2, T14_Large_2x2, T55MORUE_Large_2x2, Abrams_Large_2x2, Leopard2_Large_2x2, T80_Large_2x2, CV90mk4_Large_2x2
+;MotorSuspension/LG_2x2_Track_Lifted_Suspension_Right	= LiftedOTT_Large_2x2_Offroad, TigerOne_Large_2x2, T14_Large_2x2, T55MORUE_Large_2x2, Abrams_Large_2x2, Leopard2_Large_2x2, T80_Large_2x2, CV90mk4_Large_2x2
+;MotorSuspension/LG_3x3_Track_Lifted_Suspension_Left		= LiftedOTT_Large_3x3_Offroad, TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
+;MotorSuspension/LG_3x3_Track_Lifted_Suspension_Right	= LiftedOTT_Large_3x3_Offroad, TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
+;MotorSuspension/LG_5x5_Track_Lifted_Suspension_Left		= LiftedOTT_Large_5x5_Offroad, TigerOne_Large_5x5, T14_Large_5x5, T55MORUE_Large_5x5, Abrams_Large_5x5, Leopard2_Large_5x5, T80_Large_5x5, CV90mk4_Large_5x5
+;MotorSuspension/LG_5x5_Track_Lifted_Suspension_Right	= LiftedOTT_Large_5x5_Offroad, TigerOne_Large_5x5, T14_Large_5x5, T55MORUE_Large_5x5, Abrams_Large_5x5, Leopard2_Large_5x5, T80_Large_5x5, CV90mk4_Large_5x5
 
-; Small grid lifted short does not exist yet
+; large grid
+; Short Tracks
+MotorSuspension/ShortTrackSuspension1x1mirrored		= LiftedOTT_Large_1x1_Offroad, TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
+MotorSuspension/ShortTrackSuspension1x1	= LiftedOTT_Large_1x1_Offroad, TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
+MotorSuspension/ShortTrackSuspension2x2mirrored		= LiftedOTT_Large_2x2_Offroad, TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
+MotorSuspension/ShortTrackSuspension2x2	= LiftedOTT_Large_2x2_Offroad, TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
+MotorSuspension/ShortTrackSuspension3x3mirrored		= LiftedOTT_Large_3x3_Offroad, TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
+MotorSuspension/ShortTrackSuspension3x3	= LiftedOTT_Large_3x3_Offroad, TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
+MotorSuspension/ShortTrackSuspension5x5mirrored		= LiftedOTT_Large_5x5_Offroad, TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
+MotorSuspension/ShortTrackSuspension5x5	= LiftedOTT_Large_5x5_Offroad, TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
 
-; Static wheels
+; large grid
+; Lifted Short Tracks
+MotorSuspension/LiftedShortTrackSuspension1x1mirrored		= LiftedOTT_Large_1x1_Offroad, TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
+MotorSuspension/LiftedShortTrackSuspension1x1	= LiftedOTT_Large_1x1_Offroad, TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
+MotorSuspension/LiftedShortTrackSuspension2x2mirrored		= LiftedOTT_Large_2x2_Offroad, TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
+MotorSuspension/LiftedShortTrackSuspension2x2	= LiftedOTT_Large_2x2_Offroad, TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
+MotorSuspension/LiftedShortTrackSuspension3x3mirrored		= LiftedOTT_Large_3x3_Offroad, TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
+MotorSuspension/LiftedShortTrackSuspension3x3	= LiftedOTT_Large_3x3_Offroad, TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
+MotorSuspension/LiftedShortTrackSuspension5x5mirrored		= LiftedOTT_Large_5x5_Offroad, TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
+MotorSuspension/LiftedShortTrackSuspension5x5	= LiftedOTT_Large_5x5_Offroad, TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
+
+; large grid
+; Lifted Short Wheels
+MotorSuspension/LiftedShortSuspension1x1mirrored		= LiftedOTT_Large_1x1_Offroad, TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
+MotorSuspension/LiftedShortSuspension1x1	= LiftedOTT_Large_1x1_Offroad, TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
+MotorSuspension/LiftedShortSuspension2x2mirrored		= LiftedOTT_Large_2x2_Offroad, TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
+MotorSuspension/LiftedShortSuspension2x2	= LiftedOTT_Large_2x2_Offroad, TigerOne_Large_2x2_Track, T14_Large_2x2_Track, T55MORUE_Large_2x2_Track, Abrams_Large_2x2_Track, Leopard2_Large_2x2_Track, T80_Large_2x2_Track, CV90mk4_Large_2x2_Track
+MotorSuspension/LiftedShortSuspension3x3mirrored		= LiftedOTT_Large_3x3_Offroad, TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
+MotorSuspension/LiftedShortSuspension3x3	= LiftedOTT_Large_3x3_Offroad, TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track
+MotorSuspension/LiftedShortSuspension5x5mirrored		= LiftedOTT_Large_5x5_Offroad, TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
+MotorSuspension/LiftedShortSuspension5x5	= LiftedOTT_Large_5x5_Offroad, TigerOne_Large_5x5_Track, T14_Large_5x5_Track, T55MORUE_Large_5x5_Track, Abrams_Large_5x5_Track, Leopard2_Large_5x5_Track, T80_Large_5x5_Track, CV90mk4_Large_5x5_Track
+
 Wheel/TankWheelBlock1x1 = VanillaOTT_Large_1x1_Static, TigerOne_Large_1x1_Track, T14_Large_1x1_Track, T55MORUE_Large_1x1_Track, Abrams_Large_1x1_Track, Leopard2_Large_1x1_Track, T80_Large_1x1_Track, CV90mk4_Large_1x1_Track
 Wheel/TankWheelBlock3x3 = VanillaOTT_Large_3x3_Static, TigerOne_Large_3x3_Track, T14_Large_3x3_Track, T55MORUE_Large_3x3_Track, Abrams_Large_3x3_Track, Leopard2_Large_3x3_Track, T80_Large_3x3_Track, CV90mk4_Large_3x3_Track

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<CubeBlocks>
+		<!-- ////////////////// WILL BE REMOVED AFTER PRE-SEASON ////////////////// -->
 		<!-- Real Wheels -->
 		<!-- Large 1x1 -->
 		<Definition>
