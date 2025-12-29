@@ -2954,7 +2954,7 @@
 				<TypeId>MotorSuspension</TypeId>
 				<SubtypeId>ShortSuspension1x1mirrored</SubtypeId>
 			</Id>
-			<DisplayName>DisplayName_Block_ShortSuspension1x1mirrored</DisplayName>
+			<DisplayName>DisplayName_Block_ShortSuspension1x1Mirrored</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\ShortWheelSuspension1x1Right.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
@@ -3621,7 +3621,7 @@
 				<TypeId>MotorSuspension</TypeId>
 				<SubtypeId>SmallShortSuspension1x1mirrored</SubtypeId>
 			</Id>
-			<DisplayName>DisplayName_Block_ShortSuspension1x1mirrored</DisplayName>
+			<DisplayName>DisplayName_Block_ShortSuspension1x1Mirrored</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\ShortWheelSuspension1x1Left.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Small</CubeSize>
