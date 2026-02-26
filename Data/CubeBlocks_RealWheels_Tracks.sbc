@@ -43,6 +43,11 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
+			<WheelPlacementCollider>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
+			</WheelPlacementCollider>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
 			</MountPoints>
@@ -114,9 +119,9 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<WheelPlacementCollider>
-				<ColliderDiameter>1</ColliderDiameter>
-				<ColliderHeight>0.88</ColliderHeight>
-				<ColliderOffset>0.28</ColliderOffset>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
 			</WheelPlacementCollider>
 			<BlockPairName>RealTrackWheel2x2</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
@@ -181,6 +186,11 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
+			<WheelPlacementCollider>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
+			</WheelPlacementCollider>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
 			</MountPoints>
@@ -247,6 +257,11 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
+			<WheelPlacementCollider>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
+			</WheelPlacementCollider>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
 			</MountPoints>

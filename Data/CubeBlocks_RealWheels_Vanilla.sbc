@@ -45,6 +45,11 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
+			<WheelPlacementCollider>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
+			</WheelPlacementCollider>
 			<BlockPairName>RealWheel1x1</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -112,9 +117,9 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<WheelPlacementCollider>
-				<ColliderDiameter>0.9</ColliderDiameter>
-				<ColliderHeight>0.88</ColliderHeight>
-				<ColliderOffset>0.25</ColliderOffset>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
 			</WheelPlacementCollider>
 			<BlockPairName>RealWheel2x2</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
@@ -178,9 +183,11 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
-			</MountPoints>
+			<WheelPlacementCollider>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
+			</WheelPlacementCollider>
 			<BlockPairName>RealWheel</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -243,9 +250,11 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
-			</MountPoints>
+			<WheelPlacementCollider>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
+			</WheelPlacementCollider>
 			<BlockPairName>RealWheel5x5</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -308,9 +317,11 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
-			</MountPoints>
+			<WheelPlacementCollider>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
+			</WheelPlacementCollider>
 			<BlockPairName>RealWheel1x1</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -379,9 +390,9 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<WheelPlacementCollider>
-				<ColliderDiameter>1</ColliderDiameter>
-				<ColliderHeight>0.88</ColliderHeight>
-				<ColliderOffset>0.28</ColliderOffset>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
 			</WheelPlacementCollider>
 			<BlockPairName>RealWheel2x2</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
@@ -446,9 +457,11 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
-			</MountPoints>
+			<WheelPlacementCollider>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
+			</WheelPlacementCollider>
 			<BlockPairName>RealWheel</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -512,9 +525,11 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
-			</MountPoints>
+			<WheelPlacementCollider>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
+			</WheelPlacementCollider>
 			<BlockPairName>RealWheel5x5</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -579,6 +594,11 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
+			<WheelPlacementCollider>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
+			</WheelPlacementCollider>
 			<BlockPairName>RealWheel1x1mirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -646,9 +666,9 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<WheelPlacementCollider>
-				<ColliderDiameter>0.9</ColliderDiameter>
-				<ColliderHeight>0.88</ColliderHeight>
-				<ColliderOffset>0.25</ColliderOffset>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
 			</WheelPlacementCollider>
 			<BlockPairName>RealWheel2x2Mirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
@@ -712,9 +732,11 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
-			</MountPoints>
+			<WheelPlacementCollider>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
+			</WheelPlacementCollider>
 			<BlockPairName>RealWheelmirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -777,9 +799,11 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
-			</MountPoints>
+			<WheelPlacementCollider>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
+			</WheelPlacementCollider>
 			<BlockPairName>RealWheel5x5mirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -842,9 +866,11 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
-			</MountPoints>
+			<WheelPlacementCollider>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
+			</WheelPlacementCollider>
 			<BlockPairName>RealWheel1x1mirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -912,9 +938,9 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<WheelPlacementCollider>
-				<ColliderDiameter>1</ColliderDiameter>
-				<ColliderHeight>0.88</ColliderHeight>
-				<ColliderOffset>0.28</ColliderOffset>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
 			</WheelPlacementCollider>
 			<BlockPairName>RealWheel2x2Mirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
@@ -979,9 +1005,11 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
-			</MountPoints>
+			<WheelPlacementCollider>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
+			</WheelPlacementCollider>
 			<BlockPairName>RealWheelmirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
@@ -1045,9 +1073,11 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0" EndY="0" Enabled="false"/>
-			</MountPoints>
+			<WheelPlacementCollider>
+				<ColliderDiameter>0.01</ColliderDiameter>
+				<ColliderHeight>0.01</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
+			</WheelPlacementCollider>
 			<BlockPairName>RealWheel5x5mirrored</BlockPairName>
 			<UsesDeformation>false</UsesDeformation>
 			<DeformationRatio>0.3</DeformationRatio>
