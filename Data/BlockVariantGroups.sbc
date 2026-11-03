@@ -167,7 +167,7 @@
 			<Blocks>
 				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="LiftedShortSuspension3x3mirrored"/>
 				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="LiftedShortSuspension5x5mirrored"/>
-				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="LiftedShortSuspension2x2mirrored"/>
+				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="LiftedShortSuspension2x2Mirrored"/>
 				<Block Type="MyObjectBuilder_MotorSuspension" Subtype="LiftedShortSuspension1x1mirrored"/>
 			</Blocks>
 		</BlockVariantGroup>

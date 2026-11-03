@@ -41,7 +41,7 @@
 				<string>MotorSuspension/LiftedShortSuspension3x3</string>
 				<string>MotorSuspension/LiftedShortSuspension3x3mirrored</string>
 				<string>MotorSuspension/LiftedShortSuspension2x2</string>
-				<string>MotorSuspension/LiftedShortSuspension2x2mirrored</string>
+				<string>MotorSuspension/LiftedShortSuspension2x2Mirrored</string>
 				<string>MotorSuspension/LiftedShortSuspension1x1</string>
 				<string>MotorSuspension/LiftedShortSuspension1x1mirrored</string>
 				<string>MotorSuspension/LiftedShortTrackSuspension5x5</string>
@@ -94,7 +94,7 @@
 				<string>MotorSuspension/LiftedShortSuspension3x3</string>
 				<string>MotorSuspension/LiftedShortSuspension3x3mirrored</string>
 				<string>MotorSuspension/LiftedShortSuspension2x2</string>
-				<string>MotorSuspension/LiftedShortSuspension2x2mirrored</string>
+				<string>MotorSuspension/LiftedShortSuspension2x2Mirrored</string>
 				<string>MotorSuspension/LiftedShortSuspension1x1</string>
 				<string>MotorSuspension/LiftedShortSuspension1x1mirrored</string>
 				<string>MotorSuspension/LiftedShortTrackSuspension5x5</string>
@@ -176,7 +176,7 @@
 				<string>MotorSuspension/LiftedShortSuspension3x3</string>
 				<string>MotorSuspension/LiftedShortSuspension3x3mirrored</string>
 				<string>MotorSuspension/LiftedShortSuspension2x2</string>
-				<string>MotorSuspension/LiftedShortSuspension2x2mirrored</string>
+				<string>MotorSuspension/LiftedShortSuspension2x2Mirrored</string>
 				<string>MotorSuspension/LiftedShortSuspension1x1</string>
 				<string>MotorSuspension/LiftedShortSuspension1x1mirrored</string>
 				<string>MotorSuspension/LiftedShortTrackSuspension5x5</string>
