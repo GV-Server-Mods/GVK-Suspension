@@ -22,6 +22,10 @@ __pycache__/
 *.bak
 *.orig
 
+# Blender autosaves and local checkpoints (the working .blend is tracked)
+*.blend1
+*_before_*.blend
+
 # OS
 desktop.ini
 Thumbs.db
