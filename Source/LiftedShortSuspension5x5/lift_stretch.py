@@ -74,7 +74,7 @@ def island_info(o, mode, arm_tree, stay_tree):
     info = []
     for l in range(k):
         ps = [W[i] for i in verts[l]]
-        ys = [p.y for p in ps]
+        ys = [p.y for p in ps]; xs = [p.x for p in ps]; zs = [p.z for p in ps]
         if mode == 'arm':
             arm = True
         elif mode == 'fa':
@@ -87,6 +87,7 @@ def island_info(o, mode, arm_tree, stay_tree):
         mats = set(mat_name(me, me.polygons[f]) for f in faces[l])
         vs = [uv[li].uv.y for f in faces[l] for li in me.polygons[f].loop_indices]
         info.append(dict(verts=verts[l], faces=faces[l], arm=arm, y0=min(ys), y1=max(ys),
+                         x0=min(xs), x1=max(xs), z0=min(zs), z1=max(zs),
                          yc=sum(ys) / len(ys), mats=mats,
                          tile=tiling(mats, min(vs) if vs else 0, max(vs) if vs else 0)))
     return info
@@ -156,9 +157,20 @@ def band_split(o, isl, b, w):
     bm.to_mesh(me); bm.free(); me.update()
 
 
-def stretch(o, cut, lift, mode='arm', arm_tree=None, stay_tree=None, band_w=0.03, zone=(0.15, 0.85)):
+def stretch(o, cut, lift, mode='arm', arm_tree=None, stay_tree=None, band_w=0.03, zone=(0.15, 0.85),
+            sgn=-1, pick=None):
+    """sgn=-1 moves world y < cut by -lift (the first build); sgn=+1 moves y > cut by +lift.
+    pick(island) -> bool limits the move to the islands it accepts."""
     me = o.data; mw = o.matrix_world; imw = mw.inverted()
     rep = dict(obj=o.name, band=[], whole=[], uvisl=0, spread=[])
+    side = (lambda y: y < cut) if sgn < 0 else (lambda y: y > cut)
+    _info = globals()['island_info']
+    def island_info(o, mode, arm_tree, stay_tree):
+        inf = _info(o, mode, arm_tree, stay_tree)
+        if pick:
+            for isl in inf:
+                isl['arm'] = isl['arm'] and pick(isl)
+        return inf
     # 1. record corner normals (object space), keyed by position + face normal
     rec = {}; facen = {}
     cn = me.corner_normals
@@ -188,14 +200,14 @@ def stretch(o, cut, lift, mode='arm', arm_tree=None, stay_tree=None, band_w=0.03
         if isl['y0'] < cut < isl['y1'] and not isl['tile']:
             hit = [bb for y0, y1, bb, _ in bands if abs(isl['y0'] - y0) < 1e-3 and abs(isl['y1'] - y1) < 1e-3]
             if hit:
-                M.update(i for i in isl['verts'] if W[i].y < hit[0] - band_w / 2)
+                M.update(i for i in isl['verts'] if (W[i].y < hit[0] - band_w / 2) == (sgn < 0))
             else:
-                mv = isl['yc'] < cut
+                mv = side(isl['yc'])
                 rep['whole'].append((round(isl['y0'], 3), round(isl['y1'], 3), 'move' if mv else 'stay', sorted(isl['mats'])))
                 if mv:
                     M.update(isl['verts'])
         else:
-            M.update(i for i in isl['verts'] if W[i].y < cut)
+            M.update(i for i in isl['verts'] if side(W[i].y))
     # 4. UV refit on tiling faces. Pure faces (all loops moved or none) form
     #    components joined by UV-matching edges; crossing faces join a moved and an
     #    unmoved component and fix their offset difference to -g*lift, where g is
@@ -271,7 +283,7 @@ def stretch(o, cut, lift, mode='arm', arm_tree=None, stay_tree=None, band_w=0.03
         sp = max(max(abs(g.x - gu), abs(g.y - gv)) for g, _ in ga)
         if sp > 2e-3:
             rep['spread'].append((round(gu, 4), round(gv, 4), round(sp, 4), len(ga)))
-        dlt = Vector((-gu * lift, -gv * lift))
+        dlt = Vector((sgn * gu * lift, sgn * gv * lift))
         cl_d[c] = dlt
         ms = set(); us = set()
         for f in fs:
@@ -333,7 +345,7 @@ def stretch(o, cut, lift, mode='arm', arm_tree=None, stay_tree=None, band_w=0.03
             want.append(rec.get(k, p.normal.copy()))
     rep['normals_missing'] = sum(1 for p in me.polygons for li in p.loop_indices
                                  if (pkey(me.vertices[me.loops[li].vertex_index].co), nkey(p.normal)) not in rec)
-    d = imw.to_3x3() @ Vector((0, -lift, 0))
+    d = imw.to_3x3() @ Vector((0, sgn * lift, 0))
     for i in M:
         me.vertices[i].co += d
     me.normals_split_custom_set([tuple(v) for v in want])
