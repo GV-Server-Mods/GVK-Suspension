@@ -185,7 +185,7 @@ The spacer between the two bands is a plain steel channel down to the groove flo
 3. The 1x1, 2x2 and 5x5 doubles and both Track Wheel block doubles. Done 2026-11-22.
 4. The double link's LODs and construction model; the icon. Done 2026-11-22.
 5. Export, ini, MDK2 build, check the deployed copy. Done 2026-11-22.
-6. In-game test. First look (owner, 2026-11-22): "oh man this is good". The six tests above on the double design, plus: the tread sits on both bands (checks the X sign), a mixed 1x1/2x2/3x3 double track, a Track Wheel block idler, Keen's and an offroad suspension, a 10 m 5x5 double, and a fit check between two blocks.
+6. In-game test. First look (owner, 2026-11-22): "oh man this is good". **Passed, every test** (owner, 2026-11-22: "all of those test pass"); committed as GVK_Suspension 2d222d5. The owner then saw the tread pushed below the ground under every track wheel (next section). The six tests above on the double design, plus: the tread sits on both bands (checks the X sign), a mixed 1x1/2x2/3x3 double track, a Track Wheel block idler, Keen's and an offroad suspension, a 10 m 5x5 double, and a fit check between two blocks.
 
 ### Decisions
 
@@ -193,6 +193,79 @@ The spacer between the two bands is a plain steel channel down to the groove flo
 - **DD2, 5x5: decided, a 10 m double** (owner, 2026-11-22: "lets keep the 5x5 double wide in play, but its double wide would just be a 10m width instead of a 5m width"). The 5x5 double is the 3x3 double at twice the width: two bands with a spacer (sizes in DD1), 9.96 m tread across four cells. Its link is the double link at SegmentScale 2.01, 2.13, 2.13, so the pads stretch only 6% lengthwise, close to the single 5x5's proportions.
 - **DD3, where the doubles sit across the cells: decided, between the grid line at the mount and the line four cells out** (owner, 2026-11-22, marked in `Source/KharakTread/reference/double_5x5_bounds_owner_2026-11-22.webp`: "this is what I want the 5x5 wheel to stay inside"). The 10 m double spans 5 to 15 m from the mounting face, the 5 m doubles 2.5 to 7.5 m, each centered on the single's line less 0.13 m. The inner band covers the part of the mount that pokes past that grid line. Background: The wheel's attach point (its mount on the suspension) is 2.675 m from the mounting face on the 1x1 to 3x3 and 5.531 m on the 5x5 (Lifted Short; groove line minus the groove's distance from the attach point, track-wheel-swap.md). Centered on a grid line, the 5 m double spans 2.5 to 7.5 m and its inner band reaches 0.12 m behind the mount; the 10 m double spans 5 to 15 m and reaches 0.47 m behind it, into the suspension. Shifting the 10 m double out one more cell (7.5 to 17.5 m) clears the mount but puts the track 2.4 m further out than the single 5x5.
 - **DD4, the gap between the two wheels: decided, the groove hub** (owner, 2026-11-22: "Yes, same as groove"). The gap shows the same recessed hub as the groove between each wheel's two rubber rings. After the round 2 renders the owner simplified it to a plain channel, without the groove's bevels and wear strips (round 3).
+
+## Tread above the ground (built 2026-11-22, passed in game)
+
+Tested in the NPC Dev world the same day (owner, 2026-11-22: "I tested it and it works great").
+
+Owner, 2026-11-22: "the tracks get pushed below the surface of the ground, can we shrink the visual diameter of the tank track wheels so the visible track can wrap closer but still stay above the ground? this is for all of the tank track wheels".
+
+### Why it sinks
+
+- A wheel touches the ground with its collision sphere, which is smaller than the tire it draws. The track wheels copy the vanilla tires on both counts (vanilla tire spec, track-wheel-swap.md), so the drawn rubber already reaches below the ground:
+
+  | Size | Drawn radius | Collision sphere | Rubber below ground |
+  |---|---|---|---|
+  | 1x1 | 1.278 | 1.1 | 0.178 |
+  | 2x2 | 2.553 | 2.278 | 0.275 |
+  | 3x3 | 3.829 | 3.4 | 0.429 |
+  | 5x5 | 6.337 | 5.8 | 0.537 |
+
+  Drawn radii are half the model's bounding box width, read from the `.mwm` files. The sphere radii are the GVK track wheels' own collision (built to the vanilla values), and they gave the same top speed as vanilla tires in game (owner, 2026-11-22). Offroad tires draw 1 to 4 cm bigger.
+- Tank Tracks wraps the track round the radius it measures from the wheel model (half its bounding box width, `Roller.cs:263-264, 519-520`). Its hull points sit on a slightly bigger circle, sqrt(R² + (link pitch / 2)²) (`Roller.cs:190-195`), and the straight bottom run between two wheels lies on that circle. The tread's outer face sits a link thickness further out: 0.215 m on 1x1 to 3x3, 0.458 m on the 5x5 (SegmentScale Y 2.13). So the bottom run's tread surface is 0.451 / 0.519 / 0.664 / 1.049 m below the ground. Tank Tracks lifts long straight runs onto the terrain (`GroundCollide`, `Track.cs:1076-1250`), but only their lower half, never the part wrapped round a wheel.
+
+### Fix
+
+Lower the tread by that amount and draw every track wheel smaller by the same amount, so the tread's outer face ends where the collision sphere touches the ground and the tread still wraps the drawn wheel. Collision, attach points, grip and speed stay as they are, and so does the track line across the vehicle.
+
+| Size | Drawn radius now | New drawn radius | Tread drop (SegmentOffset Y) | Offroad style Y |
+|---|---|---|---|---|
+| 1x1 | 1.278 | 0.827 (-35%) | -0.451 | -0.405 |
+| 2x2 | 2.553 | 2.033 (-20%) | -0.519 | -0.541 |
+| 3x3 | 3.829 | 3.165 (-17%) | -0.664 | -0.697 |
+| 5x5 | 6.337 | 5.288 (-17%) | -1.049 | -1.091 |
+
+Offroad tires have the same collision spheres as vanilla ones (read from Keen's `WheelSuspension*_Racing.mwm`), so their Y uses the same formula with the offroad radius (1.23 for the 1x1, Digi's override; 2.575 / 3.862 / 6.379). Y is in metres, + outward, and Tank Tracks moves its ground rays with it (`Track.cs:1087-1096`). Every SegmentOffset restates its X.
+
+1. **Models.** Rebuilt at the new radius, scaled in radius only (hub, cups and bolts with it; width, groove line and axle stub unchanged): `TankWheel1x1/2x2/3x3/5x5`, the swap-only `TankWheel1x1_Lifted` and `TankWheel5x5_Lifted`, the four Track Wheel block models (`TankWheelBlock1x1/3x3` and their `_Lifted` idlers) and the six doubles, with every LOD and build stage. Suspension wheels keep their vanilla-size collision sphere and every dummy (checked byte for byte against the previous files). The Track Wheel blocks' convex hull now reaches 1.1 / 3.4 m, the tread's outer face, instead of the old drawn tire (about 1.25 / 3.75 m): a block idler touching the ground then holds the tread on it, as a suspension wheel's sphere does. The 1x1 block's mounting flange (0.99 m) is now wider than its 0.83 m wheel. The axle stubs and the blocks' posts keep their old size. The 1x1 groove is cut deeper and a little wider (floor 0.31 m from the axle), because the tread's 0.44 m guide horn would otherwise reach 6 to 9 cm into the hub; on the bigger sizes the horn clears the groove floor by 0.4 m or more.
+2. **What each roller reports.** One track is drawn with one style, picked from its biggest wheel (`Track.cs:168-276`), so every wheel on it has to report a radius that the style's one drop fits. `[WheelOverride] Radius` sets it, per the scheme below. Vanilla and offroad tires need an override too: after a destroyed track the surviving wheels stay swapped (`Roller.cs:113`), and a rebuilt track would measure the smaller swapped model. A later mod's WheelOverride replaces Digi's whole entry, so ours restates his values (`RealWheel1x1` Width 2.5; `OffroadRealWheel1x1` Width 2.5, Radius 1.23; mirrored too).
+3. **Styles lower the tread:** every Kharak Tread and Kharak Double Tread style on a GVK track wheel, a swapped tire or a Track Wheel block (`_Static`) gets the drop above.
+4. **Styles that draw round tires GVK does not shrink stay as they are.** Zantulo and Offroad Lifted draw the Kharak Tread round their own tires through the same `_Track` styles as Short Track. They get their own copies with Y 0 (`KharakTread_Large_<size>_Zantulo`). Their tread keeps sinking until their swap models exist. Tank Tracks picks a block's style by the design the player chooses, so the new style names don't break tracks already built.
+5. **Over-the-tire styles on GVK track wheels.** Short Track and Lifted Short Track also list Digi's over-the-tire track (`LiftedOTT_Large_<size>_Offroad`), which would float above the smaller wheel. They get copies lowered by the same drop (`LiftedOTT_Large_<size>_Offroad_TrackWheel`); Lifted Short keeps the original, since its vanilla tire does not shrink. The Track Wheel blocks get the same for Digi's static styles (`VanillaOTT_Large_1x1_Static_TrackWheel`, `_3x3_`).
+6. **Tread collider.** Tank Tracks reads the `track_collider` empty's scale as half its size (`DefinitionsInternal.cs:375`), and the Kharak Tread colliders were set at full size, so a run lifted onto a bump floated 0.11 m above it (0.23 m on 5x5). The collider is halved in `KharakTread.mwm`, `KharakDoubleTread.mwm` and their scenes in `KharakTread.blend`.
+7. MDK2 build and deployed copy checked (2026-11-22). An independent review read the Tank Tracks code and the new files and recomputed every drop to within 1 mm. In-game test: see the list below.
+
+In-game test (full game restart first: the wheel models changed, and the Track Wheel blocks' collision too):
+- T1. One-size tracks, every size: Short Track 1x1, 2x2, 3x3, 5x5 with Kharak Tread on flat ground. The tread's outside rests on the ground, the tread wraps the smaller wheels with no gap and nothing poking through.
+- T2. Swaps: the same on Keen's Suspension 3x3 and Offroad Suspension 3x3, and Lifted Short 5x5. Wheels swap and the tread rests on the ground.
+- T3. Mixed one-size track: Short Track 3x3 and Lifted Short 3x3 on one track.
+- T4. Track Wheel blocks: a 3x3 track with a Track Wheel 3x3 block idler, and a 1x1 track with a Track Wheel 1x1 idler, with Kharak Tread and with Digi's track. Expected: tread wraps the idler. A 3x3 track with a 1x1 idler is expected to cut about 0.21 m into the idler (Scheme A).
+- T5. Kharak Double Tread on Short Track 3x3 and on Offroad Suspension 3x3: both bands on the ground.
+- T6. Destroy one track wheel under a track (grinder), rebuild the track: it looks the same as before.
+- T7. Digi's over-the-tire track on Short Track 3x3: it wraps the smaller wheel, not floating.
+- T8. Zantulo Lifted 3x3 with Kharak Tread: unchanged from before (still sinks).
+- T9. Drive each over rough ground: no wheel catching on terrain it seems to clear, top speed unchanged. Small bumps may show through long straight runs (limit below); taller ones lift the tread onto them.
+- T10. A Short Track 3x3 with no track: the wheels are expected to hover about 0.24 m above the ground (limit below). Say whether that is acceptable.
+- The NPC Dev world still loads `TankTracks_SwapTest`, which adds its own style to Keen's 3x3 and 5x5 suspensions; pick Kharak Tread there.
+
+### Mixed sizes: Scheme A picked
+
+The drop has to be one number per track, but the right drop differs per size. Two ways to set the radii. **Picked: Scheme A** (owner, 2026-11-22: "try one-size tracks, I really want these to play nicely with vanilla blocks. If I don't like it then we can switch to the all-gvk tracks later").
+
+- **Scheme A, one radius per size.** Every wheel reports its size's vanilla radius. Exact on any track of one size, GVK and swapped vanilla tires mixed. On a mixed-size track the smaller wheels get the big wheel's drop and the tread cuts into them: on a 3x3 track a 1x1 by 0.21 m and a 2x2 by 0.14 m; on a 5x5 track a 3x3 by 0.385 m, a 2x2 by 0.53 m and a 1x1 by 0.60 m.
+- **Scheme E, one drop for all GVK wheels.** GVK track wheels and Track Wheel blocks report their new drawn radius plus 0.664, so the 3x3 drop fits every GVK size. Exact on any all-GVK track, mixed sizes and idlers included, and on GVK with vanilla 3x3 tires. Off on mixed tracks of GVK with swapped vanilla 1x1, 2x2 or 5x5 tires, and vanilla 5x5 with idlers. Switching later means new Radius overrides and drops; the models stay.
+
+Limits (both schemes):
+- **Small bumps show through long straight runs.** Tank Tracks casts its ground rays only down to the lowered link's inner face, not its outer face (`Track.cs:1088`), so on a straight run of 3 or more links (2.3 m; 5.0 m on 5x5) a bump lower than the tread's thickness (0.215 m; 0.458 m on 5x5) is not seen and pokes through. A taller bump lifts the run onto it, exactly (collider fix, step 6). Before this change every run was lifted, floating 0.11 m. Fix if it shows: one tread model per size with the drop built into the model and Y back to 0 (8 more tread models), or ask Digi to cast the ray to the outer face.
+- **Track wheels hover with no track.** A GVK track wheel is drawn smaller than its collision sphere, so on a suspension with no track (or a destroyed one) it hovers 0.27 / 0.25 / 0.24 / 0.51 m above the ground. Swapped Keen tires that stay swapped after their track is destroyed do the same (`Roller.cs:113`).
+- **A tire on the other kind of suspension gets the wrong drop.** The game lets any wheel go on any suspension, and Tank Tracks picks the style by the suspension. A Keen tire on a Short Track suspension gets the lowered tread without a swap, so the tread cuts into it; a GVK track wheel on a Zantulo suspension, or under Digi's track on a Keen suspension, gets a tread that floats. Short Track could list the swap style instead, but every plain Kharak Tread track would then depend on the swap (hub #345).
+- **The radius overrides depend on mod order.** GVK_Suspension must load after Digi's track pack (3209008231), or his WheelOverride entries replace ours for the four 1x1 wheels he lists. True in the NPC Dev world and the Season 10 list.
+- The swap-only `TankWheel1x1_Lifted` and `TankWheel5x5_Lifted` are shrunk too; when they are wired to the Zantulo suspensions, their styles need the `_Swap` drops, not the Zantulo Y 0.
+- Tank Tracks spins a wheel at speed / reported radius (`Roller.cs:421, 657`), so the smaller drawn wheels turn slower than the tread moves: 35% slower on the 1x1, 17 to 20% on the others.
+- On rough ground a sphere can still dip a few centimetres into a voxel edge, so the tread may touch the ground there; it no longer sinks by its own thickness.
+- The collision sphere now reaches past the drawn tire, so a wheel can bump a wall it seems to clear.
+- The 1x1 loses about a third of its drawn size. A thinner tread on 1x1 (SegmentScale Y below 1) would let it shrink less.
+- Rejected: one drop with per-size tread thickness (the tread's horns scale and pierce the hub), and shrinking the radius Keen's tires report (breaks Digi's over-the-tire track on Keen's suspensions).
 
 ## Open decisions
 
