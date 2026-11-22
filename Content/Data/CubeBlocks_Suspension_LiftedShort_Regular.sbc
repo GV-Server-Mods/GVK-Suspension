@@ -490,7 +490,7 @@
 			<BlockPairName>LiftedShortSuspension2x2</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-			<MirroringBlock>LiftedShortSuspension2x2</MirroringBlock>
+			<MirroringBlock>LiftedShortSuspension2x2Mirrored</MirroringBlock>
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>20</BuildTimeSeconds>
 			<PrimarySound>BlockWheel3x3</PrimarySound>
