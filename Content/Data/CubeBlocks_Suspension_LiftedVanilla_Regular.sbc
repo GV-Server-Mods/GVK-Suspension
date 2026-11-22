@@ -510,7 +510,7 @@
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="2" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\LG_1x1_Lifted_Suspension_ZANTULO.mwm</Model>
+			<Model>Models\LG_3x3_Lifted_Suspension_ZANTULO.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
 			<DeformationRatio>0.1</DeformationRatio>
@@ -532,9 +532,9 @@
 				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+				<Model BuildPercentUpperBound="0.33" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS3.mwm"/>
 			</BuildProgressModels>
 			<VoxelPlacement>
 				<StaticMode>
@@ -591,7 +591,7 @@
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="2" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\LG_1x1_Lifted_Suspension_ZANTULO.mwm</Model>
+			<Model>Models\LG_3x3_Lifted_Suspension_ZANTULO.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
 			<DeformationRatio>0.1</DeformationRatio>
@@ -609,13 +609,13 @@
 				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
 				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
 				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
 				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\LG_1x1_Lifted_Suspension_ZANTULO_BS3.mwm"/>
+				<Model BuildPercentUpperBound="0.33" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\LG_3x3_Lifted_Suspension_ZANTULO_BS3.mwm"/>
 			</BuildProgressModels>
 			<VoxelPlacement>
 				<StaticMode>

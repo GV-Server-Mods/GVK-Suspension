@@ -92,20 +92,20 @@ Decisions for detailing:
 2. Full styles per size, with no Morue inheritance: `_Track` (1x1, 2x2, 3x3, 5x5), `_Static` for the track wheel blocks, and `_Swap` (inherit `_Track`, plus `ReplaceWheelModel`).
 3. Retune `SegmentOffset` Y for the new link's thickness, so the tread sits on the vanilla-spec wheels from Part A. X keeps the groove line from track-wheel-swap.md.
 4. Remap `[Blocks]`: every GVK suspension and track wheel block lists `LiftedOTT_*` (over the tire) plus the GVK designs. Keen's large-grid suspensions get Kharak Tread `_Swap` styles (T3). Small-grid lines drop their Morue styles and keep `LiftedOTT_Small_*` only (T4).
-5. Then wire the Zantulo swaps (track-wheel-swap.md, Part B step 4) on the GVK styles.
+5. Then wire the Zantulo swaps (track-wheel-swap.md, Part B step 4) on the GVK styles. Done 2026-11-22: Zantulo uses Keen's Kharak styles (track-wheel-swap.md, "Zantulo on Keen's line").
 
 Done 2026-11-22 (steps 1 to 4; not seen in game). The Morue-based `_Track` and `_Swap` styles are gone, and the ini no longer names a Morue style.
 
 | Style | SegmentScale | SegmentOffset | Why |
 |---|---|---|---|
-| `KharakTread_Large_1x1_Track`, `_2x2_`, `_3x3_` | 1.03, 1, 1 | .554 / 1.326 / .757, 0, 0 | Link modelled at 3x3 size, and 1x1 to 3x3 share the 3x3 tread width (2.80 m). X 1.03 makes it 2.88 m, about 4 cm past each wheel edge (owner, 2026-11-22: "hang a few cms past the edges of the wheel"; was 1, flush). X is the groove line the old tank styles used after Part A. |
-| `KharakTread_Large_5x5_Track` | 2.16, 2.13, 2.13 | .529, 0, 0 | 5.96 m wheel / 2.80 m link, kept in proportion (pitch 1.66 m); X 2.16 makes it 6.05 m, about 4 cm past each edge (was 2.13). |
+| `KharakTread_Large_1x1_Track`, `_2x2_`, `_3x3_` | 1.104, 1, 1 | .554 / 1.326 / .757, 0, 0 | Link modelled at 3x3 size, and 1x1 to 3x3 share the 3x3 tread width (2.80 m of rubber; 3.01 m rim to rim). X 1.104 makes it 3.09 m, about 4 cm past each wheel face (owner, 2026-11-22: "extend past the faces of all track wheels a few cms"; was 1.03, 4 cm past the rubber but 6.5 cm inside the rims). X is the groove line the old tank styles used after Part A. |
+| `KharakTread_Large_5x5_Track` | 2.318, 2.13, 2.13 | .529, 0, 0 | 5.96 m wheel / 2.80 m link, kept in proportion (pitch 1.66 m); X 2.318 makes it 6.49 m, about 4 cm past each face of the 6.41 m rim (was 2.16, 6.05 m). |
 | `KharakTread_Large_1x1_Static`, `_3x3_Static` | as 1x1 / 3x3 | 0, 0, 0; `AllowOnRotors` | The Track Wheel blocks' `OutOffset` 0.14 already puts the groove on the line. |
 | `KharakTread_Large_<size>_Swap` | as `_Track` | as `_Track` | Plus `ReplaceWheelModel` TankWheel<size> and its BS2. |
 | `KharakTread_Large_<size>_Swap_Offroad` | as `_Track` | X as `_Track`; Y +0.048 / -0.022 / -0.033 / -0.042 | Offroad tire radius fix (D5 in track-wheel-swap.md), for Keen's Offroad and Offroad Short. |
 
 - **Y is 0:** the link's origin is on the plate's underside, and Tank Tracks puts the middle of each link's chord on the roller radius (`Roller.cs:191-196`), so the plate rests on the tire. The hinge axes sit 0.093 m above the chord (Tank Tracks ignores pivot Y, `DefinitionsInternal.cs:293-305`), so on a curve the knuckles part by about 2 cm on a 3x3 and 6 cm on a 1x1; the in-game test checks it.
-- **`[Blocks]`:** Zantulo and Offroad Lifted list `LiftedOTT_*` plus `_Track` until their swap models exist (step 5); Short Track and Lifted Short Track list `_Track`; Lifted Short lists `_Swap`; Keen's 32 large suspensions list only the Kharak swap (Digi's vanilla track stays from his own pack, since block mappings add up across mods, `DefinitionsInternal.cs:34-39`); the Track Wheel blocks list `VanillaOTT_*_Static` plus `_Static`; small grid keeps `LiftedOTT_Small_*` only.
+- **`[Blocks]`:** Zantulo and Offroad Lifted list `LiftedOTT_*` plus `_Swap` / `_Swap_Offroad`, like Keen's suspensions (step 5); Short Track and Lifted Short Track list `_Track`; Lifted Short lists `_Swap`; Keen's 32 large suspensions list only the Kharak swap (Digi's vanilla track stays from his own pack, since block mappings add up across mods, `DefinitionsInternal.cs:34-39`); the Track Wheel blocks list `VanillaOTT_*_Static` plus `_Static`; small grid keeps `LiftedOTT_Small_*` only.
 - **Icon:** `Content/Textures/Icons/KharakTread.dds` (256 px BC7 sRGB, as Digi's), rendered from five links on the 3x3 curve (`Source/KharakTread/review/icon_r1.png`); material `KharakTread_Icon` in the new `Content/Data/Icons.sbc`.
 - **Build:** MDK2 Release build passed; the deployed `Mods\GVK_Suspension` copy has the new ini, `Icons.sbc`, icon and all seven link models, byte-identical to the repo.
 
@@ -149,11 +149,11 @@ A second track design that looks like the twin tracks on the larger Deserts of K
 |---|---|---|
 | Double wheel | 4.78 m | Two bands of 2.24 m with a 0.30 m spacer between them (round 2) |
 | Each band | 2.24 m | The single road wheel scaled 0.80 across, with its own groove (0.45 m) |
-| Tread | 4.96 m | 9 cm past each outer wheel edge (round 2; the single hangs 4 cm) |
+| Tread | 4.856 m | Just inside both rim faces, 4.86 m apart (owner, 2026-11-22: "so they don't extend past the rim face on either side"; was 4.96 m, 5 cm past each rim face). SegmentScale X 0.979 (1.987 on the 5x5, 9.856 m inside 9.86 m) |
 
 - **Centered between grid lines:** on the Lifted Short line the groove sits 0.137 m past a grid line, so the double's mesh moves that far toward the hull inside the swap model, and its styles' X moves with it. The wheel then spans exactly two cells.
 - **Keen's suspensions:** the 1x1 to 3x3 sit within 0.01 m of that line, so the same models fit. The Keen 5x5 sits 0.13 m off the Lifted Short line, so its 10 m double would be about 0.1 m off the cells.
-- **Zantulo and Offroad Lifted:** their line is 0.28 m off. No double styles there until they get their own shifted models, as with their single swaps.
+- **Zantulo and Offroad Lifted:** since their 2x2/3x3 mount moved to Keen's spot (2026-11-22) they list the same double styles as Keen's suspensions.
 
 ### Models
 
@@ -170,9 +170,9 @@ The spacer between the two bands is a plain steel channel down to the groove flo
 ### TankTracks.ini
 
 - `[Design:KharakDoubleTread_Large]`, display name "Kharak Double Tread", icon `KharakDoubleTread_Icon` (`Content/Textures/Icons/KharakDoubleTread.dds`, 256 px BC7 sRGB, from five double links on the 3x3 curve, `review/icon_double_r1.png`; material in `Icons.sbc`).
-- Swap styles only (no plain `_Track`): `KharakDoubleTread_Large_<size>_Swap` and `_Swap_Offroad` (the offroad Y fix) for every size, plus `_1x1_Static` and `_3x3_Static`. Link SegmentScale 1 on 1x1 to 3x3 and 2.01, 2.13, 2.13 on the 5x5 (DD2).
+- Swap styles only (no plain `_Track`): `KharakDoubleTread_Large_<size>_Swap` and `_Swap_Offroad` (the offroad Y fix) for every size, plus `_1x1_Static` and `_3x3_Static`. Link SegmentScale 0.979, 1, 1 on 1x1 to 3x3 and 1.987, 2.13, 2.13 on the 5x5 (DD2; X cut 2026-11-22 so the tread stays inside the rim faces, was 1 and 2.01).
 - SegmentOffset X is the single style's X less the mesh's shift toward the hull: .417 / 1.188 / .613 / .401 for 1x1 / 2x2 / 3x3 / 5x5, and -.14 / -.132 on the Track Wheel blocks. That assumes + X is outward, as in Tank Tracks' notes; the in-game test confirms the sign (a wrong sign puts the tread about 0.28 m off the wheels).
-- `[Blocks]`: the matching double style added to every line that lists a Kharak Tread style, except Zantulo and Offroad Lifted (58 lines). Short Track and Lifted Short Track get `_Swap` too, so their track wheels swap to the double under a double track.
+- `[Blocks]`: the matching double style added to every line that lists a Kharak Tread style, except Zantulo and Offroad Lifted (58 lines; the 16 Zantulo lines got theirs on 2026-11-22). Short Track and Lifted Short Track get `_Swap` too, so their track wheels swap to the double under a double track.
 - Done 2026-11-22: models exported (SEUT I007, every file read back: LOD distances, dummies, materials, bounding boxes), ini written, MDK2 Release build passed, and the deployed `Mods\GVK_Suspension` copy matches the repo (40 files hashed). Not seen in game.
 
 ### Order
@@ -220,7 +220,7 @@ Lower the tread by that amount and draw every track wheel smaller by the same am
 
 | Size | Drawn radius now | New drawn radius | Tread drop (SegmentOffset Y) | Offroad style Y |
 |---|---|---|---|---|
-| 1x1 | 1.278 | 0.827 (-35%) | -0.451 | -0.405 |
+| 1x1 | 1.278 | 0.827 (-35%); 0.833 since the 1x1 middle ground | -0.451; -0.615 since then (reports 1.448) | -0.405; -0.615 since then |
 | 2x2 | 2.553 | 2.033 (-20%) | -0.519 | -0.541 |
 | 3x3 | 3.829 | 3.165 (-17%) | -0.664 | -0.697 |
 | 5x5 | 6.337 | 5.288 (-17%) | -1.049 | -1.091 |
@@ -230,7 +230,7 @@ Offroad tires have the same collision spheres as vanilla ones (read from Keen's 
 1. **Models.** Rebuilt at the new radius, scaled in radius only (hub, cups and bolts with it; width, groove line and axle stub unchanged): `TankWheel1x1/2x2/3x3/5x5`, the swap-only `TankWheel1x1_Lifted` and `TankWheel5x5_Lifted`, the four Track Wheel block models (`TankWheelBlock1x1/3x3` and their `_Lifted` idlers) and the six doubles, with every LOD and build stage. Suspension wheels keep their vanilla-size collision sphere and every dummy (checked byte for byte against the previous files). The Track Wheel blocks' convex hull now reaches 1.1 / 3.4 m, the tread's outer face, instead of the old drawn tire (about 1.25 / 3.75 m): a block idler touching the ground then holds the tread on it, as a suspension wheel's sphere does. The 1x1 block's mounting flange (0.99 m) is now wider than its 0.83 m wheel. The axle stubs and the blocks' posts keep their old size. The 1x1 groove is cut deeper and a little wider (floor 0.31 m from the axle), because the tread's 0.44 m guide horn would otherwise reach 6 to 9 cm into the hub; on the bigger sizes the horn clears the groove floor by 0.4 m or more.
 2. **What each roller reports.** One track is drawn with one style, picked from its biggest wheel (`Track.cs:168-276`), so every wheel on it has to report a radius that the style's one drop fits. `[WheelOverride] Radius` sets it, per the scheme below. Vanilla and offroad tires need an override too: after a destroyed track the surviving wheels stay swapped (`Roller.cs:113`), and a rebuilt track would measure the smaller swapped model. A later mod's WheelOverride replaces Digi's whole entry, so ours restates his values (`RealWheel1x1` Width 2.5; `OffroadRealWheel1x1` Width 2.5, Radius 1.23; mirrored too).
 3. **Styles lower the tread:** every Kharak Tread and Kharak Double Tread style on a GVK track wheel, a swapped tire or a Track Wheel block (`_Static`) gets the drop above.
-4. **Styles that draw round tires GVK does not shrink stay as they are.** Zantulo and Offroad Lifted draw the Kharak Tread round their own tires through the same `_Track` styles as Short Track. They get their own copies with Y 0 (`KharakTread_Large_<size>_Zantulo`). Their tread keeps sinking until their swap models exist. Tank Tracks picks a block's style by the design the player chooses, so the new style names don't break tracks already built.
+4. **Styles that draw round tires GVK does not shrink stay as they are.** Zantulo and Offroad Lifted draw the Kharak Tread round their own tires through the same `_Track` styles as Short Track. They got their own copies with Y 0 (`KharakTread_Large_<size>_Zantulo`) until their swaps were wired on 2026-11-22; those copies are gone. Tank Tracks picks a block's style by the design the player chooses, so the new style names don't break tracks already built.
 5. **Over-the-tire styles on GVK track wheels.** Short Track and Lifted Short Track also list Digi's over-the-tire track (`LiftedOTT_Large_<size>_Offroad`), which would float above the smaller wheel. They get copies lowered by the same drop (`LiftedOTT_Large_<size>_Offroad_TrackWheel`); Lifted Short keeps the original, since its vanilla tire does not shrink. The Track Wheel blocks get the same for Digi's static styles (`VanillaOTT_Large_1x1_Static_TrackWheel`, `_3x3_`).
 6. **Tread collider.** Tank Tracks reads the `track_collider` empty's scale as half its size (`DefinitionsInternal.cs:375`), and the Kharak Tread colliders were set at full size, so a run lifted onto a bump floated 0.11 m above it (0.23 m on 5x5). The collider is halved in `KharakTread.mwm`, `KharakDoubleTread.mwm` and their scenes in `KharakTread.blend`.
 7. MDK2 build and deployed copy checked (2026-11-22). An independent review read the Tank Tracks code and the new files and recomputed every drop to within 1 mm. In-game test: see the list below.
@@ -243,7 +243,7 @@ In-game test (full game restart first: the wheel models changed, and the Track W
 - T5. Kharak Double Tread on Short Track 3x3 and on Offroad Suspension 3x3: both bands on the ground.
 - T6. Destroy one track wheel under a track (grinder), rebuild the track: it looks the same as before.
 - T7. Digi's over-the-tire track on Short Track 3x3: it wraps the smaller wheel, not floating.
-- T8. Zantulo Lifted 3x3 with Kharak Tread: unchanged from before (still sinks).
+- T8. Zantulo Lifted 3x3 with Kharak Tread: unchanged from before (still sinks). Superseded: Zantulo now swaps (track-wheel-swap.md).
 - T9. Drive each over rough ground: no wheel catching on terrain it seems to clear, top speed unchanged. Small bumps may show through long straight runs (limit below); taller ones lift the tread onto them.
 - T10. A Short Track 3x3 with no track: the wheels are expected to hover about 0.24 m above the ground (limit below). Say whether that is acceptable.
 - The NPC Dev world still loads `TankTracks_SwapTest`, which adds its own style to Keen's 3x3 and 5x5 suspensions; pick Kharak Tread there.
@@ -258,14 +258,51 @@ The drop has to be one number per track, but the right drop differs per size. Tw
 Limits (both schemes):
 - **Small bumps show through long straight runs.** Tank Tracks casts its ground rays only down to the lowered link's inner face, not its outer face (`Track.cs:1088`), so on a straight run of 3 or more links (2.3 m; 5.0 m on 5x5) a bump lower than the tread's thickness (0.215 m; 0.458 m on 5x5) is not seen and pokes through. A taller bump lifts the run onto it, exactly (collider fix, step 6). Before this change every run was lifted, floating 0.11 m. Fix if it shows: one tread model per size with the drop built into the model and Y back to 0 (8 more tread models), or ask Digi to cast the ray to the outer face.
 - **Track wheels hover with no track.** A GVK track wheel is drawn smaller than its collision sphere, so on a suspension with no track (or a destroyed one) it hovers 0.27 / 0.25 / 0.24 / 0.51 m above the ground. Swapped Keen tires that stay swapped after their track is destroyed do the same (`Roller.cs:113`).
-- **A tire on the other kind of suspension gets the wrong drop.** The game lets any wheel go on any suspension, and Tank Tracks picks the style by the suspension. A Keen tire on a Short Track suspension gets the lowered tread without a swap, so the tread cuts into it; a GVK track wheel on a Zantulo suspension, or under Digi's track on a Keen suspension, gets a tread that floats. Short Track could list the swap style instead, but every plain Kharak Tread track would then depend on the swap (hub #345).
+- **A tire on the other kind of suspension gets the wrong drop.** The game lets any wheel go on any suspension, and Tank Tracks picks the style by the suspension. A Keen tire on a Short Track suspension gets the lowered tread without a swap, so the tread cuts into it; a GVK track wheel under Digi's track on a Keen or Zantulo suspension gets a tread that floats. Short Track could list the swap style instead, but every plain Kharak Tread track would then depend on the swap (hub #345).
 - **The radius overrides depend on mod order.** GVK_Suspension must load after Digi's track pack (3209008231), or his WheelOverride entries replace ours for the four 1x1 wheels he lists. True in the NPC Dev world and the Season 10 list.
-- The swap-only `TankWheel1x1_Lifted` and `TankWheel5x5_Lifted` are shrunk too; when they are wired to the Zantulo suspensions, their styles need the `_Swap` drops, not the Zantulo Y 0.
+- The swap-only `TankWheel1x1_Lifted` and `TankWheel5x5_Lifted` and the `_Lifted` idlers were shrunk too, but are no longer used: the Zantulo mount moved instead (track-wheel-swap.md).
 - Tank Tracks spins a wheel at speed / reported radius (`Roller.cs:421, 657`), so the smaller drawn wheels turn slower than the tread moves: 35% slower on the 1x1, 17 to 20% on the others.
 - On rough ground a sphere can still dip a few centimetres into a voxel edge, so the tread may touch the ground there; it no longer sinks by its own thickness.
 - The collision sphere now reaches past the drawn tire, so a wheel can bump a wall it seems to clear.
 - The 1x1 loses about a third of its drawn size. A thinner tread on 1x1 (SegmentScale Y below 1) would let it shrink less.
 - Rejected: one drop with per-size tread thickness (the tread's horns scale and pierce the hub), and shrinking the radius Keen's tires report (breaks Digi's over-the-tire track on Keen's suspensions).
+
+### 1x1 on mixed tracks (plan, 2026-11-22)
+
+Seen in game (owner, 2026-11-22): every 1x1 wheel clips under a 3x3 or bigger track, and the GVK 1x1 face "looks like an opened soda can" (a 3 cm wall round a 1 m deep cup, with the tread visible inside). Bigger wheels hide their sink in their deep groove; the 1x1 cannot. A per-wheel drop in Tank Tracks was rejected (owner: "no, not doing that").
+
+**Settings (middle ground).** Every large 1x1 wheel reports a bigger radius, by d, and every style a 1x1 leads lowers its Y by the same change in hull radius, so a 1x1-only track stays exact (same ground contact, the tread wraps 6-8 mm further out). Under a bigger wheel's style the 1x1 sinks d less.
+
+| | d = 0.15 | d = 0.17 (offroad 1x1 shares the vanilla radius) |
+|---|---|---|
+| 1x1 Radius (track wheel, idler, Keen 1x1 tires) | 1.428; offroad 1.38 | 1.448 for every large 1x1 |
+| Y, Kharak and Double 1x1 `_Track` / `_Swap` / `_Static` | -0.595 | -0.615 |
+| Y, both `_Swap_Offroad` | -0.549 | -0.615 |
+| Y, `LiftedOTT_Large_1x1`, `_Offroad` | -0.141, -0.140 | -0.160 |
+| Y, `LiftedOTT_Large_1x1_Offroad_TrackWheel` | -0.592 | -0.611 |
+| Y, `VanillaOTT_Large_1x1_Static_TrackWheel` | -0.737 | -0.756 |
+| Merge `[Track:VanillaOTT_Large_1x1]`, `SegmentOffset` | 0.09, -0.317, 0 | 0.09, -0.335, 0 |
+| 1x1 cut under a 3x3 (was 0.21 m) | 0.06 m; horns clear the hub by 1.4 cm (offroad 3x3: 2 cm into it) | 4-8 cm; horns clear by 3 cm (offroad 3x3: level with the groove floor) |
+| 1x1 on a 2x2 track | floats 6-8 cm | floats 8-10 cm |
+| 1x1 spin vs tread | 10% slower | 12% slower |
+
+Keen's static `Wheel1x1` / `OffroadWheel1x1` overrides stay as they are. No d fixes a 1x1 under a 5x5 (the scaled horn passes the axle): unsupported.
+
+**Model.** New 1x1 face profile (prototypes in scene `proto_1x1`, render `Source/TrackWheels/review/wheel1x1_face_options_r1.png`):
+- A: a thick rim ring and a shallow 0.18 m dish, hub boss just past the face.
+- B: a nearly flat disc with a raised hub.
+
+Both hide the tread inside the wheel. The pick goes into `TankWheel1x1`, `TankWheelBlock1x1`, `TankWheelDouble1x1` and `TankWheelBlockDouble1x1`, with LODs and build stages; the joining bolts and lug nuts move onto the new face.
+
+Picked (owner, 2026-11-22): d = 0.17 with the shared offroad radius, and face A.
+
+Built 2026-11-22, not seen in game: the ini values above (d = 0.17 column), and the four 1x1 models with face A (Main, LOD1-3, build stages). The drawn 1x1 grew to 0.833 m (reported radius + drop) so the tread still rests on it; joining bolts and lug nuts sit on the dish floor. Same day (owner: "simplify the black rubber rub strips inside the centers so it doesn't have the extra step in it"): the groove's rub strips on every track wheel, Track Wheel block and double are one plain band (was 0.085 m on the inner half, 0.045 m on the outer half), then cut to a quarter, 0.021 m thick (owner: "like 1/4 the thickness so they look more flat like rub strips"); then removed from every wheel (owner: "unnecessary detail no one needs for more triangles"; 384 fewer faces on each single wheel's Main model, 768 on a double). All wheel models rebuilt. Face A round 2 (owner, same day): the joining-bolt ring removed, the lug nuts 1.5x bigger on the same circle ("Bigger bolts"), and the dish 0.30 m deep (was 0.18; the hub boss still ends just past the face). Then the hub (owner: "doesn't look so much like a cone"): a straight round boss filleted into the hub plate, a small chamfer and a flat end cap with the decal, like the bigger wheels' hub. Then half its height (owner: "don't like how the hub cap face sticks out past the rim face"): 0.15 m above the hub plate, so the cap sits 0.09 m inside the rim face. Then (owner: "spread out the diameter of the bolts just a tad, it looks like no one can fit a socket on them"; "smooth the base of the hubcap where it flanges out more"): lug circle 1.80 design (was 1.60), and the hub's base fillet twice the radius, in 8 steps. Then (owner: "make the rim diameter wall a little thinner so the rubber track can be thickened while keeping the same overall outside diameter"): the 1x1's rubber inner radius 3.35 design (was 3.504), so its rubber is 8.9 cm thick (was 5.5) and the steel rim ring 3.4 cm thinner; outside diameter unchanged. On every wheel the bolt bosses are `PaintedMetalScratched_Colorable` (Chrome first, then owner: "color matched metal but not painted"; the worn colorable metal under the bolt-head decal), and the painted metal texture is finer, 0.14 UV per metre (was 0.10; owner: "scale down the texture on all of the tank track wheels a bit more").
+
+Face cuts (owner, 2026-11-22: "Plain hull-side face", "48 segments on 1x1/2x2", "Drop tiny bevels"): the hull-side face of every wheel is the rim lip, then a flat plate in to the axle stub, with no bolts; the 1x1 and 2x2 (their Track Wheel blocks and doubles too) are 48 segments around (was 64); the axle stub is 24; the rubber bands lost their edge chamfers, the outer face's corner arc has 2 steps (was 4) and the hub fillet 3 (was 6). The Track Wheel block double 3x3 keeps its recessed hull-side cup, since a flat plate there would cut into the block's flange. Main-model faces, before and after: 1x1 3217 to 1953, 2x2 4049 to 1969, 3x3 and 5x5 4049 to 2545, Block1x1 3393 to 2193, Block3x3 4225 to 2881, BlockDouble1x1 4545 to 2817, BlockDouble3x3 5377 to 4353, Double1x1 4369 to 2625, Double2x2 5201 to 2593, Double3x3 and 5x5 5201 to 3393. All models, LODs and build stages together: 184,024 to 121,224 faces.
+
+Hull side of the 2x2 to 5x5 back (owner, same day: the flat plate is "super bland when walking around underneath the rover", "maybe it doesn't need as many angles"; the 1x1 "is fine now"; picked "D: simple cup + bolts" from `Source/TrackWheels/review/hullside_options_r1.png`): the recessed cup again with fewer angles (its bulge and corner arc are one straight wall with a chamfer; the floor slope and raised hub ring stay) and the 8 joining bolts back on the cup floor. The Track Wheel block double 3x3 now uses it too, as it clears the flange. Main faces: 2x2 2321, 3x3 and 5x5 2993, Block3x3 3329, BlockDouble3x3 4225, Double2x2 2993, Double3x3 and 5x5 3889 (448 more than the flat plate on a 64-segment wheel). The 1x1, its block and doubles keep the flat plate.
+
+In-game test, after a full restart: a 1x1-only track; vanilla and offroad 3x3 tracks with a 1x1 idler; a 2x2 track with a 1x1 idler; Digi's track on a Keen 1x1.
 
 ## Open decisions
 
@@ -274,3 +311,4 @@ Limits (both schemes):
 - **T3, Keen's suspensions: decided** (owner, 2026-11-22: "Yes, add it"): Keen's large-grid suspensions (Suspension, Short, Offroad, Offroad Short, each size and mirror) get Kharak Tread `_Swap` styles in GVK's `[Blocks]`, next to Digi's vanilla track. Their SBC stays untouched. Offroad tires use the offroad Y fix (D5 in track-wheel-swap.md). Keen's small-grid suspensions wait for T4.
 - **T4, small grid: decided, later** (owner, 2026-11-22: "lets just do large grid for now, we'll look at doing small grids later because those probably need new track wheel models too"): this plan covers large grid only. `KharakTread_Small` and small-grid track wheels come later, together with D9 in track-wheel-swap.md. Until then, once Morue leaves the mod list, the `SG_*` blocks and Keen's small-grid suspensions offer only Digi's vanilla track (`LiftedOTT_Small_*` / `VanillaOTT_Small`), and small-grid tracks built on Morue designs disappear.
 - **T5, 5x5 link:** one link scaled for every size, or a separate wide link for 5x5. Settled by the render review.
+- **T6, more track styles: later** (owner, 2026-11-22: "I have two other track styles I want to create after everything is working perfect with the current kharak ones"): two more GVK designs, started once the Kharak Tread and Kharak Double Tread pass every in-game test. Not designed yet.

@@ -3,6 +3,9 @@ title: Track wheel swap (few suspension blocks, track wheels shown on demand)
 covers:
   - Content/Models/TankWheel*.mwm
   - Content/Data/TankTracks.ini
+  - Content/Models/LG_3x3_Lifted_Suspension_ZANTULO.mwm
+  - Content/Data/CubeBlocks_Suspension_LiftedVanilla_Regular.sbc
+  - Content/Data/CubeBlocks_Suspension_LiftedVanilla_Offroad.sbc
   - Content/Data/CubeBlocks_RealWheels_Tracks.sbc
   - Content/Data/CubeBlocks_TrackWheelBlocks.sbc
   - Content/Data/BlockVariantGroups.sbc
@@ -13,7 +16,8 @@ covers:
 
 Branch `wheel-swap`. Status 2026-11-22:
 - **Passed in game (owner, 2026-11-22: "everything looks good"):** Part A (all six models at vanilla radius, attach point and collision sphere; the tank styles retuned), and the Lifted Short swaps for all four sizes (Part B step 3, pulled forward so Lifted Short tracks never show off-line tires). Keen's Short Suspension 1x1 shows no swap, as planned (see Part B, "Keen's own suspensions").
-- **Models made, not wired up:** the Zantulo swap models `TankWheel1x1_Lifted` and `TankWheel5x5_Lifted`, and the Zantulo static idler models `TankWheelBlock1x1_Lifted` and `TankWheelBlock3x3_Lifted`. They still need their block definitions, icons and track mappings (Part B step 4). Their track styles wait for [gvk-treads.md](gvk-treads.md), which replaces the Morue pack first.
+- **Zantulo and Offroad Lifted (built 2026-11-22, not tested in game):** the 2x2/3x3 wheel mount moved to Keen's spot, and all 16 large blocks swap like Keen's suspensions (Part B, "Zantulo on Keen's line").
+- **Unused models, to delete:** `TankWheel1x1_Lifted`, `TankWheel5x5_Lifted`, `TankWheelBlock1x1_Lifted` and `TankWheelBlock3x3_Lifted` were made for the old Zantulo line and are no longer needed. `LG_1x1_Lifted_Suspension_ZANTULO*` (10 files) is unused too, since the large 1x1 blocks borrow the 2x2/3x3 model.
 
 ### Part A in-game test (passed 2026-11-22)
 
@@ -89,13 +93,13 @@ Each wheel's `wheel` dummy moves to the vanilla tire's spot. The mesh moves by t
 
 ## Part B: roll the swap out
 
-Keen's own suspensions (Suspension, Short, Offroad, Offroad Short, large and small) stay untouched and get no GVK swap styles. The Morue pack already maps them to the same designs, and a second style of the same design on one block breaks the builder.
+Keen's own suspension blocks keep their SBC. Since the Morue pack was replaced ([gvk-treads.md](gvk-treads.md)), TankTracks.ini gives the large ones the Kharak swap styles.
 
 | Suspension | Sizes | Styles |
 |---|---|---|
-| Lifted Short | 1x1, 2x2, 3x3, 5x5, both sides | Over-the-tire (no swap) plus the 7 `*_Swap` styles |
-| Zantulo Lifted, large | 1x1, 2x2, 3x3, 5x5 | Decision D3 |
-| Offroad Lifted, large | 1x1, 2x2, 3x3, 5x5 | Decision D5 |
+| Lifted Short | 1x1, 2x2, 3x3, 5x5, both sides | Over-the-tire (no swap) plus the Kharak `_Swap` styles |
+| Keen's large suspensions | 1x1, 2x2, 3x3, 5x5 | Kharak `_Swap` (offroad tires: `_Swap_Offroad`) |
+| Zantulo Lifted / Offroad Lifted, large | 1x1, 2x2, 3x3, 5x5 | Over-the-tire plus Keen's Kharak styles (`_Swap` / `_Swap_Offroad`) |
 | Small grid | all | No change: there are no small track wheels |
 
 - 21 new `*_Swap` styles (1x1, 2x2, 5x5, for 7 tank designs; the 3x3 ones exist).
@@ -109,14 +113,38 @@ Every swapped wheel on one suspension family puts its center groove on one line.
 | Family | 1x1 | 2x2 | 3x3 | 5x5 |
 |---|---|---|---|---|
 | Lifted Short (and Lifted Short Track) | 5.137 (0.137) | 5.138 (0.138) | 5.144 (0.144) | 10.128 (0.128) |
-| Zantulo Lifted and Offroad Lifted, large | 6.401 (1.401) | 7.359 (2.359) | 7.365 (2.365) | 12.474 (2.474) |
+| Zantulo Lifted and Offroad Lifted, large (before 2026-11-22) | 6.401 (1.401) | 7.359 (2.359) | 7.365 (2.365) | 12.474 (2.474) |
+
+Wheel mount along the axle (`electric_motor` dummy y, measured in the `.mwm` files):
+
+| Suspension model | 1x1 | 2x2, 3x3 | 5x5 |
+|---|---|---|---|
+| Keen's regular (`MotorSuspension*.mwm`) | 2.635 | 2.635 | 4.127 |
+| Zantulo before 2026-11-22 | 1.439 | 2.396 | 4.127 |
+| Zantulo after 2026-11-22 | 2.635 (the 2x2/3x3 model) | 2.635 | 4.127 |
 
 - **Lifted Short:** the Part A models line up within 1.6 cm, swapped or not. No extra models.
-- **Zantulo and Offroad Lifted:** their 1x1 suspension attaches the wheel 0.96 m nearer the hull, and their 5x5 0.11 m further out, than the 2x2/3x3. So they need their own swap models, used only by their swap styles: `TankWheel1x1_Zantulo` (mesh 0.961 m outward) and `TankWheel5x5_Zantulo` (mesh 0.110 m inward). Each is 5 files (base, BS2, LOD1-3) with no collision, since the swap keeps the tire's collision. Their swap styles' X moves by the same amounts so the track follows. The swapped 1x1 then shows 0.96 m outward of the tire it rides on (decision D10).
-- **Between families:** the Lifted Short line sits 0.14 m past a grid line and the Zantulo line 0.14 m short of one, so the 0.28 m gap between the two families stays (decided earlier). One track should use one family.
-- **Static idlers:** the two Track Wheel blocks sit on the Lifted Short line, so on a Zantulo or Offroad Lifted track they show 0.28 m off. Matching idlers need two new static blocks (1x1 and 3x3) with the wheel 0.28 m nearer the mounting face. There is room: the inner rubber sits about 1.2 m from the flange. Each is a full model (Main, LOD1-3, BS1-3, convex hull collision), a block definition, an icon and a TankTracks mapping with `OutOffset` -0.14 instead of 0.14 (decision D11).
-- **New models in all (owner, 2026-11-21: "two models are fine"):** the 6 existing models are rebuilt (Part A), plus 2 swap-only Zantulo models (1x1, 5x5), plus 2 Zantulo static idlers if D11 is yes.
-- Test 2 checks the groove line for every size on each family.
+- **Keen's line:** Keen's 1x1/2x2/3x3 sit within 0.04 m of the Lifted Short line and the 5x5 0.15 m from it (mod 2.5 m), so Keen's suspensions share the swap models and the Track Wheel idlers.
+
+### Zantulo on Keen's line (built 2026-11-22)
+
+The owner pointed out that the Zantulo suspensions reach out from the hull as far as Keen's regular ones (owner, 2026-11-22: "the zantulo suspension extend out from the vehicle body the same distance as vanilla regular suspension"). Measured, the 5x5 mounts exactly where Keen's does, the 2x2/3x3 0.24 m nearer the hull, and the 1x1 1.2 m nearer. So instead of Zantulo-only models, the 2x2/3x3 mount moved to Keen's spot (owner, 2026-11-22: "Yes, move it"), and Zantulo uses Keen's Kharak styles. This replaces the shifted swap models (D10), the Zantulo idlers (D11) and the plan for separate Zantulo designs.
+1. **Wheel mount:** `LG_3x3_Lifted_Suspension_ZANTULO.mwm` (used by every large Lifted and Offroad Lifted size but the 5x5) has its `electric_motor` y moved from 2.396 to 2.635, Keen's value; nothing else in the file changed. Only the main model holds the dummy.
+2. **Track styles:** the 16 large Zantulo and Offroad Lifted lines list Digi's over-the-tire style plus `KharakTread_Large_<size>_Swap` and `KharakDoubleTread_Large_<size>_Swap` (Offroad Lifted: `_Swap_Offroad`), the same as Keen's suspensions. The `KharakTread_Large_<size>_Zantulo` styles are gone.
+3. **1x1:** Zantulo's 1x1 used the old dedicated 1x1 suspension arm; Keen's 1x1 moved onto the 2x2/3x3 arm years ago (its own file, `MotorSuspension1x1.mwm`, now mounts exactly where `MotorSuspension.mwm` does) (owner, 2026-11-22: "I'd like to borrow the zantulo 2x2/3x3 suspension block and replace the 1x1 model"). The four large Zantulo 1x1 blocks (Lifted and Offroad Lifted, left and right) now use LG_3x3_Lifted_Suspension_ZANTULO and its build stages; their size and offset were already the same. The two Right blocks also had their Left mount point written as a second Right one, so they could not attach by their Left face; fixed. The LG_1x1_Lifted_Suspension_ZANTULO* files are unused on large grid. Small grid (SG_1x1) is unchanged.
+
+What players see:
+- Wheels on Zantulo and Offroad Lifted 2x2/3x3 vehicles already built sit 0.24 m further out on each side after a restart. Built 1x1s change to the 2x2/3x3 arm: their wheels sit 1.2 m further out, and the axle drops 0.58 m, so the vehicle rides about 0.58 m higher on them, the same lift as the 2x2/3x3. A saved wheel starts at its old spot and the suspension pulls it over on the first load, so a 1x1 with armor or fenders built close to its old wheel may hit them.
+- Kharak tracks on Zantulo blocks show road wheels instead of tires, and every Zantulo size can share a track with Keen's, Lifted Short and Short Track suspensions and the Track Wheel idlers.
+- The arm's hub ends 0.10 m past the old mount, so a tire now sits about 0.14 m beyond it. Whether the tire's own hub hides that gap is not checked yet.
+- Like every swap, it needs the patched Tank Tracks (hub #345).
+
+In-game test (restart the game fully first: the game keeps a model's wheel mount until it closes):
+1. A Zantulo Lifted 3x3 next to Keen's Suspension 3x3 on one hull face, same tire. Pass: the tires line up, and the arm's hub meets the tire with no visible gap.
+2. A Zantulo Lifted 1x1, Left and Right. Pass: it looks like the 2x2/3x3 arm, its tire lines up with Keen's 1x1, it rides at the 2x2/3x3 lift, and the Right block attaches by every side face.
+3. A Kharak Tread over Zantulo 1x1 + 2x2 + 3x3 with a Track Wheel Block 3x3 idler, then the same with Kharak Double Tread. Pass: road wheels instead of tires, every groove and the idler on one line; removing the track brings the tires back.
+4. The same on Offroad Lifted. Pass: the tread rests on the tires, no gap and no sinking.
+5. An older Zantulo vehicle from the save. Pass: it loads, and its wheels sit on the new spot without jumping or breaking off.
 
 ## Part C: hide Short Track and Lifted Short Track
 
@@ -128,7 +156,7 @@ Every swapped wheel on one suspension family puts its center groove on one line.
 ## Existing grids and the player change note
 
 - Short Track and Lifted Short Track 3x3 and 5x5 vehicles ride 0.35 / 0.45 m lower and run about 9% / 7% slower, the same as Lifted Short on tires.
-- Lifted Short tracks (and Zantulo, if D3) show track wheels instead of tires under the track. Saved tracks pick up the new styles on load; no rebuild is needed.
+- Lifted Short, Keen and Zantulo tracks show track wheels instead of tires under a Kharak track. Saved tracks pick up the new styles on load; no rebuild is needed.
 - Built 1x1 and 2x2 tracks on Lifted Short move about 0.47 / 0.65 m outward onto the shared line.
 - Short Track and Lifted Short Track leave the G menu; built ones keep working.
 
@@ -137,7 +165,6 @@ Every swapped wheel on one suspension family puts its center groove on one line.
 - Every client and the server need a Tank Tracks build with the swap crash fix before any of this ships. Stock 1.1.5 crashes.
 - A destroyed track leaves the other wheels showing the swap until their next model refresh. If a new track is built on them before that, a 5x5 steers around a pivot 0.26 m off, on that client only.
 - Swapped wheels leave tire trails (trails follow the wheel block, not the model).
-- The Zantulo 1x1 sits about 1 m off the line of the Zantulo 2x2/3x3 (different suspension model).
 - Small grid has no track wheels.
 
 ## In-game tests
@@ -157,16 +184,16 @@ Every swapped wheel on one suspension family puts its center groove on one line.
 1. Part A, with tests 1 to 4.
 2. The checker script.
 3. Part B for Lifted Short (1x1, 2x2, 5x5), test 3.
-4. Part B for Zantulo and Offroad Lifted, after D3, D5 and D10, with their two shifted swap models; tests 2 and 5.
+4. Part B for Zantulo and Offroad Lifted: their 2x2/3x3 mount moved to Keen's, then Keen's swap styles (built 2026-11-22); tests 2 and 5.
 5. Part C, tests 7 and 8.
 6. Tests 6 and 9, then the README, the wiki and the player change note. Publish only after the dry run and the owner's "go".
 
 ## Open decisions
 
 - **D3. Decided: yes** (owner, 2026-11-21: "two models are fine"). The large Zantulo and Offroad Lifted blocks swap to track wheels; their tracks change look to the GVK tank styles.
-- **D5.** Offroad Lifted: their own offroad swap styles with the small height fixes above, or share the vanilla ones and accept a 2 to 5 cm gap?
+- **D5. Done:** offroad tires get their own _Swap_Offroad styles with the offroad drops ([gvk-treads.md](gvk-treads.md)), on Keen's offroad suspensions and Offroad Lifted alike.
 - **D6.** 7x7: leave it search-only with no tracks, or retire it?
 - **D7.** Static Track Wheel blocks: keep as they are, or put the 1x1 and 3x3 in one visible group?
 - **D9.** Small grid: no swaps for now, or a hub issue to model small track wheels?
-- **D10. Decided: the shifted swap model** (owner, 2026-11-21: "two models are fine"). Was: Zantulo and Offroad Lifted 1x1: a swap model shifted 0.96 m onto the line (it shows away from the tire it rides on), or hide those two 1x1 suspensions instead (owner, 2026-11-21: "I almost want to just delete that one")?
-- **D11. Decided: make them** (owner, 2026-11-21: "Yes, make them"). Was: static idlers for the Zantulo line: two new Track Wheel blocks (1x1, 3x3) 0.28 m nearer the hull, or keep one pair and accept a 0.28 m offset on Zantulo tracks?
+- **D10. Superseded 2026-11-22** by moving the Zantulo mount (Part B, "Zantulo on Keen's line"); the 1x1 now uses the 2x2/3x3 model. Earlier pick: the shifted swap model (owner, 2026-11-21: "two models are fine"). Was: Zantulo and Offroad Lifted 1x1: a swap model shifted 0.96 m onto the line (it shows away from the tire it rides on), or hide those two 1x1 suspensions instead (owner, 2026-11-21: "I almost want to just delete that one")?
+- **D11. Superseded 2026-11-22:** with the mount moved, the normal Track Wheel blocks fit Zantulo tracks. Earlier pick: make them (owner, 2026-11-21: "Yes, make them"). Was: static idlers for the Zantulo line: two new Track Wheel blocks (1x1, 3x3) 0.28 m nearer the hull, or keep one pair and accept a 0.28 m offset on Zantulo tracks?
