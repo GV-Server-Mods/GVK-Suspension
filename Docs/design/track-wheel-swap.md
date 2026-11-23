@@ -197,8 +197,8 @@ The Short Track Wheel 1x1 and 3x3 blocks (`ShortTankWheelBlock1x1/3x3`, deleted 
 
 - **D3. Decided: yes** (owner, 2026-11-21: "two models are fine"). The large Zantulo and Offroad Lifted blocks swap to track wheels; their tracks change look to the GVK tank styles.
 - **D5. Done:** offroad tires get their own _Swap_Offroad styles with the offroad drops ([gvk-treads.md](gvk-treads.md)), on Keen's offroad suspensions and Offroad Lifted alike.
-- **D6.** 7x7: leave it search-only with no tracks, or retire it?
-- **D7.** Static Track Wheel blocks: keep as they are, or put the 1x1 and 3x3 in one visible group?
-- **D9.** Small grid: no swaps for now, or a hub issue to model small track wheels?
+- **D6. Decided: keep** (owner, 2026-11-22: "I'd rather the 7x7s just be in there as individuals in that group"). The 7x7s stay, with no tracks, as single icons in the GV Kharak Items and Propulsion tabs; on Home they sit in Keen's suspension groups. Was: leave it search-only with no tracks, or retire it?
+- **D7. Decided: hide** (owner, 2026-11-22: "Hide it too"). Every Track Wheel block has `GuiVisible` and `Public` false (Part C); built ones keep working. Was: keep as they are, or put the 1x1 and 3x3 in one visible group?
+- **D9. Decided: later** (owner, 2026-11-22, T4 in [gvk-treads.md](gvk-treads.md)): large grid only for now; small-grid track wheels and `KharakTread_Small` come later. Was: no swaps for now, or a hub issue to model small track wheels?
 - **D10. Superseded 2026-11-22** by moving the Zantulo mount (Part B, "Zantulo on Keen's line"); the 1x1 now uses the 2x2/3x3 model. Earlier pick: the shifted swap model (owner, 2026-11-21: "two models are fine"). Was: Zantulo and Offroad Lifted 1x1: a swap model shifted 0.96 m onto the line (it shows away from the tire it rides on), or hide those two 1x1 suspensions instead (owner, 2026-11-21: "I almost want to just delete that one")?
 - **D11. Superseded 2026-11-22:** with the mount moved, the normal Track Wheel blocks fit Zantulo tracks. Earlier pick: make them (owner, 2026-11-21: "Yes, make them"). Was: static idlers for the Zantulo line: two new Track Wheel blocks (1x1, 3x3) 0.28 m nearer the hull, or keep one pair and accept a 0.28 m offset on Zantulo tracks?
