@@ -9,7 +9,8 @@ The suspensions, wheels and tank tracks of the **GV: Deserts of Kharak (GVK)** s
 - **Few blocks, many looks.** The track look is picked in the Tank Tracks builder, not with extra suspension blocks.
 
 ## Requirements
-- Digi's Tank Tracks: Framework & API (3208995513), Builder (3209005014) and Tank Tracks over Vanilla Wheels (3209008231). The wheel swap needs the Framework's swap crash fix ([gvk-treads.md](Docs/design/gvk-treads.md)).
+- Digi's Tank Tracks: Framework & API (3208995513) and Builder (3209005014), both set as required items on the Workshop page. The wheel swap needs the Framework's swap crash fix ([gvk-treads.md](Docs/design/gvk-treads.md)).
+- Optional: Tank Tracks over Vanilla Wheels (3209008231). The `LiftedOTT_*` styles inherit its `VanillaOTT_*` styles, so without it Digi's own track design is not offered on GVK suspensions; the Kharak designs do not need it.
 - No re-uploads.
 
 ## For other modders
