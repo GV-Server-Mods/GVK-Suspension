@@ -9,7 +9,7 @@
 				<SubtypeId>SmallRealWheel1x1</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel1x1</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension1x1Right.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Wheel1x1.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -79,7 +79,7 @@
 				<SubtypeId>SmallRealWheel2x2</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel2x2</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension2x2Left.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Wheel2x2.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -126,7 +126,7 @@
 			<DeformationRatio>0.3</DeformationRatio>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-			<MirroringBlock>SmallReal2x2WheelMirrored</MirroringBlock>
+			<MirroringBlock>SmallRealWheel2x2Mirrored</MirroringBlock>
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>15</BuildTimeSeconds>
 			<InventorySize>
@@ -150,7 +150,7 @@
 				<SubtypeId>SmallRealWheel</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel3x3</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension3x3Right.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Wheel3x3.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -220,7 +220,7 @@
 				<SubtypeId>SmallRealWheel5x5</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel5x5</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension5x5Right.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Wheel5x5.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -289,7 +289,7 @@
 				<SubtypeId>RealWheel1x1</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel1x1</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension1x1Right.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Wheel1x1.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -360,7 +360,7 @@
 				<SubtypeId>RealWheel2x2</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel2x2</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension2x2Right.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Wheel2x2.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -432,7 +432,7 @@
 				<SubtypeId>RealWheel</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel3x3</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension3x3Right.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Wheel3x3.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -503,7 +503,7 @@
 				<SubtypeId>RealWheel5x5</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel5x5</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension5x5Right.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Wheel5x5.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -573,7 +573,7 @@
 				<SubtypeId>SmallRealWheel1x1mirrored</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel1x1Mirrored</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension1x1Left.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Wheel1x1.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -643,7 +643,7 @@
 				<SubtypeId>SmallRealWheel2x2Mirrored</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel2x2</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension3x3Left.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Wheel2x2.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -690,7 +690,7 @@
 			<DeformationRatio>0.3</DeformationRatio>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-			<MirroringBlock>SmallReal2x2Wheel</MirroringBlock>
+			<MirroringBlock>SmallRealWheel2x2</MirroringBlock>
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>15</BuildTimeSeconds>
 			<InventorySize>
@@ -714,7 +714,7 @@
 				<SubtypeId>SmallRealWheelmirrored</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel3x3mirrored</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension3x3Left.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Wheel3x3.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -784,7 +784,7 @@
 				<SubtypeId>SmallRealWheel5x5mirrored</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel5x5mirrored</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension5x5Left.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Wheel5x5.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -853,7 +853,7 @@
 				<SubtypeId>RealWheel1x1mirrored</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel1x1mirrored</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension1x1Left.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Wheel1x1.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -923,7 +923,7 @@
 				<SubtypeId>RealWheel2x2Mirrored</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel2x2</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension3x3Left.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Wheel2x2.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -971,7 +971,7 @@
 			<DeformationRatio>0.3</DeformationRatio>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-			<MirroringBlock>RealWheel2x2Mirrored</MirroringBlock>
+			<MirroringBlock>RealWheel2x2</MirroringBlock>
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>15</BuildTimeSeconds>
 			<InventorySize>
@@ -995,7 +995,7 @@
 				<SubtypeId>RealWheelmirrored</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel3x3mirrored</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension3x3Left.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Wheel3x3.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -1066,7 +1066,7 @@
 				<SubtypeId>RealWheel5x5mirrored</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel5x5mirrored</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension5x5Left.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Wheel5x5.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

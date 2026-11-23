@@ -9,7 +9,7 @@
 				<SubtypeId>RealTrackWheel1x1</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel1x1</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension1x1Right.dds</Icon>
+			<Icon>Textures\Icons\RealTrackWheel1x1.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -80,7 +80,7 @@
 				<SubtypeId>RealTrackWheel2x2</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel2x2</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension2x2Right.dds</Icon>
+			<Icon>Textures\Icons\RealTrackWheel2x2.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -152,7 +152,7 @@
 				<SubtypeId>RealTrackWheel</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel3x3</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension3x3Right.dds</Icon>
+			<Icon>Textures\Icons\RealTrackWheel3x3.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -223,7 +223,7 @@
 				<SubtypeId>RealTrackWheel5x5</SubtypeId>
 			</Id>
 			<DisplayName>DisplayName_Block_Wheel5x5</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\WheelSuspension5x5Right.dds</Icon>
+			<Icon>Textures\Icons\RealTrackWheel5x5.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

@@ -12,7 +12,7 @@
 				<SubtypeId>ShortTrackSuspension5x5mirrored</SubtypeId>
 			</Id>
 			<DisplayName>5x5 Short Track Suspension Left</DisplayName>
-			<Icon>Textures\Icons\5x5_Lifted_Short_Track_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\5x5_Short_Track_Suspension_Left.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -89,6 +89,7 @@
 				<string>Propulsion</string>
 			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -96,7 +97,7 @@
 				<SubtypeId>ShortTrackSuspension5x5</SubtypeId>
 			</Id>
 			<DisplayName>5x5 Short Track Suspension Right</DisplayName>
-			<Icon>Textures\Icons\5x5_Lifted_Short_Track_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\5x5_Short_Track_Suspension_Right.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -173,6 +174,7 @@
 				<string>Propulsion</string>
 			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -180,7 +182,7 @@
 				<SubtypeId>ShortTrackSuspension3x3mirrored</SubtypeId>
 			</Id>
 			<DisplayName>3x3 Short Track Suspension Left</DisplayName>
-			<Icon>Textures\Icons\3x3_Lifted_Short_Track_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\3x3_Short_Track_Suspension_Left.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -258,6 +260,7 @@
 				<string>Propulsion</string>
 			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -265,7 +268,7 @@
 				<SubtypeId>ShortTrackSuspension3x3</SubtypeId>
 			</Id>
 			<DisplayName>3x3 Short Track Suspension Right</DisplayName>
-			<Icon>Textures\Icons\3x3_Lifted_Short_Track_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\3x3_Short_Track_Suspension_Right.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -345,6 +348,7 @@
 				<string>Propulsion</string>
 			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -352,7 +356,7 @@
 				<SubtypeId>ShortTrackSuspension2x2mirrored</SubtypeId>
 			</Id>
 			<DisplayName>2x2 Short Track Suspension Left</DisplayName>
-			<Icon>Textures\Icons\2x2_Lifted_Short_Track_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\2x2_Short_Track_Suspension_Left.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -430,6 +434,7 @@
 				<string>Propulsion</string>
 			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -437,7 +442,7 @@
 				<SubtypeId>ShortTrackSuspension2x2</SubtypeId>
 			</Id>
 			<DisplayName>2x2 Short Track Suspension Right</DisplayName>
-			<Icon>Textures\Icons\2x2_Lifted_Short_Track_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\2x2_Short_Track_Suspension_Right.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -515,6 +520,7 @@
 				<string>Propulsion</string>
 			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -522,7 +528,7 @@
 				<SubtypeId>ShortTrackSuspension1x1mirrored</SubtypeId>
 			</Id>
 			<DisplayName>1x1 Short Track Suspension Left</DisplayName>
-			<Icon>Textures\Icons\1x1_Lifted_Short_Track_Suspension_Left.dds</Icon>
+			<Icon>Textures\Icons\1x1_Short_Track_Suspension_Left.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -599,6 +605,7 @@
 				<string>Propulsion</string>
 			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -606,7 +613,7 @@
 				<SubtypeId>ShortTrackSuspension1x1</SubtypeId>
 			</Id>
 			<DisplayName>1x1 Short Track Suspension Right</DisplayName>
-			<Icon>Textures\Icons\1x1_Lifted_Short_Track_Suspension_Right.dds</Icon>
+			<Icon>Textures\Icons\1x1_Short_Track_Suspension_Right.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -683,6 +690,7 @@
 				<string>Propulsion</string>
 			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
 		</Definition>
 		<!-- ==============================================================
 

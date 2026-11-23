@@ -339,7 +339,7 @@
 				<SubtypeId>LG_2x2_Offroad_Lifted_Suspension_Left</SubtypeId>
 			</Id>
 			<DisplayName>2x2 Offroad Lifted Wheel Suspension Left</DisplayName>
-			<Icon>Textures\Icons\3x3_Lifted_Offroad_Suspension_Left.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
+			<Icon>Textures\Icons\2x2_Lifted_Offroad_Suspension_Left.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -421,7 +421,7 @@
 				<SubtypeId>LG_2x2_Offroad_Lifted_Suspension_Right</SubtypeId>
 			</Id>
 			<DisplayName>2x2 Offroad Lifted Wheel Suspension Right</DisplayName>
-			<Icon>Textures\Icons\3x3_Lifted_Offroad_Suspension_Right.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
+			<Icon>Textures\Icons\2x2_Lifted_Offroad_Suspension_Right.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -503,7 +503,7 @@
 				<SubtypeId>LG_1x1_Offroad_Lifted_Suspension_Left</SubtypeId>
 			</Id>
 			<DisplayName>1x1 Offroad Lifted Wheel Suspension Left</DisplayName>
-			<Icon>Textures\Icons\1x1_Lifted_Offroad_Suspension_Left.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
+			<Icon>Textures\Icons\LG_1x1_Lifted_Offroad_Suspension_Left.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -584,7 +584,7 @@
 				<SubtypeId>LG_1x1_Offroad_Lifted_Suspension_Right</SubtypeId>
 			</Id>
 			<DisplayName>1x1 Offroad Lifted Wheel Suspension Right</DisplayName>
-			<Icon>Textures\Icons\1x1_Lifted_Offroad_Suspension_Right.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
+			<Icon>Textures\Icons\LG_1x1_Lifted_Offroad_Suspension_Right.dds</Icon> <Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Lifted suspension allows your ground vehicles to have a significant increase in ground clearance while also increasing vertical height limit.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

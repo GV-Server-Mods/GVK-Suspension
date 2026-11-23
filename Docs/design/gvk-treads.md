@@ -105,7 +105,7 @@ Done 2026-11-22 (steps 1 to 4; not seen in game). The Morue-based `_Track` and `
 | `KharakTread_Large_<size>_Swap_Offroad` | as `_Track` | X as `_Track`; Y +0.048 / -0.022 / -0.033 / -0.042 | Offroad tire radius fix (D5 in track-wheel-swap.md), for Keen's Offroad and Offroad Short. |
 
 - **Y is 0:** the link's origin is on the plate's underside, and Tank Tracks puts the middle of each link's chord on the roller radius (`Roller.cs:191-196`), so the plate rests on the tire. The hinge axes sit 0.093 m above the chord (Tank Tracks ignores pivot Y, `DefinitionsInternal.cs:293-305`), so on a curve the knuckles part by about 2 cm on a 3x3 and 6 cm on a 1x1; the in-game test checks it.
-- **`[Blocks]`:** Zantulo and Offroad Lifted list `LiftedOTT_*` plus `_Swap` / `_Swap_Offroad`, like Keen's suspensions (step 5); Short Track and Lifted Short Track list `_Track`; Lifted Short lists `_Swap`; Keen's 32 large suspensions list only the Kharak swap (Digi's vanilla track stays from his own pack, since block mappings add up across mods, `DefinitionsInternal.cs:34-39`); the Track Wheel blocks list `VanillaOTT_*_Static` plus `_Static`; small grid keeps `LiftedOTT_Small_*` only.
+- **`[Blocks]`:** Zantulo and Offroad Lifted list `LiftedOTT_*` plus `_Swap` / `_Swap_Offroad`, like Keen's suspensions (step 5); Short Track and Lifted Short Track list `_Track`; Lifted Short lists `_Swap` and Offroad Lifted Short `_Swap_Offroad`; Keen's 32 large suspensions list only the Kharak swap (Digi's vanilla track stays from his own pack, since block mappings add up across mods, `DefinitionsInternal.cs:34-39`); the Track Wheel blocks list `VanillaOTT_*_Static` plus `_Static`; small grid keeps `LiftedOTT_Small_*` only.
 - **Icon:** `Content/Textures/Icons/KharakTread.dds` (256 px BC7 sRGB, as Digi's), rendered from five links on the 3x3 curve (`Source/KharakTread/review/icon_r1.png`); material `KharakTread_Icon` in the new `Content/Data/Icons.sbc`.
 - **Build:** MDK2 Release build passed; the deployed `Mods\GVK_Suspension` copy has the new ini, `Icons.sbc`, icon and all seven link models, byte-identical to the repo.
 
@@ -122,7 +122,7 @@ Done 2026-11-22 (steps 1 to 4; not seen in game). The Morue-based `_Track` and `
 
 ## In-game test
 
-First look in game (owner, 2026-11-22): "this new tread looks SO good, and it fits perfectly around the wheels". Covers the look and the fit on the wheel (part of test 1). **Passed in game, all six tests** (owner, 2026-11-22: "all checks pass 1x1 and 5x5 look great, no issues"), including the hinge gap on the 1x1 curve, the 2.13x 5x5 link, the 10 / 20 / 40 m LODs, the construction model and rebuilding a swapped track. The NPC Dev world also loads the local `TankTracks_SwapFix` copy, so the rebuild check says nothing about Digi's Workshop build.
+First look in game (owner, 2026-11-22): "this new tread looks SO good, and it fits perfectly around the wheels". Covers the look and the fit on the wheel (part of test 1). **Passed in game, all six tests** (owner, 2026-11-22: "all checks pass 1x1 and 5x5 look great, no issues"), including the hinge gap on the 1x1 curve, the 2.13x 5x5 link, the 10 / 20 / 40 m LODs, the construction model and rebuilding a swapped track. The NPC Dev world also loads the local `TankTracks_SwapFix` copy. Digi's Workshop v1.1.6 (2026-11-22) ships that fix unchanged (every script matches `TankTracks_SwapFix` except the version string), so the rebuild check holds for the Workshop build.
 
 1. Build a track on each GVK suspension size, 1x1 to 5x5. Pass: the tread sits on the tread line, no gap, no sinking, links bend at the hinge with no gaps on the curve.
 2. Mixed 1x1/2x2/3x3 track. Pass: one tread width, guide teeth in the grooves.
@@ -141,7 +141,7 @@ A second track design that looks like the twin tracks on the larger Deserts of K
 - Every style swaps the wheel model (`ReplaceWheelModel`); the swap keeps the tire's collision (`Roller.cs:123-140`).
 - The Track Wheel blocks swap too: on a static wheel the "wheel" is the block itself (`Roller.cs:256-257`), so the double idlers are swap models of the two Track Wheel block models. No new blocks, SBC or block owners.
 - The track is drawn with the biggest wheel's style (`Track.cs:285-306`). Every double is the same width, so a mixed 1x1/2x2/3x3 double track looks the same whichever wheel leads.
-- Risk: the whole look rides on the wheel swap, so it carries Digi's swap crash (rebuilding a track on swapped wheels; see track-wheel-swap.md). The NPC Dev world loads a patched local Tank Tracks (`TankTracks_SwapFix`); the server needs the same before this ships.
+- Risk: the whole look rides on the wheel swap, so it carries Digi's swap crash (rebuilding a track on swapped wheels; see track-wheel-swap.md). Fixed in Digi's Workshop v1.1.6 (2026-11-22), the same code as the local `TankTracks_SwapFix` the NPC Dev world loads, so the server needs nothing extra.
 
 ### Size (proposal)
 

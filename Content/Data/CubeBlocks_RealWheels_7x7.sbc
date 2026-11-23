@@ -10,7 +10,7 @@
 			</Id>
 			<Public>false</Public>
 			<DisplayName>7x7 Real Wheel Right</DisplayName>
-			<Icon>Textures\Icons\WheelSuspension7x7Right.dds</Icon>
+			<Icon>Textures\Icons\Wheel7x7.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -80,7 +80,7 @@
 			</Id>
 			<Public>false</Public>
 			<DisplayName>7x7 Real Wheel Right</DisplayName>
-			<Icon>Textures\Icons\WheelSuspension7x7Right.dds</Icon>
+			<Icon>Textures\Icons\Wheel7x7.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -151,7 +151,7 @@
 			</Id>
 			<Public>false</Public>
 			<DisplayName>7x7 Real Wheel Left</DisplayName>
-			<Icon>Textures\Icons\WheelSuspension7x7Left.dds</Icon>
+			<Icon>Textures\Icons\Wheel7x7.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -221,7 +221,7 @@
 			</Id>
 			<Public>false</Public>
 			<DisplayName>7x7 Real Wheel Left</DisplayName>
-			<Icon>Textures\Icons\WheelSuspension7x7Left.dds</Icon>
+			<Icon>Textures\Icons\Wheel7x7.dds</Icon>
 			<Description>Description_Wheel</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

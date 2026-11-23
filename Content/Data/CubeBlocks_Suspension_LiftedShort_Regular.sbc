@@ -12,7 +12,7 @@
 				<SubtypeId>LiftedShortSuspension5x5mirrored</SubtypeId>
 			</Id>
 			<DisplayName>5x5 Lifted Short Suspension Left</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\ShortWheelSuspension5x5Right.dds</Icon>
+			<Icon>Textures\Icons\5x5_Lifted_Short_Suspension_Left.dds</Icon>
 			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
@@ -97,7 +97,7 @@
 				<SubtypeId>LiftedShortSuspension5x5</SubtypeId>
 			</Id>
 			<DisplayName>5x5 Lifted Short Suspension Right</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\ShortWheelSuspension5x5Left.dds</Icon>
+			<Icon>Textures\Icons\5x5_Lifted_Short_Suspension_Right.dds</Icon>
 			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
@@ -182,7 +182,7 @@
 				<SubtypeId>LiftedShortSuspension3x3mirrored</SubtypeId>
 			</Id>
 			<DisplayName>3x3 Lifted Short Suspension Left</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\ShortWheelSuspension3x3Right.dds</Icon>
+			<Icon>Textures\Icons\3x3_Lifted_Short_Suspension_Left.dds</Icon>
 			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
@@ -268,7 +268,7 @@
 				<SubtypeId>LiftedShortSuspension3x3</SubtypeId>
 			</Id>
 			<DisplayName>3x3 Lifted Short Suspension Right</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\ShortWheelSuspension3x3left.dds</Icon>
+			<Icon>Textures\Icons\3x3_Lifted_Short_Suspension_Right.dds</Icon>
 			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
@@ -356,7 +356,7 @@
 				<SubtypeId>LiftedShortSuspension2x2Mirrored</SubtypeId>
 			</Id>
 			<DisplayName>2x2 Lifted Short Suspension Left</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\ShortWheelSuspension2x2Right.dds</Icon>
+			<Icon>Textures\Icons\2x2_Lifted_Short_Suspension_Left.dds</Icon>
 			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
@@ -442,7 +442,7 @@
 				<SubtypeId>LiftedShortSuspension2x2</SubtypeId>
 			</Id>
 			<DisplayName>2x2 Lifted Short Suspension Right</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\ShortWheelSuspension2x2Left.dds</Icon>
+			<Icon>Textures\Icons\2x2_Lifted_Short_Suspension_Right.dds</Icon>
 			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
@@ -528,7 +528,7 @@
 				<SubtypeId>LiftedShortSuspension1x1mirrored</SubtypeId>
 			</Id>
 			<DisplayName>1x1 Lifted Short Suspension Left</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\ShortWheelSuspension1x1Right.dds</Icon>
+			<Icon>Textures\Icons\1x1_Lifted_Short_Suspension_Left.dds</Icon>
 			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>
@@ -613,7 +613,7 @@
 				<SubtypeId>LiftedShortSuspension1x1</SubtypeId>
 			</Id>
 			<DisplayName>1x1 Lifted Short Suspension Right</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\ShortWheelSuspension1x1Left.dds</Icon>
+			<Icon>Textures\Icons\1x1_Lifted_Short_Suspension_Right.dds</Icon>
 			<Icon>Textures\Icons\Lifted_Icon.dds</Icon>
 			<Description>Description_Suspension</Description>
 			<CubeSize>Large</CubeSize>

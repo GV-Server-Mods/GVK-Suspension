@@ -14,10 +14,10 @@ covers:
 
 # Track wheel swap: plan
 
-Branch `wheel-swap`. Status 2026-11-22:
+On `main`. Status 2026-11-22:
 - **Passed in game (owner, 2026-11-22: "everything looks good"):** Part A (all six models at vanilla radius, attach point and collision sphere; the tank styles retuned), and the Lifted Short swaps for all four sizes (Part B step 3, pulled forward so Lifted Short tracks never show off-line tires). Keen's Short Suspension 1x1 shows no swap, as planned (see Part B, "Keen's own suspensions").
 - **Zantulo and Offroad Lifted (built 2026-11-22, not tested in game):** the 2x2/3x3 wheel mount moved to Keen's spot, and all 16 large blocks swap like Keen's suspensions (Part B, "Zantulo on Keen's line").
-- **Unused models, to delete:** `TankWheel1x1_Lifted`, `TankWheel5x5_Lifted`, `TankWheelBlock1x1_Lifted` and `TankWheelBlock3x3_Lifted` were made for the old Zantulo line and are no longer needed. `LG_1x1_Lifted_Suspension_ZANTULO*` (10 files) is unused too, since the large 1x1 blocks borrow the 2x2/3x3 model.
+- **Unused models deleted (2026-11-22):** `TankWheel1x1_Lifted`, `TankWheel5x5_Lifted`, `TankWheelBlock1x1_Lifted` and `TankWheelBlock3x3_Lifted` (made for the old Zantulo line), and `LG_1x1_Lifted_Suspension_ZANTULO*` (the large 1x1 blocks borrow the 2x2/3x3 model): 34 files.
 
 ### Part A in-game test (passed 2026-11-22)
 
@@ -98,6 +98,7 @@ Keen's own suspension blocks keep their SBC. Since the Morue pack was replaced (
 | Suspension | Sizes | Styles |
 |---|---|---|
 | Lifted Short | 1x1, 2x2, 3x3, 5x5, both sides | Over-the-tire (no swap) plus the Kharak `_Swap` styles |
+| Offroad Lifted Short (added 2026-11-22, owner: "just reuse the same suspension base model and pop the offroad wheels on") | 1x1, 2x2, 3x3, 5x5, both sides, large grid | Over-the-tire plus the Kharak `_Swap_Offroad` styles |
 | Keen's large suspensions | 1x1, 2x2, 3x3, 5x5 | Kharak `_Swap` (offroad tires: `_Swap_Offroad`) |
 | Zantulo Lifted / Offroad Lifted, large | 1x1, 2x2, 3x3, 5x5 | Over-the-tire plus Keen's Kharak styles (`_Swap` / `_Swap_Offroad`) |
 | Small grid | all | No change: there are no small track wheels |
@@ -137,7 +138,7 @@ What players see:
 - Wheels on Zantulo and Offroad Lifted 2x2/3x3 vehicles already built sit 0.24 m further out on each side after a restart. Built 1x1s change to the 2x2/3x3 arm: their wheels sit 1.2 m further out, and the axle drops 0.58 m, so the vehicle rides about 0.58 m higher on them, the same lift as the 2x2/3x3. A saved wheel starts at its old spot and the suspension pulls it over on the first load, so a 1x1 with armor or fenders built close to its old wheel may hit them.
 - Kharak tracks on Zantulo blocks show road wheels instead of tires, and every Zantulo size can share a track with Keen's, Lifted Short and Short Track suspensions and the Track Wheel idlers.
 - The arm's hub ends 0.10 m past the old mount, so a tire now sits about 0.14 m beyond it. Whether the tire's own hub hides that gap is not checked yet.
-- Like every swap, it needs the patched Tank Tracks (hub #345).
+- Like every swap, it needs the swap crash fix, in Digi's Workshop Tank Tracks since v1.1.6 (2026-11-22; hub #345).
 
 In-game test (restart the game fully first: the game keeps a model's wheel mount until it closes):
 1. A Zantulo Lifted 3x3 next to Keen's Suspension 3x3 on one hull face, same tire. Pass: the tires line up, and the arm's hub meets the tire with no visible gap.
@@ -148,9 +149,13 @@ In-game test (restart the game fully first: the game keeps a model's wheel mount
 
 ## Part C: hide Short Track and Lifted Short Track
 
+Done 2026-11-22 (owner: "Hide them now"), passed in game (owner, 2026-11-22: "E18 all passes"): the 4 variant groups and the 48 category entries are gone; all 16 definitions stay. The owner still found them by searching the G menu (2026-11-22: "those need to be fully hidden"), so they and the two Short Track Wheel blocks now also have `<Public>false</Public>`. The Track Wheel 1x1 and 3x3 blocks are hidden the same way (owner, 2026-11-22: "Hide it too"; the 3x3 had been the one track block still in the block list), so players can no longer place new static idlers; built ones keep working in their tracks.
+
+The Short Track Wheel 1x1 and 3x3 blocks (`ShortTankWheelBlock1x1/3x3`, deleted 2026-11-21) are back the same way: hidden, with the Track Wheel blocks' models, track line, `[Blocks]` styles and `WheelOverride` values, so built ones keep their place in a track (owner, 2026-11-22: "just for backwards compatibility so player grids aren't missing tracks or suspension").
+
 - Remove the 4 variant groups (Short Track and Lifted Short Track, left and right) from `BlockVariantGroups.sbc`.
 - Remove the 16 blocks from the GVK, Large Blocks and Propulsion categories in `BlockCategories.sbc`. Without that they show as 16 loose blocks when browsing those categories.
-- Never delete the definitions: a block with no definition disappears from grids with no refund. Hidden blocks stay buildable from projections, pastes and search, and keep their toolbar slots.
+- Never delete the definitions: a block with no definition disappears from grids with no refund. With `GuiVisible` false a block is out of the menu but the G menu's text search still lists it; `Public` false takes it out of search too (`MyGuiScreenToolbarConfigBase.AddCubeDefinitionsToBlocks`). Built ones stay: the game strips non-public blocks from a grid only under a debug flag that is off (`MyFakes.REMOVE_NON_PUBLIC_BLOCKS`), and the projector does not check `Public`, so projections still weld. Seen in game: built ones stayed after a reload and a projection welded (E18).
 - Visible GVK suspension families go from 5 to 3.
 
 ## Existing grids and the player change note

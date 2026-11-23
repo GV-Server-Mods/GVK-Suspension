@@ -90,6 +90,7 @@
 				<string>Propulsion</string>
 			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -175,6 +176,7 @@
 				<string>Propulsion</string>
 			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -261,6 +263,7 @@
 				<string>Propulsion</string>
 			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -349,6 +352,7 @@
 				<string>Propulsion</string>
 			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -435,6 +439,7 @@
 				<string>Propulsion</string>
 			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -521,6 +526,7 @@
 				<string>Propulsion</string>
 			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -606,6 +612,7 @@
 				<string>Propulsion</string>
 			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
 			<Id>
@@ -691,6 +698,7 @@
 				<string>Propulsion</string>
 			</TargetingGroups>
 			<GuiVisible>false</GuiVisible>
+			<Public>false</Public>
 		</Definition>
 	</CubeBlocks>
 </Definitions>

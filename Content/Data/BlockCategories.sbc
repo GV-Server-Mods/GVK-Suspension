@@ -1,137 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<CategoryClasses>
+		<!-- Group primaries only: a category shows every listed block as its own icon, so listing one block per group shows one icon with the + mark (StrictSearch true, or the group's other sizes are added back). StrictSearch here only counts if this mod's GVK category loads first -->
 		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
 			<Id>
 				<TypeId>GuiBlockCategoryDefinition</TypeId>
-				<SubtypeId></SubtypeId>
+				<SubtypeId/>
 			</Id>
 			<DisplayName>GV Kharak Items</DisplayName>
 			<Name>GVK</Name>
-			<StrictSearch>false</StrictSearch>
+			<StrictSearch>true</StrictSearch>
 			<ItemIds>
-				<string>MotorSuspension/Suspension7x7</string>
-				<string>MotorSuspension/Suspension7x7mirrored</string>
-				<string>MotorSuspension/LG_5x5_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_5x5_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/LG_5x5_Offroad_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_5x5_Offroad_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/LG_3x3_Lifted_Suspension_Left</string>
 				<string>MotorSuspension/LG_3x3_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/LG_3x3_Offroad_Lifted_Suspension_Left</string>
 				<string>MotorSuspension/LG_3x3_Offroad_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/LG_2x2_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_2x2_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/LG_2x2_Offroad_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_2x2_Offroad_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/LG_1x1_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_1x1_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/LG_1x1_Offroad_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_1x1_Offroad_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/ShortTrackSuspension5x5</string>
-				<string>MotorSuspension/ShortTrackSuspension5x5mirrored</string>
-				<string>MotorSuspension/ShortTrackSuspension3x3</string>
-				<string>MotorSuspension/ShortTrackSuspension3x3mirrored</string>
-				<string>MotorSuspension/ShortTrackSuspension2x2</string>
-				<string>MotorSuspension/ShortTrackSuspension2x2mirrored</string>
-				<string>MotorSuspension/ShortTrackSuspension1x1</string>
-				<string>MotorSuspension/ShortTrackSuspension1x1mirrored</string>
-				<string>MotorSuspension/LiftedShortSuspension5x5</string>
-				<string>MotorSuspension/LiftedShortSuspension5x5mirrored</string>
-				<string>MotorSuspension/LiftedShortSuspension3x3</string>
 				<string>MotorSuspension/LiftedShortSuspension3x3mirrored</string>
-				<string>MotorSuspension/LiftedShortSuspension2x2</string>
-				<string>MotorSuspension/LiftedShortSuspension2x2Mirrored</string>
-				<string>MotorSuspension/LiftedShortSuspension1x1</string>
-				<string>MotorSuspension/LiftedShortSuspension1x1mirrored</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension5x5</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension5x5mirrored</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension3x3</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension3x3mirrored</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension2x2</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension2x2mirrored</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension1x1</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension1x1mirrored</string>
+				<string>MotorSuspension/LiftedShortSuspension3x3</string>
+				<string>MotorSuspension/LiftedShortOffroadSuspension3x3mirrored</string>
+				<string>MotorSuspension/LiftedShortOffroadSuspension3x3</string>
+				<string>MotorSuspension/Suspension7x7mirrored</string>
+				<string>MotorSuspension/Suspension7x7</string>
 			</ItemIds>
 		</Category>
+		<!-- Added to Keen's Large Blocks tab -->
 		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
 			<Id>
 				<TypeId>GuiBlockCategoryDefinition</TypeId>
 				<SubtypeId/>
 			</Id>
-            <DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
-            <Name>Section1_Position1_LargeBlocks</Name>
+			<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+			<Name>Section1_Position1_LargeBlocks</Name>
 			<StrictSearch>true</StrictSearch>
 			<ItemIds>
-				<string>MotorSuspension/Suspension7x7</string>
-				<string>MotorSuspension/Suspension7x7mirrored</string>
-				<string>MotorSuspension/LG_5x5_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_5x5_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/LG_5x5_Offroad_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_5x5_Offroad_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/LG_3x3_Lifted_Suspension_Left</string>
 				<string>MotorSuspension/LG_3x3_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/LG_3x3_Offroad_Lifted_Suspension_Left</string>
 				<string>MotorSuspension/LG_3x3_Offroad_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/LG_2x2_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_2x2_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/LG_2x2_Offroad_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_2x2_Offroad_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/LG_1x1_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_1x1_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/LG_1x1_Offroad_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_1x1_Offroad_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/ShortTrackSuspension5x5</string>
-				<string>MotorSuspension/ShortTrackSuspension5x5mirrored</string>
-				<string>MotorSuspension/ShortTrackSuspension3x3</string>
-				<string>MotorSuspension/ShortTrackSuspension3x3mirrored</string>
-				<string>MotorSuspension/ShortTrackSuspension2x2</string>
-				<string>MotorSuspension/ShortTrackSuspension2x2mirrored</string>
-				<string>MotorSuspension/ShortTrackSuspension1x1</string>
-				<string>MotorSuspension/ShortTrackSuspension1x1mirrored</string>
-				<string>MotorSuspension/LiftedShortSuspension5x5</string>
-				<string>MotorSuspension/LiftedShortSuspension5x5mirrored</string>
-				<string>MotorSuspension/LiftedShortSuspension3x3</string>
 				<string>MotorSuspension/LiftedShortSuspension3x3mirrored</string>
-				<string>MotorSuspension/LiftedShortSuspension2x2</string>
-				<string>MotorSuspension/LiftedShortSuspension2x2Mirrored</string>
-				<string>MotorSuspension/LiftedShortSuspension1x1</string>
-				<string>MotorSuspension/LiftedShortSuspension1x1mirrored</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension5x5</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension5x5mirrored</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension3x3</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension3x3mirrored</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension2x2</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension2x2mirrored</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension1x1</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension1x1mirrored</string>
+				<string>MotorSuspension/LiftedShortSuspension3x3</string>
+				<string>MotorSuspension/LiftedShortOffroadSuspension3x3mirrored</string>
+				<string>MotorSuspension/LiftedShortOffroadSuspension3x3</string>
 			</ItemIds>
 		</Category>
+		<!-- Added to Keen's Small Blocks tab (the small Lifted Short has no small grid version) -->
 		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
 			<Id>
 				<TypeId>GuiBlockCategoryDefinition</TypeId>
 				<SubtypeId/>
 			</Id>
-            <DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
-            <Name>Section1_Position1_SmallBlocks</Name>
+			<DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
+			<Name>Section1_Position1_SmallBlocks</Name>
 			<StrictSearch>true</StrictSearch>
 			<ItemIds>
-				<string>MotorSuspension/SG_5x5_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/SG_5x5_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/SG_5x5_Offroad_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/SG_5x5_Offroad_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/SG_3x3_Lifted_Suspension_Left</string>
 				<string>MotorSuspension/SG_3x3_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/SG_3x3_Offroad_Lifted_Suspension_Left</string>
 				<string>MotorSuspension/SG_3x3_Offroad_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/SG_1x1_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/SG_1x1_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/SG_1x1_Offroad_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/SG_1x1_Offroad_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/SmallSuspension7x7mirrored</string>
-				<string>MotorSuspension/SmallSuspension7x7</string>
 			</ItemIds>
 		</Category>
+		<!-- GV Kharak Items, Propulsion; the 7x7 shows as two single icons (it is a size inside Keen's suspension groups, so it has no + here) -->
 		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
 			<Id>
 				<TypeId>GuiBlockCategoryDefinition</TypeId>
@@ -141,62 +69,16 @@
 			<Name>GVK_Propulsion</Name>
 			<StrictSearch>true</StrictSearch>
 			<ItemIds>
-				<string>MotorSuspension/Suspension7x7</string>
-				<string>MotorSuspension/Suspension7x7mirrored</string>
-				<string>MotorSuspension/LG_5x5_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_5x5_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/LG_5x5_Offroad_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_5x5_Offroad_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/LG_3x3_Lifted_Suspension_Left</string>
 				<string>MotorSuspension/LG_3x3_Lifted_Suspension_Right</string>
 				<string>MotorSuspension/LG_3x3_Offroad_Lifted_Suspension_Left</string>
 				<string>MotorSuspension/LG_3x3_Offroad_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/LG_2x2_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_2x2_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/LG_2x2_Offroad_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_2x2_Offroad_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/LG_1x1_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_1x1_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/LG_1x1_Offroad_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/LG_1x1_Offroad_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/ShortTrackSuspension5x5</string>
-				<string>MotorSuspension/ShortTrackSuspension5x5mirrored</string>
-				<string>MotorSuspension/ShortTrackSuspension3x3</string>
-				<string>MotorSuspension/ShortTrackSuspension3x3mirrored</string>
-				<string>MotorSuspension/ShortTrackSuspension2x2</string>
-				<string>MotorSuspension/ShortTrackSuspension2x2mirrored</string>
-				<string>MotorSuspension/ShortTrackSuspension1x1</string>
-				<string>MotorSuspension/ShortTrackSuspension1x1mirrored</string>
-				<string>MotorSuspension/LiftedShortSuspension5x5</string>
-				<string>MotorSuspension/LiftedShortSuspension5x5mirrored</string>
-				<string>MotorSuspension/LiftedShortSuspension3x3</string>
 				<string>MotorSuspension/LiftedShortSuspension3x3mirrored</string>
-				<string>MotorSuspension/LiftedShortSuspension2x2</string>
-				<string>MotorSuspension/LiftedShortSuspension2x2Mirrored</string>
-				<string>MotorSuspension/LiftedShortSuspension1x1</string>
-				<string>MotorSuspension/LiftedShortSuspension1x1mirrored</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension5x5</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension5x5mirrored</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension3x3</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension3x3mirrored</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension2x2</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension2x2mirrored</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension1x1</string>
-				<string>MotorSuspension/LiftedShortTrackSuspension1x1mirrored</string>
-				<string>MotorSuspension/SG_5x5_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/SG_5x5_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/SG_5x5_Offroad_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/SG_5x5_Offroad_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/SG_3x3_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/SG_3x3_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/SG_3x3_Offroad_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/SG_3x3_Offroad_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/SG_1x1_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/SG_1x1_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/SG_1x1_Offroad_Lifted_Suspension_Left</string>
-				<string>MotorSuspension/SG_1x1_Offroad_Lifted_Suspension_Right</string>
-				<string>MotorSuspension/SmallSuspension7x7mirrored</string>
-				<string>MotorSuspension/SmallSuspension7x7</string>
+				<string>MotorSuspension/LiftedShortSuspension3x3</string>
+				<string>MotorSuspension/LiftedShortOffroadSuspension3x3mirrored</string>
+				<string>MotorSuspension/LiftedShortOffroadSuspension3x3</string>
+				<string>MotorSuspension/Suspension7x7mirrored</string>
+				<string>MotorSuspension/Suspension7x7</string>
 			</ItemIds>
 		</Category>
 	</CategoryClasses>
