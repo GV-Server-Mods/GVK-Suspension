@@ -1,6 +1,6 @@
 # GVK Suspension
 
-The suspensions, wheels and tank tracks of the **GV: Deserts of Kharak (GVK)** server: lifted and short suspensions, real-wheel and track wheel blocks, and the Kharak Tread and Kharak Double Tread for Digi's Tank Tracks. Workshop item 2780232704.
+The suspensions, wheels and tank tracks of the **GV: Deserts of Kharak (GVK)** server: lifted and short suspensions, real-wheel and track wheel blocks, and the Kharak Tread, Kharak Double Tread and Rubber Track for Digi's Tank Tracks. Workshop item 2780232704.
 
 ## Philosophy
 - **Vanilla suspension models stay untouched.** Track wheels are shown by swapping the wheel model per track style, never by editing a suspension block.
@@ -10,7 +10,7 @@ The suspensions, wheels and tank tracks of the **GV: Deserts of Kharak (GVK)** s
 
 ## Requirements
 - Digi's Tank Tracks: Framework & API (3208995513) and Builder (3209005014), both set as required items on the Workshop page. The wheel swap needs the Framework's swap crash fix ([gvk-treads.md](Docs/design/gvk-treads.md)).
-- Optional: Tank Tracks over Vanilla Wheels (3209008231). The `LiftedOTT_*` styles inherit its `VanillaOTT_*` styles, so without it Digi's own track design is not offered on GVK suspensions; the Kharak designs do not need it.
+- Optional: Tank Tracks over Vanilla Wheels (3209008231). The `LiftedOTT_*` styles inherit its `VanillaOTT_*` styles, so without it Digi's own track design is not offered on GVK suspensions; the GVK designs do not need it.
 - No re-uploads.
 
 ## For other modders
@@ -33,7 +33,7 @@ The suspensions, wheels and tank tracks of the **GV: Deserts of Kharak (GVK)** s
 ## Design docs
 | Doc | What it covers |
 | --- | --- |
-| [gvk-treads.md](Docs/design/gvk-treads.md) | The Kharak Tread and Kharak Double Tread, their wheels and every Tank Tracks value |
+| [gvk-treads.md](Docs/design/gvk-treads.md) | The Kharak Tread, Kharak Double Tread and Rubber Track, their wheels and every Tank Tracks value |
 | [track-wheel-swap.md](Docs/design/track-wheel-swap.md) | Track wheels shown by swapping the wheel model, and the suspension blocks that swap |
 | [icons.md](Docs/design/icons.md) | The full-color block icons and how they are rendered with SEUT |
 
