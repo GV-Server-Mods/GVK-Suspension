@@ -1,6 +1,6 @@
 """Kharak Tread Mk II review boards: two tongues side by side, from the renders kt2_review.py writes.
 
-    uv run -q --no-project --with pillow python -I kt2_boards.py [AB|BC|CD|C|5x5|5x5cut|5x5even|hinge]
+    uv run -q --no-project --with pillow python -I kt2_boards.py [AB|BC|CD|C|5x5|5x5cut|5x5even|hinge|r3]
 """
 import sys
 from pathlib import Path
@@ -188,7 +188,24 @@ def hinge():
            "there; the gap stays 12 cm deep (5x5: 4 cm floor, 24 cm deep)."])
 
 
+def round3():
+    """Round 3 small link (kt2_r3.py renders): two equal pads, plate-only tongue with its knuckle, beveled ends."""
+    board("board_r3", "Kharak Tread Mk II round 3: two equal pads, plate-only tongue",
+          [[(on_white(img("top_R3")), "Top view"), (img("straight_R3"), "Three links, straight")],
+           [(img("3x3_close_R3"), "3x3 track wheel: joint on the front"),
+            (img("1x1_close_R3"), "1x1 track wheel: joint on the front")],
+           [(on_white(img("hinge_R3_wide")), "Beside the tongue"), (on_white(img("hinge_R3")), "The rod in the gap")]],
+          ["Pads 19 cm wide with one 5 cm gap between them, to the back edge, the plate's ends and the notch. The front "
+           "pad's shoulders run up the tongue's sides, over the front piece.",
+           "The tongue is plate only, cut straight across at the front pad's middle front edge. One knuckle straight "
+           "across curves gently down into the plate behind.",
+           "The rod (9 cm) runs through the tongue's front piece and shows only in the gaps beside it. The ends are "
+           "part of the plate, each a truncated prism: 5 cm in at the front and back, 2 cm at the top and bottom."])
+
+
 def main(cols="BC"):
+    if cols == "r3":
+        return round3()
     if cols == "5x5":
         return five()
     if cols == "5x5cut":

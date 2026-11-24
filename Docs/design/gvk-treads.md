@@ -269,6 +269,54 @@ On every option:
 
 `kt2_5x5.py` builds both (`KT2_G6`, `KT2_G13`); board `review/board_5x5_even.png` (`kt2_boards.py 5x5even`). G6 is the 5x5 link from here on. Next, with the owner's yes: the details (owner: "adding a few details"). Nothing is exported before sign-off.
 
+### Mk II detailing (plan, 2026-11-24)
+
+The owner asked to start the details (owner, 2026-11-24: "commit then work on details"). Both links get the same treatment, with fasteners at one real size on both (lesson: "Don't scale up a link"). The blockout costs 340 triangles (small link) and 376 (5x5), far under the Kharak Tread's 1,748 vertices, so the details fit.
+
+**Finish, on every option** (from earlier picks):
+- Materials: the plate, knuckle and horn in `PaintedMetal_VeryDark`; the rubber in Keen's tire split as on the Rubber Track (`RubberWheels` tops, `RubberWheelsScratched` bevels, `RubberDry` walls); the hinge bar in bare steel. Tiling UVs at 0.5 UV per meter, rubber turned to run along the track.
+- Bevels on the rubber's top edges and the plate's outer edges, sized so every gap still measures its picked width at the opening (the owner's rule): about 6 mm on the small link's rubber, so its 3 cm slots keep a 1.8 cm floor, and 13 mm on the 5x5's. No bevels under the pads or on the underside.
+- Weighted normals; smooth shading on the knuckle and bar.
+
+**Details offered** (board `review/board_details.png`, `kt2_sketch.py`):
+
+| Detail | Small link | 5x5 link | Triangles, small / 5x5 |
+|---|---|---|---|
+| Pad bolts: sunken heads in 6 cm counterbores, holding the rubber to the plate, about 0.2 m in from each lug's ends | 6: two in the arrowhead, one near each bar's outer end | 18: four on each arrowhead piece, two on each bar, one on each corner lug | about 240 / 720 |
+| Sipes: one narrow cut across the middle of each side bar, half the rubber's depth | 4, 1.5 cm wide | 4, 3.2 cm wide | about 100 / 100 |
+| Side pockets: a recessed pocket with 45° corners in each end face of the plate, the face seen from beside the vehicle | 0.48 x 0.07 m, 3 cm deep | the same, scaled 2.13x | about 40 / 40 |
+
+Not offered: edge wear and decals (none on the Kharak Tread, DT1 and DT2, and little metal shows), visible hinge pins (owner pick, 2026-11-23: no visible hinge), and a lightening hole in the guide horn, which sits hidden in the wheel's groove.
+
+Order after the pick: the finish and the picked details on both links, renders for review, then LODs and export.
+
+On hold: the owner wants more blockout work first and will send a mockup (owner, 2026-11-24: "I want to work on the block out more. I'll send a mock up"). The options above wait for it.
+
+### Mk II round 3: two equal pads (reading and blockout, 2026-11-24)
+
+The owner's markup over a picture of a track link (`Source/KharakTread/reference/kharak_tread_v3_mockup_owner_2026-11-24.webp`, kept local): "green lines are the pads, red is the plate, blue is the hinge rod that connects them". It is AI concept art ("the dimensions are not perfect, it is a concept"), so the owner's rules and round 2's sizes win over its pixels:
+- "I want to keep the visual trick with the tongue attached to the next tread, but it will just be the backplate instead of backplate and rubber".
+- "I want the rubber pads to be equal in width", and "the gap between the pads should be equal all the way across too".
+- "the ends of the plate are beveled all the way around with some detail lines".
+
+Reading (board `review/v3_reading.png`, `kt2_v3_reading.py`; it copies only the owner's colored lines, not the picture):
+
+| Part | Reading |
+|---|---|
+| Plate | 2.80 x 0.68 m, pitch 0.736 m, as round 2 |
+| Plate ends | Part of the plate (owner: "the end caps need to be better integrated into the plate, they have extra chamfers around the wider base that shouldn't be there"). Each end is a truncated prism over the last 9 cm: its front and back taper in 5 cm and its top and bottom 2 cm, as flat faces with no edge bevels (owner: "it should be beveled on all 4 sides so the end cap is a truncated prism"; chamfers on its edges come in a later pass) |
+| Tongue | Plate only, 0.14 m thick: 1.03 m across its front, 45° sides, 0.25 m long (to 0.5925 m from center, as round 2). The notch round it keeps the 4 cm gap |
+| Pads | Two chevrons, both 19 cm wide, with one 5 cm gap between them all the way across. The same gap to the back edge, the plate's ends and the notch. The front pad's shoulders rise 5 cm up the tongue's sides, 24 cm long, to 0.43 m from center (owner: "the forward pad is missing the shoulders"; pick "Seam back, shoulders end on it") |
+| Tongue seam | Straight across the tongue along the front pad's middle front edge, 0.85 cm ahead of the hinge. The piece in front (the slice) belongs to the next link, as with tongue C (owner: "you could make the tongue slice larger so it takes more parts of the trailing tread to help improve the bend seam"; then "make the seam here all the way across, straight line, its fine if the rubber part of the tread looks like it is lifting off a little on a really tight bend"). The shoulders' 5 cm rise sits over the slice, so bent, a gap opens under their front edge: 1.4 cm on the 3x3, 2.1 cm on the 2x2, 4.9 cm on the 1x1 |
+| Knuckle | One knuckle on the slice, straight across the tongue. Owner, of round 2's knuckle: "the curve is hidden when the track is straight, and hides the split/gap when it is wrapped around a wheel"; then, drawing on the joint section (`review/seam_markup_owner_2026-11-24.png`): "make the tongue slice knuckle straight across at the center of hinge point, and add a more gradual curve that intersects with the trailing plate". Its back is a straight line up from the hinge line at the underside, leaning back 22.3° (half the 1x1's turn), so it stands square between the links on a 1x1; it ends 1 cm under the top. Its top is a gentle arc (20 cm radius) from the slice's top at the seam down to that point. Straight, it is hidden in the plate behind; bent, it fills the split, and what rises behind the hinge (up to 2.3 cm on the 1x1) sits inside the front pad. Bent, the slice's middle sits 0.3 cm below the plate's front edge on the 3x3 and 1.4 cm on the 1x1; beside the shoulders the step is under the pad's own front face |
+| Hinge rod | 9 cm across, 0.51 m from center; it shows only in the gaps beside the tongue. The notch's gap has no floor, so only the rod holds the links together (owner: "remove that, its supposed to look like the rod hinge is holding it together only") |
+
+The pads come out within 3 cm of the drawn lines (front pad top 0.377 m against about 0.39; rear pad bottom −0.290 m against about −0.32). The round 2 arrowhead, side bars and slots go; the hinge rod moves 1 cm forward.
+
+A first blockout curved the seam round the hinge axis, so the plate behind ended in a round knob. The owner turned it down: "you had this perfect on the prior design. You are overthinking it now with these perfectly grooved cutouts. Its just supposed to extend into the tread behind to hide gap when its around a wheel".
+
+Blockout: `scripts/kt2_r3.py` with the outlines in `kt2_r3_geom.py`, collection `KT2_R3` under `KT3_blockout` in `KharakTreadMk2.blend`. Board `review/board_r3.png` (`kt2_boards.py r3`); the joint from the side, straight and bent, `review/seam_section.png` (`kt2_seam_sketch.py`).
+
 ## [Blocks]
 
 | Blocks | Styles |
