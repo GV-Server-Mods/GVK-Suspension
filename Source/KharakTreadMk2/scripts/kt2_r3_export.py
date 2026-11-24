@@ -1,6 +1,6 @@
 """Kharak Tread Mk II round 3: export the finished link to Content/Models/KharakTreadMk2.mwm for an in-game test.
 
-Run after kt2_r3.py and kt2_r3_detail.py, with KharakTreadMk2.blend saved:
+Run after kt2_r3.py, kt2_r3_detail.py and kt2_r3_seam.py, with KharakTreadMk2.blend saved:
     exec(open(r"...\\kt2_r3_export.py").read(), {"__name__": "__main__"})
 
 Joins copies of the R3 parts (modifiers applied) into one object in SEUT scene KharakTreadMk2 and adds Tank Tracks'
@@ -13,7 +13,7 @@ import bpy
 
 CONTENT = r"C:\Users\blayl\source\repos\MDK2 Mods\GVK_Suspension\Content"
 NAME = "KharakTreadMk2"
-PARTS = ("R3_plate", "R3_tip", "R3_pad_front", "R3_pad_rear", "R3_rod", "R3_horn")
+PARTS = ("R3_plate", "R3_tip", "R3_pad_front", "R3_pad_rear", "R3_rod", "R3_horn", "R3_seam")
 HINGE_Y, HINGE_Z, HALF_W, THICK = 0.368, 0.113, 1.40, 0.24   # kt2_r3_geom.py HINGE_Y, KNUCKLE_H, HALF_W, plate + pad
 
 

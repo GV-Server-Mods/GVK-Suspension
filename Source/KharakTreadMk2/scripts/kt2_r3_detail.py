@@ -22,6 +22,10 @@ RUBBER = ("RubberWheels", "RubberWheelsScratched", "RubberDry")
 # Faces and chamfers alike: Keen's scratched paint is 100% paintable (flat ADD), so its scratches never showed, and no
 # tiling worn steel takes paint (owner, 2026-11-24: "worn steel if it is colorable")
 METAL = ("PaintedMetal_Colorable",)
+# The plate's end caps in unpainted dark steel, their chamfers scratched (owner, 2026-11-24: "I want to make those end
+# caps a dark metal with scratched metal chamfers"); neither takes paint, so the scratches show
+CAP = ("PaintedMetal_VeryDark", "PaintedMetalScratched_VeryDark")
+END_X = 1.31                                 # kt2_r3_geom.py HALF_W - END_W: where each end cap starts
 CHAMFER = 0.01
 SEAM, PITCH, HALF_L, Y_SH = 0.3765, 0.736, 0.34, 0.4265   # kt2_r3_geom.py SEAM_Y, PITCH, HALF_L and Y_SH
 LIB = next(bpy.path.abspath(lb.filepath) for lb in bpy.data.libraries if lb.filepath.endswith("Materials.blend"))
@@ -97,7 +101,8 @@ def finish_metal(ob, chamfer=True):
     so does the knuckle, which hides inside the plate behind."""
     me = ob.data
     me.materials.clear()
-    for n in METAL:
+    caps = ob.name == "R3_plate"
+    for n in METAL + (CAP if caps else ()):
         me.materials.append(material(n))
     if chamfer:
         bm = bmesh.new()
@@ -125,8 +130,16 @@ def finish_metal(ob, chamfer=True):
         bv = ob.modifiers.new("bev", "BEVEL")
         bv.width, bv.segments, bv.limit_method = CHAMFER, 1, "WEIGHT"
         # no clamp: Blender's clamp shrinks the whole bevel to its tightest spot, which left most chamfers a sliver
-        bv.use_clamp_overlap, bv.face_strength_mode, bv.material = False, "FSTR_ALL", 0
+        # chamfer faces land in slot 2 for now (the scratched cap steel on the plate), sorted after the bevel
+        bv.use_clamp_overlap, bv.face_strength_mode, bv.material = False, "FSTR_ALL", 2 if caps else 0
         apply(ob, "bev")
+        if caps:
+            for p in me.polygons:
+                # all corners on one end: the front, back and long chamfer faces run end to end and stay painted
+                xs = [me.vertices[i].co.x for i in p.vertices]
+                on_cap = min(xs) > END_X - 1e-4 or max(xs) < -END_X + 1e-4
+                chamfer = p.material_index == 2
+                p.material_index = (2 if chamfer else 1) if on_cap else 0
         if ob.name == "R3_plate":
             # Blender slides the front edge's chamfer forward up the unchamfered tongue side at the tongue's base, so
             # it pinches to nothing there; put its top corner back on the chamfer line (owner, 2026-11-24, of the
