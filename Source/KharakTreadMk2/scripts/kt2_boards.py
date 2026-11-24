@@ -197,8 +197,8 @@ def round3():
            [(on_white(img("hinge_R3_wide")), "Beside the tongue"), (on_white(img("hinge_R3")), "The rod in the gap")]],
           ["Pads 19 cm wide with one 5 cm gap between them, to the back edge, the plate's ends and the notch. The front "
            "pad's shoulders run up the tongue's sides, over the front piece.",
-           "The tongue is plate only, cut straight across at the front pad's middle front edge. One knuckle straight "
-           "across curves gently down into the plate behind.",
+           "The plate stops straight across its front edge; the tongue's front piece belongs to the next link, and its "
+           "knuckle curls down into the plate behind.",
            "The rod (9 cm) runs through the tongue's front piece and shows only in the gaps beside it. The ends are "
            "part of the plate, each a truncated prism: 5 cm in at the front and back, 2 cm at the top and bottom."])
 

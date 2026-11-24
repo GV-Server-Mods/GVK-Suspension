@@ -36,9 +36,9 @@ TIP_Y = 0.5925                  # tongue front, as round 2 (markup: 0.595)
 TIP_HALF = 0.513                # markup: 1.03 m across the tongue's front
 NOTCH_GAP = 0.04
 END_W = 0.09                    # each end of the plate: its corners are cut back over this width (markup: 9 cm)
-END_CUT = 0.05                  # each end is a truncated prism: its front and back taper in by this (markup: 5.7 cm)
-END_BEVEL = 0.02                # and its top and bottom by this, flat faces, no edge bevels (owner, 2026-11-24: "it
-                                # should be beveled on all 4 sides so the end cap is a truncated prism")
+END_CUT = 0.05                  # each end is a truncated prism over END_W: its front and back taper in by this
+END_BEVEL = 0.02                # and its top and bottom by this (owner, 2026-11-24: "it should be beveled on all 4
+                                # sides so the end cap is a truncated prism"; markup: 5.7 cm)
 G = 0.05                        # one gap: between the pads, to the back edge, the end bands and the notch
 W = 0.19                        # each pad's width (markup: 2W + G = 0.43 m at the sides and in the middle)
 SH_RISE, SH_LEN = G, 0.24       # the front pad's shoulders: rise to the seam (markup: 6 cm), 24 cm long
@@ -124,8 +124,14 @@ def plate(seam=False):
     cut back (owner, 2026-11-24: "the end caps need to be better integrated into the plate")."""
     x0 = HALF_W - END_W
     cut = NOTCH_GAP * (R2 - 1)
-    front = seam_line() if seam else [(-TIP_HALF, TIP_Y), (TIP_HALF, TIP_Y)]
-    top = [(-x0, HALF_L), (-tongue_half(HALF_L), HALF_L)] + front + [(tongue_half(HALF_L), HALF_L), (x0, HALF_L)]
+    if seam:
+        # straight across the front edge: the strip of tongue up to the seam stuck out on a wheel, so the rubber
+        # tongue and shoulders overhang there and the slice's knuckle fills the gap (owner, 2026-11-24: "The metal
+        # plate should just go straight across and leave the rubber tread tongue and shoulders as overhang")
+        top = [(-x0, HALF_L), (x0, HALF_L)]
+    else:
+        top = ([(-x0, HALF_L), (-tongue_half(HALF_L), HALF_L), (-TIP_HALF, TIP_Y), (TIP_HALF, TIP_Y),
+                (tongue_half(HALF_L), HALF_L), (x0, HALF_L)])
     end = [(HALF_W, HALF_L - END_CUT), (HALF_W, -HALF_L + END_CUT)]
     notch = [(notch_half(-HALF_L), -HALF_L), (TIP_HALF + cut, NOTCH_FRONT), (-TIP_HALF - cut, NOTCH_FRONT),
              (-notch_half(-HALF_L), -HALF_L)]
@@ -137,34 +143,42 @@ def tip_piece():
     return ccw([(x, y - PITCH) for x, y in seam_line()] + [(TIP_HALF, TIP_Y - PITCH), (-TIP_HALF, TIP_Y - PITCH)])
 
 
-KNUCKLE_LEAN = math.radians(44.6 / 2)  # its back leans back half the 1x1's turn per link
-KNUCKLE_BACK_Z = 0.13                  # top of its straight back, 1 cm under the plate's top (markup: about 0.129)
+# Its arc: 0.105 m radius, turning 80 degrees from the slice's top, so it ends 9.5 cm behind the hinge and 5.3 cm up
+# (owner, 2026-11-24, drawing over a bent joint in game: "adjust the knuckle so the radius is a little tighter and
+# extends further back", which gave 0.12 m ending 8 cm behind, 10 cm up; then "tighter and angles even further into
+# the back tread"; it was 0.20 m ending 5.3 cm behind, 13 cm up)
+KNUCKLE_R = 0.105
+KNUCKLE_SWEEP = math.radians(80)
 KNUCKLE_BOT = 0.0                      # flush with the underside (owner: "a similar step ... on the bottom side")
 KNUCKLE_FRONT = SEAM_Y + 0.01          # it reaches 1 cm into the slice
 
 
-def knuckle_yz(n=16):
+def knuckle_yz(n=16, whole=False):
     """The slice's knuckle, (y, z) in this link's frame (the slice sits in its notch): one profile straight across
     the tongue. Owner, 2026-11-24, of round 2's knuckle: "the curve is hidden when the track is straight, and hides
     the split/gap when it is wrapped around a wheel"; then, drawing on the joint section: "make the tongue slice
     knuckle straight across at the center of hinge point, and add a more gradual curve that intersects with the
     trailing plate, see green lines on my mockup" (review/seam_markup_owner_2026-11-24.png).
-    Its back is a straight line up from the hinge line at the plate's underside, leaning back half the 1x1's turn, so
-    on the 1x1 it stands square between the two links, as drawn. Its top is an arc tangent to the slice's top at the
-    seam's middle, curving gently down into the plate behind; forward of there it sits 4 mm under the slice's top.
+    Its top is an arc tangent to the slice's top at the seam, curving down behind the hinge; its back is a straight
+    line from the arc's end down to the plate's underside, under the front edge of the plate behind.
     Straight, it is hidden in the plate and front pad behind; bent, it fills the split, and the part behind the hinge
     rises into that pad."""
-    t = math.tan(KNUCKLE_LEAN)
-    yb = HINGE_Y - KNUCKLE_BACK_Z * t
-    dy, dz = SEAM_Y - yb, PLATE_T - KNUCKLE_BACK_Z
-    r = (dy * dy + dz * dz) / (2 * dz)
+    r = KNUCKLE_R
     cz = PLATE_T - r
-    a1 = math.atan2(KNUCKLE_BACK_Z - cz, yb - SEAM_Y)
+    a1 = math.pi / 2 + KNUCKLE_SWEEP
     arc = [(SEAM_Y + r * math.cos(math.pi / 2 + (a1 - math.pi / 2) * k / n),
             cz + r * math.sin(math.pi / 2 + (a1 - math.pi / 2) * k / n)) for k in range(n + 1)]
     yf = KNUCKLE_FRONT
-    pts = ([(yf, KNUCKLE_BOT), (yf, KNUCKLE_TOP), (SEAM_Y, KNUCKLE_TOP)] + arc
-           + [(HINGE_Y - KNUCKLE_BOT * t, KNUCKLE_BOT)])
+    # its bottom reaches back to the plate's front edge, closing the gap under the hinge (owner, 2026-11-24: "need
+    # to extend the bottom of the knuckle to close that gap"); bent, that corner turns up into the plate behind
+    # whole: the slice and its knuckle as one profile, from the tongue's tip back (its top runs into the arc)
+    # whole: its top also breaks at Y_SH, where the front pad's shoulders start to overhang it, so its side chamfers
+    # can end there (owner, 2026-11-24: "chamfer on the top side needs to end where it overlaps with the rubber
+    # tread")
+    front = ([(TIP_Y, KNUCKLE_BOT), (TIP_Y, PLATE_T), (Y_SH, PLATE_T)] if whole
+             else [(yf, KNUCKLE_BOT), (yf, KNUCKLE_TOP), (SEAM_Y, KNUCKLE_TOP)])
+    # the bottom 1 cm under the plate's front chamfer as well ("pull the bottom just a tiny bit further")
+    pts = front + arc + [(HALF_L - 0.01, KNUCKLE_BOT)]
     return [(y - PITCH, z) for y, z in pts]
 
 
