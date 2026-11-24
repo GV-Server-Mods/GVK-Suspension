@@ -28,7 +28,7 @@ HALF = 0.008                    # half the line's width
 LIFT = 0.0015
 V0, V1 = 0.4834, 0.5166         # Atlas4 piece 3's box
 U_PER_M = 0.5
-STEP = 0.025
+STEP = 0.2         # rows at most this far apart (2.5 cm first; owner, 2026-11-24, picked the cut)
 NAME = "R3_seam"
 
 

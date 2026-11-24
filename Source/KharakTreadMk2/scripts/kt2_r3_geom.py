@@ -71,6 +71,11 @@ PAD_END = HALF_W - END_W - G
 SEAM_Y = Y_MID + D              # the seam, straight across the tongue along the front pad's middle front edge
 Y_SH = Y_MID + D + SH_RISE      # top of the front pad's shoulders, over the slice
 BAR_Y = (Y_SH + TIP_Y) / 2      # the rod, 0.51 m from center
+# A notch cut into the slice's front, through its full thickness, so the rod shows in the middle (owner, 2026-11-24:
+# "cutting a notch out of the front of the tongue so you can see the metal connecting rod in the center"): 0.56 m
+# across, read off the owner's sketch, back to where the front pad's shoulders start
+NOTCH_HALF = 0.28
+NOTCH_BACK = Y_SH
 KNUCKLE_TOP = PLATE_T - 0.004   # 4 mm under the plate top, so the knuckle stays hidden when straight (as round 2)
 
 
@@ -153,7 +158,7 @@ KNUCKLE_BOT = 0.0                      # flush with the underside (owner: "a sim
 KNUCKLE_FRONT = SEAM_Y + 0.01          # it reaches 1 cm into the slice
 
 
-def knuckle_yz(n=16, whole=False):
+def knuckle_yz(n=8, whole=False):     # 8 arc steps of 10 degrees, smooth shaded (16 before; owner picked fewer faces)
     """The slice's knuckle, (y, z) in this link's frame (the slice sits in its notch): one profile straight across
     the tongue. Owner, 2026-11-24, of round 2's knuckle: "the curve is hidden when the track is straight, and hides
     the split/gap when it is wrapped around a wheel"; then, drawing on the joint section: "make the tongue slice

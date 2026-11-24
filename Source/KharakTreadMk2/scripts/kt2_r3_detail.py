@@ -6,17 +6,20 @@ The rubber follows the Rubber Track's Look and Bevel in Docs/design/gvk-treads.m
 rt_build.py; owner, 2026-11-24: "I want the rubber portions to follow the same style as the rubber trade we made with
 the rubber textures, chamfers, and direction", "use the keen's rubber look section of the gvk-treads.md"):
 - Keen's tire split: RubberWheels on the tops, RubberWheelsScratched on the bevel faces, RubberDry on the walls.
-- One round 3 cm bevel, 3 segments, on the top edges and the outside upright corners; the bottoms and inside
-  corners stay sharp.
-- Smooth by angle (60 degrees) and weighted normals, so the flat faces stay flat and only the bevels round off.
-- Box UVs, turned 90 degrees so the texture's streaks run along the track; y and z inside one tile and the width
-  stretched to one tile (0.245 UV per metre), since Keen's rubber textures do not tile.
+- One flat 3 cm chamfer (first a 3-segment round) on the top edges and the outside upright corners; the bottoms
+  and inside corners stay sharp. The underside, flat on the plate and never seen, is deleted.
+- Keen's shading rule (keen_normals): smooth under 65 degrees, normals weighted by flat-region area cubed, so the
+  flat faces stay flat and the chamfers shade round.
+- Box UVs at 0.245 UV per metre on every axis, each face turned flat first so slopes keep their size (uv_rubber),
+  turned 90 degrees so the texture's streaks run along the track; the whole pad sits in one tile, since Keen's
+  rubber textures do not tile.
 The plate, slice and horn take PaintedMetal_Colorable, the plate's and slice's 1 cm chamfers
 PaintedMetalScratched_Colorable, with box UVs at 0.5 UV per metre.
 """
 import math
 import bmesh
 import bpy
+from mathutils import Vector
 
 RUBBER = ("RubberWheels", "RubberWheelsScratched", "RubberDry")
 # Faces and chamfers alike: Keen's scratched paint is 100% paintable (flat ADD), so its scratches never showed, and no
@@ -29,9 +32,12 @@ END_X = 1.31                                 # kt2_r3_geom.py HALF_W - END_W: wh
 CHAMFER = 0.01
 SEAM, PITCH, HALF_L, Y_SH = 0.3765, 0.736, 0.34, 0.4265   # kt2_r3_geom.py SEAM_Y, PITCH, HALF_L and Y_SH
 LIB = next(bpy.path.abspath(lb.filepath) for lb in bpy.data.libraries if lb.filepath.endswith("Materials.blend"))
-BEVEL, SEGMENTS = 0.03, 3
+# one flat chamfer, as the metal (owner, 2026-11-24, of the 3-segment round: "I don't think the rubber chamfers need
+# so many faces", then picked 1 segment over 2)
+BEVEL, SEGMENTS = 0.03, 1
 PLATE_T = 0.14
 TONGUE_C = 0.5925 + 0.513   # kt2_r3_geom.py TONGUE_C: the tongue's sides are |x| = TONGUE_C - y
+NOTCH_HALF = 0.28           # kt2_r3_geom.py NOTCH_HALF: the slice's front notch
 
 
 def material(name):
@@ -62,6 +68,85 @@ def uv_box(ob, sx, s, edge=None):
     bm.free()
 
 
+def uv_rubber(ob, s=0.245):
+    """Box UVs at one scale on every axis, each face first turned flat onto its box plane about its own centre, so
+    walls and chamfers at an angle keep their true size (owner, 2026-11-24: "all the rubber scaling needs to be
+    consistent"; plain box UVs ran from 0.17 to 0.5 UV per metre). 0.245 keeps the whole pad inside one tile, so
+    there is still no wrap (Keen's rubber textures do not tile). Orientation as uv_box: turned 90 degrees."""
+    bm = bmesh.new()
+    bm.from_mesh(ob.data)
+    uv = bm.loops.layers.uv.get("UVMap") or bm.loops.layers.uv.new("UVMap")
+    for f in bm.faces:
+        n = f.normal
+        ax = max(range(3), key=lambda i: abs(n[i]))
+        target = Vector([0.0, 0.0, 0.0])
+        target[ax] = math.copysign(1.0, n[ax])
+        rot = n.rotation_difference(target).to_matrix()
+        c = f.calc_center_median()
+        for lp in f.loops:
+            p = rot @ (lp.vert.co - c) + c
+            ux = p.x * s + 0.5
+            a, b = ((p.y * s + 0.5, p.z * s + 0.5) if ax == 0 else (ux, p.z * s + 0.5) if ax == 1
+                    else (ux, p.y * s + 0.5))
+            lp[uv].uv = (b, -a)
+    bm.to_mesh(ob.data)
+    bm.free()
+
+
+def keen_normals(ob, sharp_deg=65.0):
+    """Keen's shading rule (se-dev-seut bpy-recipes.md, "Matching vanilla shading"; owner, 2026-11-24: "keen-style
+    shade smoothing on the rubber chamfers"): smooth across edges under 65 degrees, hard over it; each corner's
+    normal is the sum of the face normals in its smooth fan, each weighted by its flat region's area cubed (a region
+    counted once per corner), so the big flat faces stay flat and the chamfers beside them shade round."""
+    bm = bmesh.new()
+    bm.from_mesh(ob.data)
+    bm.faces.ensure_lookup_table()
+    sharp = {e.index for e in bm.edges
+             if len(e.link_faces) != 2 or e.calc_face_angle(0) > math.radians(sharp_deg)}
+    # flat regions: faces joined edge to edge within 0.5 degree
+    region, areas = {}, []
+    for f in bm.faces:
+        if f.index in region:
+            continue
+        rid, stack, total = len(areas), [f], 0.0
+        region[f.index] = rid
+        while stack:
+            g = stack.pop()
+            total += g.calc_area()
+            for e in g.edges:
+                for h in e.link_faces:
+                    if h.index not in region and h.normal.angle(g.normal, 0.0) < math.radians(0.5):
+                        region[h.index] = rid
+                        stack.append(h)
+        areas.append(total)
+    normals = [None] * len(ob.data.loops)
+    for f in bm.faces:
+        for lp in f.loops:
+            v, fan, stack = lp.vert, {f.index}, [f]
+            while stack:                     # faces round this corner reachable across smooth edges
+                g = stack.pop()
+                for e in g.edges:
+                    if v not in e.verts or e.index in sharp:
+                        continue
+                    for h in e.link_faces:
+                        if h.index not in fan:
+                            fan.add(h.index)
+                            stack.append(h)
+            best = {}
+            for i in fan:
+                r = region[i]
+                best.setdefault(r, bm.faces[i].normal)
+            n = sum((nrm * areas[r] ** 3 for r, nrm in best.items()), Vector())
+            normals[lp.index] = n.normalized()
+    bm.free()
+    me = ob.data
+    for p in me.polygons:
+        p.use_smooth = True
+    for e in me.edges:
+        e.use_edge_sharp = e.index in sharp
+    me.normals_split_custom_set(normals)
+
+
 def finish_rubber(ob):
     me = ob.data
     me.materials.clear()
@@ -86,12 +171,18 @@ def finish_rubber(ob):
     apply(ob, "bev")
     if "bevel_weight_edge" in me.attributes:
         me.attributes.remove(me.attributes["bevel_weight_edge"])
+    bm = bmesh.new()                             # the underside lies flat on the plate: never seen
+    bm.from_mesh(me)
+    bmesh.ops.delete(bm, geom=[f for f in bm.faces if f.normal.z < -0.99 and f.calc_center_median().z < PLATE_T + 1e-4],
+                     context="FACES_ONLY")
+    bm.to_mesh(me)
+    bm.free()
     me.materials.append(material(RUBBER[2]))
     for p in me.polygons:                        # walls: any other face steeper than about 53 degrees
         if p.material_index == 0 and abs(p.normal.z) < 0.6:
             p.material_index = 2
-    smooth(ob, 60)
-    uv_box(ob, 0.245, 0.5)
+    keen_normals(ob)
+    uv_rubber(ob)
 
 
 def finish_metal(ob, chamfer=True):
@@ -118,7 +209,9 @@ def finish_metal(ob, chamfer=True):
             side_bottom = all(v.co.z < 1e-4 for v in e.verts) and abs(ys[0] - ys[1]) > 1e-4
             # its top edges stop where the front pad's shoulders overhang them ("chamfer on the top side needs to
             # end where it overlaps with the rubber tread")
-            under_pad = all(v.co.z > PLATE_T - 1e-4 for v in e.verts) and max(ys) < Y_SH - PITCH + 1e-4
+            # the front notch's back edge, between the shoulders, is in view and keeps its chamfer
+            under_pad = (all(v.co.z > PLATE_T - 1e-4 for v in e.verts) and max(ys) < Y_SH - PITCH + 1e-4
+                         and max(abs(v.co.x) for v in e.verts) > NOTCH_HALF + 1e-3)
             seam = (all(abs(y - SEAM) < 1e-4 for y in ys)
                     or (ob.name == "R3_tip" and (under_pad or max(ys) < SEAM - PITCH + 0.011 and not side_bottom))
                     or (ob.name == "R3_plate" and min(ys) > HALF_L - 1e-4 and max(ys) > HALF_L + 1e-4))

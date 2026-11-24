@@ -57,6 +57,33 @@ def bevel_ends(ob):
     return moved
 
 
+def cut_notch(tip):
+    """The slice's front notch (kt2_r3_geom.py NOTCH_HALF, NOTCH_BACK), so the rod shows through it."""
+    g = GEO
+    h, y0, y1 = g["NOTCH_HALF"], g["NOTCH_BACK"] - g["PITCH"], g["TIP_Y"] - g["PITCH"] + 0.05
+    bm = bmesh.new()
+    bmesh.ops.create_cube(bm, size=1.0)
+    for v in bm.verts:
+        v.co.x, v.co.y, v.co.z = v.co.x * 2 * h, y0 + (v.co.y + 0.5) * (y1 - y0), v.co.z
+    me = bpy.data.meshes.new("R3_notch_cutter")
+    bm.to_mesh(me)
+    bm.free()
+    cutter = bpy.data.objects.new("R3_notch_cutter", me)
+    for c in tip.users_collection:
+        c.objects.link(cutter)
+    mod = tip.modifiers.new("notch", "BOOLEAN")
+    mod.operation, mod.solver, mod.object = "DIFFERENCE", "EXACT", cutter
+    with bpy.context.temp_override(object=tip, active_object=tip, selected_objects=[tip]):
+        bpy.ops.object.modifier_apply(modifier="notch")
+    bpy.data.objects.remove(cutter)
+    bpy.data.meshes.remove(me)
+    bm = bmesh.new()
+    bm.from_mesh(tip.data)
+    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-5)
+    bm.to_mesh(tip.data)
+    bm.free()
+
+
 def fresh(scene):
     old = bpy.data.collections.get(ROOT_COLL)
     if old:
@@ -103,6 +130,7 @@ def build():
     bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-5)
     bm.to_mesh(tip.data)
     bm.free()
+    cut_notch(tip)
     parts = [plate, tip]
 
     parts.append(lib["prism"]("R3_pad_front", g["front_pad"](), pt, pt + g["PAD_T"], rubber, coll))
@@ -111,7 +139,14 @@ def build():
     # No floor in the notch's gap: only the rod holds the links together (owner, 2026-11-24: "remove that, its
     # supposed to look like the rod hinge is holding it together only").
     yb = g["BAR_Y"] - g["PITCH"]
-    parts.append(lib["hinge_bar"]("R3_rod", yb, g["BAR_Z"], g["BAR_R"], g["bar_half"](yb), lib["bar_mat"](), coll))
+    # 16 sides, and no end caps: both ends sit inside the plate (owner, 2026-11-24, picked fewer faces here)
+    rod = lib["hinge_bar"]("R3_rod", yb, g["BAR_Z"], g["BAR_R"], g["bar_half"](yb), lib["bar_mat"](), coll, n=16)
+    bm = bmesh.new()
+    bm.from_mesh(rod.data)
+    bmesh.ops.delete(bm, geom=[f for f in bm.faces if len(f.verts) > 4], context="FACES_ONLY")
+    bm.to_mesh(rod.data)
+    bm.free()
+    parts.append(rod)
     horn_src = bpy.data.objects.get("KT_horn")
     if horn_src:
         horn = bpy.data.objects.new("R3_horn", horn_src.data.copy())
