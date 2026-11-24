@@ -34,7 +34,18 @@ R2 = math.sqrt(2)
 LINK = globals().get("LINK", "small")
 SX = 5.96 / 2.80 if LINK == "5x5" else 1.0       # outlines: width, length, gaps
 SZ = 2.0 if LINK == "5x5" else 1.0               # thickness, and the chamfers with it
-P = "R5_" if LINK == "5x5" else "R3_"            # object names
+# Which level of detail, set by the caller like LINK (Docs/design/gvk-treads.md, "Mk II finish"; owner, 2026-11-24:
+# "lod 1 drops all chamfers but keeps decals, lod 2 drops decals, and so on"). Per level: name tag, rod sides, knuckle
+# arc steps. The construction model ("con") is the metal link without pads or decals, with its own two LODs.
+LEVEL = globals().get("LEVEL", "main")
+LEVELS = {"main": ("", 16, 8), "lod1": ("L1", 8, 4), "lod2": ("L2", 6, 2), "lod3": ("L3", 6, 2),
+          "con": ("C", 16, 8), "con1": ("C1", 8, 4), "con2": ("C2", 6, 2)}
+TAG, ROD_N, KNUCKLE_N = LEVELS[LEVEL]
+CHAMFERS = LEVEL in ("main", "con")              # metal and rubber chamfers
+DECALS = LEVEL in ("main", "lod1")               # the seam and the 5x5's decals
+PADS = not LEVEL.startswith("con")
+NOTCH = LEVEL != "lod3"                          # the rod and the notch it shows through
+P = ("R5" if LINK == "5x5" else "R3") + TAG + "_"   # object names
 HALF_W, HALF_L, PITCH = 1.40 * SX, 0.34 * SX, 0.736 * SX
 HINGE_Y = PITCH / 2
 PLATE_T, PAD_T = 0.14 * SZ, 0.10 * SZ
@@ -175,7 +186,7 @@ KNUCKLE_BOT = 0.0                      # flush with the underside (owner: "a sim
 KNUCKLE_FRONT = SEAM_Y + 0.01 * SX     # it reaches 1 cm into the slice
 
 
-def knuckle_yz(n=8, whole=False):     # 8 arc steps of 10 degrees, smooth shaded (16 before; owner picked fewer faces)
+def knuckle_yz(n=None, whole=False):  # 8 arc steps of 10 degrees on the main model (16 before; owner picked fewer)
     """The slice's knuckle, (y, z) in this link's frame (the slice sits in its notch): one profile straight across
     the tongue. Owner, 2026-11-24, of round 2's knuckle: "the curve is hidden when the track is straight, and hides
     the split/gap when it is wrapped around a wheel"; then, drawing on the joint section: "make the tongue slice
@@ -185,6 +196,7 @@ def knuckle_yz(n=8, whole=False):     # 8 arc steps of 10 degrees, smooth shaded
     line from the arc's end down to the plate's underside, under the front edge of the plate behind.
     Straight, it is hidden in the plate and front pad behind; bent, it fills the split, and the part behind the hinge
     rises into that pad."""
+    n = n or KNUCKLE_N
     r = KNUCKLE_R
     cz = PLATE_T - r
     a1 = math.pi / 2 + KNUCKLE_SWEEP

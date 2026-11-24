@@ -22,7 +22,7 @@ LIB = next(bpy.path.abspath(lb.filepath) for lb in bpy.data.libraries if lb.file
 HERE = r"C:\Users\blayl\source\repos\MDK2 Mods\GVK_Suspension\Source\KharakTreadMk2\scripts"
 INI = r"C:\Users\blayl\source\repos\MDK2 Mods\GVK_Suspension\Content\Data\TankTracks.ini"
 LINK = globals().get("LINK", "small")
-GEO = {"__name__": "kt2_r3_geom_lib", "LINK": LINK}
+GEO = {"__name__": "kt2_r3_geom_lib", "LINK": LINK, "LEVEL": globals().get("LEVEL", "main")}   # main and LOD1
 exec(open(HERE + r"\kt2_r3_geom.py").read(), GEO)
 NAME = GEO["P"] + "decals"
 LIFT = 0.0015

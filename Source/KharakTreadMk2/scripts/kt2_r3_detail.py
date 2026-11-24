@@ -30,9 +30,10 @@ METAL = ("PaintedMetal_Colorable",)
 CAP = ("PaintedMetal_VeryDark", "PaintedMetalScratched_VeryDark")
 HERE = r"C:\Users\blayl\source\repos\MDK2 Mods\GVK_Suspension\Source\KharakTreadMk2\scripts"
 LINK = globals().get("LINK", "small")        # "small" or "5x5" (kt2_r3_geom.py)
-GEO = {"__name__": "kt2_r3_geom_lib", "LINK": LINK}
+LEVEL = globals().get("LEVEL", "main")      # level of detail (kt2_r3_geom.py LEVELS)
+GEO = {"__name__": "kt2_r3_geom_lib", "LINK": LINK, "LEVEL": LEVEL}
 exec(open(HERE + r"\kt2_r3_geom.py").read(), GEO)
-P, SX = GEO["P"], GEO["SX"]
+P, SX, CHAMFERS = GEO["P"], GEO["SX"], GEO["CHAMFERS"]
 END_X, CHAMFER = GEO["END_X"], GEO["CHAMFER"]
 SEAM, PITCH, HALF_L, Y_SH = GEO["SEAM_Y"], GEO["PITCH"], GEO["HALF_L"], GEO["Y_SH"]
 LIB = next(bpy.path.abspath(lb.filepath) for lb in bpy.data.libraries if lb.filepath.endswith("Materials.blend"))
@@ -157,8 +158,27 @@ def keen_normals(ob, sharp_deg=65.0):
 def finish_rubber(ob):
     me = ob.data
     me.materials.clear()
-    for n in RUBBER[:2]:
+    for n in RUBBER[:2] if CHAMFERS else RUBBER[:1]:     # LODs: no chamfers, so no scratched rubber
         me.materials.append(material(n))
+    if CHAMFERS:
+        bevel_rubber(ob)
+    bm = bmesh.new()                             # the underside lies flat on the plate: never seen
+    bm.from_mesh(me)
+    bmesh.ops.delete(bm, geom=[f for f in bm.faces if f.normal.z < -0.99 and f.calc_center_median().z < PLATE_T + 1e-4],
+                     context="FACES_ONLY")
+    bm.to_mesh(me)
+    bm.free()
+    me.materials.append(material(RUBBER[2]))
+    dry = len(me.materials) - 1
+    for p in me.polygons:                        # walls: any other face steeper than about 53 degrees
+        if p.material_index == 0 and abs(p.normal.z) < 0.6:
+            p.material_index = dry
+    keen_normals(ob)
+    uv_rubber(ob)
+
+
+def bevel_rubber(ob):
+    me = ob.data
     bm = bmesh.new()
     bm.from_mesh(me)
     bw = bm.edges.layers.float.get("bevel_weight_edge") or bm.edges.layers.float.new("bevel_weight_edge")
@@ -178,18 +198,6 @@ def finish_rubber(ob):
     apply(ob, "bev")
     if "bevel_weight_edge" in me.attributes:
         me.attributes.remove(me.attributes["bevel_weight_edge"])
-    bm = bmesh.new()                             # the underside lies flat on the plate: never seen
-    bm.from_mesh(me)
-    bmesh.ops.delete(bm, geom=[f for f in bm.faces if f.normal.z < -0.99 and f.calc_center_median().z < PLATE_T + 1e-4],
-                     context="FACES_ONLY")
-    bm.to_mesh(me)
-    bm.free()
-    me.materials.append(material(RUBBER[2]))
-    for p in me.polygons:                        # walls: any other face steeper than about 53 degrees
-        if p.material_index == 0 and abs(p.normal.z) < 0.6:
-            p.material_index = 2
-    keen_normals(ob)
-    uv_rubber(ob)
 
 
 def finish_metal(ob, chamfer=True):
@@ -200,7 +208,7 @@ def finish_metal(ob, chamfer=True):
     me = ob.data
     me.materials.clear()
     caps = ob.name == P + "plate"
-    for n in METAL + (CAP if caps else ()):
+    for n in METAL + ((CAP if chamfer else CAP[:1]) if caps else ()):
         me.materials.append(material(n))
     if chamfer:
         bm = bmesh.new()
@@ -233,13 +241,6 @@ def finish_metal(ob, chamfer=True):
         # chamfer faces land in slot 2 for now (the scratched cap steel on the plate), sorted after the bevel
         bv.use_clamp_overlap, bv.face_strength_mode, bv.material = False, "FSTR_ALL", 2 if caps else 0
         apply(ob, "bev")
-        if caps:
-            for p in me.polygons:
-                # all corners on one end: the front, back and long chamfer faces run end to end and stay painted
-                xs = [me.vertices[i].co.x for i in p.vertices]
-                on_cap = min(xs) > END_X - 1e-4 or max(xs) < -END_X + 1e-4
-                chamfer = p.material_index == 2
-                p.material_index = (2 if chamfer else 1) if on_cap else 0
         if ob.name == P + "plate":
             # Blender slides the front edge's chamfer forward up the unchamfered tongue side at the tongue's base, so
             # it pinches to nothing there; put its top corner back on the chamfer line (owner, 2026-11-24, of the
@@ -250,6 +251,13 @@ def finish_metal(ob, chamfer=True):
                     v.co.x, v.co.y = math.copysign(TONGUE_C - y, v.co.x), y
         if "bevel_weight_edge" in me.attributes:
             me.attributes.remove(me.attributes["bevel_weight_edge"])
+    if caps:
+        for p in me.polygons:
+            # all corners on one end: the front, back and long chamfer faces run end to end and stay painted
+            xs = [me.vertices[i].co.x for i in p.vertices]
+            on_cap = min(xs) > END_X - 1e-4 or max(xs) < -END_X + 1e-4
+            scratched = p.material_index == 2
+            p.material_index = (2 if scratched else 1) if on_cap else 0
     # sharp from 10 degrees, so the crease where each end's tapers start stays crisp instead of smearing the
     # shading across the flat plate (owner, 2026-11-24: "something looks bad where the beveled end chamfers meet
     # with the flat part of the plate")
@@ -270,22 +278,26 @@ def smooth(ob, deg):
 
 
 def finish():
-    for name in (P + "pad_front", P + "pad_rear"):
+    """Every level: the LODs and the construction model's LODs skip the chamfers (CHAMFERS), the construction
+    model has no pads, LOD3 no rod."""
+    pads = [P + n for n in ("pad_front", "pad_rear") if bpy.data.objects.get(P + n)]
+    for name in pads:
         finish_rubber(bpy.data.objects[name])
-    finish_metal(bpy.data.objects[P + "plate"])
-    finish_metal(bpy.data.objects[P + "tip"])
+    finish_metal(bpy.data.objects[P + "plate"], CHAMFERS)
+    finish_metal(bpy.data.objects[P + "tip"], CHAMFERS)
     if bpy.data.objects.get(P + "horn"):
         finish_metal(bpy.data.objects[P + "horn"], chamfer=False)   # hidden in the wheel's groove
-    rod = bpy.data.objects[P + "rod"]          # dark steel, the Kharak Tread's metal
-    rod.data.materials.clear()
-    rod.data.materials.append(material("PaintedMetal_VeryDark"))
-    smooth(rod, 30)
-    uv_box(rod, 0.5, 0.5)
+    rod = bpy.data.objects.get(P + "rod")      # dark steel, the Kharak Tread's metal
+    if rod:
+        rod.data.materials.clear()
+        rod.data.materials.append(material("PaintedMetal_VeryDark"))
+        smooth(rod, 30)
+        uv_box(rod, 0.5, 0.5)
+    return pads
 
 
 if __name__ == "__main__":
-    finish()
-    for name in (P + "pad_front", P + "pad_rear"):
+    for name in finish():
         me = bpy.data.objects[name].data
         print(name, len(me.vertices), [m.name for m in me.materials],
               [sum(p.material_index == i for p in me.polygons) for i in range(len(me.materials))])

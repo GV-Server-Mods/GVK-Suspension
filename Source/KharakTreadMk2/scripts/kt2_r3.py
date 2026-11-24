@@ -19,12 +19,14 @@ from mathutils import Matrix, Vector
 
 HERE = r"C:\Users\blayl\source\repos\MDK2 Mods\GVK_Suspension\Source\KharakTreadMk2\scripts"
 LINK = globals().get("LINK", "small")      # "small" or "5x5" (kt2_r3_geom.py)
-ROOT_COLL = "KT3_blockout_5x5" if LINK == "5x5" else "KT3_blockout"
-VARIANT = "R3_5x5" if LINK == "5x5" else "R3"
+LEVEL = globals().get("LEVEL", "main")     # level of detail (kt2_r3_geom.py LEVELS)
+_lv = "" if LEVEL == "main" else "_" + LEVEL
+ROOT_COLL = ("KT3_blockout_5x5" if LINK == "5x5" else "KT3_blockout") + _lv
+VARIANT = ("R3_5x5" if LINK == "5x5" else "R3") + _lv
 
 
 def load(name):
-    ns = {"__name__": name.replace(".py", "_lib"), "LINK": LINK}
+    ns = {"__name__": name.replace(".py", "_lib"), "LINK": LINK, "LEVEL": LEVEL}
     exec(open(os.path.join(HERE, name)).read(), ns)
     return ns
 
@@ -132,34 +134,43 @@ def build():
     bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-5)
     bm.to_mesh(tip.data)
     bm.free()
-    cut_notch(tip)
+    if g["NOTCH"]:
+        cut_notch(tip)
     parts = [plate, tip]
 
-    parts.append(lib["prism"](P + "pad_front", g["front_pad"](), pt, pt + g["PAD_T"], rubber, coll))
-    parts.append(lib["prism"](P + "pad_rear", g["rear_pad"](), pt, pt + g["PAD_T"], rubber, coll))
+    if g["PADS"]:
+        parts.append(lib["prism"](P + "pad_front", g["front_pad"](), pt, pt + g["PAD_T"], rubber, coll))
+        parts.append(lib["prism"](P + "pad_rear", g["rear_pad"](), pt, pt + g["PAD_T"], rubber, coll))
     bevel_ends(plate)
+    if not g["NOTCH"]:                 # LOD3: no notch, so the rod would only hide inside the tongue
+        return parts + horn_part(g, coll, metal)
     # No floor in the notch's gap: only the rod holds the links together (owner, 2026-11-24: "remove that, its
     # supposed to look like the rod hinge is holding it together only").
     yb = g["BAR_Y"] - g["PITCH"]
     # 16 sides, and no end caps: both ends sit inside the plate (owner, 2026-11-24, picked fewer faces here)
-    rod = lib["hinge_bar"](P + "rod", yb, g["BAR_Z"], g["BAR_R"], g["bar_half"](yb), lib["bar_mat"](), coll, n=16)
+    rod = lib["hinge_bar"](P + "rod", yb, g["BAR_Z"], g["BAR_R"], g["bar_half"](yb), lib["bar_mat"](), coll,
+                           n=g["ROD_N"])
     bm = bmesh.new()
     bm.from_mesh(rod.data)
     bmesh.ops.delete(bm, geom=[f for f in bm.faces if len(f.verts) > 4], context="FACES_ONLY")
     bm.to_mesh(rod.data)
     bm.free()
     parts.append(rod)
+    return parts + horn_part(g, coll, metal)
+
+
+def horn_part(g, coll, metal):
     horn_src = bpy.data.objects.get("KT_horn")
-    if horn_src:
-        horn = bpy.data.objects.new(P + "horn", horn_src.data.copy())
-        horn.data.materials.clear()
-        horn.data.materials.append(metal)
-        # 7 cm forward, clear of the open gap in front of the tongue's tip (owner, 2026-11-24: "the guide horn should
-        # be moved forward a little so it isn't visible from this angel")
-        horn.data.transform(Matrix.Translation((0, g["HORN_Y"], 0)) @ Matrix.Scale(g["HORN_S"], 4))
-        coll.objects.link(horn)
-        parts.append(horn)
-    return parts
+    if not horn_src:
+        return []
+    horn = bpy.data.objects.new(P + "horn", horn_src.data.copy())
+    horn.data.materials.clear()
+    horn.data.materials.append(metal)
+    # 7 cm forward, clear of the open gap in front of the tongue's tip (owner, 2026-11-24: "the guide horn should
+    # be moved forward a little so it isn't visible from this angel")
+    horn.data.transform(Matrix.Translation((0, g["HORN_Y"], 0)) @ Matrix.Scale(g["HORN_S"], 4))
+    coll.objects.link(horn)
+    return [horn]
 
 
 def renders():

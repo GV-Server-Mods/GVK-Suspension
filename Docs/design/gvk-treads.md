@@ -356,6 +356,24 @@ Scale decals, 5x5 only (owner, 2026-11-24: "the 5x5 version could look good just
 | Slot | Atlas3 20, tall pill slot, `Atlas3_Chrome` | 6 x 27 cm, 8 per link | 2 on each end cap's top and bottom face |
 | Plate | Atlas3 34, tall plate with a groove across and four corner screws, `Atlas3_Colorable` | 44 x 24 cm (34 x 19 first; owner: "make those C1 decals 30% larger"), its long side across the track (owner: "rotate those C1 decals 1/4 turn"), 2 per link | the plate's outer corners beside the end caps; it replaced Atlas1 8, the recessed X (owner: "not loving the Xs can we swap them with C1?") |
 
+### Mk II finish: LODs, construction model, icon (built 2026-11-24)
+
+The owner asked to finish both links (owner, 2026-11-24: "lets finish it up, icon, lods, build stage etc"), then set the LOD steps: "lod 1 drops all chamfers but keeps decals, lod 2 drops decals, and so on". Each level is the same build run with fewer features (`LEVEL` in `kt2_r3_geom.py`, taken by every round 3 script), so outlines, UVs and shading match between levels; no decimation.
+
+| Level | What it keeps | Small link | 5x5 link |
+|---|---|---|---|
+| Main | everything | 586 tris | 878 tris |
+| LOD1 | no chamfers (metal or rubber, so no scratched materials); seam and 5x5 decals kept; rod 8 sides, knuckle 4 steps | 284 tris, 10 m | 568 tris, 20 m |
+| LOD2 | no seam, no decals; rod 6 sides, knuckle 2 steps | 192 tris, 30 m | 200 tris, 60 m |
+| LOD3 | no rod and no notch for it; the horn kept (it shows in the groove) | 164 tris, 60 m | 164 tris, 120 m |
+| Construction | the metal only: plate, end caps, tongue, rod and horn, no pads or decals, so the rubber is what the build adds (as Mk I); its own LOD1 and LOD2 at the LOD1 and LOD2 steps | 284 / 124 / 112 tris, 10 / 30 m | 300 / 132 / 120 tris, 20 / 60 m |
+
+Distances are the Rubber Track's, doubled for the 5x5. Links have no build stages of their own: Tank Tracks shows the construction model on a whole track while any wheel or suspension on it is not fully built, and the main model otherwise [HARD, `Track.cs` `AllBuilt`, `TrackRender.cs` `ChangeModels`]. Every Mk II style points `SegmentConstruction` at `KharakTreadMk2_Construction.mwm` or `KharakTreadMk2_5x5_Construction.mwm`. The construction model's empties are named `track_pivot1.c` and so on (Blender names must be unique); Tank Tracks reads dummies from `SegmentModel` only, by name prefix, so that is harmless [HARD, `DefinitionsInternal.cs` `GetDataFromModel`].
+
+Icon: `Content/Textures/Icons/KharakTreadMk2.dds` (256 px BC7 sRGB), five small links on the 3x3 curve as the Kharak Tread and Rubber Track icons (`scripts/kt2_icon.py`, run in background Blender on the saved .blend), material `KharakTreadMk2_Icon` in `Icons.sbc`, set on the design. The design is named "Kharak Tread Mk II" (owner, 2026-11-24; "(test)" dropped).
+
+**Which way the tongue points** [HARD, Tank Tracks v1.1.5 `Track.cs` `UpdateTransforms`, `TrackRender.cs` segment matrix]. Each track takes its frame from its primary roller (the largest wheel, preferring one whose suspension faces the same way as the cockpit): out from the hull, up, and along. Links are laid round that track's outline in one rotational direction, with the link's side always facing out of the hull. A link is never mirrored, so on a rover built symmetric (left suspensions on the left, right ones on the right) the tongues point forward on one side and backward on the other, whatever the suspension. The one switch is a style's `SegmentFlip = true`, which turns the link end for end. Fix: a flipped copy of each Mk II style (`..._Flip`, `SegmentFlip = true`), put on the Right-hand suspension blocks only (Keen's and GVK's plain names and `_Right`; `mirrored` and `_Left` are the Left hand), under the same design, so the player still picks one "Kharak Tread Mk II". The owner saw the right side's tongues point backward (owner, 2026-11-24: "Right side"); 40 Right-hand suspension lines name the flipped styles.
+
 ## [Blocks]
 
 | Blocks | Styles |

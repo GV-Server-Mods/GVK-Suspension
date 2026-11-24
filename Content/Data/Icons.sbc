@@ -16,6 +16,21 @@
       <UseAtlas>false</UseAtlas>
       <Reflectivity>0</Reflectivity>
     </TransparentMaterial>
+    <!-- Tank Tracks builder icon for the Kharak Tread Mk II design (TankTracks.ini, Design:KharakTreadMk2_Large) -->
+    <TransparentMaterial>
+      <Id>
+        <TypeId>TransparentMaterialDefinition</TypeId>
+        <SubtypeId>KharakTreadMk2_Icon</SubtypeId>
+      </Id>
+      <AlphaMistingEnable>false</AlphaMistingEnable>
+      <AlphaSaturation>1</AlphaSaturation>
+      <CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights>
+      <IgnoreDepth>true</IgnoreDepth>
+      <SoftParticleDistanceScale>0</SoftParticleDistanceScale>
+      <Texture>Textures\Icons\KharakTreadMk2.dds</Texture>
+      <UseAtlas>false</UseAtlas>
+      <Reflectivity>0</Reflectivity>
+    </TransparentMaterial>
     <!-- Tank Tracks builder icon for the Kharak Double Tread design (TankTracks.ini, Design:KharakDoubleTread_Large) -->
     <TransparentMaterial>
       <Id>

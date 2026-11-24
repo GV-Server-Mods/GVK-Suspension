@@ -25,7 +25,7 @@ LIB = next(bpy.path.abspath(lb.filepath) for lb in bpy.data.libraries if lb.file
 MAT = "Atlas4_Colorable"       # takes part of the paint (owner, 2026-11-24: "i want it to take some of the paint color")
 HERE = r"C:\Users\blayl\source\repos\MDK2 Mods\GVK_Suspension\Source\KharakTreadMk2\scripts"
 LINK = globals().get("LINK", "small")        # "small" or "5x5" (kt2_r3_geom.py)
-GEO = {"__name__": "kt2_r3_geom_lib", "LINK": LINK}
+GEO = {"__name__": "kt2_r3_geom_lib", "LINK": LINK, "LEVEL": globals().get("LEVEL", "main")}   # main and LOD1
 exec(open(HERE + r"\kt2_r3_geom.py").read(), GEO)
 END_X = GEO["END_X"]            # the line keeps Keen's 16 mm width and 1.5 mm lift on both links
 HALF = 0.008                    # half the line's width
