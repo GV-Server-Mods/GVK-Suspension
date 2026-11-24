@@ -1,6 +1,8 @@
 # Track builder icon for the Kharak Tread Mk II: five small links on a 3x3 curve, transparent background, as the
 # Rubber Track's (Source/RubberTread/scripts/rt_icon.py). Run on the saved .blend after kt2_r3_export.py:
-#   blender -b KharakTreadMk2.blend --python scripts\kt2_icon.py -- <out.png> [camera x y z]
+#   blender -b KharakTreadMk2.blend --python scripts\kt2_icon.py -- <out.png> [root pitch scale_x]
+# The Kharak Tread and Double Tread icons use it too, on KharakTread.blend:
+#   -- KharakTread.png KharakTread 0.78 1.104      -- KharakDoubleTread.png KharakDoubleTread 0.78 0.979
 import math
 import sys
 import bpy
@@ -8,15 +10,20 @@ import mathutils
 
 a = sys.argv[sys.argv.index("--") + 1:]
 out = a[0]
-DX, DY, DZ = [float(v) for v in a[1:4]] if len(a) >= 4 else (0.75, -0.9, 0.85)
-HERE = r"C:\Users\blayl\source\repos\MDK2 Mods\GVK_Suspension\Source\KharakTreadMk2\scripts"
-g = {"__name__": "kt2_r3_geom_lib", "LINK": "small", "LEVEL": "main"}
-exec(open(HERE + r"\kt2_r3_geom.py").read(), g)
-PITCH = 2 * g["HINGE_Y"]
-SX = 1.104                    # SegmentScale X of the Mk II 3x3 style (TankTracks.ini)
+DX, DY, DZ = 0.75, -0.9, 0.85
+if len(a) >= 4:
+    ROOT, PITCH, SX = a[1], float(a[2]), float(a[3])
+else:
+    HERE = r"C:\Users\blayl\source\repos\MDK2 Mods\GVK_Suspension\Source\KharakTreadMk2\scripts"
+    g = {"__name__": "kt2_r3_geom_lib", "LINK": "small", "LEVEL": "main"}
+    exec(open(HERE + r"\kt2_r3_geom.py").read(), g)
+    ROOT, PITCH = "KharakTreadMk2", 2 * g["HINGE_Y"]
+    SX = 1.104                # SegmentScale X of the Mk II 3x3 style (TankTracks.ini)
 RW = 3.3                      # the 3x3 curve, as rt_icon.py
-root = bpy.data.objects["KharakTreadMk2"]
+root = bpy.data.objects[ROOT]
 parts = [root] + list(root.children)
+dg = bpy.context.evaluated_depsgraph_get()
+meshes = {p.name: bpy.data.meshes.new_from_object(p.evaluated_get(dg)) for p in parts if p.type == "MESH"}
 sc = bpy.data.scenes.new("Icon")
 links = []
 for i in range(-2, 3):
@@ -26,8 +33,8 @@ for i in range(-2, 3):
     for p in parts:
         if p.type != "MESH":
             continue
-        c = bpy.data.objects.new("icon_%d_%s" % (i, p.name), p.data)
-        c.matrix_world = m
+        c = bpy.data.objects.new("icon_%d_%s" % (i, p.name), meshes[p.name])   # with modifiers (slot, bevels)
+        c.matrix_world = m @ root.matrix_world.inverted() @ p.matrix_world
         sc.collection.objects.link(c)
         links.append(c)
 for eng in ("BLENDER_EEVEE_NEXT", "BLENDER_EEVEE"):

@@ -105,15 +105,15 @@ Wide flat plates with a raised rubber pattern in dark worn metal, after the orig
 | Collider | `track_collider` over 0 to 0.215 m (the empty set at half size) |
 | Bounding box | 2.80 x 0.655 x 0.924 m with horn and knuckles |
 
-**Look.** Plate, knuckles and horn are `PaintedMetal_VeryDark`; pads and rib are `RubberScratched`. Tiling UVs at 0.5 UV per meter, one planar map per part along the track. Weighted normals, so flat faces shade flat beside their bevels, and a 12 mm bevel on the plate and horn edges. No edge wear, decals or hinge pins (DT1-DT3), and the tread never takes the grid's paint (T2).
+**Look.** Plate, knuckles, horn and hinge rod are `PaintedMetal_VeryDark`. Plate and horn: tiling UVs at 0.5 UV per meter, weighted normals, a 12 mm bevel on their edges. Pads and rib have the Mk II's rubber since the detail pass below: Keen's tire split, a 2 cm chamfer, Keen's shading. No edge wear or decals (DT1-DT2), and the tread never takes the grid's paint (T2).
 
 | Level | Distance | What it keeps | Vertices in the file |
 |---|---|---|---|
-| Main | | everything | 1,748 |
-| LOD1 | 10 m | plate bevels; pads without bevels; knuckles 8 steps round | 917 |
-| LOD2 | 20 m | no bevels; knuckles 4 steps | 573 |
-| LOD3 | 40 m | knuckles 2 steps; flat pad tops; no rib slots | 216 |
-| Construction | LOD1 15 m, LOD2 40 m | the plate outline, knuckles and horn without pads or rib, so only the detail grows | |
+| Main | | everything; rod 16 sides | 1,906 |
+| LOD1 | 10 m | plate bevels; pads without chamfers, one rubber material; knuckles 8 steps round; rod 8 sides | 981 |
+| LOD2 | 20 m | no bevels; knuckles 4 steps; rod 6 sides | 629 |
+| LOD3 | 40 m | knuckles 2 steps; flat pad tops; no rib slots, rod or slot | 216 |
+| Construction | LOD1 15 m, LOD2 40 m | the plate outline, knuckles, horn, rod (16 / 8 / 6 sides) and slot, without pads or rib, so only the rubber grows | 794 / 234 / 192 |
 
 The distances sit inside Digi's own (15 / 30 / 60 m; owner: "lets do the lod sooner for now"), since the full link costs about 2,240 vertices per meter of track, three times the Morue CV90mk4's.
 
@@ -129,6 +129,18 @@ The distances sit inside Digi's own (15 / 30 / 60 m; owner: "lets do the lod soo
 - Icon: `Content/Textures/Icons/KharakTread.dds` (256 px BC7 sRGB, five links on the 3x3 curve), material `KharakTread_Icon`.
 - Source: scenes `KharakTread` and `KharakTread_Construction` in `Source/KharakTread/KharakTread.blend`.
 
+### Kharak Tread detail pass (built 2026-11-24)
+
+The owner asked to bring the first tread up to the Mk II's finish (owner, 2026-11-24: "updating the rubber pads to follow the same keen rubber tire details with textures, direction, shade smoothing, etc. Then I want to add a metal hinge rod on the back of the tread that runs through the three hinge races").
+
+1. **Rubber, as the Mk II's** (Keen's rubber look, `kt2_r3_detail.py` `finish_rubber`): `RubberWheels` on the pad and rib tops, `RubberWheelsScratched` on their chamfers, `RubberDry` on the walls; one flat 2 cm chamfer on the top edges and outside upright corners, bottoms sharp (2 cm, not the Mk II's 3 cm: the pads are 7.5 cm thick and the rib's top only 6 cm wide); the never-seen undersides deleted; Keen's shading rule (`keen_normals`); box UVs at 0.245 UV per meter, each face turned flat first, streaks along the track. The pad shapes, gaps and heights stay as they are. Chamfers and the three-way split on the main model only; LOD1 to LOD3 keep `RubberWheels` alone.
+2. **Hinge rod:** a dark steel rod (`PaintedMetal_VeryDark`), 9 cm across as the Mk II small link's (owner, 2026-11-24, picked "as the Mk II"; the prompt said 9.6 cm by mistake), along the back pivot (+0.456 m, 0.093 m up), through the three knuckles and across the two gaps between them, its ends inside the outer knuckles. 16 sides, no end caps, as the Mk II's. The hinge line runs under the next link's front margin and the front of its pads, so a plain rod would never show: each link gets a slot in its underside along its front edge, between its two front notches, as deep as the rod's centre, so the rod's lower half shows from below and on the track's top return run (owner, 2026-11-24, picked "Underside slot" from the mockup `Source/KharakTread/review/rod_underside_mockup_close.png`; a channel on top was dropped, the pads cover it).
+3. **LODs and construction** (table above): LOD1 drops the chamfers, LOD1 and LOD2 thin the rod, LOD3 drops the rod and slot; the construction models get the rod and slot but no rubber. Distances stay 10 / 20 / 40 m.
+4. **Kharak Double Tread too** (owner, 2026-11-24: "Yes, both treads"): the same rubber, rod and slot on both of its bands, the rod running through all six knuckles. Main 3,378 vertices; LOD1 1,243, LOD2 504, LOD3 360; construction 1,534 / 437 / 360.
+5. **Icons** re-rendered from the new links with `kt2_icon.py` (its arguments take the root object, pitch and SegmentScale X).
+
+Script: `Source/KharakTread/scripts/kt1_finish.py`, run in `KharakTread.blend`; the slot is a boolean modifier on each plate, its cutters in the collection "Rod slot cutters (not exported)". Checkpoint: `KharakTread_before_rubber.blend` beside the file (the folder is not in git). In-game test: runbook E35.
+
 ## Kharak Double Tread
 
 Twin tracks like those on the bigger Deserts of Kharak cruisers: two road wheels side by side under one tread with two bands, just under 5 m across so it fits between blocks. Every style swaps the wheel model, so a wheel looks double only on a track built with this design, and it keeps its tire's collision, grip and radius (owner: "I'm ok with it being mostly visual").
@@ -142,7 +154,7 @@ Twin tracks like those on the bigger Deserts of Kharak cruisers: two road wheels
 | Tread in game | 4.856 m (SegmentScale 0.979, 1, 1), just inside the 4.86 m rim faces; 5x5 9.856 m (1.987, 2.13, 2.13) |
 
 - **Placement (DD3).** The 5 m doubles span 2.5 to 7.5 m from the mounting face and the 10 m double 5 to 15 m, so each wheel fills whole cells. The meshes sit 0.137 m nearer the hull than the single groove line, so X is the single style's X less that: .417 / 1.188 / .613 / .401, and −.14 / −.132 on the Track Wheel blocks. Y matches the Kharak Tread. Keen's 5x5 sits 0.13 m off the Lifted Short line, so its 10 m double is about 0.1 m off the cells.
-- **Levels.** Each double link level is two single links one level down (Main from LOD1, LOD1 from LOD2, LOD2 from LOD3, LOD3 the LOD3 plate and pads only), so it costs about two single links at the next LOD. LODs 10 / 20 / 40 m; construction model `KharakDoubleTread_Construction` at 15 / 40 m. The wheels have Main and LOD1-3 at 25 / 50 / 100 m, BS1 (the bare steel wheel) for construction, no collision, and the single wheel's dummies.
+- **Levels.** Each double link level is two single links one level down (Main from LOD1, LOD1 from LOD2, LOD2 from LOD3, LOD3 the LOD3 plate and pads only), so it costs about two single links at the next LOD; since the detail pass the main model's rubber has the 2 cm chamfers too. LODs 10 / 20 / 40 m; construction model `KharakDoubleTread_Construction` at 15 / 40 m. The wheels have Main and LOD1-3 at 25 / 50 / 100 m, BS1 (the bare steel wheel) for construction, no collision, and the single wheel's dummies.
 - **Styles.** Swap styles only: `_Swap` and `_Swap_Offroad` for every size, plus `_1x1_Static` and `_3x3_Static`. Every `[Blocks]` line that lists a Kharak Tread style lists the double too; Short Track and Lifted Short Track get `_Swap`, so their track wheels swap to the double.
 - Icon: `KharakDoubleTread.dds`, material `KharakDoubleTread_Icon`.
 - Source: wheels in `Source/TrackWheels/TrackWheelStudy.blend`, the link in `KharakTread.blend`.
@@ -374,6 +386,8 @@ Icon: `Content/Textures/Icons/KharakTreadMk2.dds` (256 px BC7 sRGB), five small 
 
 **Which way the tongue points** [HARD, Tank Tracks v1.1.5 `Track.cs` `UpdateTransforms`, `TrackRender.cs` segment matrix]. Each track takes its frame from its primary roller (the largest wheel, preferring one whose suspension faces the same way as the cockpit): out from the hull, up, and along. Links are laid round that track's outline in one rotational direction, with the link's side always facing out of the hull. A link is never mirrored, so on a rover built symmetric (left suspensions on the left, right ones on the right) the tongues point forward on one side and backward on the other, whatever the suspension. The one switch is a style's `SegmentFlip = true`, which turns the link end for end. Fix: a flipped copy of each Mk II style (`..._Flip`, `SegmentFlip = true`), put on the Right-hand suspension blocks only (Keen's and GVK's plain names and `_Right`; `mirrored` and `_Left` are the Left hand), under the same design, so the player still picks one "Kharak Tread Mk II". The owner saw the right side's tongues point backward (owner, 2026-11-24: "Right side"); 40 Right-hand suspension lines name the flipped styles.
 
+Every other design followed the same day (owner, 2026-11-24: "can we do the same mirror thing for all of the tracks?"): 50 more `_Flip` styles (Kharak Tread, Kharak Double Tread, Rubber Track, and Digi's over-the-tire link on GVK's Lifted blocks), named on all 46 Right-hand suspension lines. The Kharak Tread and Double Tread links point the way the Mk II does in the model (hinge tabs at +Y, the centre reaching toward -Y like the Mk II's tongue), so the same hand gets the flip. Keen's own suspensions keep Digi's over-the-tire link unflipped: Digi's pack assigns it there, and Tank Tracks adds `[Blocks]` lines from every mod together (`DefinitionHandler.cs` `ProcessBlocks`, `AddOrOverride` appends) [HARD], so this file cannot swap it. That link is nearly the same both ways round (about three quarters of its vertices match front to back).
+
 ## [Blocks]
 
 | Blocks | Styles |
@@ -412,12 +426,12 @@ From building and testing:
 ## Decisions
 
 - **T1, name:** "Kharak Tread", ids `KharakTread_Large` / `KharakTread_Small`.
-- **T2, paint:** fixed dark painted metal with scratched rubber pads; the tread never takes the grid's paint.
+- **T2, paint:** fixed dark painted metal with rubber pads (`RubberScratched` until 2026-11-24, Keen's tire rubber since); the tread never takes the grid's paint.
 - **T3, Keen's suspensions:** Keen's large-grid suspensions get GVK swap styles next to Digi's vanilla track; their SBC stays untouched. Offroad tires use the offroad Y (D5 in track-wheel-swap.md).
 - **T4, small grid: later** (owner: "those probably need new track wheel models too"), together with D9 in track-wheel-swap.md. Until then the `SG_*` blocks and Keen's small-grid suspensions offer only Digi's vanilla track, and small-grid tracks on Morue designs disappear.
 - **T5, 5x5 link:** the Kharak designs scale one link 2.13x along and in thickness; the Rubber Track has its own 5x5 link.
 - **T6, more styles:** two more GVK designs once the Kharak ones pass every test. First the Rubber Track; the second is next.
-- **DT1-DT3:** no edge wear, decals or hinge pins on the Kharak Tread.
+- **DT1-DT3:** no edge wear, decals or hinge pins on the Kharak Tread. Hinge pins replaced on 2026-11-24 by a 9 cm hinge rod seen through an underside slot (owner: "add a metal hinge rod on the back of the tread"; picked "Underside slot").
 - **DD1, widths:** 2.24 m bands round the groove centers, a 0.30 m channel, so the tread hangs past the wheel ("so the tread appears to have some more overhang"), then cut to end inside the rim faces.
 - **DD2, 5x5 double:** 10 m wide ("its double wide would just be a 10m width").
 - **DD3, placement:** between the grid line at the mount and the line two cells (four on the 5x5) out.
