@@ -90,6 +90,7 @@ Each wheel's `wheel` dummy moves to the vanilla tire's spot. The mesh moves by t
 - SEUT export of Main, LOD1-3 and BS1-3 for each of the six models. Checkpoint the .blend first.
 - In mwminfo, each file shows the new radius, the new `wheel` dummy and the sphere size. Then MDK2 build and a check of the deployed copy.
 - Restart the game fully: collision and dummy changes don't reload otherwise.
+- Every re-export needs the dummies copied back in: `TrackWheelStudy.blend` holds no empties, and a 2026-11-22 texture-scale export without them left the wheels with no attach point (fixed 2026-11-23; [gvk-treads.md](gvk-treads.md), "Dummies after every wheel export"). Read the dummies back before deploying.
 
 ## Part B: roll the swap out
 
