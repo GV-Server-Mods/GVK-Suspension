@@ -45,7 +45,7 @@ GVK renders, each with `_Right` and `_Left` unless marked:
 | `TankTrackWheelBlock1x1`, `3x3` (no Left) | Track Wheel 1x1 and 3x3 | `TankWheelBlock1x1`, `TankWheelBlock3x3` |
 | `RealTrackWheel<size>`, `Wheel7x7` (no Left) | The GVK track wheels and the 7x7 tire | The wheel alone |
 
-Also: `Lifted_Icon` (the small "lifted" badge drawn over the group icons; flipped to the bottom left on 2026-11-22, since the game draws the DLC icon in the bottom right and the owner saw them collide), and `KharakTread`, `KharakDoubleTread` and `RubberTrack` (the Tank Tracks builder icons; `RubberTrack` added 2026-11-23, [gvk-treads.md](gvk-treads.md)).
+Also: `Lifted_Icon` (the small "lifted" badge drawn over the group icons; flipped to the bottom left on 2026-11-22, since the game draws the DLC icon in the bottom right and the owner saw them collide), and `KharakTread`, `KharakDoubleTread` and `RubberTrack` (the Tank Tracks builder icons; `RubberTrack` added 2026-11-23 and re-rendered the same day from the current link, [gvk-treads.md](gvk-treads.md), "Icon redone").
 
 ## How
 
