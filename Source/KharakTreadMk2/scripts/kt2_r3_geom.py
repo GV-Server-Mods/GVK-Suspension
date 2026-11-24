@@ -51,6 +51,9 @@ END_BEVEL = 0.02 * SZ           # and its top and bottom by this (owner, 2026-11
 G = 0.05 * SX                   # one gap: between the pads, to the back edge, the end bands and the notch
 W = 0.19 * SX                   # each pad's width (markup: 2W + G = 0.43 m at the sides and in the middle)
 SH_RISE, SH_LEN = G, 0.24 * SX  # the front pad's shoulders: rise to the seam (markup: 6 cm), 24 cm long
+# the 5x5's reach twice that, further over the tongue (owner, 2026-11-24: "increase the size of forward rubber tread's
+# shoulders so they extend further over the tongue", picked "Double" and "5x5 only"); the rod and its notch stay put
+SH_REACH = 2 * SH_RISE if LINK == "5x5" else SH_RISE
 BAR_R = 0.045 * SX
 BAR_Z = PLATE_T / 2
 HORN_Y = 0.07 * SX              # the guide horn's shift forward: its back 4 cm in front of the notch's open gap
@@ -82,13 +85,14 @@ Y_MID = NOTCH_FRONT + G + D
 C_DIAG = TONGUE_C - D * R2      # the center line's shoulder: y = C_DIAG - |x|
 PAD_END = HALF_W - END_W - G
 SEAM_Y = Y_MID + D              # the seam, straight across the tongue along the front pad's middle front edge
-Y_SH = Y_MID + D + SH_RISE      # top of the front pad's shoulders, over the slice
-BAR_Y = (Y_SH + TIP_Y) / 2      # the rod, 0.51 m from center
+Y_SH0 = Y_MID + D + SH_RISE     # the shoulders' first top line: the rod and its notch are placed from it
+Y_SH = Y_MID + D + SH_REACH     # top of the front pad's shoulders, over the slice
+BAR_Y = (Y_SH0 + TIP_Y) / 2     # the rod, 0.51 m from center
 # A notch cut into the slice's front, through its full thickness, so the rod shows in the middle (owner, 2026-11-24:
 # "cutting a notch out of the front of the tongue so you can see the metal connecting rod in the center"): 0.56 m
 # across, read off the owner's sketch, back to where the front pad's shoulders start
 NOTCH_HALF = 0.28 * SX
-NOTCH_BACK = Y_SH
+NOTCH_BACK = Y_SH0
 KNUCKLE_TOP = PLATE_T - 0.004 * SZ   # 4 mm under the plate top, so the knuckle stays hidden when straight (round 2)
 
 
@@ -116,7 +120,7 @@ def front_pad_top():
     x_out = -tongue_half(Y_SH)
     x_in = x_out + SH_LEN
     return [(-PAD_END, Y_SIDE + D), (knee(Y_SIDE, D), Y_SIDE + D), (x_out, Y_SH), (x_in, Y_SH),
-            (x_in + SH_RISE, Y_MID + D)]
+            (x_in + SH_REACH, Y_MID + D)]
 
 
 def seam_line():

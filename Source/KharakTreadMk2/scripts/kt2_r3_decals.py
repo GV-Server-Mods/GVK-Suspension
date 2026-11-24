@@ -20,6 +20,7 @@ from mathutils.bvhtree import BVHTree
 
 LIB = next(bpy.path.abspath(lb.filepath) for lb in bpy.data.libraries if lb.filepath.endswith("Materials.blend"))
 HERE = r"C:\Users\blayl\source\repos\MDK2 Mods\GVK_Suspension\Source\KharakTreadMk2\scripts"
+INI = r"C:\Users\blayl\source\repos\MDK2 Mods\GVK_Suspension\Content\Data\TankTracks.ini"
 LINK = globals().get("LINK", "small")
 GEO = {"__name__": "kt2_r3_geom_lib", "LINK": LINK}
 exec(open(HERE + r"\kt2_r3_geom.py").read(), GEO)
@@ -36,6 +37,7 @@ PLATE = ("Atlas3_Colorable", (0.7637, 0.2554, 0.8613, 0.4321), 0.442)   # length
 BOLTS = [(2.3, -0.415), (2.3, 0.095), (0.75, 0.09), (0.75, 0.6)]          # +X side; the -X side is the same at -x
 SLOTS_Y = (0.33, -0.33)
 PLATE_XY = (2.33, 0.5)
+SX_GAME = 1.0          # set by build() from TankTracks.ini
 
 
 def material(name):
@@ -47,15 +49,38 @@ def material(name):
     return m
 
 
+def ini_stretch():
+    """SegmentScale X of the test design's 5x5 style in TankTracks.ini. The game stretches the link across the
+    track by it, so every decal is laid out at its in-game size and built that much narrower (owner, 2026-11-24:
+    "I don't like how it stretched the bolt decals", then the slots and plates too)."""
+    style = None
+    for line in open(INI, encoding="utf-8"):
+        s = line.strip()
+        if s.startswith("["):
+            style = s
+        elif style == "[Track:KharakTreadMk2_Large_5x5_Track]" and s.startswith("SegmentScale"):
+            return float(s.split("=")[1].split(",")[0])
+    return 1.0
+
+
+def frame(c, n, t):
+    """The decal's centre (lifted) and its U and V directions on the face as the game draws it, stretched by
+    SX_GAME along X, plus the map from an in-game offset back to the model."""
+    s = SX_GAME
+    ng = Vector((n.x / s, n.y, n.z)).normalized()      # a stretched face's normal
+    tg = Vector((t.x * s, t.y, t.z))
+    tg = (tg - ng * tg.dot(ng)).normalized()
+    bg = ng.cross(tg)
+    return c + n.normalized() * LIFT, tg, bg, lambda o: Vector((o.x / s, o.y, o.z))
+
+
 def quad(bm, uv, slot, c, n, t, w, l, box):
-    """A w x l quad at c on a face of normal n: U along t, V along n x t, right-handed."""
-    n, t = n.normalized(), t.normalized()
-    b = n.cross(t)
+    """A w x l quad (in game) at c on a face of normal n: U along t, V along n x t, right-handed."""
+    c, t, b, back = frame(c, n, t)
     u0, v0, u1, v1 = box
-    c = c + n * LIFT
-    pts = [(c - t * w / 2 - b * l / 2, (u0, v0)), (c + t * w / 2 - b * l / 2, (u1, v0)),
-           (c + t * w / 2 + b * l / 2, (u1, v1)), (c - t * w / 2 + b * l / 2, (u0, v1))]
-    f = bm.faces.new([bm.verts.new(p) for p, _ in pts])
+    pts = [(-t * w / 2 - b * l / 2, (u0, v0)), (t * w / 2 - b * l / 2, (u1, v0)),
+           (t * w / 2 + b * l / 2, (u1, v1)), (-t * w / 2 + b * l / 2, (u0, v1))]
+    f = bm.faces.new([bm.verts.new(c + back(o)) for o, _ in pts])
     f.material_index = slot
     for lp, (_, q) in zip(f.loops, pts):
         lp[uv].uv = q
@@ -64,14 +89,12 @@ def quad(bm, uv, slot, c, n, t, w, l, box):
 
 def disc(bm, uv, slot, c, n, t, size, k, box, sides=24):
     """A round piece cut to radius k * size (se-dev-seut atlas-regions.md, "Cropping a round piece to a smaller
-    circle"): a polygon on the face, UVs on the same circle round the piece's centre, right-handed."""
-    n, t = n.normalized(), t.normalized()
-    b = n.cross(t)
+    circle"): a polygon on the face, UVs on the same circle round the piece's centre, right-handed; round in game."""
+    c, t, b, back = frame(c, n, t)
     u0, v0, u1, v1 = box
     cu, cv = (u0 + u1) / 2, (v0 + v1) / 2
-    c = c + n * LIFT
     ring = [(math.cos(2 * math.pi * i / sides), math.sin(2 * math.pi * i / sides)) for i in range(sides)]
-    f = bm.faces.new([bm.verts.new(c + (t * x + b * y) * k * size) for x, y in ring])
+    f = bm.faces.new([bm.verts.new(c + back((t * x + b * y) * k * size)) for x, y in ring])
     f.material_index = slot
     for lp, (x, y) in zip(f.loops, ring):
         lp[uv].uv = (cu + k * (u1 - u0) * x, cv + k * (v1 - v0) * y)
@@ -98,6 +121,8 @@ def build():
             bpy.data.meshes.remove(me_old)
     if LINK != "5x5":
         return None
+    global SX_GAME
+    SX_GAME = ini_stretch()
     P = GEO["P"]
     pads = {n: bvh_of(P + n) for n in ("pad_front", "pad_rear")}
     plate = bvh_of(P + "plate")
