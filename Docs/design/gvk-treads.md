@@ -205,7 +205,7 @@ The 5x5 distances are Keen's `Wheel5x5`. The small link's are set by eye from Ke
 
 - The same style set as the Kharak Tread, with its X, so the horn sits in the groove. `_Static` uses X 0.
 - The design is on every large-grid `[Blocks]` line that lists a Kharak Tread style, with the same kind of style.
-- Icon: `Content/Textures/Icons/RubberTrack.dds` (256 px BC7 sRGB), five current links on the 3x3 curve with the name on top, rendered like the Kharak icons since 2026-11-24 (`kt2_icon.py` and `icon_label.py`; owner: "match the style of the other 3"; the old back-lit `rt_icon.py` variant v7 is retired), material `RubberTrack_Icon`.
+- Icon: `Content/Textures/Icons/RubberTrack.dds` (256 px BC7 sRGB), five current links on the 3x3 curve with the name on top, rendered like the Kharak icons since 2026-11-24, on its 3x3 wheel, with a rim light from behind so the link ridges read ([icons.md](icons.md); owner: "match the style of the other 3"; the old back-lit `rt_icon.py` variant v7 is retired), material `RubberTrack_Icon`.
 - Source: `Source/RubberTread/scripts/rt_build.py` and `rt5_build.py` rebuild every level of `RubberTrack.blend` and `RubberTrack5x5.blend`, with SEUT scenes `RubberTrack`, `RubberTrack_Construction`, `RubberTrack5x5` and `RubberTrack5x5_Construction`. The `*_before_*.blend` checkpoints sit beside them.
 - **Rejected:** a band joining the lugs, which buried the side steps ("its like they are all stuck on fat slabs, all of the side detail is gone"; kept as `*_band_rejected.blend`); the 3x3 link scaled 2.13x for the 5x5, which read cartoonish and made the rover look small; mirrored UVs across the link; seamless copies of Keen's rubber maps shipped in the mod; `RubberScratched` on the whole link.
 
