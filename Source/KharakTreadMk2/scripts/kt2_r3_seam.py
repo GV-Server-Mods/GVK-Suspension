@@ -23,13 +23,17 @@ from mathutils.bvhtree import BVHTree
 
 LIB = next(bpy.path.abspath(lb.filepath) for lb in bpy.data.libraries if lb.filepath.endswith("Materials.blend"))
 MAT = "Atlas4_Colorable"       # takes part of the paint (owner, 2026-11-24: "i want it to take some of the paint color")
-END_X = 1.31                    # kt2_r3_detail.py END_X
+HERE = r"C:\Users\blayl\source\repos\MDK2 Mods\GVK_Suspension\Source\KharakTreadMk2\scripts"
+LINK = globals().get("LINK", "small")        # "small" or "5x5" (kt2_r3_geom.py)
+GEO = {"__name__": "kt2_r3_geom_lib", "LINK": LINK}
+exec(open(HERE + r"\kt2_r3_geom.py").read(), GEO)
+END_X = GEO["END_X"]            # the line keeps Keen's 16 mm width and 1.5 mm lift on both links
 HALF = 0.008                    # half the line's width
 LIFT = 0.0015
 V0, V1 = 0.4834, 0.5166         # Atlas4 piece 3's box
 U_PER_M = 0.5
 STEP = 0.2         # rows at most this far apart (2.5 cm first; owner, 2026-11-24, picked the cut)
-NAME = "R3_seam"
+NAME = GEO["P"] + "seam"
 
 
 def material(name):
@@ -74,7 +78,7 @@ def lifted(bvh, p):
 
 
 def build():
-    plate = bpy.data.objects["R3_plate"]
+    plate = bpy.data.objects[GEO["P"] + "plate"]
     old = bpy.data.objects.get(NAME)
     if old:
         me_old = old.data
@@ -127,12 +131,59 @@ def build():
     for c in plate.users_collection:
         c.objects.link(ob)
     ob.matrix_world = plate.matrix_world
+    lift_dips(ob, bvh)
     return ob
+
+
+BARY = ((.96, .02, .02), (.02, .96, .02), (.02, .02, .96), (1 / 3, 1 / 3, 1 / 3), (.5, .5, 0), (0, .5, .5), (.5, 0, .5))
+
+
+def tri_gap(bvh, me, t):
+    """Lowest gap over a triangle, from 7 samples cast back along its normal (se-dev-seut decal_snap.py gaps())."""
+    lo = None
+    for b in BARY:
+        p = sum((me.vertices[v].co * w for v, w in zip(t.vertices, b)), Vector())
+        h = bvh.ray_cast(p + t.normal * 0.0025, -t.normal, 0.0125)
+        if h[0] is not None:
+            lo = h[3] - 0.0025 if lo is None else min(lo, h[3] - 0.0025)
+    return lo
+
+
+def lift_dips(ob, bvh, keep=0.001, to=0.0012, passes=4):
+    """Where the end taper's corners twist, a flat triangle of the strip passes under the surface between its
+    corners (0.1 mm left on the small link, touching on the 5x5). Lift each triangle under `keep` out along its
+    normal to `to`, moving every copy of a corner together (se-dev-seut bpy-recipes.md, "Dips the snap leaves")."""
+    me = ob.data
+    groups = {}
+    for v in me.vertices:
+        groups.setdefault(tuple(round(c, 5) for c in v.co), []).append(v.index)
+    of = {i: k for k, idx in groups.items() for i in idx}
+    for _ in range(passes):
+        me.calc_loop_triangles()
+        move = {}
+        for t in me.loop_triangles:
+            g = tri_gap(bvh, me, t)
+            if g is not None and g < keep:
+                for v in t.vertices:
+                    k = of[v]
+                    d = t.normal * (to - g)
+                    if k not in move or d.length > move[k].length:
+                        move[k] = d
+        if not move:
+            break
+        for k, d in move.items():
+            for i in groups[k]:
+                me.vertices[i].co += d
+        groups = {}
+        for v in me.vertices:
+            groups.setdefault(tuple(round(c, 5) for c in v.co), []).append(v.index)
+        of = {i: k for k, idx in groups.items() for i in idx}
+    me.update()
 
 
 def check(ob):
     """Faces facing in, faces whose UVs break the right-handed rule, and the lift range against the plate."""
-    plate = bpy.data.objects["R3_plate"]
+    plate = bpy.data.objects[GEO["P"] + "plate"]
     bvh = BVHTree.FromPolygons([v.co for v in plate.data.vertices], [p.vertices for p in plate.data.polygons])
     me = ob.data
     uvl = me.uv_layers[0].data
@@ -147,7 +198,10 @@ def check(ob):
         a, b, cc = (uvl[i].uv for i in p.loop_indices[:3])
         if (b - a).cross(cc - a) <= 0:
             flipped += 1
-    return len(me.polygons), inward, flipped, round(min(gaps) * 1000, 2), round(max(gaps) * 1000, 2)
+    me.calc_loop_triangles()
+    lows = [g for g in (tri_gap(bvh, me, t) for t in me.loop_triangles) if g is not None]
+    return (len(me.polygons), inward, flipped, round(min(gaps) * 1000, 2), round(max(gaps) * 1000, 2),
+            "lowest triangle sample mm", round(min(lows) * 1000, 2))
 
 
 if __name__ == "__main__":

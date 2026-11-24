@@ -28,23 +28,36 @@ underside center. Outlines are counterclockwise seen from +Z.
 import math
 
 R2 = math.sqrt(2)
-HALF_W, HALF_L, PITCH = 1.40, 0.34, 0.736
+# Which link: "small" (1x1 to 3x3) or "5x5", set by the caller's namespace. The 5x5 link is the small one with every
+# outline scaled to the 5x5 rubber's 5.96 m width and its thickness doubled, as round 2's 5x5 (Docs/design/gvk-treads.md,
+# "Mk II round 3: the 5x5 link"; owner, 2026-11-24: "Yes, build it")
+LINK = globals().get("LINK", "small")
+SX = 5.96 / 2.80 if LINK == "5x5" else 1.0       # outlines: width, length, gaps
+SZ = 2.0 if LINK == "5x5" else 1.0               # thickness, and the chamfers with it
+P = "R5_" if LINK == "5x5" else "R3_"            # object names
+HALF_W, HALF_L, PITCH = 1.40 * SX, 0.34 * SX, 0.736 * SX
 HINGE_Y = PITCH / 2
-PLATE_T, PAD_T = 0.14, 0.10
-KNUCKLE_H = 0.113               # hinge height in the link frame, as round 2 (0.110 on the 1x1 to 0.116 on the 3x3)
-TIP_Y = 0.5925                  # tongue front, as round 2 (markup: 0.595)
-TIP_HALF = 0.513                # markup: 1.03 m across the tongue's front
-NOTCH_GAP = 0.04
-END_W = 0.09                    # each end of the plate: its corners are cut back over this width (markup: 9 cm)
-END_CUT = 0.05                  # each end is a truncated prism over END_W: its front and back taper in by this
-END_BEVEL = 0.02                # and its top and bottom by this (owner, 2026-11-24: "it should be beveled on all 4
+PLATE_T, PAD_T = 0.14 * SZ, 0.10 * SZ
+# hinge height in the link frame, as round 2 (0.110 on the 1x1 to 0.116 on the 3x3); on the 5x5 the Kharak rule,
+# outer face on the 5x5's collision sphere (5.8 m, reported radius 5.478 m): -(5.8 - 0.48 - hull radius)
+KNUCKLE_H = 0.2138 if LINK == "5x5" else 0.113
+TIP_Y = 0.5925 * SX             # tongue front, as round 2 (markup: 0.595)
+TIP_HALF = 0.513 * SX           # markup: 1.03 m across the tongue's front
+NOTCH_GAP = 0.04 * SX
+END_W = 0.09 * SX               # each end of the plate: its corners are cut back over this width (markup: 9 cm)
+END_CUT = 0.05 * SX             # each end is a truncated prism over END_W: its front and back taper in by this
+END_BEVEL = 0.02 * SZ           # and its top and bottom by this (owner, 2026-11-24: "it should be beveled on all 4
                                 # sides so the end cap is a truncated prism"; markup: 5.7 cm)
-G = 0.05                        # one gap: between the pads, to the back edge, the end bands and the notch
-W = 0.19                        # each pad's width (markup: 2W + G = 0.43 m at the sides and in the middle)
-SH_RISE, SH_LEN = G, 0.24       # the front pad's shoulders: rise to the seam (markup: 6 cm), 24 cm long
-BAR_R = 0.045
+G = 0.05 * SX                   # one gap: between the pads, to the back edge, the end bands and the notch
+W = 0.19 * SX                   # each pad's width (markup: 2W + G = 0.43 m at the sides and in the middle)
+SH_RISE, SH_LEN = G, 0.24 * SX  # the front pad's shoulders: rise to the seam (markup: 6 cm), 24 cm long
+BAR_R = 0.045 * SX
 BAR_Z = PLATE_T / 2
-HORN_Y = 0.07                   # the guide horn's shift forward: its back 4 cm in front of the notch's open gap
+HORN_Y = 0.07 * SX              # the guide horn's shift forward: its back 4 cm in front of the notch's open gap
+HORN_S = SX                     # the Kharak Tread's horn, scaled as its 5x5 style does
+CHAMFER = 0.01 * SZ             # the metal's chamfer (kt2_r3_detail.py)
+RUBBER_BEVEL = 0.03 * SZ        # the rubber's chamfer
+END_X = HALF_W - END_W          # where each end cap starts
 
 TONGUE_C = TIP_Y + TIP_HALF     # the tongue's 45 degree sides: |x| = TONGUE_C - y
 
@@ -74,9 +87,9 @@ BAR_Y = (Y_SH + TIP_Y) / 2      # the rod, 0.51 m from center
 # A notch cut into the slice's front, through its full thickness, so the rod shows in the middle (owner, 2026-11-24:
 # "cutting a notch out of the front of the tongue so you can see the metal connecting rod in the center"): 0.56 m
 # across, read off the owner's sketch, back to where the front pad's shoulders start
-NOTCH_HALF = 0.28
+NOTCH_HALF = 0.28 * SX
 NOTCH_BACK = Y_SH
-KNUCKLE_TOP = PLATE_T - 0.004   # 4 mm under the plate top, so the knuckle stays hidden when straight (as round 2)
+KNUCKLE_TOP = PLATE_T - 0.004 * SZ   # 4 mm under the plate top, so the knuckle stays hidden when straight (round 2)
 
 
 def knee(y_run, d):
@@ -152,10 +165,10 @@ def tip_piece():
 # (owner, 2026-11-24, drawing over a bent joint in game: "adjust the knuckle so the radius is a little tighter and
 # extends further back", which gave 0.12 m ending 8 cm behind, 10 cm up; then "tighter and angles even further into
 # the back tread"; it was 0.20 m ending 5.3 cm behind, 13 cm up)
-KNUCKLE_R = 0.105
+KNUCKLE_R = 0.105 * SZ                 # a round arc, so it scales with the thickness only
 KNUCKLE_SWEEP = math.radians(80)
 KNUCKLE_BOT = 0.0                      # flush with the underside (owner: "a similar step ... on the bottom side")
-KNUCKLE_FRONT = SEAM_Y + 0.01          # it reaches 1 cm into the slice
+KNUCKLE_FRONT = SEAM_Y + 0.01 * SX     # it reaches 1 cm into the slice
 
 
 def knuckle_yz(n=8, whole=False):     # 8 arc steps of 10 degrees, smooth shaded (16 before; owner picked fewer faces)
@@ -183,7 +196,7 @@ def knuckle_yz(n=8, whole=False):     # 8 arc steps of 10 degrees, smooth shaded
     front = ([(TIP_Y, KNUCKLE_BOT), (TIP_Y, PLATE_T), (Y_SH, PLATE_T)] if whole
              else [(yf, KNUCKLE_BOT), (yf, KNUCKLE_TOP), (SEAM_Y, KNUCKLE_TOP)])
     # the bottom 1 cm under the plate's front chamfer as well ("pull the bottom just a tiny bit further")
-    pts = front + arc + [(HALF_L - 0.01, KNUCKLE_BOT)]
+    pts = front + arc + [(HALF_L - CHAMFER, KNUCKLE_BOT)]
     return [(y - PITCH, z) for y, z in pts]
 
 
@@ -196,7 +209,7 @@ def gap_floor(e=0.005):
 
 def bar_half(y):
     """Half length of the rod at y in this link's notch: 4 cm into the plate past the notch's side walls."""
-    return notch_half(y - BAR_R) + 0.04
+    return notch_half(y - BAR_R) + 0.04 * SX
 
 
 def summary():

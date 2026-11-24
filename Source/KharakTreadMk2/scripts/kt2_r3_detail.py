@@ -28,16 +28,20 @@ METAL = ("PaintedMetal_Colorable",)
 # The plate's end caps in unpainted dark steel, their chamfers scratched (owner, 2026-11-24: "I want to make those end
 # caps a dark metal with scratched metal chamfers"); neither takes paint, so the scratches show
 CAP = ("PaintedMetal_VeryDark", "PaintedMetalScratched_VeryDark")
-END_X = 1.31                                 # kt2_r3_geom.py HALF_W - END_W: where each end cap starts
-CHAMFER = 0.01
-SEAM, PITCH, HALF_L, Y_SH = 0.3765, 0.736, 0.34, 0.4265   # kt2_r3_geom.py SEAM_Y, PITCH, HALF_L and Y_SH
+HERE = r"C:\Users\blayl\source\repos\MDK2 Mods\GVK_Suspension\Source\KharakTreadMk2\scripts"
+LINK = globals().get("LINK", "small")        # "small" or "5x5" (kt2_r3_geom.py)
+GEO = {"__name__": "kt2_r3_geom_lib", "LINK": LINK}
+exec(open(HERE + r"\kt2_r3_geom.py").read(), GEO)
+P, SX = GEO["P"], GEO["SX"]
+END_X, CHAMFER = GEO["END_X"], GEO["CHAMFER"]
+SEAM, PITCH, HALF_L, Y_SH = GEO["SEAM_Y"], GEO["PITCH"], GEO["HALF_L"], GEO["Y_SH"]
 LIB = next(bpy.path.abspath(lb.filepath) for lb in bpy.data.libraries if lb.filepath.endswith("Materials.blend"))
 # one flat chamfer, as the metal (owner, 2026-11-24, of the 3-segment round: "I don't think the rubber chamfers need
 # so many faces", then picked 1 segment over 2)
-BEVEL, SEGMENTS = 0.03, 1
-PLATE_T = 0.14
-TONGUE_C = 0.5925 + 0.513   # kt2_r3_geom.py TONGUE_C: the tongue's sides are |x| = TONGUE_C - y
-NOTCH_HALF = 0.28           # kt2_r3_geom.py NOTCH_HALF: the slice's front notch
+BEVEL, SEGMENTS = GEO["RUBBER_BEVEL"], 1
+PLATE_T = GEO["PLATE_T"]
+TONGUE_C = GEO["TONGUE_C"]   # the tongue's sides are |x| = TONGUE_C - y
+NOTCH_HALF = GEO["NOTCH_HALF"]   # the slice's front notch
 
 
 def material(name):
@@ -72,7 +76,10 @@ def uv_rubber(ob, s=0.245):
     """Box UVs at one scale on every axis, each face first turned flat onto its box plane about its own centre, so
     walls and chamfers at an angle keep their true size (owner, 2026-11-24: "all the rubber scaling needs to be
     consistent"; plain box UVs ran from 0.17 to 0.5 UV per metre). 0.245 keeps the whole pad inside one tile, so
-    there is still no wrap (Keen's rubber textures do not tile). Orientation as uv_box: turned 90 degrees."""
+    there is still no wrap (Keen's rubber textures do not tile). Orientation as uv_box: turned 90 degrees.
+    The 5x5's 5.96 m does not fit one tile at that scale, so it wraps once, down the center, as the Rubber Track 5x5
+    (owner, 2026-11-23, of that link: "do a seam at the center on the 5x5")."""
+    x0 = 1.0 if LINK == "5x5" else 0.5
     bm = bmesh.new()
     bm.from_mesh(ob.data)
     uv = bm.loops.layers.uv.get("UVMap") or bm.loops.layers.uv.new("UVMap")
@@ -85,7 +92,7 @@ def uv_rubber(ob, s=0.245):
         c = f.calc_center_median()
         for lp in f.loops:
             p = rot @ (lp.vert.co - c) + c
-            ux = p.x * s + 0.5
+            ux = p.x * s + x0
             a, b = ((p.y * s + 0.5, p.z * s + 0.5) if ax == 0 else (ux, p.z * s + 0.5) if ax == 1
                     else (ux, p.y * s + 0.5))
             lp[uv].uv = (b, -a)
@@ -192,7 +199,7 @@ def finish_metal(ob, chamfer=True):
     so does the knuckle, which hides inside the plate behind."""
     me = ob.data
     me.materials.clear()
-    caps = ob.name == "R3_plate"
+    caps = ob.name == P + "plate"
     for n in METAL + (CAP if caps else ()):
         me.materials.append(material(n))
     if chamfer:
@@ -213,8 +220,8 @@ def finish_metal(ob, chamfer=True):
             under_pad = (all(v.co.z > PLATE_T - 1e-4 for v in e.verts) and max(ys) < Y_SH - PITCH + 1e-4
                          and max(abs(v.co.x) for v in e.verts) > NOTCH_HALF + 1e-3)
             seam = (all(abs(y - SEAM) < 1e-4 for y in ys)
-                    or (ob.name == "R3_tip" and (under_pad or max(ys) < SEAM - PITCH + 0.011 and not side_bottom))
-                    or (ob.name == "R3_plate" and min(ys) > HALF_L - 1e-4 and max(ys) > HALF_L + 1e-4))
+                    or (ob.name == P + "tip" and (under_pad or max(ys) < SEAM - PITCH + CHAMFER + 0.001 and not side_bottom))
+                    or (ob.name == P + "plate" and min(ys) > HALF_L - 1e-4 and max(ys) > HALF_L + 1e-4))
             # outside corners only: an inside corner (the tongue's base) chamfered twists the chamfer beside it
             e[bw] = 1.0 if (len(e.link_faces) == 2 and e.calc_face_angle(0) > math.radians(30) and e.is_convex
                             and not seam) else 0.0
@@ -233,12 +240,12 @@ def finish_metal(ob, chamfer=True):
                 on_cap = min(xs) > END_X - 1e-4 or max(xs) < -END_X + 1e-4
                 chamfer = p.material_index == 2
                 p.material_index = (2 if chamfer else 1) if on_cap else 0
-        if ob.name == "R3_plate":
+        if ob.name == P + "plate":
             # Blender slides the front edge's chamfer forward up the unchamfered tongue side at the tongue's base, so
             # it pinches to nothing there; put its top corner back on the chamfer line (owner, 2026-11-24, of the
             # front and back top edges: "JUST FIX THE CHAMFER ON THESE EDGES")
             for v in me.vertices:
-                if (v.co.z > PLATE_T - 1e-4 or v.co.z < 1e-4) and HALF_L - 1e-4 < v.co.y < HALF_L + CHAMFER + 1e-3 and abs(v.co.x) < 0.8:
+                if (v.co.z > PLATE_T - 1e-4 or v.co.z < 1e-4) and HALF_L - 1e-4 < v.co.y < HALF_L + CHAMFER + 1e-3 and abs(v.co.x) < 0.8 * SX:
                     y = HALF_L - CHAMFER
                     v.co.x, v.co.y = math.copysign(TONGUE_C - y, v.co.x), y
         if "bevel_weight_edge" in me.attributes:
@@ -263,13 +270,13 @@ def smooth(ob, deg):
 
 
 def finish():
-    for name in ("R3_pad_front", "R3_pad_rear"):
+    for name in (P + "pad_front", P + "pad_rear"):
         finish_rubber(bpy.data.objects[name])
-    finish_metal(bpy.data.objects["R3_plate"])
-    finish_metal(bpy.data.objects["R3_tip"])
-    if bpy.data.objects.get("R3_horn"):
-        finish_metal(bpy.data.objects["R3_horn"], chamfer=False)   # hidden in the wheel's groove
-    rod = bpy.data.objects["R3_rod"]          # dark steel, the Kharak Tread's metal
+    finish_metal(bpy.data.objects[P + "plate"])
+    finish_metal(bpy.data.objects[P + "tip"])
+    if bpy.data.objects.get(P + "horn"):
+        finish_metal(bpy.data.objects[P + "horn"], chamfer=False)   # hidden in the wheel's groove
+    rod = bpy.data.objects[P + "rod"]          # dark steel, the Kharak Tread's metal
     rod.data.materials.clear()
     rod.data.materials.append(material("PaintedMetal_VeryDark"))
     smooth(rod, 30)
@@ -278,7 +285,7 @@ def finish():
 
 if __name__ == "__main__":
     finish()
-    for name in ("R3_pad_front", "R3_pad_rear"):
+    for name in (P + "pad_front", P + "pad_rear"):
         me = bpy.data.objects[name].data
         print(name, len(me.vertices), [m.name for m in me.materials],
               [sum(p.material_index == i for p in me.polygons) for i in range(len(me.materials))])

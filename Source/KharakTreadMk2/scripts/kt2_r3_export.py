@@ -1,7 +1,9 @@
 """Kharak Tread Mk II round 3: export the finished link to Content/Models/KharakTreadMk2.mwm for an in-game test.
 
-Run after kt2_r3.py, kt2_r3_detail.py and kt2_r3_seam.py, with KharakTreadMk2.blend saved:
+Run after kt2_r3.py, kt2_r3_detail.py, kt2_r3_seam.py and kt2_r3_decals.py, with KharakTreadMk2.blend saved:
     exec(open(r"...\\kt2_r3_export.py").read(), {"__name__": "__main__"})
+    exec(open(r"...\\kt2_r3_export.py").read(), {"__name__": "__main__", "LINK": "5x5"})   # KharakTreadMk2_5x5.mwm
+Every round 3 script takes the same LINK setting.
 
 Joins copies of the R3 parts (modifiers applied) into one object in SEUT scene KharakTreadMk2 and adds Tank Tracks'
 empties: the hinges (track_pivot1/2, only their Blender Y counts) and the ground-contact box (track_collider, scale
@@ -12,9 +14,16 @@ import os
 import bpy
 
 CONTENT = r"C:\Users\blayl\source\repos\MDK2 Mods\GVK_Suspension\Content"
-NAME = "KharakTreadMk2"
-PARTS = ("R3_plate", "R3_tip", "R3_pad_front", "R3_pad_rear", "R3_rod", "R3_horn", "R3_seam")
-HINGE_Y, HINGE_Z, HALF_W, THICK = 0.368, 0.113, 1.40, 0.24   # kt2_r3_geom.py HINGE_Y, KNUCKLE_H, HALF_W, plate + pad
+HERE = r"C:\Users\blayl\source\repos\MDK2 Mods\GVK_Suspension\Source\KharakTreadMk2\scripts"
+SNAP = r"C:\Users\blayl\.agents\skills\se-dev-seut\scripts\decal_snap.py"
+LINK = globals().get("LINK", "small")        # "small" or "5x5" (kt2_r3_geom.py)
+GEO = {"__name__": "kt2_r3_geom_lib", "LINK": LINK}
+exec(open(HERE + r"\kt2_r3_geom.py").read(), GEO)
+NAME = "KharakTreadMk2_5x5" if LINK == "5x5" else "KharakTreadMk2"
+PARTS = tuple(GEO["P"] + n for n in ("plate", "tip", "pad_front", "pad_rear", "rod", "horn", "seam", "decals")
+              if GEO["P"] + n in bpy.data.objects)           # decals: 5x5 only (kt2_r3_decals.py)
+HINGE_Y, HINGE_Z, HALF_W = GEO["HINGE_Y"], GEO["KNUCKLE_H"], GEO["HALF_W"]
+THICK = GEO["PLATE_T"] + GEO["PAD_T"]
 
 
 def clear(name):
@@ -75,6 +84,11 @@ def build():
     main = next(c for c in s.collection.children_recursive if c.name.startswith("Main"))
     root = joined(main)
     empties(root, main)
+    if max(abs(v.co.x) for v in root.data.vertices) > 2.0:
+        # past 2 m the game's vertex rounding can sink a 1.5 mm decal into its surface (se-dev-seut, "Decal offset")
+        ns = {"__name__": "decal_snap_lib"}
+        exec(open(SNAP).read(), ns)
+        print("decal snap", ns["snap"](main))
     s.seut.export_exportPath = os.path.join(CONTENT, "Models")
     if hasattr(s.seut, "mod_path"):
         s.seut.mod_path = CONTENT

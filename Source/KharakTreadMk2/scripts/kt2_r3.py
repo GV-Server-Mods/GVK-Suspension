@@ -15,21 +15,23 @@ import math
 import os
 import bmesh
 import bpy
-from mathutils import Matrix
+from mathutils import Matrix, Vector
 
 HERE = r"C:\Users\blayl\source\repos\MDK2 Mods\GVK_Suspension\Source\KharakTreadMk2\scripts"
-ROOT_COLL = "KT3_blockout"
-VARIANT = "R3"
+LINK = globals().get("LINK", "small")      # "small" or "5x5" (kt2_r3_geom.py)
+ROOT_COLL = "KT3_blockout_5x5" if LINK == "5x5" else "KT3_blockout"
+VARIANT = "R3_5x5" if LINK == "5x5" else "R3"
 
 
 def load(name):
-    ns = {"__name__": name.replace(".py", "_lib")}
+    ns = {"__name__": name.replace(".py", "_lib"), "LINK": LINK}
     exec(open(os.path.join(HERE, name)).read(), ns)
     return ns
 
 
 GEO = load("kt2_r3_geom.py")
 LIB = load("kt2_build.py")
+P = GEO["P"]
 
 
 def bevel_ends(ob):
@@ -112,14 +114,14 @@ def build():
 
     # Plate and tongue base, cut along the front pad's front edge; the tongue's front piece (slice) in this link's
     # notch, with its knuckles reaching back into the link behind.
-    plate = lib["prism"]("R3_plate", g["plate"](seam=True), 0.0, pt, metal, coll)
+    plate = lib["prism"](P + "plate", g["plate"](seam=True), 0.0, pt, metal, coll)
     # The slice and its knuckle are one profile extruded across the tongue, its ends moved onto the tongue's 45 degree
     # sides all the way back (owner, 2026-11-24: "continue the angled (45 degree?) edge on both sides all the way to
     # the knuckle end", "you still have a tiny little step that needs to be flattened"). Built as one solid, so its
     # edges and chamfers run unbroken from the tip to the knuckle's back ("you have some ugly jagged edges here when
     # it should be smooth and the chamfer needs to continue to the edge/corners"; two stacked meshes or a boolean
     # union left steps and slivers there).
-    tip = lib["prism_x"]("R3_tip", g["knuckle_yz"](whole=True), -1.0, 1.0, metal, coll)
+    tip = lib["prism_x"](P + "tip", g["knuckle_yz"](whole=True), -1.0, 1.0, metal, coll)
     for v in tip.data.vertices:
         v.co.x = math.copysign(g["tongue_half"](v.co.y + g["PITCH"]), v.co.x)
     # a cut all round where the front pad's shoulders start to overhang it, so the top side chamfers end square there
@@ -133,14 +135,14 @@ def build():
     cut_notch(tip)
     parts = [plate, tip]
 
-    parts.append(lib["prism"]("R3_pad_front", g["front_pad"](), pt, pt + g["PAD_T"], rubber, coll))
-    parts.append(lib["prism"]("R3_pad_rear", g["rear_pad"](), pt, pt + g["PAD_T"], rubber, coll))
+    parts.append(lib["prism"](P + "pad_front", g["front_pad"](), pt, pt + g["PAD_T"], rubber, coll))
+    parts.append(lib["prism"](P + "pad_rear", g["rear_pad"](), pt, pt + g["PAD_T"], rubber, coll))
     bevel_ends(plate)
     # No floor in the notch's gap: only the rod holds the links together (owner, 2026-11-24: "remove that, its
     # supposed to look like the rod hinge is holding it together only").
     yb = g["BAR_Y"] - g["PITCH"]
     # 16 sides, and no end caps: both ends sit inside the plate (owner, 2026-11-24, picked fewer faces here)
-    rod = lib["hinge_bar"]("R3_rod", yb, g["BAR_Z"], g["BAR_R"], g["bar_half"](yb), lib["bar_mat"](), coll, n=16)
+    rod = lib["hinge_bar"](P + "rod", yb, g["BAR_Z"], g["BAR_R"], g["bar_half"](yb), lib["bar_mat"](), coll, n=16)
     bm = bmesh.new()
     bm.from_mesh(rod.data)
     bmesh.ops.delete(bm, geom=[f for f in bm.faces if len(f.verts) > 4], context="FACES_ONLY")
@@ -149,12 +151,12 @@ def build():
     parts.append(rod)
     horn_src = bpy.data.objects.get("KT_horn")
     if horn_src:
-        horn = bpy.data.objects.new("R3_horn", horn_src.data.copy())
+        horn = bpy.data.objects.new(P + "horn", horn_src.data.copy())
         horn.data.materials.clear()
         horn.data.materials.append(metal)
         # 7 cm forward, clear of the open gap in front of the tongue's tip (owner, 2026-11-24: "the guide horn should
         # be moved forward a little so it isn't visible from this angel")
-        horn.data.transform(Matrix.Translation((0, g["HORN_Y"], 0)))
+        horn.data.transform(Matrix.Translation((0, g["HORN_Y"], 0)) @ Matrix.Scale(g["HORN_S"], 4))
         coll.objects.link(horn)
         parts.append(horn)
     return parts
@@ -165,12 +167,61 @@ def renders():
     rev = load("kt2_review.py")
     os.makedirs(rev["OUT"], exist_ok=True)
     bpy.data.materials["KT2_metal"].diffuse_color = (0.58, 0.6, 0.63, 1)   # workbench views only
+    yb = g["BAR_Y"] - g["PITCH"]
+    if LINK == "5x5":
+        renders_5x5(rev, yb)
+        return
     rev["top_view"](VARIANT)
     rev["straight_view"](VARIANT)
-    yb = g["BAR_Y"] - g["PITCH"]
     rev["hinge_view"](VARIANT, yb, g["BAR_Z"], x=g["notch_half"](yb) - g["NOTCH_GAP"] / math.sqrt(2))
     for w in rev["RENDERED"]:
         rev["wheel_views"](VARIANT, w)
+
+
+def renders_5x5(rev, yb):
+    """kt2_review.py's views, sized for the 5x5 link on TankWheel5x5 (as kt2_5x5.py views())."""
+    g, k = GEO, GEO["SX"]
+    rev["PITCH"], rev["THICK"], rev["PLATE_T"] = g["PITCH"], g["PLATE_T"] + g["PAD_T"], g["PLATE_T"]
+    rev["WHEELS"]["TankWheel5x5"] = (5.478, 5.8)
+    drawn = rev["lib_drawn"]
+    rev["lib_drawn"] = lambda name: 5.288 if name == "TankWheel5x5" else drawn(name)
+    out = rev["OUT"]
+    sc = rev["scene_setup"]("KT5_top_R3", "BLENDER_WORKBENCH")
+    for i in (-1, 0, 1, 2):
+        rev["link_instance"](sc, VARIANT, Matrix.Translation((0, i * g["PITCH"], 0)), f"L{i}")
+    rev["camera"](sc, (0, 0.5 * g["PITCH"], 10), (0, 0.5 * g["PITCH"], 0), ortho=6.6)
+    rev["render"](sc, "top_R3_5x5")
+    sc = rev["scene_setup"]("KT5_straight_R3", "BLENDER_EEVEE_NEXT")
+    rev["add_sun"](sc)
+    rev["add_ground"](sc, -0.001)
+    for i in (-1, 0, 1):
+        rev["link_instance"](sc, VARIANT, Matrix.Translation((0, i * g["PITCH"], 0)), f"L{i}")
+    rev["camera"](sc, (3.0 * k, 2.9 * k, 2.4 * k), (0, 0.15 * k, 0), lens=38)
+    rev["render"](sc, "straight_R3_5x5")
+    rev["hinge_view"](VARIANT, yb, g["BAR_Z"], s=k, name="hinge_R3_5x5",
+                      x=g["notch_half"](yb) - g["NOTCH_GAP"] / math.sqrt(2))
+    sc, pts, rh, yo, sphere = rev["wheel_scene"]("KT5_run_R3", VARIANT, "TankWheel5x5", "BLENDER_EEVEE_NEXT")
+    ys = [p[0] for p in pts]
+    y0, y1 = min(ys) - g["PITCH"], max(ys) + 0.6
+    z0, z1 = -sphere - 0.2, sphere + 0.2
+    res = rev["RES"]
+    scale = max(y1 - y0, (z1 - z0) * res[0] / res[1]) * 1.04
+    rev["camera"](sc, (40, (y0 + y1) / 2, (z0 + z1) / 2), (0, (y0 + y1) / 2, (z0 + z1) / 2), ortho=scale)
+    rev["render"](sc, "5x5_run_R3")
+    circle = pts[3:-3]
+    j = min(circle, key=lambda p: abs(math.degrees(math.atan2(p[1], p[0])) - 10))
+    j = Vector((0, *j))
+    u = j.normalized()
+    t = Vector((0, -u.z, u.y))
+    js = j * (1 + (rev["THICK"] + yo) / rh)
+    sc, *_ = rev["wheel_scene"]("KT5_close_R3", VARIANT, "TankWheel5x5", "BLENDER_EEVEE_NEXT")
+    rev["camera"](sc, js + u * 1.6 * k + Vector((2.3 * k, 0, 0)) + t * 1.9 * k, js + t * 0.15 * k, lens=30)
+    rev["render"](sc, "5x5_close_R3")
+    sc, *_ = rev["wheel_scene"]("KT5_cut_R3", VARIANT, "TankWheel5x5", "BLENDER_WORKBENCH", with_wheel=False)
+    c = j + t * 0.12 * k
+    rev["camera"](sc, (30, c.y, c.z), (0, c.y, c.z), ortho=1.5 * k, clip=30 - 0.02)
+    rev["render"](sc, "5x5_cut_R3")
+    return out, round(math.degrees(2 * math.asin(g["PITCH"] / 2 / rh)), 1), round(yo, 4)
 
 
 if __name__ == "__main__":

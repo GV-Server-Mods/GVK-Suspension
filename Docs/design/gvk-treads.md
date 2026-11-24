@@ -328,6 +328,32 @@ Finish (`kt2_r3_detail.py`, run after the blockout):
 
 In-game test (runbook E32): `kt2_r3_export.py` exports `KharakTreadMk2.mwm` (main model only, no LODs or construction model yet), used by the test design "Kharak Tread Mk II (test)" (`KharakTreadMk2_Large`), whose styles are the Kharak Tread's with that model and Y 2 cm lower (4.3 cm on the 5x5), as the Mk II hinges sit 0.113 m up instead of 0.093. Owner, in game 2026-11-24: "the tread looks good so far".
 
+### Mk II round 3: the 5x5 link (plan, 2026-11-24)
+
+The owner asked for the 5x5 next, before LODs and build stages, so both links' shapes settle first and one LOD script serves both (owner, 2026-11-24: "commit it, then start the 5x5"). It follows the 5x5 rules already picked: its own full-size link (owner pick, 2026-11-23), the small link's outline scaled up rather than a new layout (owner, 2026-11-23: "just scaling up the small one and adding a few details"), and details at real size, not blown up (lesson: "Don't scale up a link").
+
+| What | Small link | 5x5 link | Rule |
+|---|---|---|---|
+| Width, pitch, every outline (pads, gaps, tongue, notch, rod notch, end caps, rod position) | 2.80 m, 0.736 m | 5.96 m, 1.567 m | x 2.129 (5.96 / 2.80), the 5x5 rubber's width |
+| Thickness: plate + pads, hinge height | 0.14 + 0.10 m, 0.113 m | 0.28 + 0.20 m, 0.214 m | thickness x 2, as round 2's 5x5 (0.48 m); hinge by the Kharak rule (sphere 5.8 m − thickness − hull radius) |
+| Rod | 9 cm across | 19 cm across | scaled, as round 2's 5x5 bar |
+| Metal chamfer, rubber chamfer | 1 cm, 3 cm | 2 cm, 6 cm | x 2 with the thickness, so they read at the same share of each edge |
+| Seam line | 16 mm, Atlas4 piece 3 | 16 mm | Keen's line width, the same on every block size |
+| Texture scale | metal 0.5, rubber 0.245 UV per meter | the same | real size; the 5.96 m rubber wraps once, down the center, as the Rubber Track 5x5 does |
+| Shading, materials, face cuts | as finished above | the same | |
+
+Build: the round 3 scripts take the link as a setting (`kt2_r3_geom.py` and the finish, seam and export scripts), so one change lands on both links. The 5x5 builds as collection `KT2_R3_5x5` and exports `KharakTreadMk2_5x5.mwm`; the test design's 5x5 styles switch to it at SegmentScale 1, 1, 1, with Y from its hinge height. Then renders on `TankWheel5x5` for review, before any 5x5-only changes.
+
+Built 2026-11-24: 666 triangles (small link 586), x ±2.98 m, y ±0.724 m, 16.3° per link on `TankWheel5x5`. The three 5x5 styles of the test design use `KharakTreadMk2_5x5.mwm` at SegmentScale 1.104, 1, 1, the small link's stretch, so it sits 2.6% wider than the wheel's rims as the small link does: 6.58 m on 6.41 m rim to rim, against 3.09 m on 3.01 m (owner, 2026-11-24: "it should overhang the rim of the wheel the same percentage as the smaller tread"). Y is −0.214 (−0.256 Offroad, keeping Mk I's extra 4.2 cm). The 5x5 reaches past 2 m, so the export runs `decal_snap.py` (nothing to move). On both links the seam's flat triangles dipped under the twisting taper corners (0.11 mm left on the small link, touching on the 5x5); `kt2_r3_seam.py` now lifts any triangle under 1 mm to 1.2 mm. Renders: `review/renders/*_R3_5x5.png`, `5x5_*_R3.png`.
+
+Scale decals, 5x5 only (owner, 2026-11-24: "the 5x5 version could look good just with some extra decals to help sell the scale"; picked from a contact sheet and a layout drawn on the top view). `kt2_r3_decals.py` adds 18 quads, 1.5 mm off their faces:
+
+| Decal | Piece | Size, count | Where |
+|---|---|---|---|
+| Bolt | Atlas3 17, cross-head cap, `Atlas3_Chrome` | the piece 10.5 cm (7 cm first; owner: "make the screw decals 50% larger"), cut to a 24-sided disc in its black groove so the outer silver ring is gone (owner: "cut into those screw decals so that the outer silver ring is gone"), 9.1 cm across; 8 per link | 4 per pad: the outer ends and the center run |
+| Slot | Atlas3 20, tall pill slot, `Atlas3_Chrome` | 6 x 27 cm, 8 per link | 2 on each end cap's top and bottom face |
+| Plate | Atlas3 34, tall plate with a groove across and four corner screws, `Atlas3_Colorable` | 44 x 24 cm (34 x 19 first; owner: "make those C1 decals 30% larger"), its long side across the track (owner: "rotate those C1 decals 1/4 turn"), 2 per link | the plate's outer corners beside the end caps; it replaced Atlas1 8, the recessed X (owner: "not loving the Xs can we swap them with C1?") |
+
 ## [Blocks]
 
 | Blocks | Styles |
