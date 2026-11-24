@@ -205,7 +205,7 @@ The 5x5 distances are Keen's `Wheel5x5`. The small link's are set by eye from Ke
 
 - The same style set as the Kharak Tread, with its X, so the horn sits in the groove. `_Static` uses X 0.
 - The design is on every large-grid `[Blocks]` line that lists a Kharak Tread style, with the same kind of style.
-- Icon: `Content/Textures/Icons/RubberTrack.dds` (256 px BC7 sRGB), five current links on the 3x3 curve, lit from behind and seen from higher up so the pockets read at icon size (`Source/RubberTread/scripts/rt_icon.py`, variant v7), material `RubberTrack_Icon`.
+- Icon: `Content/Textures/Icons/RubberTrack.dds` (256 px BC7 sRGB), five current links on the 3x3 curve with the name on top, rendered like the Kharak icons since 2026-11-24 (`kt2_icon.py` and `icon_label.py`; owner: "match the style of the other 3"; the old back-lit `rt_icon.py` variant v7 is retired), material `RubberTrack_Icon`.
 - Source: `Source/RubberTread/scripts/rt_build.py` and `rt5_build.py` rebuild every level of `RubberTrack.blend` and `RubberTrack5x5.blend`, with SEUT scenes `RubberTrack`, `RubberTrack_Construction`, `RubberTrack5x5` and `RubberTrack5x5_Construction`. The `*_before_*.blend` checkpoints sit beside them.
 - **Rejected:** a band joining the lugs, which buried the side steps ("its like they are all stuck on fat slabs, all of the side detail is gone"; kept as `*_band_rejected.blend`); the 3x3 link scaled 2.13x for the 5x5, which read cartoonish and made the rover look small; mirrored UVs across the link; seamless copies of Keen's rubber maps shipped in the mod; `RubberScratched` on the whole link.
 
@@ -402,6 +402,8 @@ Every other design followed the same day (owner, 2026-11-24: "can we do the same
 | Small grid (`SG_*`) | `LiftedOTT_Small_*` only, until T4 |
 
 Keen's suspension SBC stays untouched.
+
+**Picker order.** The builder's design picker (Digi's Tank Tracks Placement mod) lists a block's designs in the order its `[Blocks]` line names them, after Digi's own: every line names Kharak Tread, Kharak Double Tread, Kharak Tread Mk II, Rubber Track, so the Mk I and its double sit together (owner, 2026-11-24: "group the mk1 and mk1 double next to eachother"). The picker shows only each design's icon, so the icons carry the name on top ([icons.md](icons.md)).
 
 ## Lessons for the next design
 

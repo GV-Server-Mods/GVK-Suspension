@@ -3,6 +3,9 @@
 #   blender -b KharakTreadMk2.blend --python scripts\kt2_icon.py -- <out.png> [root pitch scale_x]
 # The Kharak Tread and Double Tread icons use it too, on KharakTread.blend:
 #   -- KharakTread.png KharakTread 0.78 1.104      -- KharakDoubleTread.png KharakDoubleTread 0.78 0.979
+# and the Rubber Track's, on Source/RubberTread/RubberTrack.blend (3x3 style, SegmentScale 1, 0.80, 1):
+#   -- RubberTrack.png RubberTrack 0.90 1 0.80
+# Then icon_label.py puts the design's name on top.
 import math
 import sys
 import bpy
@@ -11,8 +14,11 @@ import mathutils
 a = sys.argv[sys.argv.index("--") + 1:]
 out = a[0]
 DX, DY, DZ = 0.75, -0.9, 0.85
+SZ = 1.0                      # SegmentScale Y (the link's thickness, Blender Z)
+TURN = math.radians(float(a[5])) if len(a) >= 6 else 0.0   # turn the strip about Z, to face its detail to the camera
 if len(a) >= 4:
     ROOT, PITCH, SX = a[1], float(a[2]), float(a[3])
+    SZ = float(a[4]) if len(a) >= 5 else 1.0
 else:
     HERE = r"C:\Users\blayl\source\repos\MDK2 Mods\GVK_Suspension\Source\KharakTreadMk2\scripts"
     g = {"__name__": "kt2_r3_geom_lib", "LINK": "small", "LEVEL": "main"}
@@ -28,8 +34,8 @@ sc = bpy.data.scenes.new("Icon")
 links = []
 for i in range(-2, 3):
     t = i * PITCH / RW
-    m = (mathutils.Matrix.Translation((0, RW * math.sin(t), RW * math.cos(t) - RW))
-         @ mathutils.Matrix.Rotation(-t, 4, "X") @ mathutils.Matrix.Diagonal((SX, 1, 1, 1)))
+    m = (mathutils.Matrix.Rotation(TURN, 4, "Z") @ mathutils.Matrix.Translation((0, RW * math.sin(t), RW * math.cos(t) - RW))
+         @ mathutils.Matrix.Rotation(-t, 4, "X") @ mathutils.Matrix.Diagonal((SX, 1, SZ, 1)))
     for p in parts:
         if p.type != "MESH":
             continue
