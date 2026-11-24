@@ -1,5 +1,6 @@
 ---
 title: Track wheel swap (few suspension blocks, track wheels shown on demand)
+checked: 2026-11-24
 covers:
   - Content/Models/TankWheel*.mwm
   - Content/Data/TankTracks.ini
