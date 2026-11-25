@@ -11,6 +11,7 @@ covers:
   - Content/Data/CubeBlocks_TrackWheelBlocks.sbc
   - Content/Data/BlockVariantGroups.sbc
   - Content/Data/BlockCategories.sbc
+  - Source/TrackWheels/scripts/shift_mwm.py
 ---
 
 # Track wheel swap: plan
@@ -159,6 +160,18 @@ The Short Track Wheel 1x1 and 3x3 blocks (`ShortTankWheelBlock1x1/3x3`, deleted 
 - Remove the 16 blocks from the GVK, Large Blocks and Propulsion categories in `BlockCategories.sbc`. Without that they show as 16 loose blocks when browsing those categories.
 - Never delete the definitions: a block with no definition disappears from grids with no refund. With `GuiVisible` false a block is out of the menu but the G menu's text search still lists it; `Public` false takes it out of search too (`MyGuiScreenToolbarConfigBase.AddCubeDefinitionsToBlocks`). Built ones stay: the game strips non-public blocks from a grid only under a debug flag that is off (`MyFakes.REMOVE_NON_PUBLIC_BLOCKS`), and the projector does not check `Public`, so projections still weld. Seen in game: built ones stayed after a reload and a projection welded (E18).
 - Visible GVK suspension families go from 5 to 3.
+
+## Wheel 1x1 rollers
+
+Built 2026-11-25. Spot-checked in game the same day on the store Battlecruiser and Support Cruiser (owner: "the suspension rollers and tracks all look correct"); the test below is still open. With the Track Wheel blocks hidden, Keen's Wheel 1x1 is the static roller players can build (owner, 2026-11-25: "lets look at swapping them all to the vanilla 1x1 wheels, then building the tank tracks dynamic model swap for when it is added to tracks"). Under a GVK track it shows the Track Wheel 1x1 block; off a track it is Keen's tire. GVK_Derelicts moved every NPC and store grid onto it (its `Docs/design/prefab-tracks.md`).
+
+- **Where it sits:** a Wheel 1x1 against the hull, top facing out (the way the suspensions face), fills the hull-side cell of a Track Wheel 1x1 block (1x2x1). That block's groove is on the track line 1.39 m out from the Wheel 1x1's center, and nothing in Tank Tracks moves a swap model (Part B).
+- **The model:** `TankWheelBlock1x1_Wheel1x1*.mwm` and `TankWheelBlockDouble1x1_Wheel1x1*.mwm` are the Track Wheel 1x1 models (main, LODs, build stages) with the mesh moved 1.25 m along the block's up, so on the Wheel 1x1 they draw exactly where the block did. `Source/TrackWheels/scripts/shift_mwm.py` makes them from the originals: it moves the vertices (repacked the game's way, so within 1 mm), the bounding box and sphere and the hit-test tree's bounds, and points the main model at its own LODs. Rerun it after any Track Wheel 1x1 export.
+- **Styles:** `*_Large_1x1_Static_Wheel1x1` for Kharak Tread, Kharak Double Tread, Kharak Tread Mk II and Rubber Track, on the `Wheel/Wheel1x1` line after Digi's over-the-tire style. Construction look: the single block's BS2, the double's BS1.
+- **Size:** `[WheelOverride:Wheel/Wheel1x1]` gives it the Track Wheel 1x1's radius 0.897 and width 1.0, so a track wraps it exactly as it wraps that block and it is never a track's biggest wheel (the biggest sets the track's line and offsets, `Track.cs`). With no OutOffset its center stays in its own cell, which passes the alignment check (`Track.cs` `CheckAlignment`) whichever way it faces.
+- **Limits:** facing in, or one cell further out, the look shows 1.25 m off the line; the track itself stays right. On Digi's over-the-tire track the smaller radius matches his styles GVK already moved out for the 0.897 tires (Merge above); only a track of static rollers alone would sink 0.35 m into the tire.
+
+In-game test (restart the game fully first): a Lifted Short 3x3 track with a Wheel 1x1 at each end, against the hull and facing out, once per design. Pass: the end rollers show the Track Wheel 1x1 (double under Double Tread) on the line, at the same track height as the suspension wheels; removing the track brings the tires back; welding one from a projection shows the bare wheel, then the full one.
 
 ## Existing grids and the player change note
 
