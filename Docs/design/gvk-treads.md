@@ -55,7 +55,7 @@ All three designs run on the GVK track wheels ([track-wheel-swap.md](track-wheel
 | 5x5 | 5.288 | 5.8 | 5.478 | 5.520 |
 
 - Drawn radii are half each model's width, read from the `.mwm`. The spheres are the vanilla tire values, which the offroad tires share, and they keep the vanilla top speed. Radius affects no physics.
-- `Radius` is set per wheel block, for every design on it. Keen's 16 large tires get it too: every GVK track suspension and Track Wheel block is hidden, so new tracks are built on Keen's tires and swapped.
+- `Radius` is set per wheel block, for every design on it. Keen's 16 large tires get it too: every GVK track suspension and Track Wheel block is hidden, so new tracks are built on Keen's tires and swapped. Keen's Wheel 1x1, the static roller players can build, reports the Track Wheel 1x1's radius 0.897 and width 1.0 ([Wheel 1x1 rollers](track-wheel-swap.md#wheel-1x1-rollers)).
 - Kharak Y = sphere − link thickness − sqrt(R² + (pitch/2)²), which comes out as minus the hinge height. The 1x1 to 3x3 share one Y, so mixed 1x1 to 3x3 tracks are exact. Under a 5x5's thicker tread a smaller wheel's tread rests on its drawn wheel and sits 0.22 m (3x3) to 0.38 m (1x1) below the ground line.
 - `RealTrackWheel1x1` reports Width 4.55, so it stays the biggest wheel next to a vanilla 2x2 (Width + Radius 5.447 against 5.191; offroad 5.342). A track can't fit inside a smaller wheel (Digi's alignment check).
 - GVK wheels turn 3 to 7% slower than the tread moves.
@@ -124,7 +124,7 @@ The distances sit inside Digi's own (15 / 30 / 60 m; owner: "lets do the lod soo
 | 3x3 | 1.104, 1, 1 | .757 | −0.093 | −0.126 | as 1x1 |
 | 5x5 | 2.318, 2.13, 2.13 | .529 | −0.198 | −0.240 | 6.49 m wide (6.41 m rim to rim), 1.66 m pitch, 0.458 m thick |
 
-- `_Track` styles serve the GVK track suspensions. `_Swap` adds `ReplaceWheelModel` `TankWheel<size>` and its BS2 for Keen's tires, and `_Swap_Offroad` uses the offroad Y. `_Static` (X 0, `AllowOnRotors`) serves the Track Wheel blocks, whose `OutOffset` 0.14 already puts the groove on the line.
+- `_Track` styles serve the GVK track suspensions. `_Swap` adds `ReplaceWheelModel` `TankWheel<size>` and its BS2 for Keen's tires, and `_Swap_Offroad` uses the offroad Y. `_Static` (X 0, `AllowOnRotors`) serves the Track Wheel blocks, whose `OutOffset` 0.14 already puts the groove on the line. `_1x1_Static_Wheel1x1` copies the `_1x1_Static` style onto Keen's Wheel 1x1 with the Track Wheel 1x1 model moved 1.25 m out (`TankWheelBlock1x1_Wheel1x1*.mwm`, `TankWheelBlockDouble1x1_Wheel1x1*.mwm`).
 - X is the groove line from track-wheel-swap.md. The 1x1 to 3x3 share the 3x3 tread width (2.80 m of rubber).
 - Icon: `Content/Textures/Icons/KharakTread.dds` (256 px BC7 sRGB, five links on the 3x3 curve), material `KharakTread_Icon`.
 - Source: scenes `KharakTread` and `KharakTread_Construction` in `Source/KharakTread/KharakTread.blend`.
@@ -399,6 +399,7 @@ Every other design followed the same day (owner, 2026-11-24: "can we do the same
 | Keen's Suspension and Short Suspension | The three `_Swap`; Digi's vanilla track comes from his own pack |
 | Keen's Offroad and Offroad Short Suspension | The three `_Swap_Offroad` |
 | Track Wheel and Short Track Wheel 1x1 and 3x3 | `VanillaOTT_Large_<size>_Static_TrackWheel` and the three `_Static` |
+| Keen's Wheel 1x1 | Digi's over-the-tire style from his pack, then `*_Large_1x1_Static_Wheel1x1` for all four designs |
 | Small grid (`SG_*`) | `LiftedOTT_Small_*` only, until T4 |
 
 Keen's suspension SBC stays untouched.
